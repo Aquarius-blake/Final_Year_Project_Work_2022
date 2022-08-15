@@ -179,7 +179,9 @@ class _MprofileState extends State<Mprofile> {
                         color: Colors.grey
                     ),),
                 ),
-                Divider()
+                Divider(
+                  height: 20,
+                )
               ],
             ),
           ),
