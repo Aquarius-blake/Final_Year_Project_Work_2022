@@ -180,7 +180,7 @@ class _MprofileState extends State<Mprofile> {
                     ),),
                 ),
                 Divider(
-                  height: 20,
+                  height: 40,
                 )
               ],
             ),
