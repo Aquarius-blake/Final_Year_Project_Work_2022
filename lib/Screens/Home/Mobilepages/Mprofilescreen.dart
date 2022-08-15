@@ -185,11 +185,14 @@ class _MprofileState extends State<Mprofile> {
               ],
             ),
           ),
-          Column(
-            children: [
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Column(
+              children: [
 Container(),
-              Container()
-            ],
+                Container()
+              ],
+            ),
           )
         ],
       ),
