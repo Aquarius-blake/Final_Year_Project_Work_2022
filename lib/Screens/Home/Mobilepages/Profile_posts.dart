@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:forum3/Screens/Platforms/WebSceens/wpost.dart';
 
 
 class Profilepost extends StatefulWidget {
-  const Profilepost({Key? key}) : super(key: key);
+  final snap;
+  const Profilepost({Key? key,this.snap}) : super(key: key);
 
   @override
   State<Profilepost> createState() => _ProfilepostState();
