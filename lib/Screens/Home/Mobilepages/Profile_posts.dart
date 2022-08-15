@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:forum3/Screens/Platforms/WebSceens/wpost.dart';
 
 
 class Profilepost extends StatefulWidget {
