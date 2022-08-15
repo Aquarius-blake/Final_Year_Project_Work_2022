@@ -16,9 +16,22 @@ class Mprofile extends StatefulWidget {
 }
 
 class _MprofileState extends State<Mprofile> {
+  late TabController _tabController;
+  @override
+  void initState() {
+    super.initState();
+    _tabController = new TabController(vsync: this, length: 2);
+  }
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -189,8 +202,23 @@ class _MprofileState extends State<Mprofile> {
             padding: const EdgeInsets.all(12.0),
             child: Column(
               children: [
-Container(),
-                Container()
+Container(
+  child: TabBar(
+    controller: _tabController,
+      tabs: [
+    Tab(text: "Posts",),
+    Tab(text: "likes",)
+  ]
+  ),
+),
+                Container(
+                  child: TabBarView(
+                    controller: _tabController,
+                      children: [
+                        Text("hi"),
+                        Text("hello")
+                      ]),
+                )
               ],
             ),
           )
