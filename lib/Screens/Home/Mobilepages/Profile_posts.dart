@@ -11,6 +11,6 @@ class Profilepost extends StatefulWidget {
 class _ProfilepostState extends State<Profilepost> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold();
   }
 }
