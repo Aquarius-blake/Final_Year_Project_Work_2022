@@ -178,7 +178,8 @@ class _MprofileState extends State<Mprofile> {
                     style: const TextStyle(
                         color: Colors.grey
                     ),),
-                )
+                ),
+                Divider()
               ],
             ),
           ),
