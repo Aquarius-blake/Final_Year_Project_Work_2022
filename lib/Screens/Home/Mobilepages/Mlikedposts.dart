@@ -10,6 +10,6 @@ class Likedposts extends StatefulWidget {
 class _LikedpostsState extends State<Likedposts> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold();
   }
 }
