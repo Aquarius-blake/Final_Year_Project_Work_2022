@@ -16,7 +16,7 @@ class _LikedpostsState extends State<Likedposts> {
   Widget build(BuildContext context) {
     return Scaffold(
       body:  StreamBuilder(
-        stream: FirebaseFirestore.instance.collection('Posts').where('author uid', isEqualTo: widget.snap['uid']).snapshots(),
+        stream: FirebaseFirestore.instance.collection('Posts').where('likes',arrayContains: widget.snap['uid']).snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
           if(snapshot.connectionState==ConnectionState.waiting){
             return Center(
