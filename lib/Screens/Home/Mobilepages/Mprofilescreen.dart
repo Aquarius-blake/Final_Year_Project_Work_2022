@@ -146,38 +146,38 @@ class _MprofileState extends State<Mprofile> {
                   ),
                 ),
                 Row(
-      children:[
+                    children:[
+                      Container(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Name: ${widget.snap['Full Name']}",
+                          style: TextStyle(
+                              color: Colors.grey
+                          ),
+                        ),
+                      ),
+                      const Expanded(
+                          child: SizedBox()
+                      ),
+                      widget.snap['Gender']==null|| widget.snap['Gender']==""? const SizedBox(): Container(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Gender: ${widget.snap['Gender']}",
+                          style: const TextStyle(
+                              color: Colors.grey
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 80,)
+                    ]
+                ),
                 Container(
                   alignment: Alignment.centerLeft,
-                  child: Text(
-                      "Name: ${widget.snap['Full Name']}",
-                    style: TextStyle(
-                      color: Colors.grey
-                    ),
-                  ),
-                ),
-        const Expanded(
-            child: SizedBox()
-        ),
-      widget.snap['Gender']==null|| widget.snap['Gender']==""? const SizedBox(): Container(
-          alignment: Alignment.centerLeft,
-          child: Text(
-            "Gender: ${widget.snap['Gender']}",
-            style: const TextStyle(
-                color: Colors.grey
-            ),
-          ),
-        ),
-        SizedBox(width: 80,)
-      ]
-                ),
-                Container(
-alignment: Alignment.centerLeft,
                   child: widget.snap['DateofBirth']==null || widget.snap['DateofBirth']==""? const SizedBox()
                       : Text("Date of Birth: ${widget.snap['DateoBirth']}",
-                  style: const TextStyle(
-                    color: Colors.grey
-                  ),),
+                    style: const TextStyle(
+                        color: Colors.grey
+                    ),),
                 )
               ],
             ),
