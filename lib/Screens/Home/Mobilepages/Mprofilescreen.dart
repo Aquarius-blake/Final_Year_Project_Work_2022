@@ -15,12 +15,13 @@ class Mprofile extends StatefulWidget {
   State<Mprofile> createState() => _MprofileState();
 }
 
-class _MprofileState extends State<Mprofile> {
+class _MprofileState extends State<Mprofile>with
+    TickerProviderStateMixin {
   late TabController _tabController;
   @override
   void initState() {
     super.initState();
-    _tabController = new TabController(vsync: this, length: 2);
+    _tabController = new TabController( vsync:this, length: 2);
   }
   @override
   void dispose() {
