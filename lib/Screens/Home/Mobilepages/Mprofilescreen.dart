@@ -208,7 +208,7 @@ class _MprofileState extends State<Mprofile>with
                     alignment: Alignment.centerLeft,
                     child: TabBar(
                       labelColor: Colors.lightBlueAccent,
-                        labelPadding: EdgeInsets.only(
+                        labelPadding: const EdgeInsets.only(
                           left: 80,
                           right: 35
                         ),
