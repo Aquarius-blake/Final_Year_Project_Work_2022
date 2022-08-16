@@ -73,7 +73,6 @@ class _MprofileState extends State<Mprofile>with
                               style: TextStyle(
                                   fontSize: 24,
                                   fontStyle: FontStyle.italic,
-                                  fontWeight: FontWeight.bold
                               ),
                             ),
                             SizedBox(width: 10,),
@@ -92,8 +91,8 @@ class _MprofileState extends State<Mprofile>with
                           children: [
                             widget.snap['uid']!=user1.UID? ElevatedButton(
                               onPressed: (){},
-                              child: Padding(
-                                padding: const EdgeInsets.only(
+                              child: const Padding(
+                                padding: EdgeInsets.only(
                                     left: 16.0,
                                     right: 16.0),
                                 child: Text(
