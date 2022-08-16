@@ -209,7 +209,7 @@ class _MprofileState extends State<Mprofile>with
                       controller: _tabController,
                       tabs: [
                         Tab(text: "Posts",),
-                        Tab(text: "likes",)
+                        Tab(text: "Likes",)
                       ]
                   ),
                 ),
