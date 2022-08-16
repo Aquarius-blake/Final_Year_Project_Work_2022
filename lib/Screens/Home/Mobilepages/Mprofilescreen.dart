@@ -21,7 +21,7 @@ class _MprofileState extends State<Mprofile>with
   @override
   void initState() {
     super.initState();
-    _tabController = new TabController( vsync:this, length: 2);
+    _tabController = TabController( vsync:this, length: 2);
   }
   @override
   void dispose() {
