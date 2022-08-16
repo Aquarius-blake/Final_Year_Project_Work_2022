@@ -210,7 +210,7 @@ class _MprofileState extends State<Mprofile>with
                       labelColor: Colors.lightBlueAccent,
                         labelPadding: EdgeInsets.only(
                           left: 80,
-                          right: 40
+                          right: 35
                         ),
                         isScrollable: true,
                         unselectedLabelColor: Colors.black,
