@@ -204,14 +204,18 @@ class _MprofileState extends State<Mprofile>with
             child: Column(
               children: [
                 Container(
-                  child: TabBar(
-                    labelColor: Colors.lightBlueAccent,
-                      unselectedLabelColor: Colors.black,
-                      controller: _tabController,
-                      tabs: [
-                        Tab(text: "Posts",),
-                        Tab(text: "Likes",)
-                      ]
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: TabBar(
+                      labelColor: Colors.lightBlueAccent,
+                        isScrollable: true,
+                        unselectedLabelColor: Colors.black,
+                        controller: _tabController,
+                        tabs: [
+                          Tab(text: "Posts",),
+                          Tab(text: "Likes",)
+                        ]
+                    ),
                   ),
                 ),
                 Container(
