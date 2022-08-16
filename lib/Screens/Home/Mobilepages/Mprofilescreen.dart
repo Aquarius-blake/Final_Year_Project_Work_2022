@@ -203,18 +203,19 @@ class _MprofileState extends State<Mprofile>with
             padding: const EdgeInsets.all(12.0),
             child: Column(
               children: [
-Container(
-  child: TabBar(
-    controller: _tabController,
-      tabs: [
-    Tab(text: "Posts",),
-    Tab(text: "likes",)
-  ]
-  ),
-),
+                Container(
+                  width:double.maxFinite ,
+                  child: TabBar(
+                      controller: _tabController,
+                      tabs: [
+                        Tab(text: "Posts",),
+                        Tab(text: "likes",)
+                      ]
+                  ),
+                ),
                 Container(
                   child: TabBarView(
-                    controller: _tabController,
+                      controller: _tabController,
                       children: [
                         Text("hi"),
                         Text("hello")
