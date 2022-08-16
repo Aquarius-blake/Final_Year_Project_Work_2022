@@ -204,7 +204,6 @@ class _MprofileState extends State<Mprofile>with
             child: Column(
               children: [
                 Container(
-                  width:double.maxFinite ,
                   child: TabBar(
                       controller: _tabController,
                       tabs: [
@@ -214,6 +213,8 @@ class _MprofileState extends State<Mprofile>with
                   ),
                 ),
                 Container(
+                  width:double.maxFinite ,
+                  height: 300,
                   child: TabBarView(
                       controller: _tabController,
                       children: [
