@@ -205,7 +205,7 @@ class _MprofileState extends State<Mprofile>with
               children: [
                 Container(
                   child: TabBar(
-                    labelColor: Colors.black,
+                    labelColor: Colors.lightBlueAccent,
                       unselectedLabelColor: Colors.grey,
                       controller: _tabController,
                       tabs: [
