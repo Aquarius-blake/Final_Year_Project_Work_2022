@@ -209,8 +209,8 @@ class _MprofileState extends State<Mprofile>with
                     child: TabBar(
                       labelColor: Colors.lightBlueAccent,
                         labelPadding: EdgeInsets.only(
-                          left: 60,
-                          right: 30
+                          left: 80,
+                          right: 40
                         ),
                         isScrollable: true,
                         unselectedLabelColor: Colors.black,
