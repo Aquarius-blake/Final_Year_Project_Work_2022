@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Screens/Home/Mobilepages/Mlikedposts.dart';
+import 'package:forum3/Screens/Home/Mobilepages/Profile_posts.dart';
 import 'package:provider/provider.dart';
 
 import '../../../Models/Users1.dart';
@@ -228,8 +230,12 @@ class _MprofileState extends State<Mprofile>with
                   child: TabBarView(
                       controller: _tabController,
                       children: [
-                        Text("hi"),
-                        Text("hello")
+                        Profilepost(
+                          snap: widget.snap,
+                        ),
+                        Likedposts(
+                          snap: widget.snap,
+                        )
                       ]),
                 )
               ],
