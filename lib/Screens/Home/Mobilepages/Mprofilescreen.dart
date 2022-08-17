@@ -22,12 +22,12 @@ class Mprofile extends StatefulWidget {
 class _MprofileState extends State<Mprofile>with
     TickerProviderStateMixin {
   late TabController _tabController;
-  int commentlen=0;
-  getcommentlen()async{
+  int postlen=0;
+  getPostlen()async{
     try{
       QuerySnapshot snapshot=await FirebaseFirestore.instance.collection("Posts").where('author uid' ,isEqualTo: widget.snap['uid']).get();
       setState(() {
-        commentlen=snapshot.docs.length;
+        postlen=snapshot.docs.length;
       });    }
     catch(e){
       Showsnackbar(e.toString(), context);
@@ -37,7 +37,7 @@ class _MprofileState extends State<Mprofile>with
   void initState() {
     super.initState();
     _tabController = TabController( vsync:this, length: 2);
-    getcommentlen();
+    getPostlen();
   }
   @override
   void dispose() {
@@ -83,8 +83,8 @@ class _MprofileState extends State<Mprofile>with
                         Row(
                           children: [
                             Text(
-                              "$commentlen",
-                              style: TextStyle(
+                              "$postlen",
+                              style: const TextStyle(
                                   fontSize: 24,
                                   fontStyle: FontStyle.italic,
                               ),
