@@ -41,7 +41,7 @@ class _MprofileState extends State<Mprofile>with
         iconTheme: IconThemeData(
             color: Colors.black
         ),
-        title: Text(
+        title: const Text(
           "Profile",
           style: TextStyle(
               color: Colors.black
