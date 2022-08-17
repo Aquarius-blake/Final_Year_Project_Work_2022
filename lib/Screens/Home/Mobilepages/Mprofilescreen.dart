@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mlikedposts.dart';
@@ -6,6 +7,7 @@ import 'package:provider/provider.dart';
 
 import '../../../Models/Users1.dart';
 import '../../../Provider/user_provider.dart';
+import '../../../shared/Pop_up.dart';
 
 
 
@@ -20,10 +22,22 @@ class Mprofile extends StatefulWidget {
 class _MprofileState extends State<Mprofile>with
     TickerProviderStateMixin {
   late TabController _tabController;
+  int commentlen=0;
+  getcommentlen()async{
+    try{
+      QuerySnapshot snapshot=await FirebaseFirestore.instance.collection("Posts").where('author uid' ,isEqualTo: widget.snap['uid']).get();
+      setState(() {
+        commentlen=snapshot.docs.length;
+      });    }
+    catch(e){
+      Showsnackbar(e.toString(), context);
+    }
+  }
   @override
   void initState() {
     super.initState();
     _tabController = TabController( vsync:this, length: 2);
+    getcommentlen();
   }
   @override
   void dispose() {
@@ -69,7 +83,7 @@ class _MprofileState extends State<Mprofile>with
                         Row(
                           children: [
                             Text(
-                              "20",
+                              "$commentlen",
                               style: TextStyle(
                                   fontSize: 24,
                                   fontStyle: FontStyle.italic,
