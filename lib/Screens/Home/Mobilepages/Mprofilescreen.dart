@@ -89,7 +89,7 @@ class _MprofileState extends State<Mprofile>with
                                   fontStyle: FontStyle.italic,
                               ),
                             ),
-                            SizedBox(width: 10,),
+                            const SizedBox(width: 10,),
                             const Text(
                               "Posts",
                               style: TextStyle(
