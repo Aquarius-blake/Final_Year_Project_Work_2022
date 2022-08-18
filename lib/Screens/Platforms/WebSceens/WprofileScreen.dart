@@ -60,191 +60,192 @@ class _WprofileState extends State<Wprofile> with
               child: Container(
                 padding: const EdgeInsets.all(40),
                 child: ListView(
-                  children:[Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children:[
+                      Column(
                         children: [
-                          CircleAvatar(
-                            radius: 65,
-                            backgroundImage: NetworkImage(
-                                widget.snap['profilepic']
-                            ),
-                          ),
-                          Column(
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Row(
-                                children: [
-                                  Text(
-                                    "$postlen",
-                                    style: const TextStyle(
-                                      fontSize: 24,
-                                      fontStyle: FontStyle.italic,
-                                    ),
-                                  ),
-                                  const SizedBox(width: 10,),
-                                  const Text(
-                                    "Posts",
-                                    style: TextStyle(
-                                        fontSize: 24,
-                                        fontStyle: FontStyle.italic,
-                                        fontWeight: FontWeight.bold
-                                    ),
-                                  )
-                                ],
+                              CircleAvatar(
+                                radius: 65,
+                                backgroundImage: NetworkImage(
+                                    widget.snap['profilepic']
+                                ),
                               ),
-                              SizedBox(height: 20,),
-                              Row(
+                              Column(
                                 children: [
-                                  widget.snap['uid']!=user1.UID? ElevatedButton(
-                                    onPressed: (){},
-                                    child: const Padding(
-                                      padding: EdgeInsets.only(
-                                          left: 16.0,
-                                          right: 16.0),
-                                      child: Text(
-                                        "Message",
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "$postlen",
+                                        style: const TextStyle(
+                                          fontSize: 24,
+                                          fontStyle: FontStyle.italic,
+                                        ),
+                                      ),
+                                      const SizedBox(width: 10,),
+                                      const Text(
+                                        "Posts",
                                         style: TextStyle(
-                                            color: Colors.lightBlueAccent
+                                            fontSize: 24,
+                                            fontStyle: FontStyle.italic,
+                                            fontWeight: FontWeight.bold
                                         ),
-                                      ),
-                                    ),
-                                    style: ElevatedButton.styleFrom(
-                                        elevation: 6.0,
-                                        shadowColor: Colors.black,
-                                        primary: Colors.white,
-                                        side: const BorderSide(
-                                          color: Colors.blue,
-                                          width: 2.0,
+                                      )
+                                    ],
+                                  ),
+                                  SizedBox(height: 20,),
+                                  Row(
+                                    children: [
+                                      widget.snap['uid']!=user1.UID? ElevatedButton(
+                                        onPressed: (){},
+                                        child: const Padding(
+                                          padding: EdgeInsets.only(
+                                              left: 16.0,
+                                              right: 16.0),
+                                          child: Text(
+                                            "Message",
+                                            style: TextStyle(
+                                                color: Colors.lightBlueAccent
+                                            ),
+                                          ),
                                         ),
+                                        style: ElevatedButton.styleFrom(
+                                            elevation: 6.0,
+                                            shadowColor: Colors.black,
+                                            primary: Colors.white,
+                                            side: const BorderSide(
+                                              color: Colors.blue,
+                                              width: 2.0,
+                                            ),
 
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(100.0)
-                                        )
-                                    ),
-                                  ):ElevatedButton(
-                                    style: ElevatedButton.styleFrom(
-                                        elevation: 6.0,
-                                        shadowColor: Colors.black,
-                                        primary: Colors.white,
-                                        side: const BorderSide(
-                                          color: Colors.blue,
-                                          width: 2.0,
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.circular(100.0)
+                                            )
                                         ),
+                                      ):ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            elevation: 6.0,
+                                            shadowColor: Colors.black,
+                                            primary: Colors.white,
+                                            side: const BorderSide(
+                                              color: Colors.blue,
+                                              width: 2.0,
+                                            ),
 
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(100.0)
-                                        )
-                                    ),
-                                    onPressed: (){},
-                                    child: const Padding(
-                                      padding: EdgeInsets.only(
-                                        left:18.0,
-                                        right: 18.0,
-                                      ),
-                                      child: Text(
-                                        "Edit Profile",
-                                        style: TextStyle(
-                                            color: Colors.lightBlueAccent
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.circular(100.0)
+                                            )
                                         ),
-                                      ),
-                                    ),
+                                        onPressed: (){},
+                                        child: const Padding(
+                                          padding: EdgeInsets.only(
+                                            left:18.0,
+                                            right: 18.0,
+                                          ),
+                                          child: Text(
+                                            "Edit Profile",
+                                            style: TextStyle(
+                                                color: Colors.lightBlueAccent
+                                            ),
+                                          ),
+                                        ),
+                                      )
+                                    ],
                                   )
                                 ],
                               )
                             ],
+                          ),
+                          SizedBox(height: 30.0,),
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              widget.snap['username'],
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18
+                              ),
+                            ),
+                          ),
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children:[
+                                Container(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    "Name: ${widget.snap['Full Name']}",
+                                    style: const TextStyle(
+                                        color: Colors.grey
+                                    ),
+                                  ),
+                                ),
+                                widget.snap['Gender']==null|| widget.snap['Gender']==""? const SizedBox(): Container(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    "Gender: ${widget.snap['Gender']}",
+                                    style: const TextStyle(
+                                        color: Colors.grey
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(width: 80,)
+                              ]
+                          ),
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            child: widget.snap['DateofBirth']==null || widget.snap['DateofBirth']==""? const SizedBox()
+                                : Text("Date of Birth: ${widget.snap['DateoBirth']}",
+                              style: const TextStyle(
+                                  color: Colors.grey
+                              ),),
+                          ),
+                          const Divider(
+                            height: 40,
                           )
                         ],
                       ),
-                      SizedBox(height: 30.0,),
-                      Container(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          widget.snap['username'],
-                          style: const TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18
-                          ),
-                        ),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children:[
+                      Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Column(
+                          children: [
                             Container(
-                              alignment: Alignment.centerLeft,
-                              child: Text(
-                                "Name: ${widget.snap['Full Name']}",
-                                style: const TextStyle(
-                                    color: Colors.grey
+                              child: Align(
+                                alignment: Alignment.centerLeft,
+                                child: TabBar(
+                                    labelColor: Colors.lightBlueAccent,
+                                    labelPadding: const EdgeInsets.only(
+                                        left: 80,
+                                        right: 35
+                                    ),
+                                    isScrollable: true,
+                                    unselectedLabelColor: Colors.black,
+                                    controller: _tabController,
+                                    tabs: [
+                                      Tab(text: "Posts",),
+                                      Tab(text: "Likes",)
+                                    ]
                                 ),
                               ),
                             ),
-                            widget.snap['Gender']==null|| widget.snap['Gender']==""? const SizedBox(): Container(
-                              alignment: Alignment.centerLeft,
-                              child: Text(
-                                "Gender: ${widget.snap['Gender']}",
-                                style: const TextStyle(
-                                    color: Colors.grey
-                                ),
-                              ),
-                            ),
-                            SizedBox(width: 80,)
-                          ]
-                      ),
-                      Container(
-                        alignment: Alignment.centerLeft,
-                        child: widget.snap['DateofBirth']==null || widget.snap['DateofBirth']==""? const SizedBox()
-                            : Text("Date of Birth: ${widget.snap['DateoBirth']}",
-                          style: const TextStyle(
-                              color: Colors.grey
-                          ),),
-                      ),
-                      const Divider(
-                        height: 40,
-                      )
-                    ],
-                  ),
-                    Padding(
-                      padding: const EdgeInsets.all(12.0),
-                      child: Column(
-                        children: [
-                          Container(
-                            child: Align(
-                              alignment: Alignment.centerLeft,
-                              child: TabBar(
-                                  labelColor: Colors.lightBlueAccent,
-                                  labelPadding: const EdgeInsets.only(
-                                      left: 80,
-                                      right: 35
-                                  ),
-                                  isScrollable: true,
-                                  unselectedLabelColor: Colors.black,
+                            Container(
+                              width:double.maxFinite ,
+                              height: 300,
+                              child: TabBarView(
                                   controller: _tabController,
-                                  tabs: [
-                                    Tab(text: "Posts",),
-                                    Tab(text: "Likes",)
-                                  ]
-                              ),
-                            ),
-                          ),
-                          Container(
-                            width:double.maxFinite ,
-                            height: 300,
-                            child: TabBarView(
-                                controller: _tabController,
-                                children: [
-                                  Profilepost(
-                                    snap: widget.snap,
-                                  ),
-                                  Likedposts(
-                                    snap: widget.snap,
-                                  )
-                                ]),
-                          )
-                        ],
-                      ),
-                    )
-                  ]
+                                  children: [
+                                    Profilepost(
+                                      snap: widget.snap,
+                                    ),
+                                    Likedposts(
+                                      snap: widget.snap,
+                                    )
+                                  ]),
+                            )
+                          ],
+                        ),
+                      )
+                    ]
                 ),
               ),
             ),
