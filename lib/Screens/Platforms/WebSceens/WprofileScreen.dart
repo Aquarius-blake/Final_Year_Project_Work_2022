@@ -169,7 +169,7 @@ class _WprofileState extends State<Wprofile> with
                               alignment: Alignment.centerLeft,
                               child: Text(
                                 "Name: ${widget.snap['Full Name']}",
-                                style: TextStyle(
+                                style: const TextStyle(
                                     color: Colors.grey
                                 ),
                               ),
@@ -186,6 +186,17 @@ class _WprofileState extends State<Wprofile> with
                             SizedBox(width: 80,)
                           ]
                       ),
+                      Container(
+                        alignment: Alignment.centerLeft,
+                        child: widget.snap['DateofBirth']==null || widget.snap['DateofBirth']==""? const SizedBox()
+                            : Text("Date of Birth: ${widget.snap['DateoBirth']}",
+                          style: const TextStyle(
+                              color: Colors.grey
+                          ),),
+                      ),
+                      const Divider(
+                        height: 40,
+                      )
                     ],
                   ),
 
