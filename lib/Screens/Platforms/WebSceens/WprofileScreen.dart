@@ -50,6 +50,7 @@ class _WprofileState extends State<Wprofile> with
       backgroundColor: Colors.lightBlueAccent,
       appBar: AppBar(
         title: Text("Profile"),
+        centerTitle: true,
       ),
       body: SafeArea(
         child: Center(
