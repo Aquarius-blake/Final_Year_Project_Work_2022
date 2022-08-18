@@ -17,6 +17,12 @@ backgroundColor: Colors.white,
   iconTheme: IconThemeData(
 color: Colors.black
   ),
+  title: Text(
+      "Edit Profile",
+  style: TextStyle(
+
+  ),
+  ),
 ),
     );
   }
