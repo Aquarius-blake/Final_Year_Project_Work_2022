@@ -14,10 +14,10 @@ class _MedprofileState extends State<Medprofile> {
     return Scaffold(
 appBar: AppBar(
 backgroundColor: Colors.white,
-  iconTheme: IconThemeData(
+  iconTheme: const IconThemeData(
 color: Colors.black
   ),
-  title: Text(
+  title: const Text(
       "Edit Profile",
   style: TextStyle(
 color: Colors.black
