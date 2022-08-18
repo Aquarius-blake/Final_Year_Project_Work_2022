@@ -66,7 +66,11 @@ CircleAvatar(
       widget.snap['profilepic']
   ),
 ),
-                        Column()
+                        Column(
+                          children: [
+
+                          ],
+                        )
                       ],
                     ),
                   ],
