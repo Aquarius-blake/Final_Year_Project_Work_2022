@@ -13,7 +13,8 @@ class Wprofile extends StatefulWidget {
   State<Wprofile> createState() => _WprofileState();
 }
 
-class _WprofileState extends State<Wprofile> {
+class _WprofileState extends State<Wprofile> with
+    TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
