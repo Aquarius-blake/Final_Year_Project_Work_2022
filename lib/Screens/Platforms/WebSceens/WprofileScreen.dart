@@ -87,6 +87,7 @@ class _WprofileState extends State<Wprofile> with
                                 )
                               ],
                             ),
+                            SizedBox(height: 20,),
                             Row(
                               children: [
                                 widget.snap['uid']!=user1.UID? ElevatedButton(
