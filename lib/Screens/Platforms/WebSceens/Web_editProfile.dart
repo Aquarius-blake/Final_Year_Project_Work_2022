@@ -13,6 +13,9 @@ class _WedProfileState extends State<WedProfile> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
+      appBar: AppBar(
+
+      ),
     );
   }
 }
