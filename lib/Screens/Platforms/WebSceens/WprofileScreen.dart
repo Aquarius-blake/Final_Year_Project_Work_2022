@@ -71,7 +71,60 @@ CircleAvatar(
 Row(),
                             Row(
                               children: [
+                                widget.snap['uid']!=user1.UID? ElevatedButton(
+                                  onPressed: (){},
+                                  child: const Padding(
+                                    padding: EdgeInsets.only(
+                                        left: 16.0,
+                                        right: 16.0),
+                                    child: Text(
+                                      "Message",
+                                      style: TextStyle(
+                                          color: Colors.lightBlueAccent
+                                      ),
+                                    ),
+                                  ),
+                                  style: ElevatedButton.styleFrom(
+                                      elevation: 6.0,
+                                      shadowColor: Colors.black,
+                                      primary: Colors.white,
+                                      side: const BorderSide(
+                                        color: Colors.blue,
+                                        width: 2.0,
+                                      ),
 
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(100.0)
+                                      )
+                                  ),
+                                ):ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                      elevation: 6.0,
+                                      shadowColor: Colors.black,
+                                      primary: Colors.white,
+                                      side: const BorderSide(
+                                        color: Colors.blue,
+                                        width: 2.0,
+                                      ),
+
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(100.0)
+                                      )
+                                  ),
+                                  onPressed: (){},
+                                  child: const Padding(
+                                    padding: EdgeInsets.only(
+                                      left:18.0,
+                                      right: 18.0,
+                                    ),
+                                    child: Text(
+                                      "Edit Profile",
+                                      style: TextStyle(
+                                          color: Colors.lightBlueAccent
+                                      ),
+                                    ),
+                                  ),
+                                )
                               ],
                             )
                           ],
