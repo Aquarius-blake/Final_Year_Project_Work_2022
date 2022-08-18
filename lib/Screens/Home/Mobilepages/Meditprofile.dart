@@ -12,7 +12,9 @@ class _MedprofileState extends State<Medprofile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+appBar: AppBar(
 
+),
     );
   }
 }
