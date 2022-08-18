@@ -53,7 +53,7 @@ class _WprofileState extends State<Wprofile> with
             child: Card(
               color: Colors.white,
               child: Container(
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(40),
                 child: Column(
                   children: [
                     SizedBox(width: MediaQuery.of(context).size.width,),
