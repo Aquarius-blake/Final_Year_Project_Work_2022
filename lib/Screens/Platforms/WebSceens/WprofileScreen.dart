@@ -163,6 +163,7 @@ class _WprofileState extends State<Wprofile> with
                         ),
                       ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children:[
                             Container(
                               alignment: Alignment.centerLeft,
@@ -172,9 +173,6 @@ class _WprofileState extends State<Wprofile> with
                                     color: Colors.grey
                                 ),
                               ),
-                            ),
-                            const Expanded(
-                                child: SizedBox()
                             ),
                             widget.snap['Gender']==null|| widget.snap['Gender']==""? const SizedBox(): Container(
                               alignment: Alignment.centerLeft,
