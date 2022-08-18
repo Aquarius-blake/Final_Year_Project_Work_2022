@@ -15,12 +15,12 @@ class _MedprofileState extends State<Medprofile> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         iconTheme: const IconThemeData(
-            color: Colors.black
+            color: Colors.black,
         ),
         title: const Text(
           "Edit Profile",
           style: TextStyle(
-              color: Colors.black
+              color: Colors.black,
           ),
         ),
       ),
