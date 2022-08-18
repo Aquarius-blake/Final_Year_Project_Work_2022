@@ -151,9 +151,20 @@ class _WprofileState extends State<Wprofile> with
                           )
                         ],
                       ),
-
+                      SizedBox(height: 30.0,),
+                      Container(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          widget.snap['username'],
+                          style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18
+                          ),
+                        ),
+                      ),
                     ],
                   ),
+
                   ]
                 ),
               ),
