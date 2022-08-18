@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Screens/Home/Mobilepages/Meditprofile.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mlikedposts.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Profile_posts.dart';
 import 'package:provider/provider.dart';
@@ -143,7 +144,13 @@ class _MprofileState extends State<Mprofile>with
                                       borderRadius: BorderRadius.circular(100.0)
                                   )
                               ),
-                              onPressed: (){},
+                              onPressed: (){
+                                Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (context)=>Medprofile(),
+                                    )
+                                );
+                              },
                               child: const Padding(
                                 padding: EdgeInsets.only(
                                   left:18.0,
