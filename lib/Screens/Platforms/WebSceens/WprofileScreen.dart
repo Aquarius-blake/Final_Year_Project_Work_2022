@@ -69,7 +69,26 @@ CircleAvatar(
 ),
                         Column(
                           children: [
-Row(),
+Row(
+  children: [
+    Text(
+      "$postlen",
+      style: const TextStyle(
+        fontSize: 24,
+        fontStyle: FontStyle.italic,
+      ),
+    ),
+    const SizedBox(width: 10,),
+    const Text(
+      "Posts",
+      style: TextStyle(
+          fontSize: 24,
+          fontStyle: FontStyle.italic,
+          fontWeight: FontWeight.bold
+      ),
+    )
+  ],
+),
                             Row(
                               children: [
                                 widget.snap['uid']!=user1.UID? ElevatedButton(
