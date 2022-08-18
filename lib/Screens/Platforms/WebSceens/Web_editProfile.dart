@@ -11,7 +11,9 @@ class WedProfile extends StatefulWidget {
 class _WedProfileState extends State<WedProfile> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: Colors.lightBlueAccent,
+    );
   }
 }
 
