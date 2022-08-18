@@ -61,7 +61,7 @@ class _WprofileState extends State<Wprofile> with
                     Row(
                       children: [
 CircleAvatar(
-  radius: 25,
+  radius: 55,
 
 )
                       ],
