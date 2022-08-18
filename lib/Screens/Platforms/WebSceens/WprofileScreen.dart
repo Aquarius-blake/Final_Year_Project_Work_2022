@@ -48,7 +48,9 @@ class _WprofileState extends State<Wprofile> with
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("Profile"),
+      ),
       body: SafeArea(
         child: Center(
           child: Container(
