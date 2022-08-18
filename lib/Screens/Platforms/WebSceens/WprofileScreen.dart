@@ -56,39 +56,37 @@ class _WprofileState extends State<Wprofile> with
                 padding: const EdgeInsets.all(40),
                 child: Column(
                   children: [
-                    SizedBox(width: MediaQuery.of(context).size.width,),
-                    Text("sdsafdsf"),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-CircleAvatar(
-  radius: 65,
-  backgroundImage: NetworkImage(
-      widget.snap['profilepic']
-  ),
-),
+                        CircleAvatar(
+                          radius: 65,
+                          backgroundImage: NetworkImage(
+                              widget.snap['profilepic']
+                          ),
+                        ),
                         Column(
                           children: [
-Row(
-  children: [
-    Text(
-      "$postlen",
-      style: const TextStyle(
-        fontSize: 24,
-        fontStyle: FontStyle.italic,
-      ),
-    ),
-    const SizedBox(width: 10,),
-    const Text(
-      "Posts",
-      style: TextStyle(
-          fontSize: 24,
-          fontStyle: FontStyle.italic,
-          fontWeight: FontWeight.bold
-      ),
-    )
-  ],
-),
+                            Row(
+                              children: [
+                                Text(
+                                  "$postlen",
+                                  style: const TextStyle(
+                                    fontSize: 24,
+                                    fontStyle: FontStyle.italic,
+                                  ),
+                                ),
+                                const SizedBox(width: 10,),
+                                const Text(
+                                  "Posts",
+                                  style: TextStyle(
+                                      fontSize: 24,
+                                      fontStyle: FontStyle.italic,
+                                      fontWeight: FontWeight.bold
+                                  ),
+                                )
+                              ],
+                            ),
                             Row(
                               children: [
                                 widget.snap['uid']!=user1.UID? ElevatedButton(
