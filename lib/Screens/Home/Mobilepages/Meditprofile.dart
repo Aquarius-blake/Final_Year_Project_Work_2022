@@ -13,7 +13,7 @@ class _MedprofileState extends State<Medprofile> {
   Widget build(BuildContext context) {
     return Scaffold(
 appBar: AppBar(
-
+backgroundColor: Colors.white,
 ),
     );
   }
