@@ -61,7 +61,8 @@ class _WprofileState extends State<Wprofile> with
                     Row(
                       children: [
 CircleAvatar(
-  radius: 55,
+  radius: 65,
+  backgroundImage: NetworkImage(widget.snap['profilepic']),
 
 )
                       ],
