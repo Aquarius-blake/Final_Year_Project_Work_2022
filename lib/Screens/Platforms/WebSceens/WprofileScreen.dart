@@ -60,7 +60,10 @@ class _WprofileState extends State<Wprofile> with
                     Text("sdsafdsf"),
                     Row(
                       children: [
+CircleAvatar(
+  radius: 25,
 
+)
                       ],
                     ),
                   ],
