@@ -69,7 +69,11 @@ CircleAvatar(
                         Column(
                           children: [
 Row(),
-                            Row()
+                            Row(
+                              children: [
+
+                              ],
+                            )
                           ],
                         )
                       ],
