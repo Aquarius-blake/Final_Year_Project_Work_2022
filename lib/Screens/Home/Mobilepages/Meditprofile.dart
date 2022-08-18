@@ -14,6 +14,9 @@ class _MedprofileState extends State<Medprofile> {
     return Scaffold(
 appBar: AppBar(
 backgroundColor: Colors.white,
+  iconTheme: IconThemeData(
+
+  ),
 ),
     );
   }
