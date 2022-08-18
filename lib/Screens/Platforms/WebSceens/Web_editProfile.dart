@@ -14,7 +14,7 @@ class _WedProfileState extends State<WedProfile> {
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
       appBar: AppBar(
-
+title: Text("Edit Profile"),
       ),
     );
   }
