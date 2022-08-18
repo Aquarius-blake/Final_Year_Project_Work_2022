@@ -59,6 +59,7 @@ class _WprofileState extends State<Wprofile> with
                     SizedBox(width: MediaQuery.of(context).size.width,),
                     Text("sdsafdsf"),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
 CircleAvatar(
   radius: 65,
