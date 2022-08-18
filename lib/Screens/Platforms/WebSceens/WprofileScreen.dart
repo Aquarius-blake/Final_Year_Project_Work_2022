@@ -53,6 +53,9 @@ class _WprofileState extends State<Wprofile> with
           child: Container(
             padding: const EdgeInsets.all(40),
             child: Card(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(60.0)
+              ),
               color: Colors.white,
               child: Container(
                 padding: const EdgeInsets.all(40),
