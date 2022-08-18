@@ -54,103 +54,107 @@ class _WprofileState extends State<Wprofile> with
               color: Colors.white,
               child: Container(
                 padding: const EdgeInsets.all(40),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        CircleAvatar(
-                          radius: 65,
-                          backgroundImage: NetworkImage(
-                              widget.snap['profilepic']
+                child: ListView(
+                  children:[Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          CircleAvatar(
+                            radius: 65,
+                            backgroundImage: NetworkImage(
+                                widget.snap['profilepic']
+                            ),
                           ),
-                        ),
-                        Column(
-                          children: [
-                            Row(
-                              children: [
-                                Text(
-                                  "$postlen",
-                                  style: const TextStyle(
-                                    fontSize: 24,
-                                    fontStyle: FontStyle.italic,
-                                  ),
-                                ),
-                                const SizedBox(width: 10,),
-                                const Text(
-                                  "Posts",
-                                  style: TextStyle(
+                          Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Text(
+                                    "$postlen",
+                                    style: const TextStyle(
                                       fontSize: 24,
                                       fontStyle: FontStyle.italic,
-                                      fontWeight: FontWeight.bold
-                                  ),
-                                )
-                              ],
-                            ),
-                            SizedBox(height: 20,),
-                            Row(
-                              children: [
-                                widget.snap['uid']!=user1.UID? ElevatedButton(
-                                  onPressed: (){},
-                                  child: const Padding(
-                                    padding: EdgeInsets.only(
-                                        left: 16.0,
-                                        right: 16.0),
-                                    child: Text(
-                                      "Message",
-                                      style: TextStyle(
-                                          color: Colors.lightBlueAccent
-                                      ),
                                     ),
                                   ),
-                                  style: ElevatedButton.styleFrom(
-                                      elevation: 6.0,
-                                      shadowColor: Colors.black,
-                                      primary: Colors.white,
-                                      side: const BorderSide(
-                                        color: Colors.blue,
-                                        width: 2.0,
+                                  const SizedBox(width: 10,),
+                                  const Text(
+                                    "Posts",
+                                    style: TextStyle(
+                                        fontSize: 24,
+                                        fontStyle: FontStyle.italic,
+                                        fontWeight: FontWeight.bold
+                                    ),
+                                  )
+                                ],
+                              ),
+                              SizedBox(height: 20,),
+                              Row(
+                                children: [
+                                  widget.snap['uid']!=user1.UID? ElevatedButton(
+                                    onPressed: (){},
+                                    child: const Padding(
+                                      padding: EdgeInsets.only(
+                                          left: 16.0,
+                                          right: 16.0),
+                                      child: Text(
+                                        "Message",
+                                        style: TextStyle(
+                                            color: Colors.lightBlueAccent
+                                        ),
                                       ),
+                                    ),
+                                    style: ElevatedButton.styleFrom(
+                                        elevation: 6.0,
+                                        shadowColor: Colors.black,
+                                        primary: Colors.white,
+                                        side: const BorderSide(
+                                          color: Colors.blue,
+                                          width: 2.0,
+                                        ),
 
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(100.0)
-                                      )
-                                  ),
-                                ):ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                      elevation: 6.0,
-                                      shadowColor: Colors.black,
-                                      primary: Colors.white,
-                                      side: const BorderSide(
-                                        color: Colors.blue,
-                                        width: 2.0,
-                                      ),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(100.0)
+                                        )
+                                    ),
+                                  ):ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                        elevation: 6.0,
+                                        shadowColor: Colors.black,
+                                        primary: Colors.white,
+                                        side: const BorderSide(
+                                          color: Colors.blue,
+                                          width: 2.0,
+                                        ),
 
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(100.0)
-                                      )
-                                  ),
-                                  onPressed: (){},
-                                  child: const Padding(
-                                    padding: EdgeInsets.only(
-                                      left:18.0,
-                                      right: 18.0,
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(100.0)
+                                        )
                                     ),
-                                    child: Text(
-                                      "Edit Profile",
-                                      style: TextStyle(
-                                          color: Colors.lightBlueAccent
+                                    onPressed: (){},
+                                    child: const Padding(
+                                      padding: EdgeInsets.only(
+                                        left:18.0,
+                                        right: 18.0,
+                                      ),
+                                      child: Text(
+                                        "Edit Profile",
+                                        style: TextStyle(
+                                            color: Colors.lightBlueAccent
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                )
-                              ],
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  ],
+                                  )
+                                ],
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+
+                    ],
+                  ),
+                  ]
                 ),
               ),
             ),
