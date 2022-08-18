@@ -5,6 +5,8 @@ import 'package:provider/provider.dart';
 import '../../../Models/Users1.dart';
 import '../../../Provider/user_provider.dart';
 import '../../../shared/Pop_up.dart';
+import '../../Home/Mobilepages/Mlikedposts.dart';
+import '../../Home/Mobilepages/Profile_posts.dart';
 
 
 class Wprofile extends StatefulWidget {
@@ -199,7 +201,46 @@ class _WprofileState extends State<Wprofile> with
                       )
                     ],
                   ),
-
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Column(
+                        children: [
+                          Container(
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: TabBar(
+                                  labelColor: Colors.lightBlueAccent,
+                                  labelPadding: const EdgeInsets.only(
+                                      left: 80,
+                                      right: 35
+                                  ),
+                                  isScrollable: true,
+                                  unselectedLabelColor: Colors.black,
+                                  controller: _tabController,
+                                  tabs: [
+                                    Tab(text: "Posts",),
+                                    Tab(text: "Likes",)
+                                  ]
+                              ),
+                            ),
+                          ),
+                          Container(
+                            width:double.maxFinite ,
+                            height: 300,
+                            child: TabBarView(
+                                controller: _tabController,
+                                children: [
+                                  Profilepost(
+                                    snap: widget.snap,
+                                  ),
+                                  Likedposts(
+                                    snap: widget.snap,
+                                  )
+                                ]),
+                          )
+                        ],
+                      ),
+                    )
                   ]
                 ),
               ),
