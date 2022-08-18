@@ -49,7 +49,7 @@ class _WprofileState extends State<Wprofile> with
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
       appBar: AppBar(
-        title: Text("Profile"),
+        title: const Text("Profile"),
         centerTitle: true,
       ),
       body: SafeArea(
