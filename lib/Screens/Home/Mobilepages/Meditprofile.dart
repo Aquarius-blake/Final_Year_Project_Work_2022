@@ -67,7 +67,9 @@ _selectimage(BuildContext context)async{
 @override
   void initState() {
   Fname.text=widget.snap['Full Name'];
-    super.initState();
+  Bio.text=widget.snap['Bio'];
+
+  super.initState();
   }
 
   @override
