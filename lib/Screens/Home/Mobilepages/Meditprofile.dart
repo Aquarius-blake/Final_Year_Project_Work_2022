@@ -161,6 +161,36 @@ class _MedprofileState extends State<Medprofile> {
 
                           ),
                         ),
+                        SizedBox(height: 20,),
+                        TextFormField(
+                          maxLines: 8,
+                          controller: Bio,
+                          onChanged: (val){
+                            setState(() {
+                              Bio.text=val;
+                            });
+                          },
+                          decoration: InputDecoration(
+                            label: const Text("Bio"),
+                            hintText: "Enter Bio",
+                            filled: true,
+                            fillColor: Colors.white70,
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: const BorderSide(
+                                  color: Colors.redAccent
+                              ),
+                              borderRadius: BorderRadius.circular(100.0),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(100.0),
+
+                            ),
+                          ),
+
+                          style: TextStyle(
+
+                          ),
+                        ),
                       ],
                     )
                 )
