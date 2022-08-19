@@ -29,7 +29,11 @@ class _MedprofileState extends State<Medprofile> {
         ),
       ),
       body: Container(
-        child: Card(),
+        child: Card(
+          child: ListView(
+
+          ),
+        ),
       ),
     );
   }
