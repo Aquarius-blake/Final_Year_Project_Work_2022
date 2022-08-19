@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:forum3/Services/Upload.dart';
+import 'package:forum3/shared/error_handling.dart';
 import 'package:image_picker/image_picker.dart';
 
 
@@ -66,15 +67,19 @@ class _MedprofileState extends State<Medprofile> {
 
   @override
   void initState() {
-    Fname.text=widget.snap['Full Name'];
-    // Bio.text=widget.snap['Bio'];
-
+    try {
+      Fname.text = widget.snap['Full Name'];
+      Bio.text=widget.snap['Bio'];
+    }catch(e){
+      errormessage(e.toString(), context);
+    }
     super.initState();
   }
 
   @override
   void dispose() {
     Fname.dispose();
+    Bio.dispose();
     super.dispose();
   }
 
@@ -109,7 +114,6 @@ class _MedprofileState extends State<Medprofile> {
                             image!=null? CircleAvatar(
                               radius: 60.0,
                               backgroundImage:MemoryImage(image) ,
-
                             ):CircleAvatar(
                               radius: 60.0,
                               backgroundImage: NetworkImage(widget.snap['profilepic']),
