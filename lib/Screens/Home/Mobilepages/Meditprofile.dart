@@ -13,6 +13,7 @@ class Medprofile extends StatefulWidget {
 class _MedprofileState extends State<Medprofile> {
 dynamic image;
 final Upload Selection=Upload();
+TextEditingController Fname=TextEditingController();
 
   final _formKey =GlobalKey<FormState>();
 
@@ -105,6 +106,33 @@ Form(
                 )
             )
           ],
+        ),
+        SizedBox(),
+        TextFormField(
+          controller: Fname,
+          validator: (val)=>val!.isEmpty ? "Enter Your Full Name" : null,
+          onChanged: (val){
+            setState(() {
+              Fname.text=val;
+            });
+          },
+          decoration: InputDecoration(
+            hintText: "Enter Full Name",
+            filled: true,
+            fillColor: Colors.white70,
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.redAccent),
+              borderRadius: BorderRadius.circular(100.0),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(100.0),
+
+            ),
+          ),
+
+          style: TextStyle(
+
+          ),
         ),
       ],
     )
