@@ -134,12 +134,14 @@ Form(
             });
           },
           decoration: InputDecoration(
-            label: Text("Full Name"),
+            label: const Text("Full Name"),
             hintText: "Enter Full Name",
             filled: true,
             fillColor: Colors.white70,
             focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.redAccent),
+              borderSide: const BorderSide(
+                  color: Colors.redAccent
+              ),
               borderRadius: BorderRadius.circular(100.0),
             ),
             enabledBorder: OutlineInputBorder(
