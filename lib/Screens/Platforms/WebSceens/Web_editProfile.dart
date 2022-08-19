@@ -15,7 +15,7 @@ class _WedProfileState extends State<WedProfile> {
       backgroundColor: Colors.lightBlueAccent,
       appBar: AppBar(
         centerTitle: true,
-title: Text("Edit Profile"),
+title: const Text("Edit Profile"),
       ),
       body: ListView(),
     );
