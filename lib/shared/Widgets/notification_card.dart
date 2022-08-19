@@ -10,6 +10,8 @@ class NotifCard extends StatefulWidget {
 class _NotifCardState extends State<NotifCard> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child:  Card(),
+    );
   }
 }
