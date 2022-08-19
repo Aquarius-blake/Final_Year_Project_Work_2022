@@ -22,11 +22,11 @@ _selectimage(BuildContext context)async{
       context: context,
       builder: (context){
         return SimpleDialog(
-          title: Text("Update Profile Picture"),
+          title: const Text("Update Profile Picture"),
           children: [
             SimpleDialogOption(
               padding: EdgeInsets.all(15.0),
-              child: Text("Take a Photo"),
+              child: const Text("Take a Photo"),
               onPressed: ()async{
                 Navigator.of(context).pop();
                 dynamic file=await Selection.uploadpic(ImageSource.camera);
@@ -37,7 +37,7 @@ _selectimage(BuildContext context)async{
             ),
             SimpleDialogOption(
               padding: EdgeInsets.all(15.0),
-              child: Text("Choose from gallery"),
+              child: const Text("Choose from gallery"),
               onPressed: ()async{
                 Navigator.of(context).pop();
                 dynamic file=await Selection.uploadpic(ImageSource.gallery);
@@ -48,7 +48,7 @@ _selectimage(BuildContext context)async{
             ),
             SimpleDialogOption(
               padding: EdgeInsets.all(15.0),
-              child: Text("Cancel"),
+              child: const Text("Cancel"),
               onPressed: (){
                 Navigator.of(context).pop();
               },
