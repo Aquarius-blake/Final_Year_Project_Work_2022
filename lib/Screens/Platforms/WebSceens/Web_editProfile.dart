@@ -17,6 +17,7 @@ class _WedProfileState extends State<WedProfile> {
         centerTitle: true,
 title: Text("Edit Profile"),
       ),
+      body: ListView(),
     );
   }
 }
