@@ -147,7 +147,9 @@ class _MprofileState extends State<Mprofile>with
                               onPressed: (){
                                 Navigator.of(context).push(
                                     MaterialPageRoute(
-                                      builder: (context)=>Medprofile(),
+                                      builder: (context)=>Medprofile(
+                                        snap: widget.snap,
+                                      ),
                                     )
                                 );
                               },
