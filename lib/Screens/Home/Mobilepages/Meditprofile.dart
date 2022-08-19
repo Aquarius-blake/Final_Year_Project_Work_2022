@@ -110,6 +110,7 @@ Form(
 
             ):CircleAvatar(
               radius: 60.0,
+              backgroundImage: NetworkImage(widget.snap['profilepic']),
             ),
             Positioned(
                 bottom: -5,
