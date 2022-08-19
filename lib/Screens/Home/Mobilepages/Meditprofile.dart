@@ -15,6 +15,8 @@ class _MedprofileState extends State<Medprofile> {
 dynamic image;
 final Upload Selection=Upload();
 TextEditingController Fname=TextEditingController();
+TextEditingController Bio=TextEditingController();
+
 
   final _formKey =GlobalKey<FormState>();
 
