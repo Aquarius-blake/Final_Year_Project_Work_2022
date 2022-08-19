@@ -9,6 +9,9 @@ class Medprofile extends StatefulWidget {
 }
 
 class _MedprofileState extends State<Medprofile> {
+
+  final _formKey =GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

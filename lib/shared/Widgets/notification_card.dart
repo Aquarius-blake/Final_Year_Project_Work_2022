@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class NotifCard extends StatefulWidget {
-  const NotifCard({Key? key}) : super(key: key);
+  final snap;
+  const NotifCard({Key? key,this.snap}) : super(key: key);
 
   @override
   State<NotifCard> createState() => _NotifCardState();
