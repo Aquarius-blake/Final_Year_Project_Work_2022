@@ -12,9 +12,53 @@ class Medprofile extends StatefulWidget {
 
 class _MedprofileState extends State<Medprofile> {
 dynamic image;
-final Upload _upload=Upload();
+final Upload Selection=Upload();
 
   final _formKey =GlobalKey<FormState>();
+
+
+_selectimage(BuildContext context)async{
+  return showDialog(
+      context: context,
+      builder: (context){
+        return SimpleDialog(
+          title: Text("Update Profile Picture"),
+          children: [
+            SimpleDialogOption(
+              padding: EdgeInsets.all(15.0),
+              child: Text("Take a Photo"),
+              onPressed: ()async{
+                Navigator.of(context).pop();
+                dynamic file=await Selection.uploadpic(ImageSource.camera);
+                setState(() {
+                  image=file;
+                });
+              },
+            ),
+            SimpleDialogOption(
+              padding: EdgeInsets.all(15.0),
+              child: Text("Choose from gallery"),
+              onPressed: ()async{
+                Navigator.of(context).pop();
+                dynamic file=await Selection.uploadpic(ImageSource.gallery);
+                setState(() {
+                  image=file;
+                });
+              },
+            ),
+            SimpleDialogOption(
+              padding: EdgeInsets.all(15.0),
+              child: Text("Cancel"),
+              onPressed: (){
+                Navigator.of(context).pop();
+              },
+            )
+          ],
+        );
+      }
+  );
+
+}
 
   @override
   Widget build(BuildContext context) {
@@ -53,12 +97,7 @@ Form(
                 bottom: -5,
                 left: 65,
                 child: IconButton(
-                    onPressed: ()async{
-                      image=await _upload.uploadpic(ImageSource.gallery);
-                      setState(()  {
-
-                      });
-                    },
+                    onPressed: ()=>_selectimage(context),
                     icon: const Icon(
                       Icons.add_a_photo,
                       color: Colors.white,
