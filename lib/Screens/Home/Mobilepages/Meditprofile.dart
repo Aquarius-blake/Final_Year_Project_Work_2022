@@ -134,6 +134,7 @@ Form(
             });
           },
           decoration: InputDecoration(
+            label: Text("Full Name"),
             hintText: "Enter Full Name",
             filled: true,
             fillColor: Colors.white70,
