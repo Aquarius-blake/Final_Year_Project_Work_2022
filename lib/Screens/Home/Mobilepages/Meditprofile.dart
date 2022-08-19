@@ -96,69 +96,72 @@ _selectimage(BuildContext context)async{
       ),
       body: Container(
         child: Card(
-          child: ListView(
+          child: Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: ListView(
 children: [
 Form(
   key: _formKey,
     child: Column(
       children: [
         Stack(
-          children: [
-            image!=null? CircleAvatar(
-              radius: 60.0,
-              backgroundImage:MemoryImage(image) ,
+            children: [
+              image!=null? CircleAvatar(
+                radius: 60.0,
+                backgroundImage:MemoryImage(image) ,
 
-            ):CircleAvatar(
-              radius: 60.0,
-              backgroundImage: NetworkImage(widget.snap['profilepic']),
-            ),
-            Positioned(
-                bottom: -5,
-                left: 65,
-                child: IconButton(
-                    onPressed: ()=>_selectimage(context),
-                    icon: const Icon(
-                      Icons.add_a_photo,
-                      color: Colors.white,
-                    )
-                )
-            )
-          ],
+              ):CircleAvatar(
+                radius: 60.0,
+                backgroundImage: NetworkImage(widget.snap['profilepic']),
+              ),
+              Positioned(
+                  bottom: -5,
+                  left: 65,
+                  child: IconButton(
+                      onPressed: ()=>_selectimage(context),
+                      icon: const Icon(
+                        Icons.add_a_photo,
+                        color: Colors.white,
+                      )
+                  )
+              )
+            ],
         ),
         SizedBox(height: 20,),
         TextFormField(
-          controller: Fname,
-          validator: (val)=>val!.isEmpty ? "Enter Your Full Name" : null,
-          onChanged: (val){
-            setState(() {
-              Fname.text=val;
-            });
-          },
-          decoration: InputDecoration(
-            label: const Text("Full Name"),
-            hintText: "Enter Full Name",
-            filled: true,
-            fillColor: Colors.white70,
-            focusedBorder: OutlineInputBorder(
-              borderSide: const BorderSide(
-                  color: Colors.redAccent
+            controller: Fname,
+            validator: (val)=>val!.isEmpty ? "Enter Your Full Name" : null,
+            onChanged: (val){
+              setState(() {
+                Fname.text=val;
+              });
+            },
+            decoration: InputDecoration(
+              label: const Text("Full Name"),
+              hintText: "Enter Full Name",
+              filled: true,
+              fillColor: Colors.white70,
+              focusedBorder: OutlineInputBorder(
+                borderSide: const BorderSide(
+                    color: Colors.redAccent
+                ),
+                borderRadius: BorderRadius.circular(100.0),
               ),
-              borderRadius: BorderRadius.circular(100.0),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(100.0),
+
+              ),
             ),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(100.0),
+
+            style: TextStyle(
 
             ),
-          ),
-
-          style: TextStyle(
-
-          ),
         ),
       ],
     )
 )
 ],
+            ),
           ),
         ),
       ),
