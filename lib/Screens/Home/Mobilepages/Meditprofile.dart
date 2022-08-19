@@ -70,7 +70,7 @@ _selectimage(BuildContext context)async{
 
   @override
   void dispose() {
-    // TODO: implement dispose
+  Fname.dispose();
     super.dispose();
   }
 
