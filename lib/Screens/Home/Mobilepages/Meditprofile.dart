@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:forum3/Services/Upload.dart';
+import 'package:image_picker/image_picker.dart';
 
 
 class Medprofile extends StatefulWidget {
@@ -9,6 +11,8 @@ class Medprofile extends StatefulWidget {
 }
 
 class _MedprofileState extends State<Medprofile> {
+dynamic image;
+final Upload _upload=Upload();
 
   final _formKey =GlobalKey<FormState>();
 
@@ -36,7 +40,33 @@ Form(
   key: _formKey,
     child: Column(
       children: [
+        Stack(
+          children: [
+            image!=null? CircleAvatar(
+              radius: 60.0,
+              backgroundImage:MemoryImage(image) ,
 
+            ):CircleAvatar(
+              radius: 60.0,
+            ),
+            Positioned(
+                bottom: -5,
+                left: 65,
+                child: IconButton(
+                    onPressed: ()async{
+                      image=await _upload.uploadpic(ImageSource.gallery);
+                      setState(()  {
+
+                      });
+                    },
+                    icon: const Icon(
+                      Icons.add_a_photo,
+                      color: Colors.white,
+                    )
+                )
+            )
+          ],
+        ),
       ],
     )
 )
