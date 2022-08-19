@@ -18,6 +18,7 @@ class User1{
   late final String? ppurl;
   late final String? Name;
   late final String? Gender;
+  late final String? Bio;
 
 
   User1({ this.UID,
@@ -32,6 +33,7 @@ class User1{
     this.Name,
     this.Gender,
      this.searchkey,
+    this.Bio
   });
 
   Map<String,dynamic> toJson()=>{
