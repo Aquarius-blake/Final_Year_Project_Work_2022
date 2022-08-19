@@ -171,7 +171,10 @@ class _MedprofileState extends State<Medprofile> {
                             });
                           },
                           decoration: InputDecoration(
-                            label: const Text("Bio"),
+                            label: const Text(
+                                "Bio",
+                              textAlign: TextAlign.start,
+                            ),
                             hintText: "Enter Bio",
                             filled: true,
                             fillColor: Colors.white70,
