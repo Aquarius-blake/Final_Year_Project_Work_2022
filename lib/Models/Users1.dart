@@ -32,7 +32,7 @@ class User1{
     this.ppurl,
     this.Name,
     this.Gender,
-     this.searchkey,
+    this.searchkey,
     this.Bio
   });
 
@@ -52,14 +52,14 @@ class User1{
   static User1? FromSnap(DocumentSnapshot snap){
     var snapshot= snap.data() as Map<String,dynamic>;
     User1? User12=User1(
-      Username: snapshot['username'],
-      UID: snapshot['uid'],
-      Email: snapshot['Email'],
-      DOB: snapshot['DateofBirth'],
-      ppurl: snapshot['profilepic'],
-      Name: snapshot['Full Name'],
-      Gender: snapshot['Gender'],
-      searchkey: snapshot['searchkey'],
+        Username: snapshot['username'],
+        UID: snapshot['uid'],
+        Email: snapshot['Email'],
+        DOB: snapshot['DateofBirth'],
+        ppurl: snapshot['profilepic'],
+        Name: snapshot['Full Name'],
+        Gender: snapshot['Gender'],
+        searchkey: snapshot['searchkey'],
         Bio: snapshot['Bio']
     );
     return User12;
