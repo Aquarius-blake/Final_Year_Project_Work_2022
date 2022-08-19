@@ -4,7 +4,8 @@ import 'package:image_picker/image_picker.dart';
 
 
 class Medprofile extends StatefulWidget {
-  const Medprofile({Key? key}) : super(key: key);
+  final snap;
+  const Medprofile({Key? key,this.snap}) : super(key: key);
 
   @override
   State<Medprofile> createState() => _MedprofileState();
@@ -63,7 +64,7 @@ _selectimage(BuildContext context)async{
 
 @override
   void initState() {
-    // TODO: implement initState
+  Fname.text=widget.snap['Full Name'];
     super.initState();
   }
 
