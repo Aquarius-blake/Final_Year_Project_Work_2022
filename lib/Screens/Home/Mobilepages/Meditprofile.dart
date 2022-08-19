@@ -192,9 +192,7 @@ class _MedprofileState extends State<Medprofile> {
                             ),
                           ),
 
-                          style: TextStyle(
-
-                          ),
+                          style: const TextStyle(),
                         ),
                       ],
                     )
