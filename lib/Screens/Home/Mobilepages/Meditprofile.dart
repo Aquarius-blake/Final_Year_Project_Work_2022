@@ -217,7 +217,7 @@ class _MedprofileState extends State<Medprofile> {
                             ),
                             floatingLabelAlignment: FloatingLabelAlignment.start,
                             floatingLabelBehavior: FloatingLabelBehavior.always,
-                            hintText: "Enter Bio",
+                            hintText: "Write Something about yourself",
                             filled: true,
                             fillColor: Colors.white70,
                             focusedBorder: OutlineInputBorder(
