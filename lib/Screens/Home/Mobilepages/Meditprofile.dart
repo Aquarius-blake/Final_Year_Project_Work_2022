@@ -67,13 +67,18 @@ class _MedprofileState extends State<Medprofile> {
 
   @override
   void initState() {
+
+    super.initState();
+  }
+
+  @override
+  void didChangeDependencies() {
     try {
       Fname.text = widget.snap['Full Name'];
       Bio.text=widget.snap['Bio'];
     }catch(e){
       errormessage(e.toString(), context);
-    }
-    super.initState();
+    }    super.didChangeDependencies();
   }
 
   @override
