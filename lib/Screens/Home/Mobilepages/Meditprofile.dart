@@ -17,6 +17,8 @@ class _MedprofileState extends State<Medprofile> {
   final Upload Selection=Upload();
   TextEditingController Fname=TextEditingController();
   TextEditingController Bio=TextEditingController();
+  TextEditingController username=TextEditingController();
+
 
 
   final _formKey =GlobalKey<FormState>();
@@ -76,6 +78,8 @@ class _MedprofileState extends State<Medprofile> {
     try {
       Fname.text = widget.snap['Full Name'];
       Bio.text=widget.snap['Bio'];
+      username.text=widget.snap['username'];
+
     }catch(e){
       errormessage(e.toString(), context);
     }    super.didChangeDependencies();
