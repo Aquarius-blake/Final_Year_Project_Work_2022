@@ -181,7 +181,7 @@ class _MedprofileState extends State<Medprofile> {
                             });
                           },
                           decoration: InputDecoration(
-                            label: const Text("Username Name"),
+                            label: const Text("Username"),
                             hintText: "Enter Nick Name",
                             filled: true,
                             fillColor: Colors.white70,
