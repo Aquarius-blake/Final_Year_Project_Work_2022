@@ -89,6 +89,7 @@ class _MedprofileState extends State<Medprofile> {
   void dispose() {
     Fname.dispose();
     Bio.dispose();
+    username.dispose();
     super.dispose();
   }
 
