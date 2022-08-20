@@ -107,7 +107,7 @@ class _MedprofileState extends State<Medprofile> {
       body: Container(
         child: Card(
           child: Padding(
-            padding: const EdgeInsets.all(15.0),
+            padding: const EdgeInsets.all(20.0),
             child: ListView(
               children: [
                 Form(
