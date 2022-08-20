@@ -174,7 +174,7 @@ class _MedprofileState extends State<Medprofile> {
                         SizedBox(height: 20,),
                         TextFormField(
                           controller: username,
-                          validator: (val)=>val!.isEmpty ? "Enter Your Full Name" : null,
+                          validator: (val)=>val!.isEmpty ? "Enter Your Username" : null,
                           onChanged: (val){
                             setState(() {
                               username.text=val;
