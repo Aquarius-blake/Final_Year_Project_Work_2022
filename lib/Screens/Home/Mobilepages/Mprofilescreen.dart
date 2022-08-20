@@ -206,8 +206,18 @@ class _MprofileState extends State<Mprofile>with
                           ),
                         ),
                       ),
+
                       SizedBox(width: 80,)
                     ]
+                ),
+                widget.snap['Bio']==null|| widget.snap['Bio']==""? const SizedBox(): Container(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    "Bio: ${widget.snap['Bio']}",
+                    style: const TextStyle(
+                        color: Colors.grey
+                    ),
+                  ),
                 ),
                 Container(
                   alignment: Alignment.centerLeft,
