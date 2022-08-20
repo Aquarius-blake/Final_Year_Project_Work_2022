@@ -173,6 +173,36 @@ class _MedprofileState extends State<Medprofile> {
                         ),
                         SizedBox(height: 20,),
                         TextFormField(
+                          controller: username,
+                          validator: (val)=>val!.isEmpty ? "Enter Your Full Name" : null,
+                          onChanged: (val){
+                            setState(() {
+                              username.text=val;
+                            });
+                          },
+                          decoration: InputDecoration(
+                            label: const Text("Username Name"),
+                            hintText: "Enter Nick Name",
+                            filled: true,
+                            fillColor: Colors.white70,
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: const BorderSide(
+                                  color: Colors.redAccent
+                              ),
+                              borderRadius: BorderRadius.circular(100.0),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(100.0),
+
+                            ),
+                          ),
+
+                          style: TextStyle(
+
+                          ),
+                        ),
+                        SizedBox(height: 20,),
+                        TextFormField(
                           maxLines: 8,
                           controller: Bio,
                           onChanged: (val){
