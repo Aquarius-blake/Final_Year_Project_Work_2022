@@ -242,6 +242,7 @@ class _MDprofileState extends State<MDprofile>with
                         ),
                         Likedposts(
                           snap: widget.snap,
+                          uid: user1.UID,
                         )
                       ]),
                 )
