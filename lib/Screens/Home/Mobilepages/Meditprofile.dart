@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Models/Users1.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/Services/Upload.dart';
 import 'package:forum3/shared/Pop_up.dart';
@@ -11,7 +12,8 @@ import 'package:image_picker/image_picker.dart';
 class Medprofile extends StatefulWidget {
   final snap;
    bool drawer;
-   Medprofile({Key? key,this.snap,required this.drawer}) : super(key: key);
+   User1? user1;
+   Medprofile({Key? key,this.snap,required this.drawer,this.user1}) : super(key: key);
 
   @override
   State<Medprofile> createState() => _MedprofileState();
@@ -82,9 +84,9 @@ late DateTime? _dateTime;
   @override
   void didChangeDependencies() {
     try {
-      Fname.text = widget.snap['Full Name'];
-      Bio.text=widget.snap['Bio'];
-      username.text=widget.snap['username'];
+     !widget.drawer? Fname.text = widget.snap['Full Name']:Fname.text=widget.user1!.Name!;
+     !widget.drawer? Bio.text=widget.snap['Bio']:Bio.text=widget.user1!.Bio!;
+     !widget.drawer? username.text=widget.snap['username']:username.text=widget.user1!.Username!;
       gender.text=widget.snap['Gender'];
 
     }catch(e){
