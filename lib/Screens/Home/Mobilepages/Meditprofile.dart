@@ -19,6 +19,7 @@ class _MedprofileState extends State<Medprofile> {
   TextEditingController Fname=TextEditingController();
   TextEditingController Bio=TextEditingController();
   TextEditingController username=TextEditingController();
+  TextEditingController DOB=TextEditingController();
 
 
   final _formKey =GlobalKey<FormState>();
@@ -90,6 +91,7 @@ class _MedprofileState extends State<Medprofile> {
     Fname.dispose();
     Bio.dispose();
     username.dispose();
+    DOB.dispose();
     super.dispose();
   }
 
@@ -206,7 +208,35 @@ ListTile(
   leading: FaIcon(
       FontAwesomeIcons.calendar
   ),
-  title: TextFormField(),
+  title: TextFormField(
+    controller: username,
+    validator: (val)=>val!.isEmpty ? "Enter Your Username" : null,
+    onChanged: (val){
+      setState(() {
+        username.text=val;
+      });
+    },
+    decoration: InputDecoration(
+      label: const Text("Username"),
+      hintText: "Enter Nick Name",
+      filled: true,
+      fillColor: Colors.white70,
+      focusedBorder: OutlineInputBorder(
+        borderSide: const BorderSide(
+            color: Colors.redAccent
+        ),
+        borderRadius: BorderRadius.circular(100.0),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(100.0),
+
+      ),
+    ),
+
+    style: TextStyle(
+
+    ),
+  ),
 ),
                         SizedBox( height: 10,),
                         TextFormField(
