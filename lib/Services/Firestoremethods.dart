@@ -198,6 +198,8 @@ Future<String> EditProfile(String userid,String Fname,String Username,String DOB
 
             await _firestore.collection('users').doc(userid).update({
                 "profilepic":ppurl,
+                "Gender":Gender,
+                "Full Name":Fname,
 
             });
             ress="Success";
