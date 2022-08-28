@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:forum3/Services/Upload.dart';
@@ -216,7 +217,7 @@ late DateTime? _dateTime;
                                 setState(() {
                                   _dateTime=value;
                                 if(_dateTime!=null) {
-                                  DOB.text = "${_dateTime!.year} / ${_dateTime!
+                                  DOB.text = " ${_dateTime!.year} / ${_dateTime!
                                       .month} / ${_dateTime!.day}";
                                 }
                                   });
@@ -228,6 +229,7 @@ late DateTime? _dateTime;
                           ),
                           horizontalTitleGap: 0.0,
                           title: TextFormField(
+                            textAlign: TextAlign.center,
                             controller: DOB,
                             validator: (val)=>val!.isEmpty ? "Enter Your Date of Birth" : null,
                             onChanged: (val){
