@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/Services/Upload.dart';
+import 'package:forum3/shared/Pop_up.dart';
 import 'package:forum3/shared/error_handling.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -328,7 +329,8 @@ late DateTime? _dateTime;
                           child: ElevatedButton(
                               onPressed: ()async{
                                 String ress= await FirestoreMethods().EditProfile(widget.snap['uid'], Fname.text, username.text, DOB.text, Bio.text, gender.text, image, widget.snap['profilepic']);
-                              },
+                              Showsnackbar(ress, context);
+                                },
                               child: const Padding(
                                 padding: EdgeInsets.only(
                                     left:32.0,
