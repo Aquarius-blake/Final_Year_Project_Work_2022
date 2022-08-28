@@ -333,8 +333,13 @@ late DateTime? _dateTime;
                         Center(
                           child: ElevatedButton(
                               onPressed: ()async{
+                                if(!widget.drawer){
                                 String ress= await FirestoreMethods().EditProfile(widget.snap['uid'], Fname.text, username.text, DOB.text, Bio.text, gender.text, image, widget.snap['profilepic']);
                               Showsnackbar(ress, context);
+                                }else{
+                                  String ress= await FirestoreMethods().EditProfile(widget.user1!.UID!, Fname.text, username.text, DOB.text, Bio.text, gender.text, image, widget.user1!.ppurl!);
+                                  Showsnackbar(ress, context);
+                                }
                                 },
                               child: const Padding(
                                 padding: EdgeInsets.only(
