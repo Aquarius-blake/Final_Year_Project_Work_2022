@@ -204,44 +204,44 @@ class _MedprofileState extends State<Medprofile> {
                           ),
                         ),
                         SizedBox(height: 10,),
-ListTile(
-  leading: GestureDetector(
-    onTap: (){},
-    child: const FaIcon(
-        FontAwesomeIcons.calendar
-    ),
-  ),
-  horizontalTitleGap: 0.0,
-  title: TextFormField(
-    controller: DOB,
-    validator: (val)=>val!.isEmpty ? "Enter Your Date of Birth" : null,
-    onChanged: (val){
-      setState(() {
-        DOB.text=val;
-      });
-    },
-    decoration: InputDecoration(
-      label: const Text("Dare of Birth"),
-      hintText: "Enter Date of Birth",
-      filled: true,
-      fillColor: Colors.white70,
-      focusedBorder: OutlineInputBorder(
-        borderSide: const BorderSide(
-            color: Colors.redAccent
-        ),
-        borderRadius: BorderRadius.circular(100.0),
-      ),
-      enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(100.0),
+                        ListTile(
+                          leading: GestureDetector(
+                            onTap: (){},
+                            child: const FaIcon(
+                                FontAwesomeIcons.calendar
+                            ),
+                          ),
+                          horizontalTitleGap: 0.0,
+                          title: TextFormField(
+                            controller: DOB,
+                            validator: (val)=>val!.isEmpty ? "Enter Your Date of Birth" : null,
+                            onChanged: (val){
+                              setState(() {
+                                DOB.text=val;
+                              });
+                            },
+                            decoration: InputDecoration(
+                              label: const Text("Dare of Birth"),
+                              hintText: "Enter Date of Birth",
+                              filled: true,
+                              fillColor: Colors.white70,
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: const BorderSide(
+                                    color: Colors.redAccent
+                                ),
+                                borderRadius: BorderRadius.circular(100.0),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(100.0),
 
-      ),
-    ),
+                              ),
+                            ),
 
-    style: TextStyle(
+                            style: TextStyle(
 
-    ),
-  ),
-),
+                            ),
+                          ),
+                        ),
                         SizedBox( height: 10,),
                         TextFormField(
                           maxLines: 8,
@@ -253,7 +253,7 @@ ListTile(
                           },
                           decoration: InputDecoration(
                             label: const Text(
-                                "Bio",
+                              "Bio",
                               textAlign: TextAlign.start,
                             ),
                             floatingLabelAlignment: FloatingLabelAlignment.start,
