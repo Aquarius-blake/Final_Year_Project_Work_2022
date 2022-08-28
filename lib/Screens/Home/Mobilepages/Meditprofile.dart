@@ -206,6 +206,7 @@ ListTile(
   leading: FaIcon(
       FontAwesomeIcons.calendar
   ),
+  title: TextFormField(),
 ),
                         SizedBox( height: 10,),
                         TextFormField(
