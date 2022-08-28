@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mcomments_screen.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Meditpost.dart';
 import 'package:forum3/Screens/Platforms/WebSceens/Webed.dart';
@@ -322,7 +323,7 @@ class _PostCardState extends State<PostCard> {
                             );
                           }
                         },
-                        icon: Icon(
+                        icon: FaIcon(
                           Icons.comment_outlined,
                           color: Colors.black,
                         )
