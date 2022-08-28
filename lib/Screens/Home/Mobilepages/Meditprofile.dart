@@ -207,16 +207,16 @@ late DateTime? _dateTime;
                         ),
                         SizedBox(height: 20,),
                         TextFormField(
-                          controller: username,
+                          controller: gender,
                           validator: (val)=>val!.isEmpty ? "Enter Your Username" : null,
                           onChanged: (val){
                             setState(() {
-                              username.text=val;
+                              gender.text=val;
                             });
                           },
                           decoration: InputDecoration(
-                            label: const Text("Username"),
-                            hintText: "Enter Nick Name",
+                            label: const Text("Gender"),
+                            hintText: "Enter Gender",
                             filled: true,
                             fillColor: Colors.white70,
                             focusedBorder: OutlineInputBorder(
