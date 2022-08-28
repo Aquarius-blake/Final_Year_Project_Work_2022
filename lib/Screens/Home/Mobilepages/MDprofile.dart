@@ -150,7 +150,7 @@ class _MDprofileState extends State<MDprofile>with
                 Container(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    widget.snap['username'],
+                    user1.Username!,
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18
