@@ -211,6 +211,7 @@ ListTile(
         FontAwesomeIcons.calendar
     ),
   ),
+  horizontalTitleGap: 1,
   title: TextFormField(
     controller: DOB,
     validator: (val)=>val!.isEmpty ? "Enter Your Date of Birth" : null,
