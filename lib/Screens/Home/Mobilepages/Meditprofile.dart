@@ -287,10 +287,12 @@ late DateTime _dateTime;
 
                           style: const TextStyle(),
                         ),
-                        SizedBox(height: 20,),
-                        ElevatedButton(
-                            onPressed: (){},
-                            child: Text("Save"),
+                        const SizedBox(height: 20,),
+                        Center(
+                          child: ElevatedButton(
+                              onPressed: (){},
+                              child: Text("Save"),
+                          ),
                         )
                       ],
                     )
