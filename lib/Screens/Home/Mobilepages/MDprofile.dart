@@ -2,8 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Meditprofile.dart';
-import 'package:forum3/Screens/Home/Mobilepages/Mlikedposts.dart';
-import 'package:forum3/Screens/Home/Mobilepages/Profile_posts.dart';
 import 'package:provider/provider.dart';
 
 import '../../../Models/Users1.dart';
@@ -207,45 +205,7 @@ drawer: true,
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Column(
-              children: [
-                Container(
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: TabBar(
-                        labelColor: Colors.lightBlueAccent,
-                        labelPadding: const EdgeInsets.only(
-                            left: 80,
-                            right: 35
-                        ),
-                        isScrollable: true,
-                        unselectedLabelColor: Colors.black,
-                        controller: _tabController,
-                        tabs: const [
-                          Tab(text: "Posts",),
-                          Tab(text: "Likes",)
-                        ]
-                    ),
-                  ),
-                ),
-                Container(
-                  width:double.maxFinite ,
-                  height: 300,
-                  child: TabBarView(
-                      controller: _tabController,
-                      children: [
-                        Profilepost(
-                        ),
-                        Likedposts(
-                          uid: user1.UID,
-                        )
-                      ]),
-                )
-              ],
-            ),
-          )
+
         ],
       ),
     );
