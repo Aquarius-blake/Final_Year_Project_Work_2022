@@ -238,6 +238,7 @@ class _MDprofileState extends State<MDprofile>with
                       children: [
                         Profilepost(
                           snap: widget.snap,
+                          uid: user1.UID,
                         ),
                         Likedposts(
                           snap: widget.snap,
