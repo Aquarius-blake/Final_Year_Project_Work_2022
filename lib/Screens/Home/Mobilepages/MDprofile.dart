@@ -123,6 +123,7 @@ class _MDprofileState extends State<MDprofile>with
                                     MaterialPageRoute(
                                       builder: (context)=>Medprofile(
 drawer: true,
+                                        user1: user1,
                                       ),
                                     )
                                 );
