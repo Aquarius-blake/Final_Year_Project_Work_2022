@@ -291,10 +291,16 @@ late DateTime _dateTime;
                         Center(
                           child: ElevatedButton(
                               onPressed: (){},
-                              child: const Text(
-                                  "Save",
-                                style: TextStyle(
-                                  color: Colors.lightBlueAccent,
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                    left:8.0,
+                                  right: 8.0
+                                ),
+                                child: const Text(
+                                    "Save",
+                                  style: TextStyle(
+                                    color: Colors.lightBlueAccent,
+                                  ),
                                 ),
                               ),
                             style: ElevatedButton.styleFrom(
