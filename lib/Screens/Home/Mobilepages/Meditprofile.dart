@@ -204,56 +204,53 @@ late DateTime _dateTime;
                           ),
                         ),
                         const SizedBox(height: 10,),
-                        Align(
-                          alignment: Alignment.centerRight,
-                          child: ListTile(
-                            leading: GestureDetector(
-                              onTap: (){
-                                showDatePicker(
-                                    context: context,
-                                    initialDate: DateTime.now(),
-                                    firstDate: DateTime(1900),
-                                    lastDate: DateTime.now()
-                                ).then((value){
-                                  setState(() {
-                                    _dateTime=value!;
-                                  DOB.text=  "${_dateTime.year} / ${_dateTime.month} / ${_dateTime.day}";
-                                    });
-                                });
-                              },
-                              child: const FaIcon(
-                                  FontAwesomeIcons.calendar
+                        ListTile(
+                          leading: GestureDetector(
+                            onTap: (){
+                              showDatePicker(
+                                  context: context,
+                                  initialDate: DateTime.now(),
+                                  firstDate: DateTime(1900),
+                                  lastDate: DateTime.now()
+                              ).then((value){
+                                setState(() {
+                                  _dateTime=value!;
+                                DOB.text=  "${_dateTime.year} / ${_dateTime.month} / ${_dateTime.day}";
+                                  });
+                              });
+                            },
+                            child: const FaIcon(
+                                FontAwesomeIcons.calendar
+                            ),
+                          ),
+                          horizontalTitleGap: 0.0,
+                          title: TextFormField(
+                            controller: DOB,
+                            validator: (val)=>val!.isEmpty ? "Enter Your Date of Birth" : null,
+                            onChanged: (val){
+                              setState(() {
+                                DOB.text=val;
+                              });
+                            },
+                            decoration: InputDecoration(
+                              label: const Text("Dare of Birth"),
+                              hintText: "Enter Date of Birth",
+                              filled: true,
+                              fillColor: Colors.white70,
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: const BorderSide(
+                                    color: Colors.redAccent
+                                ),
+                                borderRadius: BorderRadius.circular(100.0),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(100.0),
+
                               ),
                             ),
-                            horizontalTitleGap: 0.0,
-                            title: TextFormField(
-                              controller: DOB,
-                              validator: (val)=>val!.isEmpty ? "Enter Your Date of Birth" : null,
-                              onChanged: (val){
-                                setState(() {
-                                  DOB.text=val;
-                                });
-                              },
-                              decoration: InputDecoration(
-                                label: const Text("Dare of Birth"),
-                                hintText: "Enter Date of Birth",
-                                filled: true,
-                                fillColor: Colors.white70,
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: const BorderSide(
-                                      color: Colors.redAccent
-                                  ),
-                                  borderRadius: BorderRadius.circular(100.0),
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(100.0),
 
-                                ),
-                              ),
+                            style: TextStyle(
 
-                              style: TextStyle(
-
-                              ),
                             ),
                           ),
                         ),
