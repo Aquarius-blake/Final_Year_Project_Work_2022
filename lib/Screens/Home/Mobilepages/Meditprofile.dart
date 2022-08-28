@@ -270,7 +270,7 @@ late DateTime? _dateTime;
                               });
                             },
                             decoration: InputDecoration(
-                              label: const Text("Dare of Birth"),
+                              label: const Text("Date of Birth"),
                               hintText: "Enter Date of Birth",
                               filled: true,
                               fillColor: Colors.white70,
