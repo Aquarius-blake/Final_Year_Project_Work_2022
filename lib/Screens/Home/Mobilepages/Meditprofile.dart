@@ -82,6 +82,7 @@ late DateTime? _dateTime;
       Fname.text = widget.snap['Full Name'];
       Bio.text=widget.snap['Bio'];
       username.text=widget.snap['username'];
+      gender.text=widget.snap['Gender'];
 
     }catch(e){
       errormessage(e.toString(), context);
