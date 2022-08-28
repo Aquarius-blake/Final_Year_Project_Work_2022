@@ -23,6 +23,12 @@ class _CommentcardState extends State<Commentcard> {
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+    if(user1.UID==widget.snap['author uid']){
+      FirestoreMethods().Updatecommentpic(widget.postid, user1.ppurl!,widget.snap['Comment Uid']);
+      setState(() {
+
+      });
+    }
     return Container(
       padding: const EdgeInsets.symmetric(
         vertical: 0,
