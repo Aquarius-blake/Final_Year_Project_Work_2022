@@ -13,8 +13,7 @@ import '../../../shared/Pop_up.dart';
 
 
 class MDprofile extends StatefulWidget {
-  final snap;
-  const MDprofile.MDprofile({Key? key,this.snap}) : super(key: key);
+  const MDprofile.MDprofile({Key? key}) : super(key: key);
 
   @override
   State<MDprofile> createState() => _MDprofileState();
@@ -238,11 +237,9 @@ drawer: true,
                       controller: _tabController,
                       children: [
                         Profilepost(
-                          snap: widget.snap,
                           uid: user1.UID,
                         ),
                         Likedposts(
-                          snap: widget.snap,
                           uid: user1.UID,
                         )
                       ]),
