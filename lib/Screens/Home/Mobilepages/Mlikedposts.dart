@@ -5,7 +5,8 @@ import '../../../shared/Widgets/post_card.dart';
 
 class Likedposts extends StatefulWidget {
   final snap;
-  const Likedposts({Key? key,this.snap}) : super(key: key);
+  final uid;
+  const Likedposts({Key? key,this.snap,this.uid}) : super(key: key);
 
   @override
   State<Likedposts> createState() => _LikedpostsState();
