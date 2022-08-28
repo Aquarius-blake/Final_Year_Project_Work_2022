@@ -204,53 +204,56 @@ late DateTime _dateTime;
                           ),
                         ),
                         const SizedBox(height: 10,),
-                        ListTile(
-                          leading: GestureDetector(
-                            onTap: (){
-                              showDatePicker(
-                                  context: context,
-                                  initialDate: DateTime.now(),
-                                  firstDate: DateTime(1900),
-                                  lastDate: DateTime.now()
-                              ).then((value){
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: ListTile(
+                            leading: GestureDetector(
+                              onTap: (){
+                                showDatePicker(
+                                    context: context,
+                                    initialDate: DateTime.now(),
+                                    firstDate: DateTime(1900),
+                                    lastDate: DateTime.now()
+                                ).then((value){
+                                  setState(() {
+                                    _dateTime=value!;
+                                  DOB.text=  "${_dateTime.year} / ${_dateTime.month} / ${_dateTime.day}";
+                                    });
+                                });
+                              },
+                              child: const FaIcon(
+                                  FontAwesomeIcons.calendar
+                              ),
+                            ),
+                            horizontalTitleGap: 0.0,
+                            title: TextFormField(
+                              controller: DOB,
+                              validator: (val)=>val!.isEmpty ? "Enter Your Date of Birth" : null,
+                              onChanged: (val){
                                 setState(() {
-                                  _dateTime=value!;
-                                DOB.text=  "${_dateTime.year} / ${_dateTime.month} / ${_dateTime.day}";
-                                  });
-                              });
-                            },
-                            child: const FaIcon(
-                                FontAwesomeIcons.calendar
-                            ),
-                          ),
-                          horizontalTitleGap: 0.0,
-                          title: TextFormField(
-                            controller: DOB,
-                            validator: (val)=>val!.isEmpty ? "Enter Your Date of Birth" : null,
-                            onChanged: (val){
-                              setState(() {
-                                DOB.text=val;
-                              });
-                            },
-                            decoration: InputDecoration(
-                              label: const Text("Dare of Birth"),
-                              hintText: "Enter Date of Birth",
-                              filled: true,
-                              fillColor: Colors.white70,
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
-                                    color: Colors.redAccent
+                                  DOB.text=val;
+                                });
+                              },
+                              decoration: InputDecoration(
+                                label: const Text("Dare of Birth"),
+                                hintText: "Enter Date of Birth",
+                                filled: true,
+                                fillColor: Colors.white70,
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                      color: Colors.redAccent
+                                  ),
+                                  borderRadius: BorderRadius.circular(100.0),
                                 ),
-                                borderRadius: BorderRadius.circular(100.0),
+                                enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(100.0),
+
+                                ),
                               ),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(100.0),
+
+                              style: TextStyle(
 
                               ),
-                            ),
-
-                            style: TextStyle(
-
                             ),
                           ),
                         ),
