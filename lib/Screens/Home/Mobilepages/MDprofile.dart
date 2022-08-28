@@ -223,7 +223,7 @@ class _MDprofileState extends State<MDprofile>with
                         isScrollable: true,
                         unselectedLabelColor: Colors.black,
                         controller: _tabController,
-                        tabs: [
+                        tabs: const [
                           Tab(text: "Posts",),
                           Tab(text: "Likes",)
                         ]
