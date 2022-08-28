@@ -205,15 +205,18 @@ class _MedprofileState extends State<Medprofile> {
                         ),
                         SizedBox(height: 10,),
 ListTile(
-  leading: FaIcon(
-      FontAwesomeIcons.calendar
+  leading: GestureDetector(
+    onTap: (){},
+    child: const FaIcon(
+        FontAwesomeIcons.calendar
+    ),
   ),
   title: TextFormField(
-    controller: username,
-    validator: (val)=>val!.isEmpty ? "Enter Your Username" : null,
+    controller: DOB,
+    validator: (val)=>val!.isEmpty ? "Enter Your Date of Birth" : null,
     onChanged: (val){
       setState(() {
-        username.text=val;
+        DOB.text=val;
       });
     },
     decoration: InputDecoration(
