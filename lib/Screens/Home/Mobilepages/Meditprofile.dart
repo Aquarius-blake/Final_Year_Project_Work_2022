@@ -10,7 +10,8 @@ import 'package:image_picker/image_picker.dart';
 
 class Medprofile extends StatefulWidget {
   final snap;
-  const Medprofile({Key? key,this.snap}) : super(key: key);
+   bool drawer;
+   Medprofile({Key? key,this.snap,required this.drawer}) : super(key: key);
 
   @override
   State<Medprofile> createState() => _MedprofileState();

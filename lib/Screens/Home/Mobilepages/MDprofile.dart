@@ -122,7 +122,7 @@ class _MDprofileState extends State<MDprofile>with
                                 Navigator.of(context).push(
                                     MaterialPageRoute(
                                       builder: (context)=>Medprofile(
-                                        snap: widget.snap,
+drawer: true,
                                       ),
                                     )
                                 );

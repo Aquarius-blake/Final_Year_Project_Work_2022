@@ -149,6 +149,7 @@ class _MprofileState extends State<Mprofile>with
                                     MaterialPageRoute(
                                       builder: (context)=>Medprofile(
                                         snap: widget.snap,
+                                        drawer: false,
                                       ),
                                     )
                                 );
