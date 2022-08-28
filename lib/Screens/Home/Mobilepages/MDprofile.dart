@@ -13,7 +13,7 @@ import '../../../shared/Pop_up.dart';
 
 
 class MDprofile extends StatefulWidget {
-  const MDprofile.MDprofile({Key? key}) : super(key: key);
+  const MDprofile({Key? key}) : super(key: key);
 
   @override
   State<MDprofile> createState() => _MDprofileState();

@@ -20,6 +20,7 @@ import 'package:line_icons/line_icons.dart';
 import 'package:provider/provider.dart';
 import '../../Provider/user_provider.dart';
 import '../../Services/auth.dart';
+import 'Mobilepages/MDprofile.dart';
 
 //Home Screen
 class Home extends StatefulWidget {
@@ -216,7 +217,11 @@ class _HomeState extends State<Home> {
 
                   ),
                   onTap: () async{
-                    Navigator.pushNamed(context, '/Profile');
+                    Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context)=>MDprofile(),
+                        )
+                    );
                   },
                 ),
                 const SizedBox(height: 5,),
