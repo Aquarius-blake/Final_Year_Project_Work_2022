@@ -205,6 +205,7 @@ class FirestoreMethods{
                 "Bio":Bio,
             });
 
+
             ress="Success";
             return ress;
         }catch(e){
@@ -214,7 +215,22 @@ class FirestoreMethods{
     }
 
 
+    Future<void> Updatepostpic(String postid,String ppurl)async{
+
+    }
+
+
+
+
+
 }
+
+
+
+
+
+
+
 
 
 
