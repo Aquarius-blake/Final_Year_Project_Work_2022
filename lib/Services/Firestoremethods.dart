@@ -186,15 +186,18 @@ class FirestoreMethods{
     }
 
     //Edit Profile
-Future<String> EditProfile(String userid,String Fname,String Username,String DOB,String Bio,String Gender,dynamic image)async{
+Future<String> EditProfile(String userid,String Fname,String Username,String DOB,String Bio,String Gender,dynamic image,String Profileurl)async{
         String ress;
-        String ppurl;
         try{
+            String ppurl;
             if(image!=null){
-
+   ppurl =await StorageMethods().Storageip("Posts", image, false);
+            }else{
+                ppurl=Profileurl;
             }
 
             await _firestore.collection('users').doc(userid).update({
+                "profilepic":ppurl,
 
             });
             ress="Success";
