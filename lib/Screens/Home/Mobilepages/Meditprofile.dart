@@ -201,6 +201,8 @@ class _MedprofileState extends State<Medprofile> {
                           ),
                         ),
                         SizedBox(height: 20,),
+
+                        SizedBox(),
                         TextFormField(
                           maxLines: 8,
                           controller: Bio,
