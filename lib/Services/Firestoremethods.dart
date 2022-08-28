@@ -189,6 +189,8 @@ class FirestoreMethods{
 Future<String> EditProfile(String userid,String Fname,String Username,String DOB,String Bio,String Gender,dynamic image)async{
         String ress;
         try{
+            if(image!=null){}
+
             await _firestore.collection('users').doc(userid).update({
 
             });
