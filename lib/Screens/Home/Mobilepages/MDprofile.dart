@@ -24,9 +24,9 @@ class _MDprofileState extends State<MDprofile>with
     TickerProviderStateMixin {
   late TabController _tabController;
   int postlen=0;
-  getPostlen()async{
+  getPostlen(String uid)async{
     try{
-      QuerySnapshot snapshot=await FirebaseFirestore.instance.collection("Posts").where('author uid' ,isEqualTo: widget.snap['uid']).get();
+      QuerySnapshot snapshot=await FirebaseFirestore.instance.collection("Posts").where('author uid' ,isEqualTo: uid).get();
       setState(() {
         postlen=snapshot.docs.length;
       });    }
@@ -38,7 +38,6 @@ class _MDprofileState extends State<MDprofile>with
   void initState() {
     super.initState();
     _tabController = TabController( vsync:this, length: 2);
-    getPostlen();
   }
   @override
   void dispose() {
@@ -49,6 +48,7 @@ class _MDprofileState extends State<MDprofile>with
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+    getPostlen(user1.UID!);
 
     return Scaffold(
       appBar: AppBar(
