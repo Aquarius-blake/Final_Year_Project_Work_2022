@@ -217,6 +217,9 @@ class FirestoreMethods{
 
     Future<void> Updatepostpic(String postid,String ppurl)async{
 
+        await _firestore.collection("Posts").doc(postid).update({
+            "profile Pic":ppurl,
+        });
     }
 
 
