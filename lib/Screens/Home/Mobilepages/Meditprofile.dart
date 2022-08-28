@@ -137,7 +137,7 @@ late DateTime? _dateTime;
                               backgroundImage:MemoryImage(image) ,
                             ):CircleAvatar(
                               radius: 60.0,
-                              backgroundImage: NetworkImage(widget.snap['profilepic']),
+                              backgroundImage: NetworkImage(!widget.drawer? widget.snap['profilepic']:widget.user1!.ppurl!),
                             ),
                             Positioned(
                                 bottom: -5,
