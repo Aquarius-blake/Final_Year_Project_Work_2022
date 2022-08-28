@@ -19,10 +19,13 @@ class Profilepost extends StatefulWidget {
 class _ProfilepostState extends State<Profilepost> {
   @override
   void initState() {
-    if(widget.drawer){
 
-    }
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
   }
   @override
   Widget build(BuildContext context) {
