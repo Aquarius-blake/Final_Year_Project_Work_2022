@@ -206,7 +206,16 @@ class _MedprofileState extends State<Medprofile> {
                         SizedBox(height: 10,),
                         ListTile(
                           leading: GestureDetector(
-                            onTap: (){},
+                            onTap: (){
+                              showDatePicker(
+                                  context: context,
+                                  initialDate: DateTime.now(),
+                                  firstDate: DateTime(1900),
+                                  lastDate: DateTime.now()
+                              ).then((value){
+
+                              });
+                            },
                             child: const FaIcon(
                                 FontAwesomeIcons.calendar
                             ),
