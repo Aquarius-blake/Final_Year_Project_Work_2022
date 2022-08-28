@@ -20,7 +20,7 @@ class _ProfilepostState extends State<Profilepost> {
   @override
   void initState() {
     if(widget.drawer){
-      widget.snap['uid']=widget.uid;
+
     }
     super.initState();
   }
@@ -28,7 +28,8 @@ class _ProfilepostState extends State<Profilepost> {
   Widget build(BuildContext context) {
     return Scaffold(
     body:  StreamBuilder(
-        stream: FirebaseFirestore.instance.collection('Posts').where('author uid', isEqualTo: widget.snap['uid'] || widget.uid).snapshots(),
+        stream: !widget.drawer? FirebaseFirestore.instance.collection('Posts').where('author uid', isEqualTo: widget.snap['uid']).snapshots()
+            :FirebaseFirestore.instance.collection('Posts').where('author uid', isEqualTo:  widget.uid).snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
           if(snapshot.connectionState==ConnectionState.waiting){
             return Center(
