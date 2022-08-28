@@ -20,7 +20,7 @@ class _MedprofileState extends State<Medprofile> {
   TextEditingController Bio=TextEditingController();
   TextEditingController username=TextEditingController();
   TextEditingController DOB=TextEditingController();
-
+late DateTime _dateTime;
 
   final _formKey =GlobalKey<FormState>();
 
@@ -214,8 +214,9 @@ class _MedprofileState extends State<Medprofile> {
                                   lastDate: DateTime.now()
                               ).then((value){
                                 setState(() {
-                                  DOB.text=value.toString();
-                                });
+                                  _dateTime=value!;
+                                DOB.text=  "${_dateTime.year}/${_dateTime.month}/${_dateTime.day}";
+                                  });
                               });
                             },
                             child: const FaIcon(
