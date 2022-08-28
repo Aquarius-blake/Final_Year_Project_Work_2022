@@ -324,7 +324,7 @@ class _PostCardState extends State<PostCard> {
                           }
                         },
                         icon: FaIcon(
-                          Icons.comment_outlined,
+                          FontAwesomeIcons.comments,
                           color: Colors.black,
                         )
                     ),
