@@ -220,8 +220,8 @@ ListTile(
       });
     },
     decoration: InputDecoration(
-      label: const Text("Username"),
-      hintText: "Enter Nick Name",
+      label: const Text("Dare of Birth"),
+      hintText: "Enter Date of Birth",
       filled: true,
       fillColor: Colors.white70,
       focusedBorder: OutlineInputBorder(
