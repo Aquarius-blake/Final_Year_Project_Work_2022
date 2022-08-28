@@ -213,7 +213,9 @@ class _MedprofileState extends State<Medprofile> {
                                   firstDate: DateTime(1900),
                                   lastDate: DateTime.now()
                               ).then((value){
-
+                                setState(() {
+                                  DOB.text=value.toString();
+                                });
                               });
                             },
                             child: const FaIcon(
