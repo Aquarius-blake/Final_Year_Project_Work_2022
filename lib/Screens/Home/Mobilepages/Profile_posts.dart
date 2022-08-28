@@ -6,14 +6,24 @@ import '../../../shared/Widgets/post_card.dart';
 
 class Profilepost extends StatefulWidget {
   final snap;
+  final bool drawer;
   final uid;
-  const Profilepost({Key? key,this.snap,this.uid}) : super(key: key);
+  const Profilepost({Key? key,this.snap,this.uid,required this.drawer}) : super(key: key);
 
   @override
   State<Profilepost> createState() => _ProfilepostState();
 }
 
+
+
 class _ProfilepostState extends State<Profilepost> {
+  @override
+  void initState() {
+    if(widget.drawer){
+      widget.snap['uid']=widget.uid;
+    }
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

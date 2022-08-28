@@ -238,6 +238,7 @@ drawer: true,
                       children: [
                         Profilepost(
                           uid: user1.UID,
+                          drawer: true,
                         ),
                         Likedposts(
                           uid: user1.UID,
