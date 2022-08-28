@@ -162,7 +162,7 @@ class _MDprofileState extends State<MDprofile>with
                       Container(
                         alignment: Alignment.centerLeft,
                         child: Text(
-                          "Name: ${widget.snap['Full Name']}",
+                          "Name: ${user1.Name}",
                           style: TextStyle(
                               color: Colors.grey
                           ),
@@ -171,10 +171,10 @@ class _MDprofileState extends State<MDprofile>with
                       const Expanded(
                           child: SizedBox()
                       ),
-                      widget.snap['Gender']==null|| widget.snap['Gender']==""? const SizedBox(): Container(
+                      user1.Gender==null|| user1.Gender==""? const SizedBox(): Container(
                         alignment: Alignment.centerLeft,
                         child: Text(
-                          "Gender: ${widget.snap['Gender']}",
+                          "Gender: ${user1.Gender}",
                           style: const TextStyle(
                               color: Colors.grey
                           ),
