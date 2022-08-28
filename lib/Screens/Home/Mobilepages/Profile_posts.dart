@@ -21,9 +21,8 @@ class _ProfilepostState extends State<Profilepost> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    body:  StreamBuilder(
-        stream: !widget.drawer? FirebaseFirestore.instance.collection('Posts').where('author uid', isEqualTo: widget.snap['uid']).snapshots()
-            :FirebaseFirestore.instance.collection('Posts').where('author uid', isEqualTo:  widget.uid).snapshots(),
+    body: !widget.drawer?  StreamBuilder(
+        stream: FirebaseFirestore.instance.collection('Posts').where('author uid', isEqualTo:  widget.uid).snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
           if(snapshot.connectionState==ConnectionState.waiting){
             return Center(
@@ -39,7 +38,24 @@ class _ProfilepostState extends State<Profilepost> {
               )
           );
         },
-      ),
+      ): StreamBuilder(
+      stream: FirebaseFirestore.instance.collection('Posts').where('author uid', isEqualTo:  widget.snap['uid']).snapshots(),
+      builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
+        if(snapshot.connectionState==ConnectionState.waiting){
+          return Center(
+            child: CircularProgressIndicator(),
+          );
+        }
+        return ListView.builder(
+            itemCount: snapshot.data!.docs.length,
+            itemBuilder: (context, index) => Container(
+              child: PostCard(
+                snap: snapshot.data!.docs[index].data(),
+              ),
+            )
+        );
+      },
+    ),
     );
   }
 }
