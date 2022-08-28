@@ -201,11 +201,13 @@ class _MedprofileState extends State<Medprofile> {
 
                           ),
                         ),
-                        SizedBox(height: 20,),
+                        SizedBox(height: 10,),
 ListTile(
-  leading: FaIcon(FontAwesomeIcons.calendar),
+  leading: FaIcon(
+      FontAwesomeIcons.calendar
+  ),
 ),
-                        SizedBox(),
+                        SizedBox( height: 10,),
                         TextFormField(
                           maxLines: 8,
                           controller: Bio,
