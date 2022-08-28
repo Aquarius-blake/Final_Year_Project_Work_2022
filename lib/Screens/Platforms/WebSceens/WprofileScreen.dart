@@ -239,7 +239,6 @@ class _WprofileState extends State<Wprofile> with
                                   controller: _tabController,
                                   children: [
                                     Profilepost(
-                                      drawer: false,
                                       snap: widget.snap,
                                     ),
                                     Likedposts(

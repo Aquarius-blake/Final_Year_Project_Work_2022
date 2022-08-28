@@ -265,7 +265,6 @@ class _MprofileState extends State<Mprofile>with
                       children: [
                         Profilepost(
                           snap: widget.snap,
-                          drawer: false,
                         ),
                         Likedposts(
                           snap: widget.snap,

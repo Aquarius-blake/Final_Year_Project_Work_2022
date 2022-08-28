@@ -6,23 +6,18 @@ import '../../../shared/Widgets/post_card.dart';
 
 class Profilepost extends StatefulWidget {
   final snap;
-  final bool drawer;
-  final uid;
-  const Profilepost({Key? key,this.snap,this.uid,required this.drawer}) : super(key: key);
+  const Profilepost({Key? key,this.snap}) : super(key: key);
 
   @override
   State<Profilepost> createState() => _ProfilepostState();
 }
 
-
-
 class _ProfilepostState extends State<Profilepost> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    body: !widget.drawer?  StreamBuilder(
-        stream: FirebaseFirestore.instance.collection('Posts').where('author uid', isEqualTo:  widget.uid).snapshots(),
+    body:  StreamBuilder(
+        stream: FirebaseFirestore.instance.collection('Posts').where('author uid', isEqualTo: widget.snap['uid'] ).snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
           if(snapshot.connectionState==ConnectionState.waiting){
             return Center(
@@ -38,24 +33,7 @@ class _ProfilepostState extends State<Profilepost> {
               )
           );
         },
-      ): StreamBuilder(
-      stream: FirebaseFirestore.instance.collection('Posts').where('author uid', isEqualTo:  widget.snap['uid']).snapshots(),
-      builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
-        if(snapshot.connectionState==ConnectionState.waiting){
-          return Center(
-            child: CircularProgressIndicator(),
-          );
-        }
-        return ListView.builder(
-            itemCount: snapshot.data!.docs.length,
-            itemBuilder: (context, index) => Container(
-              child: PostCard(
-                snap: snapshot.data!.docs[index].data(),
-              ),
-            )
-        );
-      },
-    ),
+      ),
     );
   }
 }
