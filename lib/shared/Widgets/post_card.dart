@@ -166,7 +166,7 @@ class _PostCardState extends State<PostCard> {
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     if(user1.UID==widget.snap['author uid']){
-      FirestoreMethods().Updatepostpic(widget.snap['Posr Uid'], user1.ppurl!);
+      FirestoreMethods().Updatepostpic(widget.snap['Post Uid'], user1.ppurl!);
     }
 
     String authoruid=user1.UID!;
