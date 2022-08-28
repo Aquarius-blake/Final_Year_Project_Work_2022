@@ -191,7 +191,7 @@ class FirestoreMethods{
         try{
             String ppurl;
             if(image!=null){
-                ppurl =await StorageMethods().Storageip("Posts", image, false);
+                ppurl =await StorageMethods().Storageip("Profilepic", image, false);
             }else{
                 ppurl=Profileurl;
             }
