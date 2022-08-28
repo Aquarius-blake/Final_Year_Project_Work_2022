@@ -186,6 +186,16 @@ class FirestoreMethods{
     }
 
     //Edit Profile
+Future<String> EditProfile()async{
+        String ress;
+        try{
+            ress="Success";
+            return ress;
+        }catch(e){
+            ress=e.toString();
+            return ress;
+        }
+}
 
 
 }
