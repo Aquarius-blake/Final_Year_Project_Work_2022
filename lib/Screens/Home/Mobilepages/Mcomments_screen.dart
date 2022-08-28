@@ -53,7 +53,7 @@ text.dispose();
         ),
         backgroundColor: Colors.white,
         title:const Text(
-          "Comments",
+          "Discussion",
           style: TextStyle(
             color: Colors.black,
           ),
