@@ -186,7 +186,7 @@ class FirestoreMethods{
     }
 
     //Edit Profile
-Future<String> EditProfile(String userid)async{
+Future<String> EditProfile(String userid,String Fname,String Username)async{
         String ress;
         try{
             await _firestore.collection('users').doc(userid).update({
