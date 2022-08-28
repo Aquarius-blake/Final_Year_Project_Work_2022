@@ -188,6 +188,7 @@ class _MpostState extends State<Mpost> {
           )
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.lightBlueAccent,
         onPressed: ()=>_posting(user1.UID!,user1.Username!,user1.ppurl),
         child: const FaIcon(
           FontAwesomeIcons.featherPointed,
