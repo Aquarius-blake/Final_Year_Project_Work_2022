@@ -131,33 +131,33 @@ class FirestoreMethods{
         try{
             if(image!=null && upload){
                 photourl=await StorageMethods().Storageip("Posts", image, true);
-              await  _firestore.collection("Posts").doc(postid).update({
+                await  _firestore.collection("Posts").doc(postid).update({
                     'Post Time':DateTime.now(),
                     'Image Url':photourl,
                     'detail':details
                 }
                 );
                 if(title!=""){
-                 await   _firestore.collection("Posts").doc(postid).update({
+                    await   _firestore.collection("Posts").doc(postid).update({
                         'title':title,
-                     'searchkey':title!.substring(0,1)
+                        'searchkey':title!.substring(0,1)
                     });
-                    }
+                }
 
             }else{
                 photourl="";
-              await  _firestore.collection("Posts").doc(postid).update({
+                await  _firestore.collection("Posts").doc(postid).update({
                     'Post Time':DateTime.now(),
-                  'Image Url':photourl,
-                  'detail':details
+                    'Image Url':photourl,
+                    'detail':details
                 }
                 );
                 if(title!=""){
-                await    _firestore.collection("Posts").doc(postid).update({
+                    await    _firestore.collection("Posts").doc(postid).update({
                         'title':title,
-                    'searchkey':title!.substring(0,1)
+                        'searchkey':title!.substring(0,1)
 
-                });
+                    });
                 }
             }
             ress="Edit Succesful";
@@ -186,12 +186,12 @@ class FirestoreMethods{
     }
 
     //Edit Profile
-Future<String> EditProfile(String userid,String Fname,String Username,String DOB,String Bio,String Gender,dynamic image,String Profileurl)async{
+    Future<String> EditProfile(String userid,String Fname,String Username,String DOB,String Bio,String Gender,dynamic image,String Profileurl)async{
         String ress;
         try{
             String ppurl;
             if(image!=null){
-   ppurl =await StorageMethods().Storageip("Posts", image, false);
+                ppurl =await StorageMethods().Storageip("Posts", image, false);
             }else{
                 ppurl=Profileurl;
             }
@@ -211,7 +211,7 @@ Future<String> EditProfile(String userid,String Fname,String Username,String DOB
             ress=e.toString();
             return ress;
         }
-}
+    }
 
 
 }
