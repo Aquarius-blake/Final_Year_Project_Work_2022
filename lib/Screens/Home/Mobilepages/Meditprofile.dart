@@ -215,7 +215,7 @@ late DateTime _dateTime;
                               ).then((value){
                                 setState(() {
                                   _dateTime=value!;
-                                DOB.text=  "${_dateTime.year}/${_dateTime.month}/${_dateTime.day}";
+                                DOB.text=  "${_dateTime.year} / ${_dateTime.month} / ${_dateTime.day}";
                                   });
                               });
                             },
