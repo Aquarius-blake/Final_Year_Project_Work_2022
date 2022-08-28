@@ -323,7 +323,7 @@ class _PostCardState extends State<PostCard> {
                             );
                           }
                         },
-                        icon: FaIcon(
+                        icon: const FaIcon(
                           FontAwesomeIcons.comments,
                           color: Colors.black,
                         )
