@@ -195,8 +195,8 @@ class _MDprofileState extends State<MDprofile>with
                 ),
                 Container(
                   alignment: Alignment.centerLeft,
-                  child: widget.snap['DateofBirth']==null || widget.snap['DateofBirth']==""? const SizedBox()
-                      : Text("Date of Birth: ${widget.snap['DateoBirth']}",
+                  child: user1.DOB==null || user1.DOB==""? const SizedBox()
+                      : Text("Date of Birth: ${user1.DOB}",
                     style: const TextStyle(
                         color: Colors.grey
                     ),),
