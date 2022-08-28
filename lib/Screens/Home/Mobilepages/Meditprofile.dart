@@ -21,6 +21,7 @@ class _MedprofileState extends State<Medprofile> {
   TextEditingController Bio=TextEditingController();
   TextEditingController username=TextEditingController();
   TextEditingController DOB=TextEditingController();
+  TextEditingController gender=TextEditingController();
 late DateTime? _dateTime;
 
   final _formKey =GlobalKey<FormState>();
@@ -93,6 +94,7 @@ late DateTime? _dateTime;
     Bio.dispose();
     username.dispose();
     DOB.dispose();
+    gender.dispose();
     super.dispose();
   }
 
