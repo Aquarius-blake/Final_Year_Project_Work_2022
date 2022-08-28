@@ -184,10 +184,10 @@ class _MDprofileState extends State<MDprofile>with
                       SizedBox(width: 80,)
                     ]
                 ),
-                widget.snap['Bio']==null|| widget.snap['Bio']==""? const SizedBox(): Container(
+                user1.Bio==null|| user1.Bio==""? const SizedBox(): Container(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    "Bio: ${widget.snap['Bio']}",
+                    "Bio: ${user1.Bio}",
                     style: const TextStyle(
                         color: Colors.grey
                     ),
