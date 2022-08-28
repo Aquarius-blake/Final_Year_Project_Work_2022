@@ -203,8 +203,8 @@ class FirestoreMethods{
                 "DateofBirth":DOB,
                 "username":Username,
                 "Bio":Bio,
-
             });
+
             ress="Success";
             return ress;
         }catch(e){
