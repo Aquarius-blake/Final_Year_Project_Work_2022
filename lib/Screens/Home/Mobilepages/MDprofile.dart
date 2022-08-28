@@ -73,7 +73,7 @@ class _MDprofileState extends State<MDprofile>with
                 Row(
                   children: [
                     CircleAvatar(
-                      backgroundImage: NetworkImage(widget.snap['profilepic']),
+                      backgroundImage: NetworkImage(user1.ppurl!),
                       radius: 50,
                     ),
                     SizedBox(width: MediaQuery.of(context).size.width*0.05,),
@@ -104,33 +104,7 @@ class _MDprofileState extends State<MDprofile>with
                         SizedBox(height: 10,),
                         Row(
                           children: [
-                            widget.snap['uid']!=user1.UID? ElevatedButton(
-                              onPressed: (){},
-                              child: const Padding(
-                                padding: EdgeInsets.only(
-                                    left: 16.0,
-                                    right: 16.0),
-                                child: Text(
-                                  "Message",
-                                  style: TextStyle(
-                                      color: Colors.lightBlueAccent
-                                  ),
-                                ),
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                  elevation: 6.0,
-                                  shadowColor: Colors.black,
-                                  primary: Colors.white,
-                                  side: const BorderSide(
-                                    color: Colors.blue,
-                                    width: 2.0,
-                                  ),
-
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(100.0)
-                                  )
-                              ),
-                            ):ElevatedButton(
+                            ElevatedButton(
                               style: ElevatedButton.styleFrom(
                                   elevation: 6.0,
                                   shadowColor: Colors.black,
