@@ -200,6 +200,9 @@ Future<String> EditProfile(String userid,String Fname,String Username,String DOB
                 "profilepic":ppurl,
                 "Gender":Gender,
                 "Full Name":Fname,
+                "DateofBirth":DOB,
+                "username":Username,
+                "Bio":Bio,
 
             });
             ress="Success";
