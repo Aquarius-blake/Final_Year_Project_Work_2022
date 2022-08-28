@@ -287,7 +287,7 @@ late DateTime _dateTime;
 
                           style: const TextStyle(),
                         ),
-                        SizedBox(),
+                        SizedBox(height: 20,),
                         ElevatedButton(
                             onPressed: (){},
                             child: Text("Save"),
