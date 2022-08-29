@@ -13,10 +13,10 @@ class _NotifCardState extends State<NotifCard> {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(2.0),
-      child:  Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Card(
-          elevation: 2.0,
+      child:  Card(
+        elevation: 2.0,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
           child: Row(
             children: [
               CircleAvatar(
