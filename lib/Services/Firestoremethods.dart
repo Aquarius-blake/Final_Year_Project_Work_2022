@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:forum3/Models/Comments.dart';
 import 'package:forum3/Models/Notifs.dart';
 import 'package:forum3/Models/Posts.dart';
@@ -65,7 +64,8 @@ class FirestoreMethods{
                     {'likes':FieldValue.arrayUnion([author_uid])}
                 );
                 String message=" Liked your post";
-            Notifs nots=  Notifs(author_uid: author_uid, Eventuid: postid, message: message, author: author, Timeposted: DateTime.now(), owner_uid: owneruid);
+                String notifid=const Uuid().v1();
+            Notifs nots=  Notifs(author_uid: author_uid, Eventuid: postid, message: message, author: author, Timeposted: DateTime.now(), owner_uid: owneruid, notifid: notifid);
 
             }
 
