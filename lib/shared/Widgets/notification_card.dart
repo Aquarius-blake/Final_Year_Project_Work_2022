@@ -22,7 +22,7 @@ class _NotifCardState extends State<NotifCard> {
 backgroundColor: Colors.lightBlueAccent,
                // backgroundImage: NetworkImage(widget.snap['Profile Pic']),
               ),
-              SizedBox(),
+              SizedBox(width: 5,),
               Text(
                 widget.snap['author'],
                 style: TextStyle(
