@@ -19,7 +19,7 @@ children: [
 Text(
     "Username",
   style: TextStyle(
-
+fontWeight: FontWeight.bold
   ),
 ),
 ],
