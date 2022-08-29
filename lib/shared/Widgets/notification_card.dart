@@ -16,20 +16,25 @@ class _NotifCardState extends State<NotifCard> {
         elevation: 2.0,
         child: Padding(
           padding: const EdgeInsets.all(18.0),
-          child: Row(
+          child: Column(
             children: [
-              CircleAvatar(
-                backgroundColor: Colors.lightBlueAccent,
-                 backgroundImage: NetworkImage(widget.snap['Profile Pic']),
+              Row(
+                children: [
+                  CircleAvatar(
+                    backgroundColor: Colors.lightBlueAccent,
+                     backgroundImage: NetworkImage(widget.snap['Profile Pic']),
+                  ),
+                  SizedBox(width: 5,),
+                  Text(
+                    widget.snap['author'],
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold
+                    ),
+                  ),
+                  SizedBox(),
+
+                ],
               ),
-              SizedBox(width: 5,),
-              Text(
-                widget.snap['author'],
-                style: TextStyle(
-                    fontWeight: FontWeight.bold
-                ),
-              ),
-              SizedBox(),
               Text(
                 widget.snap['message'],
                 style: TextStyle(
@@ -43,3 +48,13 @@ class _NotifCardState extends State<NotifCard> {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
