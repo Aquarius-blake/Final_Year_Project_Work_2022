@@ -13,8 +13,11 @@ class _NotifCardState extends State<NotifCard> {
   Widget build(BuildContext context) {
     return Container(
       child:  Card(
-        child: Column(
+        elevation: 2.0,
+        child: Row(
+children: [
 
+],
         ),
       ),
     );
