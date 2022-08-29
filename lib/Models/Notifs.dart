@@ -4,25 +4,26 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Notifs{
-
+late final String notifid;
   late final  String? author_uid;
   late final String? author;
   late final String? message;
   late final  Timeposted;
   late final String? ppurl;
   late final String Eventuid;
-  late final String owner;
+  late final String? owner;
   late final String owner_uid;
 
 
   Notifs(
       { required this.author_uid,
+        required this.notifid,
         required this.Eventuid,
         required  this.message,
         required this.author,
         required  this.Timeposted,
         this.ppurl,
-        required this.owner,
+         this.owner,
         required this.owner_uid
       }
       );
@@ -35,12 +36,14 @@ class Notifs{
     "Event Uid":Eventuid,
     "message":message,
     "owner":owner,
-    "owner uid":owner_uid
+    "owner uid":owner_uid,
+    "Notifid":notifid
   };
 
   static Notifs? FromSnap(DocumentSnapshot snap){
     var snapshot= snap.data() as Map<String,dynamic>;
     Notifs? Notif12=Notifs(
+      notifid: snapshot['Notifid'],
       message: snapshot['message'],
       author_uid: snapshot['author uid'],
       author: snapshot['author'],
