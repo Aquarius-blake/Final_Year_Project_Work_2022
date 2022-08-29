@@ -43,12 +43,12 @@ class _NotifCardState extends State<NotifCard> {
                       fontStyle: FontStyle.italic,
                     ),
                   ),
-                  Text(
+                /*  Text(
                     widget.snap['Event Title'],
                     style: TextStyle(
                       fontStyle: FontStyle.italic,
                     ),
-                  ),
+                  ),*/
                 ],
               ),
             ],
