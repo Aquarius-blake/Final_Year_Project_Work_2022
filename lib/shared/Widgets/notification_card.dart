@@ -17,7 +17,7 @@ class _NotifCardState extends State<NotifCard> {
         child: Row(
           children: [
             CircleAvatar(
-
+backgroundColor: Colors.lightBlueAccent,
             ),
             Text(
               widget.snap['author'],
