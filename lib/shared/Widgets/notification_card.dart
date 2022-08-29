@@ -43,6 +43,7 @@ class _NotifCardState extends State<NotifCard> {
                       fontStyle: FontStyle.italic,
                     ),
                   ),
+                //TODO: Fix null value bug
                 /*  Text(
                     widget.snap['Event Title'],
                     style: TextStyle(
