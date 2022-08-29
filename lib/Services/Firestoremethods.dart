@@ -53,7 +53,7 @@ class FirestoreMethods{
         }
     }
 
-    Future<void>likepost(String postid,String author_uid,List likes,String owneruid,String author )async {
+    Future<void>likepost(String postid,String author_uid,List likes,String owneruid,String author,String ppurl )async {
         try{
             if(likes.contains(author_uid)){
                 await _firestore.collection("Posts").doc(postid).update(
@@ -65,7 +65,7 @@ class FirestoreMethods{
                 );
                 String message=" Liked your post";
                 String notifid=const Uuid().v1();
-            Notifs nots=  Notifs(author_uid: author_uid, Eventuid: postid, message: message, author: author, Timeposted: DateTime.now(), owner_uid: owneruid, notifid: notifid);
+            Notifs nots=  Notifs(ppurl: ppurl,author_uid: author_uid, Eventuid: postid, message: message, author: author, Timeposted: DateTime.now(), owner_uid: owneruid, notifid: notifid);
             await _firestore.collection("Notification").doc(owneruid).collection("Notifs").doc(notifid).set(
                 nots.toJson(),
                 SetOptions(merge: true)
