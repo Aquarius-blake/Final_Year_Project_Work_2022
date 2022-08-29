@@ -35,11 +35,21 @@ class _NotifCardState extends State<NotifCard> {
 
                 ],
               ),
-              Text(
-                widget.snap['message'],
-                style: TextStyle(
-                  fontStyle: FontStyle.italic,
-                ),
+              Row(
+                children: [
+                  Text(
+                    widget.snap['message'],
+                    style: TextStyle(
+                      fontStyle: FontStyle.italic,
+                    ),
+                  ),
+                  Text(
+                    widget.snap['Event Title'],
+                    style: TextStyle(
+                      fontStyle: FontStyle.italic,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
