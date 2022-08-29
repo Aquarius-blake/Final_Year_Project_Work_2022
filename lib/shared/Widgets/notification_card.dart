@@ -26,7 +26,7 @@ class _NotifCardState extends State<NotifCard> {
             Text(
               "Message",
               style: TextStyle(
-                  fontWeight: FontWeight.bold
+                fontStyle: FontStyle.italic,
               ),
             ),
           ],
