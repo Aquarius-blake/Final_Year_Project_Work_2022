@@ -16,6 +16,9 @@ class _NotifCardState extends State<NotifCard> {
         elevation: 2.0,
         child: Row(
           children: [
+            CircleAvatar(
+
+            ),
             Text(
               widget.snap['author'],
               style: TextStyle(
