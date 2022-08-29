@@ -12,7 +12,6 @@ class _NotifCardState extends State<NotifCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(2.0),
       child:  Card(
         elevation: 2.0,
         child: Padding(
