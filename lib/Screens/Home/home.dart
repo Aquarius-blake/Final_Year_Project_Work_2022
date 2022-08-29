@@ -290,7 +290,7 @@ class _HomeState extends State<Home> {
             child: Msearch(),
           ),
           Mpost(),
-          Notifications(),
+          Notifications(uid: user1.UID,),
           Mmessages()
         ],
         controller: pageController,

@@ -17,7 +17,7 @@ class _NotifCardState extends State<NotifCard> {
         child: Row(
           children: [
             Text(
-              "Username",
+              widget.snap['author'],
               style: TextStyle(
                   fontWeight: FontWeight.bold
               ),

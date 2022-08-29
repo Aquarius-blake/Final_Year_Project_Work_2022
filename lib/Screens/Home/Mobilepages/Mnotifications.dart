@@ -1,7 +1,11 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
+import '../../../shared/Widgets/notification_card.dart';
+
 class Notifications extends StatefulWidget {
-  const Notifications({Key? key}) : super(key: key);
+  final uid;
+  const Notifications({Key? key,this.uid}) : super(key: key);
 
   @override
   State<Notifications> createState() => _NotificationsState();
@@ -11,7 +15,24 @@ class _NotificationsState extends State<Notifications> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      body: StreamBuilder(
+        stream: FirebaseFirestore.instance.collection('Notification').doc(widget.uid).collection('Notifs').snapshots(),
+        builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
+          if(snapshot.connectionState==ConnectionState.waiting){
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+          return ListView.builder(
+              itemCount: snapshot.data!.docs.length,
+              itemBuilder: (context, index) => Container(
+                child: NotifCard(
+                  snap: snapshot.data!.docs[index].data(),
+                ),
+              )
+          );
+        },
+      ),
     );
   }
 }
