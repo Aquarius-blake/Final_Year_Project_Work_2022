@@ -13,6 +13,7 @@ late final String notifid;
   late final String Eventuid;
   late final String? owner;
   late final String owner_uid;
+  late final String title;
 
 
   Notifs(
@@ -24,7 +25,8 @@ late final String notifid;
         required  this.Timeposted,
         this.ppurl,
          this.owner,
-        required this.owner_uid
+        required this.owner_uid,
+        required this.title,
       }
       );
 
@@ -37,7 +39,8 @@ late final String notifid;
     "message":message,
     "owner":owner,
     "owner uid":owner_uid,
-    "Notifid":notifid
+    "Notifid":notifid,
+    "Event Title":title,
   };
 
   static Notifs? FromSnap(DocumentSnapshot snap){
@@ -52,6 +55,7 @@ late final String notifid;
       Eventuid: snapshot['Event Uid'],
       owner_uid: snapshot['owner uid'],
       owner: snapshot['owner'],
+      title: snapshot['Event Title']
 
 
     );

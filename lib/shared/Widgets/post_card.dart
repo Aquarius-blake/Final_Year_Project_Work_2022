@@ -100,7 +100,8 @@ class _PostCardState extends State<PostCard> {
           widget.snap['likes'],
           widget.snap['author uid'],
           user1.Username!,
-          user1.ppurl!
+          user1.ppurl!,
+          widget.snap['title']
 
         );
         setState(() {
@@ -294,6 +295,7 @@ class _PostCardState extends State<PostCard> {
                               widget.snap['author uid'],
                               user1.Username!,
                               user1.ppurl!,
+                              widget.snap['title'],
                             );
                           },
                           icon: liked? Icon(
