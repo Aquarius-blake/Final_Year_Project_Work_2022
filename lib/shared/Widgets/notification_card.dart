@@ -15,7 +15,7 @@ class _NotifCardState extends State<NotifCard> {
       child:  Card(
         elevation: 2.0,
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(18.0),
           child: Row(
             children: [
               CircleAvatar(
