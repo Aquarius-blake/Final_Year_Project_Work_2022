@@ -5,8 +5,7 @@ import '../../../shared/Widgets/post_card.dart';
 
 class Likedposts extends StatefulWidget {
   final snap;
-  final uid;
-  const Likedposts({Key? key,this.snap,this.uid}) : super(key: key);
+  const Likedposts({Key? key,this.snap}) : super(key: key);
 
   @override
   State<Likedposts> createState() => _LikedpostsState();
@@ -17,7 +16,7 @@ class _LikedpostsState extends State<Likedposts> {
   Widget build(BuildContext context) {
     return Scaffold(
       body:  StreamBuilder(
-        stream: FirebaseFirestore.instance.collection('Posts').where('likes',arrayContains: widget.snap['uid'] || widget.uid).snapshots(),
+        stream: FirebaseFirestore.instance.collection('Posts').where('likes',arrayContains: widget.snap['uid']).snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
           if(snapshot.connectionState==ConnectionState.waiting){
             return Center(
