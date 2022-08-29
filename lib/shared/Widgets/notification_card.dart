@@ -12,29 +12,32 @@ class _NotifCardState extends State<NotifCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10.0),
-      child:  Card(
-        elevation: 2.0,
-        child: Row(
-          children: [
-            CircleAvatar(
+      padding: EdgeInsets.all(2.0),
+      child:  Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Card(
+          elevation: 2.0,
+          child: Row(
+            children: [
+              CircleAvatar(
 backgroundColor: Colors.lightBlueAccent,
-             // backgroundImage: NetworkImage(widget.snap['Profile Pic']),
-            ),
-            Text(
-              widget.snap['author'],
-              style: TextStyle(
-                  fontWeight: FontWeight.bold
+               // backgroundImage: NetworkImage(widget.snap['Profile Pic']),
               ),
-            ),
-            SizedBox(),
-            Text(
-              widget.snap['message'],
-              style: TextStyle(
-                fontStyle: FontStyle.italic,
+              Text(
+                widget.snap['author'],
+                style: TextStyle(
+                    fontWeight: FontWeight.bold
+                ),
               ),
-            ),
-          ],
+              SizedBox(),
+              Text(
+                widget.snap['message'],
+                style: TextStyle(
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
