@@ -52,7 +52,7 @@ class FirestoreMethods{
         }
     }
 
-    Future<void>likepost(String postid,String author_uid,List likes)async {
+    Future<void>likepost(String postid,String author_uid,List likes,String owneruid )async {
         try{
             if(likes.contains(author_uid)){
                 await _firestore.collection("Posts").doc(postid).update(

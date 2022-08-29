@@ -86,7 +86,7 @@ class _PostCardState extends State<PostCard> {
 
 
   //dynamic _image;
-  Widget Postimage(dynamic image,BuildContext context){
+  Widget Postimage(dynamic image,BuildContext context,User1 user1){
     if(image==""){
       setState(() {
         image=null;
@@ -96,8 +96,11 @@ class _PostCardState extends State<PostCard> {
       onDoubleTap: ()async{
         await FirestoreMethods().likepost(
             widget.snap['Post Uid'],
-            widget.snap['author uid'],
-            widget.snap['likes']
+          user1.UID!,
+          widget.snap['likes'],
+          widget.snap['author uid'],
+
+
         );
         setState(() {
           islikeanimating=true;
@@ -251,7 +254,7 @@ class _PostCardState extends State<PostCard> {
                 ),
               ),
               SizedBox(height: 10,),
-              Postimage(widget.snap['Image Url'], context),
+              Postimage(widget.snap['Image Url'], context,user1),
               Container(
                 padding: const EdgeInsets.only(
                   top: 3.0,
@@ -286,7 +289,8 @@ class _PostCardState extends State<PostCard> {
                             await   FirestoreMethods().likepost(
                                 widget.snap['Post Uid'],
                                 user1.UID!,
-                                widget.snap['likes']
+                                widget.snap['likes'],
+                              widget.snap['author uid'],
                             );
                           },
                           icon: liked? Icon(
