@@ -12,7 +12,11 @@ class _NotifCardState extends State<NotifCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child:  Card(),
+      child:  Card(
+        child: Column(
+
+        ),
+      ),
     );
   }
 }
