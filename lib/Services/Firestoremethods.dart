@@ -67,7 +67,8 @@ class FirestoreMethods{
                 String notifid=const Uuid().v1();
             Notifs nots=  Notifs(author_uid: author_uid, Eventuid: postid, message: message, author: author, Timeposted: DateTime.now(), owner_uid: owneruid, notifid: notifid);
             await _firestore.collection("Notification").doc(owneruid).collection("Notifs").doc(notifid).set(
-                nots.toJson()
+                nots.toJson(),
+                SetOptions(merge: true)
             );
             }
 
