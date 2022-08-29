@@ -16,7 +16,7 @@ class _NotificationsState extends State<Notifications> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: StreamBuilder(
-        stream: FirebaseFirestore.instance.collection('Notification').doc(widget.uid).collection('Notifs').snapshots(),
+        stream: FirebaseFirestore.instance.collection('Notification').doc(widget.uid).collection('Notifs').orderBy('Event Time').snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
           if(snapshot.connectionState==ConnectionState.waiting){
             return Center(
