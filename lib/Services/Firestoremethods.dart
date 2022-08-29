@@ -63,7 +63,7 @@ class FirestoreMethods{
                 await  _firestore.collection("Posts").doc(postid).update(
                     {'likes':FieldValue.arrayUnion([author_uid])}
                 );
-                String message=" Liked your post";
+                String message=" Liked your post: ";
                 String notifid=const Uuid().v1();
             Notifs nots=  Notifs(ppurl: ppurl,author_uid: author_uid, Eventuid: postid, message: message, author: author, Timeposted: DateTime.now(), owner_uid: owneruid, notifid: notifid);
             await _firestore.collection("Notification").doc(owneruid).collection("Notifs").doc(notifid).set(
