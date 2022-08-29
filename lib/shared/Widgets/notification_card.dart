@@ -16,7 +16,12 @@ class _NotifCardState extends State<NotifCard> {
         elevation: 2.0,
         child: Row(
 children: [
+Text(
+    "Username",
+  style: TextStyle(
 
+  ),
+),
 ],
         ),
       ),
