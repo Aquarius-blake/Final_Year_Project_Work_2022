@@ -24,7 +24,7 @@ class _NotifCardState extends State<NotifCard> {
             ),
             SizedBox(),
             Text(
-              widget.snap['messgae'],
+              widget.snap['message'],
               style: TextStyle(
                 fontStyle: FontStyle.italic,
               ),
