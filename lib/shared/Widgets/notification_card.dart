@@ -19,8 +19,8 @@ class _NotifCardState extends State<NotifCard> {
           child: Row(
             children: [
               CircleAvatar(
-backgroundColor: Colors.lightBlueAccent,
-               // backgroundImage: NetworkImage(widget.snap['Profile Pic']),
+                backgroundColor: Colors.lightBlueAccent,
+                // backgroundImage: NetworkImage(widget.snap['Profile Pic']),
               ),
               SizedBox(width: 5,),
               Text(
