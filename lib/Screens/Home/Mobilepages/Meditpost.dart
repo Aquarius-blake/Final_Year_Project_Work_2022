@@ -69,7 +69,12 @@ _detail.text=widget.snap['detail'];
             children: [
               SimpleDialogOption(
                 padding: EdgeInsets.all(15.0),
-                child: Text("Take a Photo"),
+                child: Text(
+                    "Take a Photo",
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
                 onPressed: ()async{
                   Navigator.of(context).pop();
                   dynamic file=await Selection.uploadpic(ImageSource.camera);
