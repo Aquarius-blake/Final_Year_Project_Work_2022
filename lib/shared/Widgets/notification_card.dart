@@ -31,6 +31,8 @@ class _NotifCardState extends State<NotifCard> {
                           left:8.0
                       ),
                       child:   Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           RichText(
                               text: TextSpan(
