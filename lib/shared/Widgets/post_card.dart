@@ -34,7 +34,10 @@ class _PostCardState extends State<PostCard> {
         context: context,
         builder: (context){
           return SimpleDialog(
-            title: const Text("More options"),
+            title: const Text(
+                "More options",
+              style: TextStyle(),
+            ),
             children: [
               SimpleDialogOption(
                 padding: const EdgeInsets.all(15.0),
