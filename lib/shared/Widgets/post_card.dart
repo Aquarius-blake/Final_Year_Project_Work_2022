@@ -38,7 +38,12 @@ class _PostCardState extends State<PostCard> {
             children: [
               SimpleDialogOption(
                 padding: const EdgeInsets.all(15.0),
-                child: const Text("Edit Post"),
+                child: const Text(
+                    "Edit Post",
+                  style: TextStyle(
+
+                  ),
+                ),
                 onPressed: (){
                   Navigator.of(context).pop();
                   if(kIsWeb){
@@ -62,7 +67,7 @@ class _PostCardState extends State<PostCard> {
               ),
               SimpleDialogOption(
                 padding: EdgeInsets.all(15.0),
-                child: Text(
+                child: const Text(
                     "Delete",
                   style: TextStyle(
                       fontStyle: FontStyle.italic,
