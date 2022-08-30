@@ -74,7 +74,7 @@ class _PostCardState extends State<PostCard> {
                 child: Text(
                     "Cancel",
                   style: TextStyle(
-
+fontStyle: FontStyle.italic
                   ),
                 ),
                 onPressed: (){
