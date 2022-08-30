@@ -36,7 +36,9 @@ class _PostCardState extends State<PostCard> {
           return SimpleDialog(
             title: const Text(
                 "More options",
-              style: TextStyle(),
+              style: TextStyle(
+                fontStyle: FontStyle.italic,
+              ),
             ),
             children: [
               SimpleDialogOption(
