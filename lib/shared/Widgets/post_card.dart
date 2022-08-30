@@ -70,8 +70,10 @@ class _PostCardState extends State<PostCard> {
                 },
               ),
               SimpleDialogOption(
-                padding: EdgeInsets.all(15.0),
-                child: Text("Cancel"),
+                padding: const EdgeInsets.all(15.0),
+                child: Text(
+                    "Cancel",
+                ),
                 onPressed: (){
                   Navigator.of(context).pop();
                 },
