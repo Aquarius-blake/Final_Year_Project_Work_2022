@@ -22,7 +22,7 @@ class _NotifCardState extends State<NotifCard> {
                 children: [
                   CircleAvatar(
                     backgroundColor: Colors.lightBlueAccent,
-                     backgroundImage: NetworkImage(widget.snap['Profile Pic']),
+                    backgroundImage: NetworkImage(widget.snap['Profile Pic']),
                   ),
                   SizedBox(width: 5,),
                   Text(
@@ -32,54 +32,54 @@ class _NotifCardState extends State<NotifCard> {
                     ),
                   ),
                   SizedBox(),
-Expanded(
-  child:   Padding(
-  
-    padding: const EdgeInsets.only(
-  
-        left:8.0
-  
-    ),
-  
-    child:   Column(
-  
-  
-  
-      children: [
-  
-  
-  
-            RichText(
-  
-  
-  
-            text: TextSpan(
-  
-  
-  
-  
-  
-  
-  
-            )
-  
-  
-  
-        ),
-  
-  
-  
-      ],
-  
-  
-  
-    ),
-  
-  ),
-)
+                  Expanded(
+                    child:   Padding(
+
+                      padding: const EdgeInsets.only(
+
+                          left:8.0
+
+                      ),
+
+                      child:   Column(
+
+
+
+                        children: [
+
+
+
+                          RichText(
+
+
+
+                              text: TextSpan(
+
+
+
+
+
+
+
+                              )
+
+
+
+                          ),
+
+
+
+                        ],
+
+
+
+                      ),
+
+                    ),
+                  )
                 ],
               ),
-             /* Row(
+              /* Row(
                 children: [
                   Text(
                     widget.snap['message'],
