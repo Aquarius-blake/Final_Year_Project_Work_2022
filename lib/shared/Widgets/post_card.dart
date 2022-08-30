@@ -38,6 +38,7 @@ class _PostCardState extends State<PostCard> {
                 "More options",
               style: TextStyle(
                 fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.bold,
               ),
             ),
             children: [
