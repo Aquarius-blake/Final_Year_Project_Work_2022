@@ -35,11 +35,11 @@ class _NotifCardState extends State<NotifCard> {
 
                 ],
               ),
-              Row(
+             /* Row(
                 children: [
                   Text(
                     widget.snap['message'],
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontStyle: FontStyle.italic,
                     ),
                   ),
@@ -51,7 +51,7 @@ class _NotifCardState extends State<NotifCard> {
                     ),
                   ),*/
                 ],
-              ),
+              ),*/
             ],
           ),
         ),
