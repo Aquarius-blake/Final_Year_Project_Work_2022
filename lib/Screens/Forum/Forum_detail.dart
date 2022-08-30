@@ -13,6 +13,7 @@ class _ForumdetailState extends State<Forumdetail> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
         iconTheme: IconThemeData(
           color: Colors.black
         ),
