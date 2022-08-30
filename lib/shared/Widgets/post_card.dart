@@ -62,7 +62,12 @@ class _PostCardState extends State<PostCard> {
               ),
               SimpleDialogOption(
                 padding: EdgeInsets.all(15.0),
-                child: Text("Delete"),
+                child: Text(
+                    "Delete",
+                  style: TextStyle(
+
+                  ),
+                ),
                 onPressed: ()async{
                   String ress=  await FirestoreMethods().Deletepost(widget.snap['Post Uid']);
                   Showsnackbar(ress, context);
