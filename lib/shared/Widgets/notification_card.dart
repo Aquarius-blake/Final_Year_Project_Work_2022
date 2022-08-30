@@ -52,7 +52,7 @@ class _NotifCardState extends State<NotifCard> {
                                       )
                                     ),
                                     TextSpan(
-                                      text: widget.snap['Event title'],
+                                      text: widget.snap['Event Title'],
                                       style: const TextStyle(
                                         fontWeight: FontWeight.bold,
                                             color:Colors.black,
