@@ -308,7 +308,7 @@ class _PostCardState extends State<PostCard> {
                           )
                       ),
                     ),
-                    Expanded(
+                    const Expanded(
                         child: SizedBox()
                     ),
                     Text("$commentlen"),
