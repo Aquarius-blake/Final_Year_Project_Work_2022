@@ -38,13 +38,15 @@ class _NotifCardState extends State<NotifCard> {
                                     TextSpan(
                                       text: widget.snap['author'],
                                       style: TextStyle(
-                                          fontWeight: FontWeight.bold
+                                          fontWeight: FontWeight.bold,
+                                        color: Colors.black
                                       ),
                                     ),
                                     TextSpan(
                                       text: widget.snap['message'],
                                       style: TextStyle(
-                                        fontStyle: FontStyle.italic
+                                        color: Colors.black,
+                                        fontStyle: FontStyle.italic,
                                       )
                                     )
                                   ]
