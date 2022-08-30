@@ -31,7 +31,10 @@ class _WebeditpostState extends State<Webeditpost> {
         context: context,
         builder: (context){
           return SimpleDialog(
-            title: Text("Upload image"),
+            title: const Text(
+                "Upload image",
+            style: TextStyle(),
+            ),
             children: [
               SimpleDialogOption(
                 padding: EdgeInsets.all(15.0),
