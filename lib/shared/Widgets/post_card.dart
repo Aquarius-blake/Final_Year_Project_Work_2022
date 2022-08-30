@@ -73,6 +73,9 @@ class _PostCardState extends State<PostCard> {
                 padding: const EdgeInsets.all(15.0),
                 child: Text(
                     "Cancel",
+                  style: TextStyle(
+
+                  ),
                 ),
                 onPressed: (){
                   Navigator.of(context).pop();
