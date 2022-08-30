@@ -243,7 +243,7 @@ class _HomeState extends State<Home> {
                     await _auth.SignOut();
                   },
                 ),
-                SizedBox(height: 5.0,),
+               const SizedBox(height: 5.0,),
                 ListTile(
                   title: const Text(
                     "Create New Account",
