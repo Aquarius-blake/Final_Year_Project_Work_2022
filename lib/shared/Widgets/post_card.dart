@@ -342,7 +342,7 @@ class _PostCardState extends State<PostCard> {
                     ),
                     IconButton(
                         onPressed: (){},
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.share,
                           color: Colors.black,
                         )
