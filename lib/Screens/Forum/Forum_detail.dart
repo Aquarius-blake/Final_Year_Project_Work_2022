@@ -54,7 +54,9 @@ class _ForumdetailState extends State<Forumdetail> {
             child: Row(
               children: [
                 CircleAvatar(
-                  backgroundImage: NetworkImage(user1.ppurl!),
+                  backgroundImage: NetworkImage(
+                      user1.ppurl!
+                  ),
                   radius: 18,
                 ),
                 Expanded(
