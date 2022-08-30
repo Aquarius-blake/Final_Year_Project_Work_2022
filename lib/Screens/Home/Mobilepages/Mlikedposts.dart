@@ -19,7 +19,7 @@ class _LikedpostsState extends State<Likedposts> {
         stream: FirebaseFirestore.instance.collection('Posts').where('likes',arrayContains: widget.snap['uid']).snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
           if(snapshot.connectionState==ConnectionState.waiting){
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(),
             );
           }
