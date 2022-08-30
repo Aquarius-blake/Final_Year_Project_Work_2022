@@ -80,7 +80,7 @@ _detail.text=widget.snap['detail'];
                 },
               ),
               SimpleDialogOption(
-                padding: EdgeInsets.all(15.0),
+                padding: const EdgeInsets.all(15.0),
                 child: Text(
                     "Choose from gallery",
                   style: TextStyle(
