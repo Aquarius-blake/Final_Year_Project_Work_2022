@@ -298,11 +298,11 @@ class _PostCardState extends State<PostCard> {
                               widget.snap['title'],
                             );
                           },
-                          icon: liked? Icon(
+                          icon: liked? const Icon(
                             Icons.favorite,
                             color: Colors.red,
                           )
-                              : Icon(
+                              : const Icon(
                             Icons.favorite_border_outlined,
                             color: Colors.black,
                           )
