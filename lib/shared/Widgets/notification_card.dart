@@ -42,7 +42,8 @@ class _NotifCardState extends State<NotifCard> {
                                       ),
                                     ),
                                     TextSpan(
-                                      text: widget.snap['message']
+                                      text: widget.snap['message'],
+                                      style: TextStyle()
                                     )
                                   ]
                               )
