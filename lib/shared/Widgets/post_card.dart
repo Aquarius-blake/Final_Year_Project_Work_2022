@@ -71,10 +71,10 @@ class _PostCardState extends State<PostCard> {
               ),
               SimpleDialogOption(
                 padding: const EdgeInsets.all(15.0),
-                child: Text(
-                    "Cancel",
+                child: const Text(
+                  "Cancel",
                   style: TextStyle(
-fontStyle: FontStyle.italic
+                      fontStyle: FontStyle.italic
                   ),
                 ),
                 onPressed: (){
@@ -101,12 +101,12 @@ fontStyle: FontStyle.italic
       onDoubleTap: ()async{
         await FirestoreMethods().likepost(
             widget.snap['Post Uid'],
-          user1.UID!,
-          widget.snap['likes'],
-          widget.snap['author uid'],
-          user1.Username!,
-          user1.ppurl!,
-          widget.snap['title']
+            user1.UID!,
+            widget.snap['likes'],
+            widget.snap['author uid'],
+            user1.Username!,
+            user1.ppurl!,
+            widget.snap['title']
 
         );
         setState(() {
@@ -294,9 +294,9 @@ fontStyle: FontStyle.italic
                       child: IconButton(
                           onPressed: ()async{
                             await   FirestoreMethods().likepost(
-                                widget.snap['Post Uid'],
-                                user1.UID!,
-                                widget.snap['likes'],
+                              widget.snap['Post Uid'],
+                              user1.UID!,
+                              widget.snap['likes'],
                               widget.snap['author uid'],
                               user1.Username!,
                               user1.ppurl!,
