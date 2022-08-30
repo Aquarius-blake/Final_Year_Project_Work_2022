@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Forumdetail extends StatefulWidget {
-  const Forumdetail({Key? key}) : super(key: key);
+  final snap;
+  const Forumdetail({Key? key,this.snap}) : super(key: key);
 
   @override
   State<Forumdetail> createState() => _ForumdetailState();

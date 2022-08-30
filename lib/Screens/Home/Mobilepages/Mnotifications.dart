@@ -27,7 +27,9 @@ class _NotificationsState extends State<Notifications> {
               itemCount: snapshot.data!.docs.length,
               itemBuilder: (context, index) => Container(
                 child: GestureDetector(
-                  onTap: (){},
+                  onTap: (){
+
+                  },
                   child: NotifCard(
                     snap: snapshot.data!.docs[index].data(),
                   ),
