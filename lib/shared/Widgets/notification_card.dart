@@ -25,13 +25,6 @@ class _NotifCardState extends State<NotifCard> {
                     backgroundImage: NetworkImage(widget.snap['Profile Pic']),
                   ),
                   SizedBox(width: 5,),
-                  Text(
-                    widget.snap['author'],
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold
-                    ),
-                  ),
-                  SizedBox(),
                   Expanded(
                     child:   Padding(
                       padding: const EdgeInsets.only(
@@ -41,14 +34,17 @@ class _NotifCardState extends State<NotifCard> {
                         children: [
                           RichText(
                               text: TextSpan(
-children: [
-  TextSpan(
-text: widget.snap['author'],
-    style: TextStyle(
-      fontWeight: FontWeight.bold
-    ),
-  )
-]
+                                  children: [
+                                    TextSpan(
+                                      text: widget.snap['author'],
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text: widget.snap['message']
+                                    )
+                                  ]
                               )
                           ),
                         ],
