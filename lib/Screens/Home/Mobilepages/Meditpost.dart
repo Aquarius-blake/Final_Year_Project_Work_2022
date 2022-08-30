@@ -60,7 +60,6 @@ _detail.text=widget.snap['detail'];
   }
 
   _selectimage(BuildContext context)async{
-
     return showDialog(
         context: context,
         builder: (context){
