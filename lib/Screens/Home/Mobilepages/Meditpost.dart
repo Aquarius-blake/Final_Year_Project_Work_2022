@@ -93,8 +93,8 @@ _detail.text=widget.snap['detail'];
                 },
               ),
               SimpleDialogOption(
-                padding: EdgeInsets.all(15.0),
-                child: Text(
+                padding: const EdgeInsets.all(15.0),
+                child: const Text(
                     "Cancel",
                 style: TextStyle(
                   fontStyle: FontStyle.italic,
