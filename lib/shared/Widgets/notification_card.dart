@@ -41,7 +41,8 @@ class _NotifCardState extends State<NotifCard> {
                                       text: widget.snap['author'],
                                       style: const TextStyle(
                                           fontWeight: FontWeight.bold,
-                                        color: Colors.black
+                                        color: Colors.black,
+                                        fontSize: 15
                                       ),
                                     ),
                                     TextSpan(
