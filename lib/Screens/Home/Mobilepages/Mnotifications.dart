@@ -26,8 +26,10 @@ class _NotificationsState extends State<Notifications> {
           return ListView.builder(
               itemCount: snapshot.data!.docs.length,
               itemBuilder: (context, index) => Container(
-                child: NotifCard(
-                  snap: snapshot.data!.docs[index].data(),
+                child: GestureDetector(
+                  child: NotifCard(
+                    snap: snapshot.data!.docs[index].data(),
+                  ),
                 ),
               )
           );
