@@ -18,7 +18,7 @@ class _MhomeState extends State<Mhome> {
     stream: FirebaseFirestore.instance.collection('Posts').snapshots(),
       builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
       if(snapshot.connectionState==ConnectionState.waiting){
-          return Center(
+          return const Center(
             child: CircularProgressIndicator(),
           );
       }
