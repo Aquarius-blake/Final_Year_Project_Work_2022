@@ -43,16 +43,16 @@ class _NotifCardState extends State<NotifCard> {
                               text: TextSpan(
 children: [
   TextSpan(
-
+text: widget.snap['author'],
+    style: TextStyle(
+      fontWeight: FontWeight.bold
+    ),
   )
 ]
                               )
                           ),
-
                         ],
-
                       ),
-
                     ),
                   )
                 ],
