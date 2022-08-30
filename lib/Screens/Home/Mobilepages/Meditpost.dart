@@ -65,10 +65,12 @@ _detail.text=widget.snap['detail'];
         context: context,
         builder: (context){
           return SimpleDialog(
-            title: Text("Create Post"),
+            title: Text(
+                "Create Post",
+            ),
             children: [
               SimpleDialogOption(
-                padding: EdgeInsets.all(15.0),
+                padding: const EdgeInsets.all(15.0),
                 child: const Text(
                     "Take a Photo",
                   style: TextStyle(
