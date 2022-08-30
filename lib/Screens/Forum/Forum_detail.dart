@@ -17,7 +17,12 @@ class _ForumdetailState extends State<Forumdetail> {
         iconTheme: IconThemeData(
           color: Colors.black
         ),
-        title:Text("Details")
+        title:Text(
+          "Details",
+          style: TextStyle(
+
+          ),
+        )
       ),
       body: Container(
 
