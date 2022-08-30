@@ -37,6 +37,7 @@ class _ForumdetailState extends State<Forumdetail> {
       body: ListView(
         children: [
           Container(),
+          Container()
         ],
       ),
       bottomNavigationBar: SafeArea(
