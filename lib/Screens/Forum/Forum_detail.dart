@@ -14,6 +14,7 @@ class _ForumdetailState extends State<Forumdetail> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
+        centerTitle: true,
         iconTheme: IconThemeData(
           color: Colors.black
         ),
