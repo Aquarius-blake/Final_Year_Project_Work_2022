@@ -69,7 +69,7 @@ _detail.text=widget.snap['detail'];
             children: [
               SimpleDialogOption(
                 padding: EdgeInsets.all(15.0),
-                child: Text(
+                child: const Text(
                     "Take a Photo",
                   style: TextStyle(
                     fontStyle: FontStyle.italic,
@@ -86,7 +86,7 @@ _detail.text=widget.snap['detail'];
               ),
               SimpleDialogOption(
                 padding: const EdgeInsets.all(15.0),
-                child: Text(
+                child: const Text(
                     "Choose from gallery",
                   style: TextStyle(
                     fontStyle: FontStyle.italic,
