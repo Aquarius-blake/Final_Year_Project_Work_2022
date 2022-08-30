@@ -65,7 +65,7 @@ class _PostCardState extends State<PostCard> {
                 child: Text(
                     "Delete",
                   style: TextStyle(
-
+                      fontStyle: FontStyle.italic,
                   ),
                 ),
                 onPressed: ()async{
@@ -79,7 +79,7 @@ class _PostCardState extends State<PostCard> {
                 child: const Text(
                   "Cancel",
                   style: TextStyle(
-                      fontStyle: FontStyle.italic
+                      fontStyle: FontStyle.italic,
                   ),
                 ),
                 onPressed: (){
