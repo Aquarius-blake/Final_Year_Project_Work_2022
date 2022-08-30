@@ -337,7 +337,7 @@ class _PostCardState extends State<PostCard> {
                           color: Colors.black,
                         )
                     ),
-                    Expanded(
+                    const Expanded(
                         child: SizedBox()
                     ),
                     IconButton(
