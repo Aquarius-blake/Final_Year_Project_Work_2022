@@ -42,7 +42,7 @@ class _NotifCardState extends State<NotifCard> {
                                       style: const TextStyle(
                                           fontWeight: FontWeight.bold,
                                         color: Colors.black,
-                                        fontSize: 15
+                                        fontSize: 20
                                       ),
                                     ),
                                     TextSpan(
