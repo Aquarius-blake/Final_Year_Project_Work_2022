@@ -81,7 +81,12 @@ _detail.text=widget.snap['detail'];
               ),
               SimpleDialogOption(
                 padding: EdgeInsets.all(15.0),
-                child: Text("Choose from gallery"),
+                child: Text(
+                    "Choose from gallery",
+                  style: TextStyle(
+
+                  ),
+                ),
                 onPressed: ()async{
                   Navigator.of(context).pop();
                   dynamic file=await Selection.uploadpic(ImageSource.gallery);
