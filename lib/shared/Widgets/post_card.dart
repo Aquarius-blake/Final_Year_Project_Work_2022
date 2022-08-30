@@ -41,7 +41,7 @@ class _PostCardState extends State<PostCard> {
                 child: const Text(
                     "Edit Post",
                   style: TextStyle(
-
+                    fontStyle: FontStyle.italic,
                   ),
                 ),
                 onPressed: (){
