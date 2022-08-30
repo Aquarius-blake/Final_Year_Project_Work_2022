@@ -17,11 +17,7 @@ class _ForumdetailState extends State<Forumdetail> {
         iconTheme: IconThemeData(
           color: Colors.black
         ),
-        title: Row(
-          children: <Widget>[
-
-          ],
-        ),
+        title:Text("Details")
       ),
       body: Container(
 
