@@ -94,7 +94,12 @@ _detail.text=widget.snap['detail'];
               ),
               SimpleDialogOption(
                 padding: EdgeInsets.all(15.0),
-                child: Text("Cancel"),
+                child: Text(
+                    "Cancel",
+                style: TextStyle(
+                  fontStyle: FontStyle.italic,
+                ),
+                ),
                 onPressed: (){
                   Navigator.of(context).pop();
                 },
