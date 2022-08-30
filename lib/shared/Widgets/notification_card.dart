@@ -32,14 +32,27 @@ class _NotifCardState extends State<NotifCard> {
                     ),
                   ),
                   SizedBox(),
-Column(
-  children: [
-        RichText(
-        text: TextSpan(
+Padding(
+  padding: const EdgeInsets.only(
+      left:8.0
+  ),
+  child:   Column(
 
-        )
-    ),
-  ],
+    children: [
+
+          RichText(
+
+          text: TextSpan(
+
+
+
+          )
+
+      ),
+
+    ],
+
+  ),
 )
                 ],
               ),
