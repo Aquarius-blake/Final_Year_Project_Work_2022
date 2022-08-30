@@ -84,7 +84,7 @@ _detail.text=widget.snap['detail'];
                 child: Text(
                     "Choose from gallery",
                   style: TextStyle(
-
+                    fontStyle: FontStyle.italic,
                   ),
                 ),
                 onPressed: ()async{
