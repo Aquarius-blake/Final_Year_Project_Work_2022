@@ -87,7 +87,7 @@ class _HomeState extends State<Home> {
      );
     }
     catch(e){
-    return CircleAvatar(
+    return const CircleAvatar(
       backgroundImage: AssetImage('Assets/hac.jpg'),
       radius: 50,
     );
