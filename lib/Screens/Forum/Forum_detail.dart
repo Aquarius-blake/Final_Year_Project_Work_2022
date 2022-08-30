@@ -20,7 +20,7 @@ class _ForumdetailState extends State<Forumdetail> {
         title:Text(
           "Details",
           style: TextStyle(
-
+color: Colors.black
           ),
         )
       ),
