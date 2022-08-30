@@ -67,6 +67,7 @@ _detail.text=widget.snap['detail'];
           return SimpleDialog(
             title: Text(
                 "Create Post",
+              style: TextStyle(),
             ),
             children: [
               SimpleDialogOption(
