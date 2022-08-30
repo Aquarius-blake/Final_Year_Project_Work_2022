@@ -22,22 +22,20 @@ class _ForumdetailState extends State<Forumdetail> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        centerTitle: true,
-        iconTheme: const IconThemeData(
-          color: Colors.black
-        ),
-        title:const Text(
-          "Details",
-          style: TextStyle(
-color: Colors.black
+          backgroundColor: Colors.white,
+          centerTitle: true,
+          iconTheme: const IconThemeData(
+              color: Colors.black
           ),
-        )
+          title:const Text(
+            "Details",
+            style: TextStyle(
+                color: Colors.black
+            ),
+          )
       ),
       body: ListView(
-        children: [
-
-        ],
+        children: [],
       ),
       bottomNavigationBar: SafeArea(
           child: Container(
