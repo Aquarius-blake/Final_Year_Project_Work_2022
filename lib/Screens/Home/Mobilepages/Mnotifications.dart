@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Screens/Forum/Forum_detail.dart';
 
 import '../../../shared/Widgets/notification_card.dart';
 
@@ -28,7 +29,13 @@ class _NotificationsState extends State<Notifications> {
               itemBuilder: (context, index) => Container(
                 child: GestureDetector(
                   onTap: (){
-
+                    Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context)=>Forumdetail(
+                            snap: snapshot.data!.docs[index].data(),
+                          ),
+                        )
+                    );
                   },
                   child: NotifCard(
                     snap: snapshot.data!.docs[index].data(),
