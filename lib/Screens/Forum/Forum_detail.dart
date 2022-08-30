@@ -24,10 +24,10 @@ class _ForumdetailState extends State<Forumdetail> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         centerTitle: true,
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           color: Colors.black
         ),
-        title:Text(
+        title:const Text(
           "Details",
           style: TextStyle(
 color: Colors.black
