@@ -24,7 +24,7 @@ class _NotifCardState extends State<NotifCard> {
                     backgroundColor: Colors.lightBlueAccent,
                     backgroundImage: NetworkImage(widget.snap['Profile Pic']),
                   ),
-                  SizedBox(width: 5,),
+                  const SizedBox(width: 5,),
                   Expanded(
                     child:   Padding(
                       padding: const EdgeInsets.only(
