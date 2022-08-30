@@ -69,7 +69,7 @@ _detail.text=widget.snap['detail'];
                 "Create Post",
               style: TextStyle(
                 fontStyle: FontStyle.italic,
-                fontWeight: FontWeight.bold
+                fontWeight: FontWeight.bold,
               ),
             ),
             children: [
