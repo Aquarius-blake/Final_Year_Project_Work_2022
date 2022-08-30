@@ -65,9 +65,12 @@ _detail.text=widget.snap['detail'];
         context: context,
         builder: (context){
           return SimpleDialog(
-            title: Text(
+            title: const Text(
                 "Create Post",
-              style: TextStyle(),
+              style: TextStyle(
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.bold
+              ),
             ),
             children: [
               SimpleDialogOption(
