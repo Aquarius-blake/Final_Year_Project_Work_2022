@@ -25,7 +25,7 @@ String uid=user1.UID!;
         stream: FirebaseFirestore.instance
             .collection('Notification')
             .doc(widget.uid)
-            .collection('Notifs')
+            .collection('Notifs').orderBy('author uid')
             .where('author uid', isNotEqualTo: widget.uid)
             .orderBy('Event Time',descending: true)
             .snapshots(),
