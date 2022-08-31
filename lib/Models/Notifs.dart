@@ -43,6 +43,7 @@ late final String notifid;
     "owner uid":owner_uid,
     "Notifid":notifid,
     "Event Title":title,
+    "Comment Uid":commentuid,
   };
 
   static Notifs? FromSnap(DocumentSnapshot snap){
