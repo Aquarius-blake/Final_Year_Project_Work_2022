@@ -11,6 +11,6 @@ class Comdetail extends StatefulWidget {
 class _ComdetailState extends State<Comdetail> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold();
   }
 }
