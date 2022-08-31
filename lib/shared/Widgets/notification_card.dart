@@ -16,6 +16,10 @@ class _NotifCardState extends State<NotifCard> {
     super.initState();
   }
   @override
+  void dispose() {
+    super.dispose();
+  }
+  @override
   Widget build(BuildContext context) {
 
     return Container(
