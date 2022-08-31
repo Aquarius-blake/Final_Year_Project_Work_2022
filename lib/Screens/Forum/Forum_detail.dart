@@ -46,6 +46,7 @@ class _ForumdetailState extends State<Forumdetail> {
                 width: MediaQuery.of(context).size.width,
                 child: detailp(snap:widget.snap,)
             ),
+            Divider()
           ],
         ),
       ),
