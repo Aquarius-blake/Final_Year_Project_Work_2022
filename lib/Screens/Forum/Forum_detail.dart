@@ -45,6 +45,7 @@ class _ForumdetailState extends State<Forumdetail> {
                 child: detailp(snap:widget.snap,)
             ),
             Divider(),
+            SizedBox(),
           ],
         ),
       ),

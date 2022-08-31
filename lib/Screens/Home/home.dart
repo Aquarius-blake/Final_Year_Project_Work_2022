@@ -120,7 +120,6 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     // try{
-
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
 
     return Scaffold(
