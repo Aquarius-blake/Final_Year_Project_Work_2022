@@ -19,15 +19,15 @@ class _NotificationsState extends State<Notifications> {
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
-
+String uid=user1.UID!;
     return Scaffold(
       body: StreamBuilder(
         stream: FirebaseFirestore.instance
             .collection('Notification')
             .doc(widget.uid)
             .collection('Notifs')
+            .where('author uid', isNotEqualTo: uid)
             .orderBy('Event Time',descending: true)
-            .where('author uid', isNotEqualTo: user1.UID)
             .snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
           if(snapshot.connectionState==ConnectionState.waiting){
