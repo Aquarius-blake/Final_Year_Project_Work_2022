@@ -41,7 +41,6 @@ class _ForumdetailState extends State<Forumdetail> {
       body: Column(
         children: [
           detailp(snap:widget.snap,),
-              Container(),
         ],
       ),
       bottomNavigationBar: SafeArea(
