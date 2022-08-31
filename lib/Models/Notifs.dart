@@ -58,7 +58,8 @@ late final String notifid;
       Eventuid: snapshot['Event Uid'],
       owner_uid: snapshot['owner uid'],
       owner: snapshot['owner'],
-      title: snapshot['Event Title']
+      title: snapshot['Event Title'],
+      commentuid: snapshot['Comment Uid'],
 
 
     );
