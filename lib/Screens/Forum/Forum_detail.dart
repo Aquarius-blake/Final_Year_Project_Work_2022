@@ -37,29 +37,33 @@ class _ForumdetailState extends State<Forumdetail> {
             ),
           )
       ),
-      body: ListView(
+      body: Column(
         children: [
-          Container(
-            child:  StreamBuilder(
-              stream: FirebaseFirestore.instance.collection('Posts').where('Post Uid', isEqualTo: widget.snap['Event Uid']).snapshots(),
-              builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
-                if(snapshot.connectionState==ConnectionState.waiting){
-                  return const Center(
-                    child: CircularProgressIndicator(),
-                  );
-                }
-                return ListView.builder(
-                    itemCount: snapshot.data!.docs.length,
-                    itemBuilder: (context, index) => Container(
-                      child: PostCard(
-                        snap: snapshot.data!.docs[index].data(),
-                      ),
-                    )
-                );
-              },
-            ),
+          ListView(
+            children: [
+              Container(
+                child:  StreamBuilder(
+                  stream: FirebaseFirestore.instance.collection('Posts').where('Post Uid', isEqualTo: widget.snap['Event Uid']).snapshots(),
+                  builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
+                    if(snapshot.connectionState==ConnectionState.waiting){
+                      return const Center(
+                        child: CircularProgressIndicator(),
+                      );
+                    }
+                    return ListView.builder(
+                        itemCount: snapshot.data!.docs.length,
+                        itemBuilder: (context, index) => Container(
+                          child: PostCard(
+                            snap: snapshot.data!.docs[index].data(),
+                          ),
+                        )
+                    );
+                  },
+                ),
+              ),
+              Container(),
+            ],
           ),
-          Container(),
         ],
       ),
       bottomNavigationBar: SafeArea(
