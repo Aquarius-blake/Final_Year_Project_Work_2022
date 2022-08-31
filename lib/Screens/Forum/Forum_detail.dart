@@ -1,10 +1,8 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/shared/Widgets/Detailpost.dart';
 import 'package:provider/provider.dart';
 import '../../Models/Users1.dart';
 import '../../Provider/user_provider.dart';
-import '../../shared/Widgets/post_card.dart';
 
 
 
@@ -46,7 +44,7 @@ class _ForumdetailState extends State<Forumdetail> {
                 width: MediaQuery.of(context).size.width,
                 child: detailp(snap:widget.snap,)
             ),
-            Divider()
+            Divider(),
           ],
         ),
       ),
