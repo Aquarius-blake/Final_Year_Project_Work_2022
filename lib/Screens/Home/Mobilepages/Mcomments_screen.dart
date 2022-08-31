@@ -19,8 +19,8 @@ class McommentsScreen extends StatefulWidget {
 class _McommentsScreenState extends State<McommentsScreen> {
 
 
-  commenting(String postid, String textt,String author_uid,String author,String ppurl) async{
-    String ress=await FirestoreMethods().postcomment(postid, textt, author_uid, author, ppurl);
+  commenting(String postid, String textt,String author_uid,String author,String ppurl,String title,String onweruid) async{
+    String ress=await FirestoreMethods().postcomment(postid, textt, author_uid, author, ppurl,title,onweruid);
     if( ress=="Comment success"){
       Showsnackbar(ress, context);
     }else if(ress=="Empty field"){
@@ -111,7 +111,7 @@ text.dispose();
                   ),
                 ),
                 ElevatedButton(
-                    onPressed: ()=>commenting(widget.snap['Post Uid'], text.text, user1.UID!, user1.Username!, user1.ppurl!),
+                    onPressed: ()=>commenting(widget.snap['Post Uid'], text.text, user1.UID!, user1.Username!, user1.ppurl!,widget.snap['title'],widget.snap['author uid']),
                     child: const Text("Post"),
                   style: ElevatedButton.styleFrom(
                       elevation: 0.0,

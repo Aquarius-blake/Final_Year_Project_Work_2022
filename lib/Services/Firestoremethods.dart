@@ -79,7 +79,7 @@ class FirestoreMethods{
     }
 
 
-    Future<String> postcomment(String postid, String text,String author_uid,String author,String ppurl) async{
+    Future<String> postcomment(String postid, String text,String author_uid,String author,String ppurl,String title,String owner_uid) async{
         String ress;
         try{
             if(text.isNotEmpty){
@@ -99,6 +99,8 @@ class FirestoreMethods{
 
                 //TODO: Write comment Notification code here
                 String notifid=const Uuid().v1();
+                String message="Commented on your post";
+                Notifs notifs=Notifs(author_uid: author_uid, notifid: notifid, Eventuid: postid, message: message, author: author, Timeposted: DateTime.now(), owner_uid: owner_uid, title: title);
                 ress="Comment success";
                 return ress;
             }
