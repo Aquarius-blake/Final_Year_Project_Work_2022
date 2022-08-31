@@ -38,13 +38,11 @@ class _ForumdetailState extends State<Forumdetail> {
             ),
           )
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              detailp(snap:widget.snap,),
-            ],
-          ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            detailp(snap:widget.snap,),
+          ],
         ),
       ),
       bottomNavigationBar: SafeArea(

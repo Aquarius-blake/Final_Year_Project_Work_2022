@@ -23,13 +23,9 @@ class _detailpState extends State<detailp> {
               child: CircularProgressIndicator(),
             );
           }
-          return ListView.builder(
-              itemCount: snapshot.data!.docs.length,
-              itemBuilder: (context, index) => Container(
-                child: PostCard(
-                  snap: snapshot.data!.docs[index].data(),
-                ),
-              )
+          return  PostCard(
+                  snap: snapshot.data!.docs[0].data(),
+
           );
         },
       ),
