@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/shared/Widgets/Detailpost.dart';
 import 'package:provider/provider.dart';
 import '../../Models/Users1.dart';
 import '../../Provider/user_provider.dart';
@@ -42,24 +43,7 @@ class _ForumdetailState extends State<Forumdetail> {
           ListView(
             children: [
               Container(
-                child:  StreamBuilder(
-                  stream: FirebaseFirestore.instance.collection('Posts').where('Post Uid', isEqualTo: widget.snap['Event Uid']).snapshots(),
-                  builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
-                    if(snapshot.connectionState==ConnectionState.waiting){
-                      return const Center(
-                        child: CircularProgressIndicator(),
-                      );
-                    }
-                    return ListView.builder(
-                        itemCount: snapshot.data!.docs.length,
-                        itemBuilder: (context, index) => Container(
-                          child: PostCard(
-                            snap: snapshot.data!.docs[index].data(),
-                          ),
-                        )
-                    );
-                  },
-                ),
+                child: detailp(snap:widget.snap,),
               ),
               Container(),
             ],
