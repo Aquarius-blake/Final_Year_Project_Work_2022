@@ -16,6 +16,10 @@ class _NotifCardState extends State<NotifCard> {
     super.initState();
   }
   @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+  }
+  @override
   void dispose() {
     super.dispose();
   }
