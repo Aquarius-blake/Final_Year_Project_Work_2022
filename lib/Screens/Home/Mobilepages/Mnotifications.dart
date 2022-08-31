@@ -18,8 +18,6 @@ class Notifications extends StatefulWidget {
 class _NotificationsState extends State<Notifications> {
   @override
   Widget build(BuildContext context) {
-    late  User1 user1=  Provider.of<UserProvider>(context).getUser;
-String uid=user1.UID!;
     return Scaffold(
       body: StreamBuilder(
         stream: FirebaseFirestore.instance
