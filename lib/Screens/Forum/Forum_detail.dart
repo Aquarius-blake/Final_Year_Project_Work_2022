@@ -40,12 +40,8 @@ class _ForumdetailState extends State<Forumdetail> {
       ),
       body: Column(
         children: [
-          ListView(
-            children: [
-               detailp(snap:widget.snap,),
+          detailp(snap:widget.snap,),
               Container(),
-            ],
-          ),
         ],
       ),
       bottomNavigationBar: SafeArea(
