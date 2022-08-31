@@ -26,7 +26,7 @@ String uid=user1.UID!;
             .collection('Notification')
             .doc(widget.uid)
             .collection('Notifs')
-            .where('author uid', isNotEqualTo: uid)
+            .where('author uid', isNotEqualTo: widget.uid)
             .orderBy('Event Time',descending: true)
             .snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
