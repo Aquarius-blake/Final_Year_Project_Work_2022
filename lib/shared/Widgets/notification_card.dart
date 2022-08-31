@@ -25,7 +25,7 @@ class _NotifCardState extends State<NotifCard> {
   }
   @override
   Widget build(BuildContext context) {
-
+Future.delayed(Duration(microseconds: 100));
     return Container(
       child:  Card(
         elevation: 2.0,
