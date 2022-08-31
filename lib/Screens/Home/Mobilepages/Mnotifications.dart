@@ -1,7 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Screens/Forum/Forum_detail.dart';
+import 'package:provider/provider.dart';
 
+import '../../../Models/Users1.dart';
+import '../../../Provider/user_provider.dart';
 import '../../../shared/Widgets/notification_card.dart';
 
 class Notifications extends StatefulWidget {
@@ -15,9 +18,11 @@ class Notifications extends StatefulWidget {
 class _NotificationsState extends State<Notifications> {
   @override
   Widget build(BuildContext context) {
+    late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+
     return Scaffold(
       body: StreamBuilder(
-        stream: FirebaseFirestore.instance.collection('Notification').doc(widget.uid).collection('Notifs').orderBy('Event Time',descending: true).snapshots(),
+        stream: FirebaseFirestore.instance.collection('Notification').doc(widget.uid).collection('Notifs').where('author uid', isNotEqualTo: user1.UID).orderBy('Event Time',descending: true).snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
           if(snapshot.connectionState==ConnectionState.waiting){
             return const Center(
