@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forum3/shared/Widgets/Comdetail.dart';
 import 'package:forum3/shared/Widgets/Detailpost.dart';
 import 'package:provider/provider.dart';
 import '../../Models/Users1.dart';
@@ -48,7 +49,13 @@ class _ForumdetailState extends State<Forumdetail> {
             SizedBox(
               height: MediaQuery.of(context).size.height*0.4,
               width: MediaQuery.of(context).size.width,
-child: ListView(),
+child: ListView(
+  children: [
+    Comdetail(
+      snap: widget.snap,
+    ),
+  ],
+),
             ),
           ],
         ),
