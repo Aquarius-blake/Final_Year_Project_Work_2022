@@ -21,6 +21,7 @@ late final String notifid;
       { required this.author_uid,
         required this.notifid,
         required this.Eventuid,
+        this.commentuid,
         required  this.message,
         required this.author,
         required  this.Timeposted,
