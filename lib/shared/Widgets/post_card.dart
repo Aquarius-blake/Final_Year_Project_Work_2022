@@ -187,6 +187,7 @@ class _PostCardState extends State<PostCard> {
 
   @override
   void dispose() {
+    getcommentlen().dispose;
     super.dispose();
   }
   @override
