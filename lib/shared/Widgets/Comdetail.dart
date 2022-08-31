@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Comdetail extends StatefulWidget {
-  const Comdetail({Key? key}) : super(key: key);
+  final snap;
+  const Comdetail({Key? key,this.snap}) : super(key: key);
 
   @override
   State<Comdetail> createState() => _ComdetailState();
