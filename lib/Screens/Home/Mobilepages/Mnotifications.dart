@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Screens/Forum/Forum_detail.dart';
-import 'package:provider/provider.dart';
 
 import '../../../shared/Widgets/notification_card.dart';
 
