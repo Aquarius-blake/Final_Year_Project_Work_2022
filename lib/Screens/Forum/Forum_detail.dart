@@ -42,9 +42,7 @@ class _ForumdetailState extends State<Forumdetail> {
         children: [
           ListView(
             children: [
-              Container(
-                child: detailp(snap:widget.snap,),
-              ),
+               detailp(snap:widget.snap,),
               Container(),
             ],
           ),
