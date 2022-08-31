@@ -27,6 +27,7 @@ class _NotificationsState extends State<Notifications> {
             .doc(widget.uid)
             .collection('Notifs')
             .orderBy('Event Time',descending: true)
+            .where('author uid', isNotEqualTo: user1.UID)
             .snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
           if(snapshot.connectionState==ConnectionState.waiting){
