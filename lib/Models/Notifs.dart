@@ -11,6 +11,7 @@ late final String notifid;
   late final  Timeposted;
   late final String? ppurl;
   late final String Eventuid;
+  late final String? commentuid;
   late final String? owner;
   late final String owner_uid;
   late final String title;
