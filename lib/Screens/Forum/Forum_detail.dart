@@ -45,7 +45,11 @@ class _ForumdetailState extends State<Forumdetail> {
                 child: detailp(snap:widget.snap,)
             ),
             Divider(),
-            SizedBox(),
+            SizedBox(
+              height: MediaQuery.of(context).size.height*0.4,
+              width: MediaQuery.of(context).size.width,
+
+            ),
           ],
         ),
       ),
