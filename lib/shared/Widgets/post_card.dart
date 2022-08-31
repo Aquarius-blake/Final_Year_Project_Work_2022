@@ -187,8 +187,11 @@ class _PostCardState extends State<PostCard> {
 
   @override
   void dispose() {
-    getcommentlen().dispose;
     super.dispose();
+  }
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
   }
   @override
   Widget build(BuildContext context) {
