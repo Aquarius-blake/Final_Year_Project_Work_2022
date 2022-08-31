@@ -9,8 +9,15 @@ class NotifCard extends StatefulWidget {
 }
 
 class _NotifCardState extends State<NotifCard> {
+ late bool loading;
+
+ @override
+  void initState() {
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
+
     return Container(
       child:  Card(
         elevation: 2.0,
