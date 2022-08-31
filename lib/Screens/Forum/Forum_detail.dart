@@ -49,12 +49,8 @@ class _ForumdetailState extends State<Forumdetail> {
             SizedBox(
               height: MediaQuery.of(context).size.height*0.4,
               width: MediaQuery.of(context).size.width,
-child: ListView(
-  children: [
-    Comdetail(
-      snap: widget.snap,
-    ),
-  ],
+child: Comdetail(
+  snap: widget.snap,
 ),
             ),
           ],
