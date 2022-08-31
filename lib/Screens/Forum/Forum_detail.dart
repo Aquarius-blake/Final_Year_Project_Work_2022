@@ -41,7 +41,11 @@ class _ForumdetailState extends State<Forumdetail> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            detailp(snap:widget.snap,),
+            SizedBox(
+              height: MediaQuery.of(context).size.height*0.4,
+                width: MediaQuery.of(context).size.width*0.5,
+                child: detailp(snap:widget.snap,)
+            ),
           ],
         ),
       ),
