@@ -41,7 +41,7 @@ class _ForumdetailState extends State<Forumdetail> {
         children: [
           Container(
             child:  StreamBuilder(
-              stream: FirebaseFirestore.instance.collection('Posts').snapshots(),
+              stream: FirebaseFirestore.instance.collection('Posts').where('Post Uid', isEqualTo: widget.snap['Event Uid']).snapshots(),
               builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
                 if(snapshot.connectionState==ConnectionState.waiting){
                   return const Center(
