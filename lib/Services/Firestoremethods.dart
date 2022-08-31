@@ -101,6 +101,10 @@ class FirestoreMethods{
                 String notifid=const Uuid().v1();
                 String message="Commented on your post";
                 Notifs notifs=Notifs(author_uid: author_uid, notifid: notifid, Eventuid: postid, message: message, author: author, Timeposted: DateTime.now(), owner_uid: owner_uid, title: title);
+                await _firestore.collection("Notification").doc(owner_uid).collection("Notifs").doc(notifid).set(
+                    notifs.toJson(),
+                    SetOptions(merge: true)
+                );
                 ress="Comment success";
                 return ress;
             }
