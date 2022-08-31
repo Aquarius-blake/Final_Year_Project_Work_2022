@@ -20,7 +20,7 @@ class _ComdetailState extends State<Comdetail> {
               .collection("Posts")
               .doc(widget.snap['Event Uid'])
               .collection("comments")
-             // .where('author uid',isEqualTo: widget.snap['author uid'])
+              .where('author uid',isEqualTo: widget.snap['author uid'])
               .orderBy("Comment Time",descending: true)
               .snapshots(),
           builder: (context,AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshots){
