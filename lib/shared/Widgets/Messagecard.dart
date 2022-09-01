@@ -62,7 +62,12 @@ if(widget.snap['Receiver Uid']!=user1.UID){
              crossAxisAlignment: CrossAxisAlignment.center,
              mainAxisAlignment: MainAxisAlignment.center,
              children: [
-               Text(widget.snap['Message']),
+               Text(
+                   widget.snap['Message'],
+                 style: TextStyle(
+                   color: Colors.white,
+                 ),
+               ),
                Align(
                  alignment: Alignment.bottomRight,
                    child: Text(
