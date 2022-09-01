@@ -22,7 +22,7 @@ class _chatcardState extends State<chatcard> {
   Widget build(BuildContext context) {
     print(widget.snap['Message']);
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
-    final DateTime date1 = DateTime.fromMillisecondsSinceEpoch(widget.snap['Message Time'] * 1000);
+    final DateTime date1 = DateTime.fromMillisecondsSinceEpoch(widget.snap['Message Time']);
     timehr=TimeOfDay.fromDateTime(date1).hour;
     if(widget.snap['Receiver Uid']!=user1.UID){
       recever=false;
