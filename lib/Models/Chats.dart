@@ -7,7 +7,7 @@ class Chats{
 
   late final  String? author_uid;
   late final String? author;
-  late final String? detail;
+  late final String? message;
   late final  Timeposted;
   late final String? ppurl;
   late final String message_uid;
@@ -15,7 +15,7 @@ class Chats{
   Chats(
       { required this.author_uid,
         required this.message_uid,
-        required  this.detail,
+        required  this.message,
         required this.author,
         required  this.Timeposted,
         this.ppurl,
@@ -28,13 +28,13 @@ class Chats{
     "Message Time":Timeposted,
     "Profile Pic":ppurl,
     "Message Uid":message_uid,
-    "detail":detail,
+    "Message":message,
   };
 
   static Chats? FromSnap(DocumentSnapshot snap){
     var snapshot= snap.data() as Map<String,dynamic>;
     Chats? Chats12=Chats(
-      detail: snapshot['detail'],
+      message: snapshot['Message'],
       author_uid: snapshot['author uid'],
       author: snapshot['author'],
       Timeposted: snapshot['Message Time'],
