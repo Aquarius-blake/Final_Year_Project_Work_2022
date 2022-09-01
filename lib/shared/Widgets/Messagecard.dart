@@ -60,7 +60,7 @@ if(widget.snap['Receiver Uid']!=user1.UID){
            elevation: 3.0,
            child: Column(
              crossAxisAlignment: CrossAxisAlignment.stretch,
-             mainAxisAlignment: MainAxisAlignment.start,
+             mainAxisAlignment: MainAxisAlignment.end,
              children: [
                Text(
                    widget.snap['Message'],
@@ -69,7 +69,7 @@ if(widget.snap['Receiver Uid']!=user1.UID){
                  ),
                ),
                Align(
-                 alignment: Alignment.bottomRight,
+                 alignment: Alignment.bottomLeft,
                    child: Text(
                        "Time",
                    style: TextStyle(
