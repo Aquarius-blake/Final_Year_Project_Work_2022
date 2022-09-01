@@ -300,8 +300,7 @@ class FirestoreMethods{
             );
 
 //Receiver Side
-
-
+                ;
             await _firestore
                 .collection("Chats")
                 .doc(receiver_uid)
