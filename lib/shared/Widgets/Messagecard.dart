@@ -60,7 +60,7 @@ if(widget.snap['Receiver Uid']!=user1.UID){
            children: [
              RichText(
                  text: TextSpan(
-                   text: "",
+                   text: "${widget.snap['Message']}",
                  )
              ),
              Align(
