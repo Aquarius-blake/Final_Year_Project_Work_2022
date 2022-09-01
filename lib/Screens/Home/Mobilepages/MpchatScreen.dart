@@ -45,8 +45,11 @@ color: Colors.black
       ),
       body: SizedBox(
           height: MediaQuery.of(context).size.height*0.8,
-          child: Chatbody(
-          snap: widget.snap,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Chatbody(
+            snap: widget.snap,
+            ),
           )
       ),
       bottomNavigationBar: SafeArea(
