@@ -19,11 +19,16 @@ class _MpchatScreenState extends State<MpchatScreen> {
         iconTheme:const IconThemeData(
           color: Colors.black,
         ),
-        title: Text(
-            "Username",
-        style: const TextStyle(
+        title: Row(
+          children: [
+            CircleAvatar(),
+            Text(
+                "Username",
+            style: const TextStyle(
 
-        ),
+            ),
+            ),
+          ],
         ),
       ),
     );
