@@ -66,11 +66,11 @@ class FirestoreMethods{
 
                 String message=" Liked your post: ";
                 String notifid=const Uuid().v1();
-            Notifs nots=  Notifs(title: title,ppurl: ppurl,author_uid: author_uid, Eventuid: postid, message: message, author: author, Timeposted: DateTime.now(), owner_uid: owneruid, notifid: notifid);
-            await _firestore.collection("Notification").doc(owneruid).collection("Notifs").doc(notifid).set(
-                nots.toJson(),
-                SetOptions(merge: true)
-            );
+                Notifs nots=  Notifs(title: title,ppurl: ppurl,author_uid: author_uid, Eventuid: postid, message: message, author: author, Timeposted: DateTime.now(), owner_uid: owneruid, notifid: notifid);
+                await _firestore.collection("Notification").doc(owneruid).collection("Notifs").doc(notifid).set(
+                    nots.toJson(),
+                    SetOptions(merge: true)
+                );
             }
 
         }catch(e){
@@ -253,13 +253,13 @@ class FirestoreMethods{
         String receiver,
         String receiver_uid
         )async{
-String ress;
-try{
+        String ress;
+        try{
 
-}catch(e){
-    ress=e.toString();
-    return ress;
-}
+        }catch(e){
+            ress=e.toString();
+            return ress;
+        }
     }
 
 
