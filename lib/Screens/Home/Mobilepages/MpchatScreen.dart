@@ -75,7 +75,7 @@ color: Colors.black
                 ),
                 ElevatedButton(
                   onPressed: (){},
-                  child: FaIcon(
+                  child: const FaIcon(
                       FontAwesomeIcons.featherPointed
                   ),
                   style: ElevatedButton.styleFrom(
