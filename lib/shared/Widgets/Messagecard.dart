@@ -32,7 +32,11 @@ class _chatcardState extends State<chatcard> {
         alignment: Alignment.centerLeft,
        child: Card(
          child: Column(
-           children: [],
+           children: [
+             RichText(
+                 text: TextSpan()
+             )
+           ],
          ),
        ),
       );
