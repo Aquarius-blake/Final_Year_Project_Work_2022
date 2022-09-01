@@ -251,7 +251,8 @@ class FirestoreMethods{
         String author,
         String author_uid,
         String receiver,
-        String receiver_uid
+        String receiver_uid,
+        String message,
         )async{
         String ress;
         try{
