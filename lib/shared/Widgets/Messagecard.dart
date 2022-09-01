@@ -29,6 +29,11 @@ class _chatcardState extends State<chatcard> {
       return Container(
         alignment: Alignment.centerRight,
         child: Card(
+          shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(
+                  Radius.circular(15)
+              )
+          ),
           color: Colors.lightBlueAccent[100],
           elevation: 3.0,
           child: Padding(
