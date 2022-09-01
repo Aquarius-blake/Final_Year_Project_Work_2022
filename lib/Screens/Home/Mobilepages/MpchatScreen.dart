@@ -47,7 +47,12 @@ color: Colors.black
         child: SingleChildScrollView(
           child: Column(
 children: [
-  Chatbody(),
+
+  SizedBox(
+    width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height*0.8,
+      child: Chatbody()
+  ),
 ],
           ),
         ),
