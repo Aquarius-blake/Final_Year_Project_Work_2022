@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -60,6 +61,7 @@ if(widget.snap['Receiver Uid']!=user1.UID){
            color: Colors.black,
            elevation: 3.0,
            child: Column(
+             crossAxisAlignment: CrossAxisAlignment.center,
              children: [
                RichText(
                    text: TextSpan(
