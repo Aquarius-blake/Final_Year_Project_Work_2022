@@ -37,7 +37,7 @@ class Chats{
       detail: snapshot['detail'],
       author_uid: snapshot['author uid'],
       author: snapshot['author'],
-      Timeposted: snapshot['Comment Time'],
+      Timeposted: snapshot['Message Time'],
       ppurl: snapshot['Profile Pic'],
       message_uid: snapshot['Message Uid'],
     );
