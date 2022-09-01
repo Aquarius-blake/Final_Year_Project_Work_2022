@@ -1,6 +1,5 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/material.dart';
 import 'package:forum3/Models/Chats.dart';
 import 'package:forum3/Models/Comments.dart';
 import 'package:forum3/Models/Notifs.dart';
@@ -261,7 +260,7 @@ class FirestoreMethods{
         String ress;
         try{
 
-            dynamic Timeposted=TimeOfDay.fromDateTime(DateTime.now()).toString();
+            dynamic Timeposted=DateTime.now();
             String  message_uid= Uuid().v1();
 
             Chats chats=Chats(
