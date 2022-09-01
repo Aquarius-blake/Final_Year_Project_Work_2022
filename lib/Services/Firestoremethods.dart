@@ -247,9 +247,18 @@ class FirestoreMethods{
         });
     }
 
-    Future<String?> Sendmessage()async{
+    Future<String?> Sendmessage(
+        String author,
+        String author_uid,
+        String receiver,
+        String receiver_uid
+        )async{
 
     }
+
+
+
+
 
 
 
