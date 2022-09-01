@@ -298,6 +298,37 @@ class FirestoreMethods{
                 },
                 SetOptions(merge: true)
             );
+
+//Receiver Side
+
+
+            await _firestore
+                .collection("Chats")
+                .doc(receiver_uid)
+                .collection("Chathead")
+                .doc(author_uid)
+                .collection("message")
+                .doc(message_uid)
+                .set(
+                chats.toJson(),
+                SetOptions(merge: true)
+            );
+            await _firestore
+                .collection("Chats")
+                .doc(receiver_uid)
+                .collection("Chathead")
+                .doc(author_uid).set(
+                {
+                    "Sender uid":receiver_uid,
+                    "Receiver uid":author_uid,
+                    "Last Message":message,
+                    "Profile Pic":ppurl,
+                    "Chat Time":Timeposted
+                },
+                SetOptions(merge: true)
+            );
+
+
             ress="Message Sent";
             return ress;
         }catch(e){
