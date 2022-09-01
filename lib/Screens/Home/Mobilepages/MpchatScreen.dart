@@ -18,6 +18,13 @@ class MpchatScreen extends StatefulWidget {
 
 class _MpchatScreenState extends State<MpchatScreen> {
   TextEditingController text=TextEditingController();
+
+
+  @override
+  void dispose() {
+text.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
