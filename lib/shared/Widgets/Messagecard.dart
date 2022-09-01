@@ -68,30 +68,33 @@ class _chatcardState extends State<chatcard> {
           child: Card(
             color: Colors.black,
             elevation: 3.0,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                RichText(
-                    text: TextSpan(
-                      text: widget.snap['Message'],
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
-                    )
-                ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  RichText(
+                      text: TextSpan(
+                        text: widget.snap['Message'],
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      )
+                  ),
 
-                Align(
-                    alignment: Alignment.bottomLeft,
-                    child: Text(
-                      "Time",
-                      style: TextStyle(
-                          color: Colors.blueGrey,
-                          fontSize: 12
-                      ),
-                    )
-                ),
-              ],
+                  Align(
+                      alignment: Alignment.bottomLeft,
+                      child: Text(
+                        "Time",
+                        style: TextStyle(
+                            color: Colors.blueGrey,
+                            fontSize: 12
+                        ),
+                      )
+                  ),
+                ],
+              ),
             ),
           ),
         ),
