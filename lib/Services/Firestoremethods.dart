@@ -259,17 +259,23 @@ class FirestoreMethods{
         )async{
         String ress;
         try{
-           dynamic Timeposted=DateTime.now();
-          String  message_uid= Uuid().v1();
-Chats chats=Chats(
-    author_uid: author_uid,
-    message_uid: message_uid,
-    message: message,
-    receiver_uid: receiver_uid,
-    author: author,
-    Timeposted: Timeposted,
-    ppurl: ppurl,
-    receiver: receiver);
+
+            dynamic Timeposted=DateTime.now();
+            String  message_uid= Uuid().v1();
+
+            Chats chats=Chats(
+                author_uid: author_uid,
+                message_uid: message_uid,
+                message: message,
+                receiver_uid: receiver_uid,
+                author: author,
+                Timeposted: Timeposted,
+                ppurl: ppurl,
+                receiver: receiver);
+
+
+
+
         }catch(e){
             ress=e.toString();
             return ress;
