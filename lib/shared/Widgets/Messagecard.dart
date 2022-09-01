@@ -17,6 +17,7 @@ class _chatcardState extends State<chatcard> {
  late bool recever;
   @override
   Widget build(BuildContext context) {
+    print(widget.snap['Message']);
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
 if(widget.snap['Receiver Uid']!=user1.UID){
   recever=false;
