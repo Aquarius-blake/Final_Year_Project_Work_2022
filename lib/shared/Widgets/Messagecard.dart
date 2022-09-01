@@ -28,7 +28,7 @@ class _chatcardState extends State<chatcard> {
 
     final Timestamp timestamp = widget.snap['Message Time'] as Timestamp;
     final DateTime dateTime = timestamp.toDate();
-    final dateString = DateFormat('K:mm:ss').format(dateTime);
+    final dateString = DateFormat('K:mm').format(dateTime);
 
     if(widget.snap['Receiver Uid']!=user1.UID){
       recever=false;
