@@ -22,6 +22,7 @@ class _MpchatScreenState extends State<MpchatScreen> {
         title: Row(
           children: [
             CircleAvatar(),
+            SizedBox(width: 20,),
             Text(
                 "Username",
             style: const TextStyle(
