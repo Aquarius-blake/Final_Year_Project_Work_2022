@@ -31,8 +31,13 @@ class _ChatbodyState extends State<Chatbody> {
               itemCount: snapshot.data!.docs.length,
               itemBuilder: (context, index) => Align(
                 alignment: Alignment.bottomRight,
-                child: chatcard(
-                  snap: snapshot.data!.docs[index].data(),
+                child: Row(
+                  children: [
+                    Expanded(child: SizedBox()),
+                    chatcard(
+                      snap: snapshot.data!.docs[index].data(),
+                    ),
+                  ],
                 ),
               )
           );
