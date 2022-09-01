@@ -25,7 +25,7 @@ class _MpchatScreenState extends State<MpchatScreen> {
             Text(
                 "Username",
             style: const TextStyle(
-
+color: Colors.black
             ),
             ),
           ],
