@@ -18,7 +18,11 @@ class _chatcardState extends State<chatcard> {
       alignment: Alignment.centerRight,
       child: Card(
         child: Column(
-          children: [],
+          children: [
+            RichText(
+                text: TextSpan()
+            )
+          ],
         ),
       ),
 
