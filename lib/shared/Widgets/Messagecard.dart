@@ -31,29 +31,32 @@ class _chatcardState extends State<chatcard> {
         child: Card(
           color: Colors.lightBlueAccent[100],
           elevation: 3.0,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              RichText(
-                  text: TextSpan(
-                    text: widget.snap['Message'],
-                    style: TextStyle(
-                      color: Colors.black,
-                    ),
-                  )
-              ),
-              Align(
-                  alignment: Alignment.bottomRight,
-                  child: Text(
-                    "Time",
-                    style: TextStyle(
-                        color: Colors.blueGrey,
-                        fontSize: 12
-                    ),
-                  )
-              )
-            ],
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                RichText(
+                    text: TextSpan(
+                      text: widget.snap['Message'],
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
+                    )
+                ),
+                Align(
+                    alignment: Alignment.bottomRight,
+                    child: Text(
+                      "Time",
+                      style: TextStyle(
+                          color: Colors.blueGrey,
+                          fontSize: 12
+                      ),
+                    )
+                )
+              ],
+            ),
           ),
         ),
       );
