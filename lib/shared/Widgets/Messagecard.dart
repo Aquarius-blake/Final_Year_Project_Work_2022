@@ -13,6 +13,9 @@ class _chatcardState extends State<chatcard> {
   bool recever=false;
   @override
   Widget build(BuildContext context) {
-    return Container();
+    if(recever){
+    return Container();}else{
+      return Container();
+    }
   }
 }
