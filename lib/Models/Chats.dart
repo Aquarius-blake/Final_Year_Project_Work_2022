@@ -21,7 +21,7 @@ class Chats{
         required this. receiver_uid,
         required this.author,
         required  this.Timeposted,
-        this.ppurl,
+        required this.ppurl,
         required this.receiver
       }
       );
