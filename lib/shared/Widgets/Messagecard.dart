@@ -23,7 +23,8 @@ class _chatcardState extends State<chatcard> {
           children: [
             RichText(
                 text: TextSpan()
-            )
+            ),
+            Text("Time")
           ],
         ),
       ),
@@ -39,7 +40,8 @@ class _chatcardState extends State<chatcard> {
            children: [
              RichText(
                  text: TextSpan()
-             )
+             ),
+             Text("Time"),
            ],
          ),
        ),
