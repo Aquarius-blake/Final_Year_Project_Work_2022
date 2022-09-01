@@ -34,6 +34,7 @@ color: Colors.black
           ],
         ),
       ),
+      body: Container(),
     );
   }
 }
