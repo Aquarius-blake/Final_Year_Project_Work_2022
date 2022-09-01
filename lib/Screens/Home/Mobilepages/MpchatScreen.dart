@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Screens/Home/Mobilepages/MpChatbody.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
 import 'package:provider/provider.dart';
@@ -45,7 +46,9 @@ color: Colors.black
       body: Container(
         child: SingleChildScrollView(
           child: Column(
-
+children: [
+  Chatbody(),
+],
           ),
         ),
       ),
