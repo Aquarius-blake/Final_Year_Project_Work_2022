@@ -247,6 +247,9 @@ class FirestoreMethods{
         });
     }
 
+    Future<String?> Sendmessage()async{
+
+    }
 
 
 
