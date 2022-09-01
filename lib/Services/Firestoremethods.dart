@@ -284,7 +284,14 @@ class FirestoreMethods{
                     chats.toJson(),
                     SetOptions(merge: true)
             );
-
+            await _firestore
+                .collection("Chats")
+                .doc(author_uid)
+                .collection("Chathead")
+                .doc(receiver_uid).set(
+                {},
+                SetOptions(merge: true)
+            );
             ress="Message Sent";
             return ress;
         }catch(e){
