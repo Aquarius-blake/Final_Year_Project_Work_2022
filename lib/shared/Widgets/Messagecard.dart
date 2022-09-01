@@ -35,11 +35,7 @@ if(widget.snap['Receiver Uid']!=user1.UID){
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            RichText(
-                text: TextSpan(
-                  text: "${widget.snap['Message']}",
-                )
-            ),
+            Text(widget.snap['Message']),
             Align(
               alignment: Alignment.bottomRight,
                 child: Text(
@@ -66,11 +62,7 @@ if(widget.snap['Receiver Uid']!=user1.UID){
              crossAxisAlignment: CrossAxisAlignment.center,
              mainAxisAlignment: MainAxisAlignment.center,
              children: [
-               RichText(
-                   text: TextSpan(
-                     text: "${widget.snap['Message']}",
-                   )
-               ),
+               Text(widget.snap['Message']),
                Align(
                  alignment: Alignment.bottomRight,
                    child: Text(
