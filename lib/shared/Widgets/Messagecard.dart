@@ -32,6 +32,8 @@ if(widget.snap['Receiver Uid']!=user1.UID){
         color: Colors.lightBlueAccent,
         elevation: 3.0,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             RichText(
                 text: TextSpan(
@@ -62,6 +64,7 @@ if(widget.snap['Receiver Uid']!=user1.UID){
            elevation: 3.0,
            child: Column(
              crossAxisAlignment: CrossAxisAlignment.center,
+             mainAxisAlignment: MainAxisAlignment.center,
              children: [
                RichText(
                    text: TextSpan(
