@@ -14,8 +14,13 @@ class _chatcardState extends State<chatcard> {
   @override
   Widget build(BuildContext context) {
     if(recever){
-    return Container();}else{
-      return Container();
+    return Container(
+      alignment: Alignment.centerRight,
+    );
+    }else{
+      return Container(
+        alignment: Alignment.centerLeft,
+      );
     }
   }
 }
