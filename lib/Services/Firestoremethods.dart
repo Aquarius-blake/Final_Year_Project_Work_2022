@@ -261,7 +261,7 @@ class FirestoreMethods{
         String ress;
         try{
 
-            dynamic Timeposted=TimeOfDay.now();
+            dynamic Timeposted=TimeOfDay.fromDateTime(DateTime.now());
             String  message_uid= Uuid().v1();
 
             Chats chats=Chats(
