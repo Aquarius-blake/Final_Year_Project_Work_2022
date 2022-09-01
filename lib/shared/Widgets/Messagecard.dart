@@ -32,8 +32,8 @@ if(widget.snap['Receiver Uid']!=user1.UID){
         color: Colors.lightBlueAccent,
         elevation: 3.0,
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(widget.snap['Message']),
             Align(
@@ -59,8 +59,8 @@ if(widget.snap['Receiver Uid']!=user1.UID){
            color: Colors.black,
            elevation: 3.0,
            child: Column(
-             crossAxisAlignment: CrossAxisAlignment.center,
-             mainAxisAlignment: MainAxisAlignment.center,
+             crossAxisAlignment: CrossAxisAlignment.stretch,
+             mainAxisAlignment: MainAxisAlignment.start,
              children: [
                Text(
                    widget.snap['Message'],
