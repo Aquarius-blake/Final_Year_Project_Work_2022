@@ -39,7 +39,7 @@ class _chatcardState extends State<chatcard> {
                   text: TextSpan(
                     text: widget.snap['Message'],
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   )
               ),
