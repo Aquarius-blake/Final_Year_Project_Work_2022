@@ -66,7 +66,7 @@ color: Colors.black
                     child: TextField(
                       controller: text,
                       decoration: InputDecoration(
-                        hintText: "Comment as ${user1.Username}",
+                        hintText: "Chat as ${user1.Username}",
                         border: InputBorder.none,
                       ),
                     ),
