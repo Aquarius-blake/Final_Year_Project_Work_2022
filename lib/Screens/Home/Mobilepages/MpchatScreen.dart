@@ -75,7 +75,7 @@ color: Colors.black
                 ),
                 ElevatedButton(
                   onPressed: (){},
-                  child: FaIcon(FontAwesomeIcons.message),
+                  child: FaIcon(FontAwesomeIcons.arrowRight),
                   style: ElevatedButton.styleFrom(
                       elevation: 0.0,
                       shadowColor: Colors.black,
