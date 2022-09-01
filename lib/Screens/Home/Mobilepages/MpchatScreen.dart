@@ -43,21 +43,12 @@ color: Colors.black
           ],
         ),
       ),
-      body: Container(
-        child: SingleChildScrollView(
-          child: Column(
-children: [
-
-  SizedBox(
-    width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height*0.8,
-      child: Chatbody(
-        snap: widget.snap,
-      )
-  ),
-],
-          ),
-        ),
+      body: SizedBox(
+        width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height*0.8,
+          child: Chatbody(
+          snap: widget.snap,
+          )
       ),
       bottomNavigationBar: SafeArea(
           child: Container(
