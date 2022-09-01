@@ -24,7 +24,7 @@ class _MpchatScreenState extends State<MpchatScreen> {
             CircleAvatar(),
             SizedBox(width: 20,),
             Text(
-                "Username",
+                "${widget.snap['username']}",
             style: const TextStyle(
 color: Colors.black
             ),
