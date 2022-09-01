@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/shared/Widgets/Comdetail.dart';
 import 'package:provider/provider.dart';
 
 import '../../../Models/Users1.dart';
@@ -41,7 +42,13 @@ color: Colors.black
           ],
         ),
       ),
-      body: Container(),
+      body: Container(
+        child: SingleChildScrollView(
+          child: Column(
+
+          ),
+        ),
+      ),
       bottomNavigationBar: SafeArea(
           child: Container(
             height: kToolbarHeight,
