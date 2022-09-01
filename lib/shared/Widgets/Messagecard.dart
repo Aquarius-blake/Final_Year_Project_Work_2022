@@ -52,31 +52,34 @@ if(widget.snap['Receiver Uid']!=user1.UID){
       ),
     );
     }else{
-      return Container(
-        alignment: Alignment.centerLeft,
-       child: Card(
-         color: Colors.black,
-         elevation: 3.0,
-         child: Column(
-           children: [
-             RichText(
-                 text: TextSpan(
-                   text: "${widget.snap['Message']}",
-                 )
-             ),
-             Align(
-               alignment: Alignment.bottomRight,
-                 child: Text(
-                     "Time",
-                 style: TextStyle(
-                   color: Colors.blueGrey,
-                   fontSize: 12
-                 ),
-                 )
-             ),
-           ],
+      return Align(
+        alignment: Alignment.bottomRight,
+        child: Container(
+          alignment: Alignment.centerLeft,
+         child: Card(
+           color: Colors.black,
+           elevation: 3.0,
+           child: Column(
+             children: [
+               RichText(
+                   text: TextSpan(
+                     text: "${widget.snap['Message']}",
+                   )
+               ),
+               Align(
+                 alignment: Alignment.bottomRight,
+                   child: Text(
+                       "Time",
+                   style: TextStyle(
+                     color: Colors.blueGrey,
+                     fontSize: 12
+                   ),
+                   )
+               ),
+             ],
+           ),
          ),
-       ),
+        ),
       );
     }
   }
