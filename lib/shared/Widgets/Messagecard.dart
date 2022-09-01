@@ -16,10 +16,14 @@ class chatcard extends StatefulWidget {
 
 class _chatcardState extends State<chatcard> {
   late bool recever;
+  late int timehr;
+  late int timemin;
   @override
   Widget build(BuildContext context) {
     print(widget.snap['Message']);
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+    final DateTime date1 = DateTime.fromMillisecondsSinceEpoch(widget.snap['Message Time'] * 1000);
+    timehr=TimeOfDay.fromDateTime(date1).hour;
     if(widget.snap['Receiver Uid']!=user1.UID){
       recever=false;
     }else{
@@ -45,7 +49,7 @@ class _chatcardState extends State<chatcard> {
                 RichText(
                     text: TextSpan(
                       text: widget.snap['Message'],
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.black,
                       ),
                     )
@@ -96,7 +100,7 @@ class _chatcardState extends State<chatcard> {
                   Align(
                       alignment: Alignment.bottomLeft,
                       child: Text(
-                        "Time",
+                        "Time $timehr",
                         style: TextStyle(
                             color: Colors.blueGrey,
                             fontSize: 12
