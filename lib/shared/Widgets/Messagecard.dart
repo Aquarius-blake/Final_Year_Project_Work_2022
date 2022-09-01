@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 
 class chatcard extends StatefulWidget {
-  const chatcard({Key? key}) : super(key: key);
+  final snap;
+  const chatcard({Key? key,this.snap}) : super(key: key);
 
   @override
   State<chatcard> createState() => _chatcardState();
