@@ -18,6 +18,7 @@ class _chatcardState extends State<chatcard> {
       alignment: Alignment.centerRight,
       child: Card(
         color: Colors.lightBlueAccent,
+        elevation: 3.0,
         child: Column(
           children: [
             RichText(
