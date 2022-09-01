@@ -55,7 +55,7 @@ if(widget.snap['Receiver Uid']!=user1.UID){
       return Align(
         alignment: Alignment.bottomRight,
         child: Container(
-          alignment: Alignment.centerLeft,
+          alignment: Alignment.bottomRight,
          child: Card(
            color: Colors.black,
            elevation: 3.0,
