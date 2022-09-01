@@ -22,9 +22,7 @@ class _chatcardState extends State<chatcard> {
   late int timemin;
   @override
   Widget build(BuildContext context) {
-    print(widget.snap['Message']);
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
-
 
     final Timestamp timestamp = widget.snap['Message Time'] as Timestamp;
     final DateTime dateTime = timestamp.toDate();
