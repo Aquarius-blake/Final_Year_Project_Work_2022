@@ -26,7 +26,10 @@ class _chatcardState extends State<chatcard> {
             ),
             Align(
               alignment: Alignment.bottomRight,
-                child: Text("Time")
+                child: Text(
+                    "Time",
+                  style: TextStyle(),
+                )
             )
           ],
         ),
