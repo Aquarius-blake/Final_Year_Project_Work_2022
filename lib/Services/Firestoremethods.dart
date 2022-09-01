@@ -289,7 +289,13 @@ class FirestoreMethods{
                 .doc(author_uid)
                 .collection("Chathead")
                 .doc(receiver_uid).set(
-                {},
+                {
+                    "Sender uid":author_uid,
+                    "Receiver uid":receiver_uid,
+                    "Last Message":message,
+                    "Profile Pic":ppurl,
+                    "Chat Time":Timeposted
+                },
                 SetOptions(merge: true)
             );
             ress="Message Sent";
