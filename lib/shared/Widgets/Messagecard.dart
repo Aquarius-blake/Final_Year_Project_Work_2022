@@ -63,7 +63,7 @@ class _chatcardState extends State<chatcard> {
                 Align(
                     alignment: Alignment.bottomRight,
                     child: Text(
-                      "Time",
+                      "$dateString",
                       style: TextStyle(
                           color: Colors.blueGrey,
                           fontSize: 12
