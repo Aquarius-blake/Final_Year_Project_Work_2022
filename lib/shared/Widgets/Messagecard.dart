@@ -34,6 +34,7 @@ class _chatcardState extends State<chatcard> {
         alignment: Alignment.centerLeft,
        child: Card(
          color: Colors.black,
+         elevation: 3.0,
          child: Column(
            children: [
              RichText(
