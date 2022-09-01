@@ -25,7 +25,7 @@ class Chats{
   Map<String,dynamic> toJson()=>{
     "author uid":author_uid,
     "author":author,
-    "Comment Time":Timeposted,
+    "Message Time":Timeposted,
     "Profile Pic":ppurl,
     "Message Uid":message_uid,
     "detail":detail,
