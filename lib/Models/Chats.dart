@@ -33,7 +33,7 @@ class Chats{
 
   static Chats? FromSnap(DocumentSnapshot snap){
     var snapshot= snap.data() as Map<String,dynamic>;
-    Chats? Comments12=Chats(
+    Chats? Chats12=Chats(
       detail: snapshot['detail'],
       author_uid: snapshot['author uid'],
       author: snapshot['author'],
@@ -42,7 +42,7 @@ class Chats{
       message_uid: snapshot['Message Uid'],
     );
 
-    return Comments12;
+    return Chats12;
 
 
 
