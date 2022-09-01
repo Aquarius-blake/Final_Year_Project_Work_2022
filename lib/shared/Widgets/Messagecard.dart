@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../../Models/Users1.dart';
+import '../../Provider/user_provider.dart';
 
 
 class chatcard extends StatefulWidget {
@@ -10,9 +14,15 @@ class chatcard extends StatefulWidget {
 }
 
 class _chatcardState extends State<chatcard> {
-  bool recever=false;
+ late bool recever;
   @override
   Widget build(BuildContext context) {
+    late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+if(widget.snap['Receiver Uid']!=user1.UID){
+  recever=false;
+}else{
+  recever=true;
+}
     if(recever){
     return Container(
       alignment: Alignment.centerRight,
