@@ -10,6 +10,6 @@ class Chatbody extends StatefulWidget {
 class _ChatbodyState extends State<Chatbody> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold();
   }
 }
