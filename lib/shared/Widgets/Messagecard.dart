@@ -10,6 +10,7 @@ class chatcard extends StatefulWidget {
 }
 
 class _chatcardState extends State<chatcard> {
+  bool recever=false;
   @override
   Widget build(BuildContext context) {
     return Container();
