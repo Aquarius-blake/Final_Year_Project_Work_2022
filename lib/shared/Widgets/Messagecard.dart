@@ -17,6 +17,7 @@ class _chatcardState extends State<chatcard> {
     return Container(
       alignment: Alignment.centerRight,
       child: Card(
+        color: Colors.lightBlueAccent,
         child: Column(
           children: [
             RichText(
