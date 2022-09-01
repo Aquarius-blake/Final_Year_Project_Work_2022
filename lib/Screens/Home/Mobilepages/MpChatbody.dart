@@ -1,6 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/shared/Widgets/Messagecard.dart';
+import 'package:provider/provider.dart';
+
+import '../../../Models/Users1.dart';
+import '../../../Provider/user_provider.dart';
 
 class Chatbody extends StatefulWidget {
   final snap;
@@ -13,9 +17,10 @@ class Chatbody extends StatefulWidget {
 class _ChatbodyState extends State<Chatbody> {
   @override
   Widget build(BuildContext context) {
+    late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     return Scaffold(
       body:  StreamBuilder(
-        stream: FirebaseFirestore.instance.collection('Chats').snapshots(),
+        stream: FirebaseFirestore.instance.collection('Chats').doc(user1.UID).collection("Chathead").snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
           if(snapshot.connectionState==ConnectionState.waiting){
             return const Center(
