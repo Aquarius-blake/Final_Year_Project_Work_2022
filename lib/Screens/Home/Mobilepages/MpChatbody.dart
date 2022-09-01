@@ -33,7 +33,7 @@ class _ChatbodyState extends State<Chatbody> {
                 alignment: Alignment.bottomRight,
                 child: Row(
                   children: [
-                  user1.UID==snapshot.data!.docs[index].data()['Receiver Uid']?  Expanded(child: SizedBox()):SizedBox(),
+                  user1.UID!=snapshot.data!.docs[index].data()['Receiver Uid']?  Expanded(child: SizedBox()):SizedBox(),
                     chatcard(
                       snap: snapshot.data!.docs[index].data(),
                     ),
