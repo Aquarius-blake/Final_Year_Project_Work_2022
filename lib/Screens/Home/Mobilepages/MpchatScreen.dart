@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
 import '../../../Models/Users1.dart';
@@ -74,7 +75,7 @@ color: Colors.black
                 ),
                 ElevatedButton(
                   onPressed: (){},
-                  child: const Text("Post"),
+                  child: FaIcon(FontAwesomeIcons.message),
                   style: ElevatedButton.styleFrom(
                       elevation: 0.0,
                       shadowColor: Colors.black,
