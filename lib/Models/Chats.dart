@@ -3,18 +3,18 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class Comments{
+class Chats{
 
   late final  String? author_uid;
   late final String? author;
   late final String? detail;
   late final  Timeposted;
   late final String? ppurl;
-  late final String commentuid;
+  late final String message_uid;
 
-  Comments(
+  Chats(
       { required this.author_uid,
-        required this.commentuid,
+        required this.message_uid,
         required  this.detail,
         required this.author,
         required  this.Timeposted,
@@ -27,19 +27,19 @@ class Comments{
     "author":author,
     "Comment Time":Timeposted,
     "Profile Pic":ppurl,
-    "Comment Uid":commentuid,
+    "Message Uid":message_uid,
     "detail":detail,
   };
 
-  static Comments? FromSnap(DocumentSnapshot snap){
+  static Chats? FromSnap(DocumentSnapshot snap){
     var snapshot= snap.data() as Map<String,dynamic>;
-    Comments? Comments12=Comments(
+    Chats? Comments12=Chats(
       detail: snapshot['detail'],
       author_uid: snapshot['author uid'],
       author: snapshot['author'],
       Timeposted: snapshot['Comment Time'],
       ppurl: snapshot['Profile Pic'],
-      commentuid: snapshot['Comment Uid'],
+      message_uid: snapshot['Message Uid'],
     );
 
     return Comments12;
