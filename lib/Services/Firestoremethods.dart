@@ -253,7 +253,13 @@ class FirestoreMethods{
         String receiver,
         String receiver_uid
         )async{
+String ress;
+try{
 
+}catch(e){
+    ress=e.toString();
+    return ress;
+}
     }
 
 
