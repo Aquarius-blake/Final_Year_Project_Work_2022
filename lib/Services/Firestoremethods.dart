@@ -285,7 +285,8 @@ class FirestoreMethods{
                     SetOptions(merge: true)
             );
 
-
+            ress="Message Sent";
+            return ress;
         }catch(e){
             ress=e.toString();
             return ress;

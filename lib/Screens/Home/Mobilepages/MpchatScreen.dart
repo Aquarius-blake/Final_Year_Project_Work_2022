@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Services/Firestoremethods.dart';
+import 'package:forum3/shared/Pop_up.dart';
 import 'package:provider/provider.dart';
 import '../../../Models/Users1.dart';
 import '../../../Provider/user_provider.dart';
@@ -79,7 +81,10 @@ color: Colors.black
                   ),
                 ),
                 ElevatedButton(
-                  onPressed: (){},
+                  onPressed: ()async{
+                    String? ress= await FirestoreMethods().Sendmessage(user1.Username!, user1.UID!, widget.snap['username'], widget.snap['uid'], text.text,user1.ppurl!);
+                  Showsnackbar(ress!, context);
+                    },
                   child: const FaIcon(
                       FontAwesomeIcons.featherPointed
                   ),
