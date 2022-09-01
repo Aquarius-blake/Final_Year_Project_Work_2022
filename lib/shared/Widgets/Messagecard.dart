@@ -59,7 +59,7 @@ if(widget.snap['Receiver Uid']!=user1.UID){
            color: Colors.black,
            elevation: 3.0,
            child: Column(
-             crossAxisAlignment: CrossAxisAlignment.stretch,
+             crossAxisAlignment: CrossAxisAlignment.end,
              mainAxisAlignment: MainAxisAlignment.end,
              children: [
                Text(
