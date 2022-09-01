@@ -29,7 +29,7 @@ class _chatcardState extends State<chatcard> {
       return Container(
         alignment: Alignment.centerRight,
         child: Card(
-          color: Colors.lightBlueAccent,
+          color: Colors.lightBlueAccent[100],
           elevation: 3.0,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
