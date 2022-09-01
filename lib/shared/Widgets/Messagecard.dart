@@ -30,13 +30,13 @@ class _chatcardState extends State<chatcard> {
                     "Time",
                   style: TextStyle(
                     color: Colors.blueGrey,
+                    fontSize: 12
                   ),
                 )
             )
           ],
         ),
       ),
-
     );
     }else{
       return Container(
@@ -47,14 +47,17 @@ class _chatcardState extends State<chatcard> {
          child: Column(
            children: [
              RichText(
-                 text: TextSpan()
+                 text: TextSpan(
+                   text: "",
+                 )
              ),
              Align(
                alignment: Alignment.bottomRight,
                  child: Text(
                      "Time",
                  style: TextStyle(
-                   color: Colors.blueGrey
+                   color: Colors.blueGrey,
+                   fontSize: 12
                  ),
                  )
              ),
