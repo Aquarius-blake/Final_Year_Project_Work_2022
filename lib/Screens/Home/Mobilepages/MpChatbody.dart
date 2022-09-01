@@ -20,7 +20,7 @@ class _ChatbodyState extends State<Chatbody> {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     return Scaffold(
       body:  StreamBuilder(
-        stream: FirebaseFirestore.instance.collection('Chats').doc(user1.UID).collection("Chathead").snapshots(),
+        stream: FirebaseFirestore.instance.collection('Chats').doc(user1.UID).collection("Chathead").doc(widget.snap['uid']).collection('messages').snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
           if(snapshot.connectionState==ConnectionState.waiting){
             return const Center(
