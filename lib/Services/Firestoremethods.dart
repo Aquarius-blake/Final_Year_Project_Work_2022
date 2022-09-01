@@ -1,4 +1,6 @@
+
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:forum3/Models/Chats.dart';
 import 'package:forum3/Models/Comments.dart';
 import 'package:forum3/Models/Notifs.dart';
 import 'package:forum3/Models/Posts.dart';
@@ -257,7 +259,17 @@ class FirestoreMethods{
         )async{
         String ress;
         try{
-
+           dynamic Timeposted=DateTime.now();
+          String  message_uid= Uuid().v1();
+Chats chats=Chats(
+    author_uid: author_uid,
+    message_uid: message_uid,
+    message: message,
+    receiver_uid: receiver_uid,
+    author: author,
+    Timeposted: Timeposted,
+    ppurl: ppurl,
+    receiver: receiver);
         }catch(e){
             ress=e.toString();
             return ress;
