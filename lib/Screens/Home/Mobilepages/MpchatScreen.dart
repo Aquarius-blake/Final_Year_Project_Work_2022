@@ -19,6 +19,12 @@ class _MpchatScreenState extends State<MpchatScreen> {
         iconTheme:const IconThemeData(
           color: Colors.black,
         ),
+        title: Text(
+            "Username",
+        style: TextStyle(
+
+        ),
+        ),
       ),
     );
   }
