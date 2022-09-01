@@ -273,14 +273,17 @@ class FirestoreMethods{
                 ppurl: ppurl,
                 receiver: receiver);
 
-await _firestore
-    .collection("Chats")
-    .doc(author_uid)
-    .collection("Chathead")
-    .doc(receiver_uid)
-    .collection("message")
-    .doc(message_uid)
-    .set(chats.toJson(),SetOptions(merge: true));
+            await _firestore
+                .collection("Chats")
+                .doc(author_uid)
+                .collection("Chathead")
+                .doc(receiver_uid)
+                .collection("message")
+                .doc(message_uid)
+                .set(
+                    chats.toJson(),
+                    SetOptions(merge: true)
+            );
 
 
         }catch(e){
