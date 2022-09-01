@@ -17,7 +17,9 @@ class _chatcardState extends State<chatcard> {
     return Container(
       alignment: Alignment.centerRight,
       child: Card(
-        child: Column(),
+        child: Column(
+          children: [],
+        ),
       ),
 
     );
@@ -25,7 +27,9 @@ class _chatcardState extends State<chatcard> {
       return Container(
         alignment: Alignment.centerLeft,
        child: Card(
-         child: Column(),
+         child: Column(
+           children: [],
+         ),
        ),
       );
     }
