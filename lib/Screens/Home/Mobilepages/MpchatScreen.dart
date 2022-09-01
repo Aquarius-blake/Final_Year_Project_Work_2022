@@ -14,6 +14,7 @@ class _MpchatScreenState extends State<MpchatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Colors.white,
         iconTheme:const IconThemeData(
           color: Colors.black,
