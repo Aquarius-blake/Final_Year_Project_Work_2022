@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Meditprofile.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mlikedposts.dart';
+import 'package:forum3/Screens/Home/Mobilepages/MpchatScreen.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Profile_posts.dart';
 import 'package:provider/provider.dart';
 
@@ -105,7 +106,15 @@ class _MprofileState extends State<Mprofile>with
                         Row(
                           children: [
                             widget.snap['uid']!=user1.UID? ElevatedButton(
-                              onPressed: (){},
+                              onPressed: (){
+                                Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (context)=>MpchatScreen(
+                                        snap: widget.snap,
+                                      ),
+                                    )
+                                );
+                              },
                               child: const Padding(
                                 padding: EdgeInsets.only(
                                     left: 16.0,
