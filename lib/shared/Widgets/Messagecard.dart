@@ -16,10 +16,13 @@ class _chatcardState extends State<chatcard> {
     if(recever){
     return Container(
       alignment: Alignment.centerRight,
+      child: Card(),
+
     );
     }else{
       return Container(
         alignment: Alignment.centerLeft,
+       child: Card(),
       );
     }
   }
