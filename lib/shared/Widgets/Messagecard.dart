@@ -32,7 +32,9 @@ if(widget.snap['Receiver Uid']!=user1.UID){
         child: Column(
           children: [
             RichText(
-                text: TextSpan()
+                text: TextSpan(
+                  text: "${widget.snap['Message']}",
+                )
             ),
             Align(
               alignment: Alignment.bottomRight,
