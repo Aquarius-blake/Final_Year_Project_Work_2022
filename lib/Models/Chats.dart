@@ -9,6 +9,8 @@ class Chats{
   late final String? author;
   late final String? message;
   late final  Timeposted;
+  late final String receiver;
+  late final String receiver_uid;
   late final String? ppurl;
   late final String message_uid;
 
