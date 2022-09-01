@@ -29,8 +29,11 @@ class _ChatbodyState extends State<Chatbody> {
           }
           return ListView.builder(
               itemCount: snapshot.data!.docs.length,
-              itemBuilder: (context, index) => chatcard(
-                snap: snapshot.data!.docs[index].data(),
+              itemBuilder: (context, index) => Align(
+                alignment: Alignment.bottomRight,
+                child: chatcard(
+                  snap: snapshot.data!.docs[index].data(),
+                ),
               )
           );
         },
