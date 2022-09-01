@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 
 class MpchatScreen extends StatefulWidget {
-  const MpchatScreen({Key? key}) : super(key: key);
+  final snap;
+  const MpchatScreen({Key? key,this.snap}) : super(key: key);
 
   @override
   State<MpchatScreen> createState() => _MpchatScreenState();
@@ -11,6 +12,8 @@ class MpchatScreen extends StatefulWidget {
 class _MpchatScreenState extends State<MpchatScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(),
+    );
   }
 }
