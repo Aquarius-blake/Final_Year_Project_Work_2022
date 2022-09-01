@@ -1,5 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
 import '../../Models/Users1.dart';
@@ -22,6 +24,11 @@ class _chatcardState extends State<chatcard> {
   Widget build(BuildContext context) {
     print(widget.snap['Message']);
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+
+
+    final Timestamp timestamp = widget.snap['Message Time'] as Timestamp;
+    final DateTime dateTime = timestamp.toDate();
+    final dateString = DateFormat('K:mm:ss').format(dateTime);
 
     if(widget.snap['Receiver Uid']!=user1.UID){
       recever=false;
@@ -99,7 +106,7 @@ class _chatcardState extends State<chatcard> {
                   Align(
                       alignment: Alignment.bottomLeft,
                       child: Text(
-                        "Time ",
+                        "$dateString",
                         style: TextStyle(
                             color: Colors.blueGrey,
                             fontSize: 12
