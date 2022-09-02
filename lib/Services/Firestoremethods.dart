@@ -363,6 +363,20 @@ class FirestoreMethods{
                 .doc(message_uid)
                 .delete();
 
+            await _firestore
+                .collection("Chats")
+                .doc(author_uid)
+                .collection("Chathead")
+                .doc(receiver_uid).update(
+                {
+                    "Sender uid":author_uid,
+                    "Sender":author,
+                    "Receiver":receiver,
+                    "Receiver uid":receiver_uid,
+                    "Last Message":"This message was deleted",
+                },
+            );
+
             //Receiver Side
             await _firestore
                 .collection("Chats")
@@ -372,6 +386,20 @@ class FirestoreMethods{
                 .collection("message")
                 .doc(message_uid)
                 .delete();
+
+            await _firestore
+                .collection("Chats")
+                .doc(receiver_uid)
+                .collection("Chathead")
+                .doc(author_uid).update(
+                {
+                    "Sender uid":receiver_uid,
+                    "Sender":receiver,
+                    "Receiver":author,
+                    "Receiver uid":author_uid,
+                    "Last Message":"This message was deleted",
+                },
+            );
 
             ress="Message Deleted";
             return ress;
