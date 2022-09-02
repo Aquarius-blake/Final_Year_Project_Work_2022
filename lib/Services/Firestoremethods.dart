@@ -345,6 +345,7 @@ class FirestoreMethods{
     }
 
 
+    Future<void>Deletemessage()async {}
 
 
 
