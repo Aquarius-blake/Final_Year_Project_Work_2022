@@ -38,8 +38,10 @@ class _mChatbodyState extends State<mChatbody> {
                     ):SizedBox(),
                     SizedBox(
                       width: MediaQuery.of(context).size.width*0.5,
-                      child: chatcard(
-                        snap: snapshot.data!.docs[index].data(),
+                      child: SizedBox(
+                        child: chatcard(
+                          snap: snapshot.data!.docs[index].data(),
+                        ),
                       ),
                     ),
                   ],
