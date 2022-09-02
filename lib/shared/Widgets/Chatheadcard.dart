@@ -58,6 +58,7 @@ class _CHcardState extends State<CHcard> {
               Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
+                  SizedBox(),
                   Text(
                       dateString,
                     style: const TextStyle(
