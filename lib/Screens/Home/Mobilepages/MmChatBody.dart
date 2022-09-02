@@ -45,7 +45,7 @@ class _mChatbodyState extends State<mChatbody> {
                             if(snapshot.data!.docs[index].data()['author uid']==user1.UID){
                               Showsnackbar("hello", context);
                             }else{
-                              Showsnackbar("Denied", context);
+                              Showsnackbar("Access Denied", context);
                             }
                           },
                           child: chatcard(
