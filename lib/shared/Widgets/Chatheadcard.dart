@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 
 class CHcard extends StatefulWidget {
@@ -12,6 +14,10 @@ class CHcard extends StatefulWidget {
 class _CHcardState extends State<CHcard> {
   @override
   Widget build(BuildContext context) {
+    final Timestamp timestamp = widget.snap['Chat Time'] as Timestamp;
+    final DateTime dateTime = timestamp.toDate();
+    final dateString = DateFormat('K:mm').format(dateTime);
+
     return Container(
       child: Card(
         child: Padding(
@@ -40,7 +46,7 @@ class _CHcardState extends State<CHcard> {
                   ],
                 ),
               ),
-              Text("Chat Time"),
+              Text("$dateString"),
             ],
 
           ),
