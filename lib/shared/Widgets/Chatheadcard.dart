@@ -22,6 +22,7 @@ class _CHcardState extends State<CHcard> {
               SizedBox(),
               Expanded(
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
                       "Username",
