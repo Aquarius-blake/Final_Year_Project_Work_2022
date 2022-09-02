@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 
 import '../../../Models/Users1.dart';
 import '../../../Provider/user_provider.dart';
+import '../../../Services/Firestoremethods.dart';
 import '../../../shared/Pop_up.dart';
 
 class Chatbody extends StatefulWidget {
@@ -17,7 +18,7 @@ class Chatbody extends StatefulWidget {
 
 class _ChatbodyState extends State<Chatbody> {
 
-  _options(BuildContext context)async{
+  _options(BuildContext context,String author,String author_uid,String receiver, String receiver_uid,String message_uid)async{
     return showDialog(
         context: context,
         builder: (context){
@@ -39,6 +40,9 @@ class _ChatbodyState extends State<Chatbody> {
                   ),
                 ),
                 onPressed: ()async{
+                  String ress=await FirestoreMethods().Deletemessage(author, author_uid, receiver, receiver_uid, message_uid);
+                  Showsnackbar(ress, context);
+                  Navigator.of(context).pop();
                 },
               ),
               SimpleDialogOption(
@@ -58,7 +62,6 @@ class _ChatbodyState extends State<Chatbody> {
         }
     );
   }
-
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
@@ -86,7 +89,7 @@ class _ChatbodyState extends State<Chatbody> {
                         child: GestureDetector(
                           onLongPress: (){
                             if(snapshot.data!.docs[index].data()['author uid']==user1.UID){
-                              _options(context);
+                              _options(context, snapshot.data!.docs[index].data()['author'], user1.UID!, snapshot.data!.docs[index].data()['Receiver'], snapshot.data!.docs[index].data()['Receiver Uid'], snapshot.data!.docs[index].data()['Message Uid']);
                             }else{
                               Showsnackbar("Access Denied", context);
                             }

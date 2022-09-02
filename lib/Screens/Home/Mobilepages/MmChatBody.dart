@@ -42,6 +42,7 @@ class _mChatbodyState extends State<mChatbody> {
                 onPressed: ()async{
                   String ress=await FirestoreMethods().Deletemessage(author, author_uid, receiver, receiver_uid, message_uid);
                   Showsnackbar(ress, context);
+                  Navigator.of(context).pop();
                 },
               ),
               SimpleDialogOption(
