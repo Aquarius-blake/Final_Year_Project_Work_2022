@@ -305,7 +305,7 @@ class FirestoreMethods{
             );
 
 //Receiver Side
-                ;
+            Chats chatr=Chats(author_uid: author_uid, message_uid: message_uid, message: message, receiver_uid: receiver_uid, author: author, Timeposted: Timeposted, ppurl: appurl, receiver: receiver, appurl: ppurl);
             await _firestore
                 .collection("Chats")
                 .doc(receiver_uid)
@@ -314,7 +314,7 @@ class FirestoreMethods{
                 .collection("message")
                 .doc(message_uid)
                 .set(
-                chats.toJson(),
+                chatr.toJson(),
                 SetOptions(merge: true)
             );
             await _firestore
