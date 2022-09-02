@@ -13,6 +13,7 @@ class Chats{
   late final String receiver_uid;
   late final String? ppurl;
   late final String message_uid;
+  late final String appurl;
 
   Chats(
       { required this.author_uid,
@@ -22,7 +23,8 @@ class Chats{
         required this.author,
         required  this.Timeposted,
         required this.ppurl,
-        required this.receiver
+        required this.receiver,
+        required this.appurl
       }
       );
 
@@ -34,7 +36,8 @@ class Chats{
     "Message Uid":message_uid,
     "Message":message,
     "Receiver":receiver,
-    "Receiver Uid":receiver_uid
+    "Receiver Uid":receiver_uid,
+    "author pic":appurl,
   };
 
   static Chats? FromSnap(DocumentSnapshot snap){
@@ -48,6 +51,7 @@ class Chats{
       message_uid: snapshot['Message Uid'],
       receiver: snapshot['Receiver'],
       receiver_uid: snapshot['Receiver Uid'],
+      appurl: snapshot['author pic']
     );
 
     return Chats12;

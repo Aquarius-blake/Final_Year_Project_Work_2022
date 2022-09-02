@@ -272,6 +272,7 @@ class FirestoreMethods{
                 author: author,
                 Timeposted: Timeposted,
                 ppurl: ppurl,
+                appurl: appurl,
                 receiver: receiver);
 
             await _firestore
