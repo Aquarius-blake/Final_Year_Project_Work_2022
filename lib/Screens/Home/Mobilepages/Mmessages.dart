@@ -29,8 +29,10 @@ body: StreamBuilder(
     }
     return ListView.builder(
         itemCount: snapshot.data!.docs.length,
-        itemBuilder: (context, index) => CHcard(
-          snap: snapshot.data!.docs[index].data(),
+        itemBuilder: (context, index) => GestureDetector(
+          child: CHcard(
+            snap: snapshot.data!.docs[index].data(),
+          ),
         )
     );
   },
