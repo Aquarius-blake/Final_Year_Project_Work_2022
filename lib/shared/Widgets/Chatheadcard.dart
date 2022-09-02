@@ -39,9 +39,9 @@ class _CHcardState extends State<CHcard> {
                   children: [
                     Text(
                       "${widget.snap['Receiver']}",
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 20
+                        fontSize: 20,
                       ),
                     ),
                     RichText(
