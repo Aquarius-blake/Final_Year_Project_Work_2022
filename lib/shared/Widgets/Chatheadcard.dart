@@ -27,6 +27,7 @@ class _CHcardState extends State<CHcard> {
     final dateString = DateFormat('K:mm').format(dateTime);
     late String sent;
     if(widget.snap['Receiver uid']==user1.UID){
+
       sent="Received";
     }else{
       sent="Sent";
