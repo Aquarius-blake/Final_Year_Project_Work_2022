@@ -291,6 +291,8 @@ class FirestoreMethods{
                 .doc(receiver_uid).set(
                 {
                     "Sender uid":author_uid,
+                    "Sender":author,
+                    "Receiver":receiver,
                     "Receiver uid":receiver_uid,
                     "Last Message":message,
                     "Profile Pic":ppurl,
@@ -319,6 +321,8 @@ class FirestoreMethods{
                 .doc(author_uid).set(
                 {
                     "Sender uid":receiver_uid,
+                    "Sender":receiver,
+                    "Receiver":author,
                     "Receiver uid":author_uid,
                     "Last Message":message,
                     "Profile Pic":ppurl,
