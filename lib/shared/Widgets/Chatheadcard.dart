@@ -19,7 +19,7 @@ class _CHcardState extends State<CHcard> {
           child:   Row(
             children: [
               CircleAvatar(),
-              SizedBox(),
+              SizedBox(width: 10,),
               Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
