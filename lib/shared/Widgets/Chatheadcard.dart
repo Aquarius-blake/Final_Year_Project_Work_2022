@@ -14,25 +14,35 @@ class _CHcardState extends State<CHcard> {
   Widget build(BuildContext context) {
     return Container(
       child: Card(
-child: Row(
-  children: [
-    CircleAvatar(),
-    SizedBox(),
-    Column(
-      children: [
-        Text(
-            "Username",
-        style: TextStyle(),
-        ),
-        RichText(
-            text: TextSpan(
-              text: "last Message"
-            )
-        )
-      ],
-    ),
-    Text("Chat Time"),
-  ],
+child: Padding(
+  padding: const EdgeInsets.all(8.0),
+  child:   Row(
+    children: [
+      CircleAvatar(),
+      SizedBox(),
+      Column(
+        children: [
+          Text(
+              "Username",
+          style: TextStyle(),
+          ),
+          RichText(
+              text: TextSpan(
+                text: "last Message"
+
+              )
+
+          )
+
+        ],
+
+      ),
+
+      Text("Chat Time"),
+
+    ],
+
+  ),
 ),
       ),
     );
