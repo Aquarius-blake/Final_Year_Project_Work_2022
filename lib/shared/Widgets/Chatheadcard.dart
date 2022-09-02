@@ -36,7 +36,6 @@ class _CHcardState extends State<CHcard> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      //TODO:Update Firebase Data Before making changes
                       "${widget.snap['Receiver']}",
                      // "",
                       style: TextStyle(),
@@ -54,11 +53,11 @@ class _CHcardState extends State<CHcard> {
               ),
               Text(
                   dateString,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.grey,
                 ),
               ),
-              SizedBox(width: 10,)
+              const SizedBox(width: 10,)
             ],
           ),
         ),
