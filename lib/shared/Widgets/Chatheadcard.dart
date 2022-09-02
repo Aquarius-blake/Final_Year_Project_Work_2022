@@ -54,8 +54,7 @@ class _CHcardState extends State<CHcard> {
                 ),
               ),
               Text(
-                //  "$dateString",
-                "",
+                  "$dateString",
                 style: TextStyle(
                   color: Colors.grey,
                 ),
@@ -67,6 +66,7 @@ class _CHcardState extends State<CHcard> {
       ),
     );
     }catch(e){
+      print(e.toString());
       return Center(
           child: CircularProgressIndicator()
       );
