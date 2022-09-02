@@ -24,7 +24,9 @@ class _CHcardState extends State<CHcard> {
           padding: const EdgeInsets.all(12.0),
           child:   Row(
             children: [
-              CircleAvatar(),
+              CircleAvatar(
+                backgroundImage: NetworkImage(widget.snap['PProfile Pic']),
+              ),
               const SizedBox(width: 10,),
               Expanded(
                 child: Column(
