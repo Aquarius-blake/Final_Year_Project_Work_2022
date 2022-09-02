@@ -86,7 +86,7 @@ class _mChatbodyState extends State<mChatbody> {
                         child: GestureDetector(
                           onLongPress: (){
                             if(snapshot.data!.docs[index].data()['author uid']==user1.UID){
-_options(context);
+                              _options(context);
                             }else{
                               Showsnackbar("Access Denied", context);
                             }
