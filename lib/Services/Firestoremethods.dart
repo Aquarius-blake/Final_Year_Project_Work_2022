@@ -298,7 +298,8 @@ class FirestoreMethods{
                     "Receiver uid":receiver_uid,
                     "Last Message":message,
                     "Profile Pic":ppurl,
-                    "Chat Time":Timeposted
+                    "Chat Time":Timeposted,
+                    "author pic":appurl,
                 },
                 SetOptions(merge: true)
             );
@@ -327,7 +328,8 @@ class FirestoreMethods{
                     "Receiver":author,
                     "Receiver uid":author_uid,
                     "Last Message":message,
-                    "Profile Pic":ppurl,
+                    "Profile Pic":appurl,
+                    "author pic":ppurl,
                     "Chat Time":Timeposted
                 },
                 SetOptions(merge: true)
