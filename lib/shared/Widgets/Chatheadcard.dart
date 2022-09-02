@@ -28,7 +28,10 @@ class _CHcardState extends State<CHcard> {
                   ),
                   RichText(
                       text: TextSpan(
-                          text: "last Message"
+                          text: "last Message",
+                        style: TextStyle(
+                          color: Colors.black
+                        ),
                       )
                   )
                 ],
