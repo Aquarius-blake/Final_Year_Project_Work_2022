@@ -20,21 +20,23 @@ class _CHcardState extends State<CHcard> {
             children: [
               CircleAvatar(),
               SizedBox(),
-              Column(
-                children: [
-                  Text(
-                    "Username",
-                    style: TextStyle(),
-                  ),
-                  RichText(
-                      text: TextSpan(
-                          text: "last Message",
-                        style: TextStyle(
-                          color: Colors.black
-                        ),
-                      )
-                  )
-                ],
+              Expanded(
+                child: Column(
+                  children: [
+                    Text(
+                      "Username",
+                      style: TextStyle(),
+                    ),
+                    RichText(
+                        text: TextSpan(
+                            text: "last Message",
+                          style: TextStyle(
+                            color: Colors.black
+                          ),
+                        )
+                    )
+                  ],
+                ),
               ),
               Text("Chat Time"),
             ],
