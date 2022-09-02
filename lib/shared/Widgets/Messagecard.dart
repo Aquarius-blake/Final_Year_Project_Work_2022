@@ -43,7 +43,7 @@ class _chatcardState extends State<chatcard> {
               )
           ),
           color: Colors.lightBlueAccent[100],
-          elevation: 3.0,
+          elevation: 5.0,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
@@ -62,7 +62,7 @@ class _chatcardState extends State<chatcard> {
                     alignment: Alignment.bottomRight,
                     child: Text(
                       "Sent $dateString",
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: Colors.blueGrey,
                           fontSize: 12
                       ),
@@ -85,7 +85,7 @@ class _chatcardState extends State<chatcard> {
               )
             ),
             color: Colors.black,
-            elevation: 3.0,
+            elevation: 5.0,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
