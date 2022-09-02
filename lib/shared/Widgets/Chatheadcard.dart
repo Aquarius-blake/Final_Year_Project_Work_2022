@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 
 class CHcard extends StatefulWidget {
-  const CHcard({Key? key}) : super(key: key);
+  final snap;
+  const CHcard({Key? key,this.snap}) : super(key: key);
 
   @override
   State<CHcard> createState() => _CHcardState();
