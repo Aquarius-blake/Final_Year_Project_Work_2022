@@ -3,6 +3,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/shared/error_handling.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
+
+import '../../Models/Users1.dart';
+import '../../Provider/user_provider.dart';
 
 
 class CHcard extends StatefulWidget {
@@ -16,10 +20,17 @@ class CHcard extends StatefulWidget {
 class _CHcardState extends State<CHcard> {
   @override
   Widget build(BuildContext context) {
+    late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     try{
     final Timestamp timestamp = widget.snap['Chat Time'] as Timestamp;
     final DateTime dateTime = timestamp.toDate();
     final dateString = DateFormat('K:mm').format(dateTime);
+    late String sent;
+    if(widget.snap['Receiver Uid']==user1.UID){
+      sent="Received";
+    }else{
+      sent="Sent";
+    }
     return Container(
       child: Card(
         child: Padding(
