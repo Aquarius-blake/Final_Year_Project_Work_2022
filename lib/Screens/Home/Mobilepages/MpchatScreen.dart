@@ -92,7 +92,7 @@ class _MpchatScreenState extends State<MpchatScreen> {
                 ),
                 ElevatedButton(
                   onPressed: ()async{
-                    String? ress= await FirestoreMethods().Sendmessage(user1.Username!, user1.UID!, widget.snap['username'], widget.snap['uid'], text.text,widget.snap['profilepic']);
+                    String? ress= await FirestoreMethods().Sendmessage(user1.Username!, user1.UID!, widget.snap['username'], widget.snap['uid'], text.text,widget.snap['profilepic'],user1.ppurl!);
                     Showsnackbar(ress!, context);
                   },
                   child: const FaIcon(

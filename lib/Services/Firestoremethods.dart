@@ -256,6 +256,7 @@ class FirestoreMethods{
         String receiver_uid,
         String message,
         String ppurl,
+        String appurl,
         )async{
         String ress;
         try{
