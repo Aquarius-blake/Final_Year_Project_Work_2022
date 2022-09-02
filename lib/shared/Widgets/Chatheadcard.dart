@@ -68,7 +68,7 @@ class _CHcardState extends State<CHcard> {
       print(e.toString());
       String error="An error occurred: ${e.toString()}";
       errormessage(error, context);
-      return Center(
+      return const Center(
           child: CircularProgressIndicator()
       );
     }
