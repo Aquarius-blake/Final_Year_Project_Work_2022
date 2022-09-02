@@ -22,7 +22,7 @@ class _MpchatScreenState extends State<MpchatScreen> {
 
   @override
   void dispose() {
-text.dispose();
+    text.dispose();
     super.dispose();
   }
   @override
@@ -42,10 +42,10 @@ text.dispose();
             ),
             SizedBox(width: 20,),
             Text(
-                "${widget.snap['username']}",
-            style: const TextStyle(
-color: Colors.black
-            ),
+              "${widget.snap['username']}",
+              style: const TextStyle(
+                  color: Colors.black
+              ),
             ),
           ],
         ),
@@ -55,7 +55,7 @@ color: Colors.black
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Chatbody(
-            snap: widget.snap,
+              snap: widget.snap,
             ),
           )
       ),
@@ -93,8 +93,8 @@ color: Colors.black
                 ElevatedButton(
                   onPressed: ()async{
                     String? ress= await FirestoreMethods().Sendmessage(user1.Username!, user1.UID!, widget.snap['username'], widget.snap['uid'], text.text,widget.snap['profilepic']);
-                  Showsnackbar(ress!, context);
-                    },
+                    Showsnackbar(ress!, context);
+                  },
                   child: const FaIcon(
                       FontAwesomeIcons.featherPointed
                   ),
