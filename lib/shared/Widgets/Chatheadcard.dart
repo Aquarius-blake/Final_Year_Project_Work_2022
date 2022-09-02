@@ -31,7 +31,7 @@ child: Row(
         )
       ],
     ),
-    Text("Time"),
+    Text("Chat Time"),
   ],
 ),
       ),
