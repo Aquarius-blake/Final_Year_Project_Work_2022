@@ -17,7 +17,6 @@ class _CHcardState extends State<CHcard> {
   @override
   Widget build(BuildContext context) {
     try{
-      print(widget.snap);
     final Timestamp timestamp = widget.snap['Chat Time'] as Timestamp;
     final DateTime dateTime = timestamp.toDate();
     final dateString = DateFormat('K:mm').format(dateTime);
@@ -56,11 +55,16 @@ class _CHcardState extends State<CHcard> {
                   ],
                 ),
               ),
-              Text(
-                  dateString,
-                style: const TextStyle(
-                  color: Colors.grey,
-                ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                      dateString,
+                    style: const TextStyle(
+                      color: Colors.grey,
+                    ),
+                  ),
+                ],
               ),
               const SizedBox(width: 10,)
             ],
