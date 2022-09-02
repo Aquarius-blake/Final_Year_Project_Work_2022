@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/shared/error_handling.dart';
 import 'package:intl/intl.dart';
@@ -45,7 +46,8 @@ class _CHcardState extends State<CHcard> {
                         text: TextSpan(
                             text: "${widget.snap['Last Message']}",
                           style: const TextStyle(
-                            color: Colors.blueGrey
+                            color: Colors.blueGrey,
+                            fontStyle: FontStyle.italic,
                           ),
                         )
                     )
