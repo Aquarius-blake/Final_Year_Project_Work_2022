@@ -353,6 +353,25 @@ class FirestoreMethods{
         )async {
         String ress;
         try{
+            //Sender Side
+            await _firestore
+                .collection("Chats")
+                .doc(author_uid)
+                .collection("Chathead")
+                .doc(receiver_uid)
+                .collection("message")
+                .doc(message_uid)
+                .delete();
+
+            //Receiver Side
+            await _firestore
+                .collection("Chats")
+                .doc(receiver_uid)
+                .collection("Chathead")
+                .doc(author_uid)
+                .collection("message")
+                .doc(message_uid)
+                .delete();
 
             ress="Message Deleted";
             return ress;
