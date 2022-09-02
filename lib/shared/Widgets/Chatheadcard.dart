@@ -37,7 +37,7 @@ class _CHcardState extends State<CHcard> {
                     ),
                     RichText(
                         text: TextSpan(
-                            text: "last Message",
+                            text: "${widget.snap['Last Message']}",
                           style: TextStyle(
                             color: Colors.black
                           ),
