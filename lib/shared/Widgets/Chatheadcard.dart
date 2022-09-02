@@ -26,6 +26,7 @@ class _CHcardState extends State<CHcard> {
             children: [
               CircleAvatar(
                 backgroundImage: NetworkImage(widget.snap['PProfile Pic']),
+                backgroundColor: Colors.lightBlueAccent,
               ),
               const SizedBox(width: 10,),
               Expanded(

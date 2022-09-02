@@ -38,8 +38,9 @@ body: StreamBuilder(
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
       child: FaIcon(
-          FontAwesomeIcons.rocketchat
+          FontAwesomeIcons.rocketchat,
       ),
+        backgroundColor: Colors.lightBlueAccent,
       ),
     );
   }
