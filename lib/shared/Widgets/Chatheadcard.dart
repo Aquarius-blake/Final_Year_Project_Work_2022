@@ -19,7 +19,9 @@ child: Row(
     CircleAvatar(),
     SizedBox(),
     Column(
-      children: [],
+      children: [
+        Text(""),
+      ],
     ),
   ],
 ),
