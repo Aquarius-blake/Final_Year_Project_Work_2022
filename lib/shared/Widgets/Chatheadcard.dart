@@ -19,7 +19,7 @@ class _CHcardState extends State<CHcard> {
     final Timestamp timestamp = widget.snap['Chat Time'] as Timestamp;
     final DateTime dateTime = timestamp.toDate();
     final dateString = DateFormat('K:mm').format(dateTime);
-
+print(dateString);
     return Container(
       child: Card(
         child: Padding(
