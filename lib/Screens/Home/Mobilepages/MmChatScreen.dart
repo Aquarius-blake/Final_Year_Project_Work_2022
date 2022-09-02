@@ -8,15 +8,15 @@ import '../../../Provider/user_provider.dart';
 import 'MmChatBody.dart';
 
 
-class MpchatScreen extends StatefulWidget {
+class MmchatScreen extends StatefulWidget {
   final snap;
-  const MpchatScreen({Key? key,this.snap}) : super(key: key);
+  const MmchatScreen({Key? key,this.snap}) : super(key: key);
 
   @override
-  State<MpchatScreen> createState() => _MpchatScreenState();
+  State<MmchatScreen> createState() => _MmchatScreenState();
 }
 
-class _MpchatScreenState extends State<MpchatScreen> {
+class _MmchatScreenState extends State<MmchatScreen> {
   TextEditingController text=TextEditingController();
 
 

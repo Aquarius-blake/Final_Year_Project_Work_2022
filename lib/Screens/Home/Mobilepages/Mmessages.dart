@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Screens/Home/Mobilepages/MmChatScreen.dart';
 import 'package:forum3/shared/Widgets/Chatheadcard.dart';
 import 'package:provider/provider.dart';
 
@@ -31,7 +32,13 @@ body: StreamBuilder(
         itemCount: snapshot.data!.docs.length,
         itemBuilder: (context, index) => GestureDetector(
           onTap: (){
-
+            Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context)=>MmchatScreen(
+                    snap: snapshot.data!.docs[index].data(),
+                  ),
+                )
+            );
           },
           child: CHcard(
             snap: snapshot.data!.docs[index].data(),
