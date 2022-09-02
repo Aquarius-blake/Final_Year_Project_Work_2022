@@ -40,6 +40,7 @@ class _ChatbodyState extends State<Chatbody> {
                       width: MediaQuery.of(context).size.width*0.5,
                       child: SizedBox(
                         child: GestureDetector(
+                          onLongPress: (){},
                           child: chatcard(
                             snap: snapshot.data!.docs[index].data(),
                           ),

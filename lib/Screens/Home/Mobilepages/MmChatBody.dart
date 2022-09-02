@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/shared/Pop_up.dart';
 import 'package:forum3/shared/Widgets/Messagecard.dart';
 import 'package:provider/provider.dart';
 
@@ -40,6 +41,9 @@ class _mChatbodyState extends State<mChatbody> {
                       width: MediaQuery.of(context).size.width*0.5,
                       child: SizedBox(
                         child: GestureDetector(
+                          onLongPress: (){
+                            Showsnackbar("hello", context);
+                          },
                           child: chatcard(
                             snap: snapshot.data!.docs[index].data(),
                           ),
