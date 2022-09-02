@@ -30,6 +30,9 @@ body: StreamBuilder(
     return ListView.builder(
         itemCount: snapshot.data!.docs.length,
         itemBuilder: (context, index) => GestureDetector(
+          onTap: (){
+
+          },
           child: CHcard(
             snap: snapshot.data!.docs[index].data(),
           ),
