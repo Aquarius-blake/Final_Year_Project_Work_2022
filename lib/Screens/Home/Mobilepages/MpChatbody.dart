@@ -33,7 +33,9 @@ class _ChatbodyState extends State<Chatbody> {
                 alignment: Alignment.bottomRight,
                 child: Row(
                   children: [
-                  user1.UID!=snapshot.data!.docs[index].data()['Receiver Uid']?  Expanded(child: SizedBox()):SizedBox(),
+                  user1.UID!=snapshot.data!.docs[index].data()['Receiver Uid']?  Expanded(
+                      child: SizedBox()
+                  ):SizedBox(),
                     SizedBox(
                       width: MediaQuery.of(context).size.width*0.5,
                       child: chatcard(
