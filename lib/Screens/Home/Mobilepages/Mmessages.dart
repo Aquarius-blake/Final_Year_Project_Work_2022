@@ -19,7 +19,10 @@ body: SafeArea(
 ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
-      child: FaIcon(FontAwesomeIcons.rocketchat),),
+      child: FaIcon(
+          FontAwesomeIcons.rocketchat
+      ),
+      ),
     );
   }
 }
