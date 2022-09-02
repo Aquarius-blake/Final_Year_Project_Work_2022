@@ -33,7 +33,7 @@ class _CHcardState extends State<CHcard> {
     }
     return Container(
       padding: EdgeInsets.only(
-        top: 10.0,
+        top: 5.0,
       ),
       child: Card(
         child: Padding(
