@@ -14,7 +14,7 @@ class _CHcardState extends State<CHcard> {
   Widget build(BuildContext context) {
     return Container(
       child: Card(
-
+child: Row(),
       ),
     );
   }
