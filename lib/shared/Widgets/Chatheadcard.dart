@@ -46,7 +46,12 @@ class _CHcardState extends State<CHcard> {
                   ],
                 ),
               ),
-              Text("$dateString"),
+              Text(
+                  "$dateString",
+                style: TextStyle(
+                  color: Colors.grey,
+                ),
+              ),
             ],
 
           ),
