@@ -39,7 +39,7 @@ body: StreamBuilder(
 ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
-      child: FaIcon(
+      child: const FaIcon(
           FontAwesomeIcons.rocketchat,
       ),
         backgroundColor: Colors.lightBlueAccent,
