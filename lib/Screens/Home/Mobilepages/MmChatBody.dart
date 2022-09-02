@@ -42,7 +42,9 @@ class _mChatbodyState extends State<mChatbody> {
                       child: SizedBox(
                         child: GestureDetector(
                           onLongPress: (){
-                            Showsnackbar("hello", context);
+                            if(snapshot.data!.docs[index].data()['author uid']==user1.UID){
+                              Showsnackbar("hello", context);
+                            }
                           },
                           child: chatcard(
                             snap: snapshot.data!.docs[index].data(),
