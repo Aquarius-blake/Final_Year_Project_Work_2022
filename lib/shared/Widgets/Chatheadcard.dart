@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/shared/error_handling.dart';
 import 'package:intl/intl.dart';
 
 
@@ -65,6 +66,8 @@ class _CHcardState extends State<CHcard> {
     );
     }catch(e){
       print(e.toString());
+      String error="An error occurred: ${e.toString()}";
+      errormessage(error, context);
       return Center(
           child: CircularProgressIndicator()
       );
