@@ -345,7 +345,12 @@ class FirestoreMethods{
     }
 
 
-    Future<void>Deletemessage()async {}
+    Future<void>Deletemessage(  String author,
+        String author_uid,
+        String receiver,
+        String receiver_uid,
+        String message_uid,
+        )async {}
 
 
 
