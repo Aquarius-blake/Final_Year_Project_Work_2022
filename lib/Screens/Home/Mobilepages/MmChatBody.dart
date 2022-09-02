@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
 import 'package:forum3/shared/Widgets/Messagecard.dart';
 import 'package:provider/provider.dart';
@@ -17,7 +18,7 @@ class mChatbody extends StatefulWidget {
 
 class _mChatbodyState extends State<mChatbody> {
 
-  _options(BuildContext context)async{
+  _options(BuildContext context,String author,String author_uid,String receiver, String receiver_uid,String message_uid)async{
     return showDialog(
         context: context,
         builder: (context){
@@ -39,6 +40,8 @@ class _mChatbodyState extends State<mChatbody> {
                   ),
                 ),
                 onPressed: ()async{
+                  String ress=await FirestoreMethods().Deletemessage(author, author_uid, receiver, receiver_uid, message_uid);
+                  Showsnackbar(ress, context);
                 },
               ),
               SimpleDialogOption(
@@ -86,7 +89,7 @@ class _mChatbodyState extends State<mChatbody> {
                         child: GestureDetector(
                           onLongPress: (){
                             if(snapshot.data!.docs[index].data()['author uid']==user1.UID){
-                              _options(context);
+                           _options(context, snapshot.data!.docs[index].data()['author'], user1.UID!, snapshot.data!.docs[index].data()['Receiver'], snapshot.data!.docs[index].data()['Receiver Uid'], snapshot.data!.docs[index].data()['Message Uid']);
                             }else{
                               Showsnackbar("Access Denied", context);
                             }
