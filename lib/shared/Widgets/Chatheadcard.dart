@@ -52,7 +52,7 @@ class _CHcardState extends State<CHcard> {
                   color: Colors.grey,
                 ),
               ),
-              SizedBox(width: 5,)
+              SizedBox(width: 10,)
             ],
           ),
         ),
