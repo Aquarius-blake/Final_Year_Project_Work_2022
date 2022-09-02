@@ -345,12 +345,22 @@ class FirestoreMethods{
     }
 
 
-    Future<void>Deletemessage(  String author,
+    Future<String>Deletemessage(  String author,
         String author_uid,
         String receiver,
         String receiver_uid,
         String message_uid,
-        )async {}
+        )async {
+        String ress;
+        try{
+
+            ress="Message Deleted";
+            return ress;
+        }catch(e){
+            ress=e.toString() ;
+            return ress;
+        }
+    }
 
 
 
