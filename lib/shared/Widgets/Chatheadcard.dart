@@ -22,10 +22,13 @@ child: Row(
       children: [
         Text(
             "Username",
-        style: TextStyle(
-
+        style: TextStyle(),
         ),
-        ),
+        RichText(
+            text: TextSpan(
+              text: "last Message"
+            )
+        )
       ],
     ),
   ],
