@@ -92,7 +92,7 @@ color: Colors.black
                 ),
                 ElevatedButton(
                   onPressed: ()async{
-                    String? ress= await FirestoreMethods().Sendmessage(user1.Username!, user1.UID!, widget.snap['username'], widget.snap['uid'], text.text,user1.ppurl!);
+                    String? ress= await FirestoreMethods().Sendmessage(user1.Username!, user1.UID!, widget.snap['username'], widget.snap['uid'], text.text,widget.snap['profilepic']);
                   Showsnackbar(ress!, context);
                     },
                   child: const FaIcon(
