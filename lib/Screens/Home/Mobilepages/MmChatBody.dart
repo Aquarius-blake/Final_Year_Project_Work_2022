@@ -57,7 +57,6 @@ class _mChatbodyState extends State<mChatbody> {
           );
         }
     );
-
   }
 
   @override

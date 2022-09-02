@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 
 import '../../../Models/Users1.dart';
 import '../../../Provider/user_provider.dart';
+import '../../../shared/Pop_up.dart';
 
 class Chatbody extends StatefulWidget {
   final snap;
@@ -15,6 +16,49 @@ class Chatbody extends StatefulWidget {
 }
 
 class _ChatbodyState extends State<Chatbody> {
+
+  _options(BuildContext context)async{
+    return showDialog(
+        context: context,
+        builder: (context){
+          return SimpleDialog(
+            title: const Text(
+              "More options",
+              style: TextStyle(
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            children: [
+              SimpleDialogOption(
+                padding: EdgeInsets.all(15.0),
+                child: const Text(
+                  "Delete",
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+                onPressed: ()async{
+                },
+              ),
+              SimpleDialogOption(
+                padding: const EdgeInsets.all(15.0),
+                child: const Text(
+                  "Cancel",
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+                onPressed: (){
+                  Navigator.of(context).pop();
+                },
+              )
+            ],
+          );
+        }
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
@@ -40,7 +84,13 @@ class _ChatbodyState extends State<Chatbody> {
                       width: MediaQuery.of(context).size.width*0.5,
                       child: SizedBox(
                         child: GestureDetector(
-                          onLongPress: (){},
+                          onLongPress: (){
+                            if(snapshot.data!.docs[index].data()['author uid']==user1.UID){
+                              _options(context);
+                            }else{
+                              Showsnackbar("Access Denied", context);
+                            }
+                          },
                           child: chatcard(
                             snap: snapshot.data!.docs[index].data(),
                           ),
