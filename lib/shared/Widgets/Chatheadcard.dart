@@ -32,6 +32,9 @@ class _CHcardState extends State<CHcard> {
       sent="Sent";
     }
     return Container(
+      padding: EdgeInsets.only(
+        top: 10.0,
+      ),
       child: Card(
         child: Padding(
           padding: const EdgeInsets.all(12.0),
