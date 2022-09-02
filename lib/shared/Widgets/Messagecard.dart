@@ -95,7 +95,7 @@ class _chatcardState extends State<chatcard> {
                   RichText(
                       text: TextSpan(
                         text: widget.snap['Message'],
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white,
                         ),
                       )
