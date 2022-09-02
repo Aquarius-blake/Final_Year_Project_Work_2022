@@ -20,7 +20,12 @@ child: Row(
     SizedBox(),
     Column(
       children: [
-        Text(""),
+        Text(
+            "Username",
+        style: TextStyle(
+
+        ),
+        ),
       ],
     ),
   ],
