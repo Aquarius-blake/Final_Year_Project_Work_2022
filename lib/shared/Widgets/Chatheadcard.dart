@@ -36,7 +36,8 @@ class _CHcardState extends State<CHcard> {
                   children: [
                     Text(
                       //TODO:Update Firebase Data Before making changes
-                      "${widget.snap['Receiver']}",
+                      //"${widget.snap['Receiver']}",
+                      "",
                       style: TextStyle(),
                     ),
                     RichText(
