@@ -23,6 +23,7 @@ class _CHcardState extends State<CHcard> {
               Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       "Username",
