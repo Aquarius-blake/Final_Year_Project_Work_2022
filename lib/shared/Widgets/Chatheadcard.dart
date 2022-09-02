@@ -29,17 +29,11 @@ child: Padding(
           RichText(
               text: TextSpan(
                 text: "last Message"
-
               )
-
           )
-
         ],
-
       ),
-
       Text("Chat Time"),
-
     ],
 
   ),
@@ -48,3 +42,25 @@ child: Padding(
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
