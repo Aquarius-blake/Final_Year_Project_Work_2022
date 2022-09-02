@@ -20,7 +20,7 @@ class _MmessagesState extends State<Mmessages> {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     return Scaffold(
 body: StreamBuilder(
-  stream: FirebaseFirestore.instance.collection('Chats').doc(user1.UID).collection("Chathead").orderBy("Chat Time").snapshots(),
+  stream: FirebaseFirestore.instance.collection('Chats').doc(user1.UID).collection("Chathead").snapshots(),
   builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
     if(snapshot.connectionState==ConnectionState.waiting){
       return const Center(
