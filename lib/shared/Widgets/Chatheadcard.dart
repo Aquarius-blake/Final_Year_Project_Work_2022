@@ -21,7 +21,7 @@ class _CHcardState extends State<CHcard> {
     return Container(
       child: Card(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(12.0),
           child:   Row(
             children: [
               CircleAvatar(),
