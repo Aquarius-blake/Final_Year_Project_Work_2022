@@ -17,7 +17,10 @@ class _CHcardState extends State<CHcard> {
 child: Row(
   children: [
     CircleAvatar(),
-    Column(),
+    SizedBox(),
+    Column(
+      children: [],
+    ),
   ],
 ),
       ),
