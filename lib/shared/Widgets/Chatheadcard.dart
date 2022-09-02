@@ -45,7 +45,7 @@ class _CHcardState extends State<CHcard> {
                         text: TextSpan(
                             text: "${widget.snap['Last Message']}",
                           style: const TextStyle(
-                            color: Colors.black
+                            color: Colors.blueGrey
                           ),
                         )
                     )
