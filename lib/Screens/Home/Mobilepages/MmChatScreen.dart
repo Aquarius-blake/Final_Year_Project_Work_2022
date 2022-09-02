@@ -38,11 +38,11 @@ class _MpchatScreenState extends State<MpchatScreen> {
         title: Row(
           children: [
             CircleAvatar(
-              backgroundImage: NetworkImage(widget.snap['profilepic']),
+              backgroundImage: NetworkImage(widget.snap['Profile Pic']),
             ),
             SizedBox(width: 20,),
             Text(
-              "${widget.snap['username']}",
+              "${widget.snap['Receiver']}",
               style: const TextStyle(
                   color: Colors.black
               ),
@@ -92,7 +92,7 @@ class _MpchatScreenState extends State<MpchatScreen> {
                 ),
                 ElevatedButton(
                   onPressed: ()async{
-                    String? ress= await FirestoreMethods().Sendmessage(user1.Username!, user1.UID!, widget.snap['username'], widget.snap['uid'], text.text,widget.snap['profilepic'],user1.ppurl!);
+                    String? ress= await FirestoreMethods().Sendmessage(user1.Username!, user1.UID!, widget.snap['Receiver'], widget.snap['Receiver uid'], text.text,widget.snap['Profile Pic'],user1.ppurl!);
                     Showsnackbar(ress!, context);
                   },
                   child: const FaIcon(
@@ -119,9 +119,6 @@ class _MpchatScreenState extends State<MpchatScreen> {
 
   }
 }
-
-
-
 
 
 
