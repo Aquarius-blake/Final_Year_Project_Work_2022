@@ -14,6 +14,7 @@ class CHcard extends StatefulWidget {
 class _CHcardState extends State<CHcard> {
   @override
   Widget build(BuildContext context) {
+    try{
     final Timestamp timestamp = widget.snap['Chat Time'] as Timestamp;
     final DateTime dateTime = timestamp.toDate();
     final dateString = DateFormat('K:mm').format(dateTime);
@@ -63,6 +64,9 @@ class _CHcardState extends State<CHcard> {
         ),
       ),
     );
+    }catch(e){
+      return CircularProgressIndicator();
+    }
   }
 }
 
