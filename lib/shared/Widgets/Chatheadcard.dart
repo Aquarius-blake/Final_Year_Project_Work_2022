@@ -65,7 +65,9 @@ class _CHcardState extends State<CHcard> {
       ),
     );
     }catch(e){
-      return CircularProgressIndicator();
+      return Center(
+          child: CircularProgressIndicator()
+      );
     }
   }
 }
