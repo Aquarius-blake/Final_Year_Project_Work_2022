@@ -24,7 +24,12 @@ class _MmessagesState extends State<Mmessages> {
     return user1.Guest==true? Scaffold(
       body: SafeArea(
         child: Center(
-
+child: Text(
+    "Access Denied",
+style: TextStyle(
+  fontSize: 32,
+),
+),
         ),
       ),
     ): Scaffold(
