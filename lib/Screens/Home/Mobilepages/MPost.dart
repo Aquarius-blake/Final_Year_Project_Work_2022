@@ -72,8 +72,8 @@ class _MpostState extends State<Mpost> {
                 },
               ),
               SimpleDialogOption(
-                padding: EdgeInsets.all(15.0),
-                child: Text("Choose from gallery"),
+                padding: const EdgeInsets.all(15.0),
+                child: const Text("Choose from gallery"),
                 onPressed: ()async{
                   Navigator.of(context).pop();
                   dynamic file=await Selection.uploadpic(ImageSource.gallery);
