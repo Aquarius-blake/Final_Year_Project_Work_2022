@@ -132,7 +132,8 @@ class _MsearchState extends State<Msearch> {
 
               }else {
                 initiatepostsearch(value);
-              }}catch(e){
+              }
+            }catch(e){
               Showsnackbar(e.toString(), context);
             }
           },
