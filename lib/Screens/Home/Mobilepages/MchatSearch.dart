@@ -111,7 +111,13 @@ class _MchatusersearchState extends State<Mchatusersearch> {
         ),
         actions: [
           ElevatedButton(
-            onPressed: (){},
+            onPressed: (){
+              try{
+                initiateusersearch(_search.text);
+              }catch(e){
+                Showsnackbar(e.toString(), context);
+              }
+            },
             child:  const Text(
               "User",
               style: TextStyle(
