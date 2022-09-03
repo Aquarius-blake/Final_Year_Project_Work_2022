@@ -29,7 +29,7 @@ child:Column(
   mainAxisAlignment: MainAxisAlignment.center,
   children: [
         RichText(
-        text: TextSpan(
+        text: const TextSpan(
           children: [
             TextSpan(
               text: "Access Denied",
@@ -42,8 +42,9 @@ child:Column(
           ],
         )
     ),
+
     RichText(
-        text: TextSpan(
+        text: const TextSpan(
           text: "Please Sign in/Sign up to continue",
           style: TextStyle(
               color: Colors.black
