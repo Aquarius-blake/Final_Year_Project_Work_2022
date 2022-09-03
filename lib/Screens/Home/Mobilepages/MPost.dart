@@ -177,7 +177,12 @@ class _MpostState extends State<Mpost> {
                                 Icons.add_a_photo,
                               ),
                             ),
-                            FaIcon(FontAwesomeIcons.circleXmark)
+                            IconButton(
+                              onPressed: (){},
+                              icon: const FaIcon(
+                                  FontAwesomeIcons.circleXmark
+                              ),
+                            )
                           ],
                         )
                       ],
