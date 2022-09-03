@@ -57,7 +57,7 @@ body: StreamBuilder(
           );
         },
       child: const FaIcon(
-          FontAwesomeIcons.rocketchat,
+          FontAwesomeIcons.searchengin,
       ),
         backgroundColor: Colors.lightBlueAccent,
       ),
