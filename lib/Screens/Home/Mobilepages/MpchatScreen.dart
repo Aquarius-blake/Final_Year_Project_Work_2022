@@ -38,11 +38,11 @@ class _MpchatScreenState extends State<MpchatScreen> {
         title: Row(
           children: [
             CircleAvatar(
-              backgroundImage: NetworkImage(user1.ppurl!),
+              backgroundImage: NetworkImage(widget.snap['profilepic']),
             ),
             SizedBox(width: 20,),
             Text(
-              "${user1.Username}",
+              "${widget.snap['username']}",
               style: const TextStyle(
                   color: Colors.black
               ),

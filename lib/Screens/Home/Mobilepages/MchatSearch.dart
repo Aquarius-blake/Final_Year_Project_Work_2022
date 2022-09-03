@@ -131,10 +131,12 @@ class _MchatusersearchState extends State<Mchatusersearch> {
         ],
       ),
 
-      body: ListView(
+      body:
+      ListView(
         children:tempSearchstore.map((element){
           return usercard(element);
         }).toList()
+
         ,
       )
     );

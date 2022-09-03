@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Screens/Home/Mobilepages/MchatSearch.dart';
 import 'package:forum3/Screens/Home/Mobilepages/MmChatScreen.dart';
 import 'package:forum3/shared/Widgets/Chatheadcard.dart';
 import 'package:provider/provider.dart';
@@ -51,7 +52,7 @@ body: StreamBuilder(
         onPressed: (){
           Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (context)=>MmchatScreen(),
+                builder: (context)=>Mchatusersearch(),
               )
           );
         },
