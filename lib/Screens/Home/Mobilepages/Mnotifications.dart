@@ -1,6 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Screens/Forum/Forum_detail.dart';
+import 'package:provider/provider.dart';
+import '../../../Models/Users1.dart';
+import '../../../Provider/user_provider.dart';
 import '../../../shared/Widgets/notification_card.dart';
 
 class Notifications extends StatefulWidget {
@@ -14,7 +17,40 @@ class Notifications extends StatefulWidget {
 class _NotificationsState extends State<Notifications> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+    return user1.Guest==true?  Scaffold(
+      body: SafeArea(
+        child: Center(
+            child:Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                RichText(
+                    text: const TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "Access Denied",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 32,
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ],
+                    )
+                ),
+                RichText(
+                    text: const TextSpan(
+                      text: "Please Sign in/Sign up to continue",
+                      style: TextStyle(
+                          color: Colors.black
+                      ),
+                    )
+                )
+              ],
+            )
+        ),
+      ),
+    ):Scaffold(
       body: StreamBuilder(
         stream: FirebaseFirestore.instance
             .collection('Notification')
