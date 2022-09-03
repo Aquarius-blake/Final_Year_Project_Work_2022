@@ -21,7 +21,7 @@ class _MmessagesState extends State<Mmessages> {
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
 
-    return user1.Guest==true? Scaffold(
+    return user1.Guest==true? const Scaffold(
       body: SafeArea(
         child: Center(
 child: Text(
