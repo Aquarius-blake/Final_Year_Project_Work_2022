@@ -136,7 +136,7 @@ class _MpostState extends State<Mpost> {
             child: Column(
               children: [
                 _isloading? const LinearProgressIndicator():Container(),
-                SizedBox(height: 10,),
+                const SizedBox(height: 10,),
                 Card(
                   elevation: 0,
                   child: Padding(
