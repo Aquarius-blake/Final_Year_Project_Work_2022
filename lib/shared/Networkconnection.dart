@@ -16,7 +16,9 @@ class _NetconState extends State<Netcon> {
         child: Center(
           child: Container(
 child: Column(
+children: [
 
+],
 ),
           ),
         ),
