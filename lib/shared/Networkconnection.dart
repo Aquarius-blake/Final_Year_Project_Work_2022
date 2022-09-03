@@ -16,6 +16,7 @@ class _NetconState extends State<Netcon> {
         child: Center(
           child: Container(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
                   Icons.wifi_off,
