@@ -104,7 +104,7 @@ class _MpostState extends State<Mpost> {
         backgroundImage: NetworkImage(user1.ppurl!),
       );
     }catch(e){
-      return CircleAvatar(
+      return const CircleAvatar(
         radius: 20,
         backgroundImage: AssetImage('Assets/hac.jpg'),
       );
