@@ -42,7 +42,7 @@ class _MpchatScreenState extends State<MpchatScreen> {
             ),
             SizedBox(width: 20,),
             Text(
-              "${widget.snap['username']}",
+              "${user1.Username}",
               style: const TextStyle(
                   color: Colors.black
               ),
