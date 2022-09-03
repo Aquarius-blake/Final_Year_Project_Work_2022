@@ -144,16 +144,7 @@ class _MsearchState extends State<Msearch> {
         ),
         actions: [
           ElevatedButton(
-            onPressed: (){
-              setState(() {
-                isShowuser=!isShowuser;
-                if(isShowuser){
-                  se="user";
-                }else{
-                  se="Post";
-                }
-              });
-            },
+            onPressed: (){},
             child:  const Text(
               "User",
               style: TextStyle(
