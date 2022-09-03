@@ -79,8 +79,11 @@ class _HomeState extends State<Home> {
      return image!=null?  CircleAvatar(
        radius: 50,
        backgroundImage: MemoryImage(image),
-     ): CircleAvatar(
+     ):user1.ppurl!=""? CircleAvatar(
        backgroundImage: NetworkImage(user1.ppurl!),
+       radius: 50,
+     ):const CircleAvatar(
+       backgroundImage: AssetImage('Assets/hac.jpg'),
        radius: 50,
      );
     }
