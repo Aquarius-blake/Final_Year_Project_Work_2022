@@ -112,7 +112,7 @@ class _MpostState extends State<Mpost> {
   }
 
   Widget Post(){
-    return _image==null?SizedBox():SizedBox(
+    return _image==null?const SizedBox():SizedBox(
       width: MediaQuery.of(context).size.width*0.8,
       child:Image.memory(_image),
     );
