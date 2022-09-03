@@ -48,7 +48,14 @@ body: StreamBuilder(
   },
 ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
+        onPressed: (){
+          Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context)=>MmchatScreen(
+                ),
+              )
+          );
+        },
       child: const FaIcon(
           FontAwesomeIcons.rocketchat,
       ),
