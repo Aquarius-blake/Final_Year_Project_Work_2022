@@ -169,7 +169,7 @@ class _MpostState extends State<Mpost> {
                           ),
                         ),
                         Post(),
-                        Divider(),
+                        const Divider(),
                         Row(
                           children: [
                             IconButton(
