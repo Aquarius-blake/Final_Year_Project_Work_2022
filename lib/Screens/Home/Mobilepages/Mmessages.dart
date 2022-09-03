@@ -39,16 +39,17 @@ child:Column(
                 fontWeight: FontWeight.bold
               ),
             ),
-            TextSpan(
-              text: "Please Sign in/Sign up to continue",
-              style: TextStyle(
-                color: Colors.black
-              ),
-            )
           ],
         )
-
     ),
+    RichText(
+        text: TextSpan(
+          text: "Please Sign in/Sign up to continue",
+          style: TextStyle(
+              color: Colors.black
+          ),
+        )
+    )
   ],
 )
         ),
