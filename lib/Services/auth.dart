@@ -58,7 +58,7 @@ class AuthService{
       User? user = result.user;
       guest=true;
 
-      User1 user1= User1(UID: user?.uid,Username:"Guest",Name:"Guest",Gender:"Unknown",Email: "Guest@Guest.com",ppurl: null,searchkey: "Guest".substring(0,1));
+      User1 user1= User1(Bio: "Ghost of Sushima",Guest: true,UID: user?.uid,Username:"Guest",Name:"Guest",Gender:"Unknown",Email: "Guest@Guest.com",ppurl: null,searchkey: "Guest".substring(0,1));
 
       await  _firestore.collection("users").doc(user!.uid).set(
         user1.toJson(),
