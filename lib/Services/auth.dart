@@ -128,8 +128,10 @@ class AuthService{
 
 
   //sign out
-  Future SignOut()async{
+  Future SignOut(bool? guest,String uid)async{
     try{
+      if(guest!){
+      await  _firestore.collection("users").doc(uid).delete();}
       return await _auth.signOut();
     }catch(e){
       print(e.toString());
