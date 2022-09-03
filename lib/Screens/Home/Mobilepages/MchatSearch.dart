@@ -66,6 +66,7 @@ class _MchatusersearchState extends State<Mchatusersearch> {
           child: Row(
             children: [
               CircleAvatar(
+                backgroundColor: Colors.lightBlueAccent,
                 backgroundImage: NetworkImage(
                     data['profilepic']
                 ),
