@@ -24,23 +24,30 @@ class _MmessagesState extends State<Mmessages> {
     return user1.Guest==true?  Scaffold(
       body: SafeArea(
         child: Center(
-child:RichText(
-    text: TextSpan(
-      children: [
-        TextSpan(
-          text: "Access Denied",
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 32,
-            fontWeight: FontWeight.bold
-          ),
-        ),
-        TextSpan(
-          text: "Please Sign in/Sign up to continue",
-          style: TextStyle(),
+child:Column(
+  children: [
+        RichText(
+        text: TextSpan(
+          children: [
+            TextSpan(
+              text: "Access Denied",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 32,
+                fontWeight: FontWeight.bold
+              ),
+            ),
+            TextSpan(
+              text: "Please Sign in/Sign up to continue",
+              style: TextStyle(
+                color: Colors.black
+              ),
+            )
+          ],
         )
-      ],
-    )
+
+    ),
+  ],
 )
         ),
       ),
