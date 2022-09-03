@@ -184,7 +184,7 @@ class _MpostState extends State<Mpost> {
                                 });
                               },
                               icon: const FaIcon(
-                                  FontAwesomeIcons.circleXmark
+                                  FontAwesomeIcons.circleXmark,
                               ),
                             )
                           ],
