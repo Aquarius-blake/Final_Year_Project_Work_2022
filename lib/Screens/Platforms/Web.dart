@@ -141,10 +141,13 @@ class _WebviewState extends State<Webview> {
                             children: <Widget>[
                               Stack(
                                   children:<Widget>[
-                                    CircleAvatar(
+                                   user1.ppurl!=""? CircleAvatar(
                                       radius: 50.0,
                                       backgroundImage: NetworkImage(user1.ppurl!),
-                                    ),
+                                    ):CircleAvatar(
+                                     backgroundImage: AssetImage('Assets/hac.jpg'),
+                                     radius: 50,
+                                   ),
                                     Positioned(
                                       bottom: -5,
                                       left: 65,
