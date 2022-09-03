@@ -51,8 +51,7 @@ body: StreamBuilder(
         onPressed: (){
           Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (context)=>MmchatScreen(
-                ),
+                builder: (context)=>MmchatScreen(),
               )
           );
         },
