@@ -46,7 +46,8 @@ class User1{
     "profilepic":ppurl,
     "Full Name":Name,
     "Gender":Gender,
-    "Bio":Bio
+    "Bio":Bio,
+    "Guest":Guest
   };
 
   static User1? FromSnap(DocumentSnapshot snap){
@@ -60,7 +61,8 @@ class User1{
         Name: snapshot['Full Name'],
         Gender: snapshot['Gender'],
         searchkey: snapshot['searchkey'],
-        Bio: snapshot['Bio']
+        Bio: snapshot['Bio'],
+      Guest: snapshot['Guest']
     );
     return User12;
 
