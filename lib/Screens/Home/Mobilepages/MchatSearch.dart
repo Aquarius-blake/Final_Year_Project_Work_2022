@@ -2,8 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Services/Searchmethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
-import 'package:forum3/shared/Widgets/post_card.dart';
-
 import 'Mprofilescreen.dart';
 
 class Msearch extends StatefulWidget {
@@ -15,37 +13,8 @@ class Msearch extends StatefulWidget {
 
 class _MsearchState extends State<Msearch> {
   TextEditingController _search=TextEditingController();
-  bool isShowuser=false;
-  String se="Post";
   var queryResultset=[];
   var tempSearchstore=[];
-
-
-  initiatepostsearch(value)async{
-    if(value.length==0){
-      setState(() {
-        queryResultset=[];
-        tempSearchstore=[];
-      });
-    }
-    var capvalue=value.substring(0,1).toUpperCase()+value.substring(1);
-    if(queryResultset.length==0 && value.length==1 ){
-      SearchService().SearchPost(value).then((QuerySnapshot<Map<String,dynamic>> snapshot){
-        for(int i=0;i<snapshot.docs.length;++i){
-          queryResultset.add(snapshot.docs[i].data());
-        }
-      });
-    }else{
-      tempSearchstore=[];
-      queryResultset.forEach((element) {
-        if(element['title'].startsWith(capvalue)){
-          setState(() {
-            tempSearchstore.add(element);
-          });
-        }
-      });
-    }
-  }
 
 
 
@@ -127,19 +96,14 @@ class _MsearchState extends State<Msearch> {
           controller: _search,
           onChanged: (value){
             try{
-              if(isShowuser){
                 initiateusersearch(value);
-
-              }else {
-                initiatepostsearch(value);
-              }
             }catch(e){
               Showsnackbar(e.toString(), context);
             }
           },
 
           decoration: InputDecoration(
-            labelText: "Search $se",
+            labelText: "Search User",
           ),
         ),
         actions: [
