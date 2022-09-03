@@ -157,7 +157,7 @@ class _MpostState extends State<Mpost> {
                             hintText: "Title",
                           ),
                         ),
-                        SizedBox(height: 10,),
+                        const SizedBox(height: 10,),
                         SingleChildScrollView(
                           child: TextField(
                             controller: _textEditingController2,
