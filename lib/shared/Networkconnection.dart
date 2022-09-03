@@ -15,7 +15,9 @@ class _NetconState extends State<Netcon> {
       body: SafeArea(
         child: Center(
           child: Container(
+child: Column(
 
+),
           ),
         ),
       ),
