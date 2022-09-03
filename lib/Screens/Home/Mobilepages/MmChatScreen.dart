@@ -40,7 +40,7 @@ class _MmchatScreenState extends State<MmchatScreen> {
             CircleAvatar(
               backgroundImage: NetworkImage(widget.snap['Profile Pic']),
             ),
-            SizedBox(width: 20,),
+            const SizedBox(width: 20,),
             Text(
               "${widget.snap['Receiver']}",
               style: const TextStyle(
