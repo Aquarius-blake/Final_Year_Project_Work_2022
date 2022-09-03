@@ -17,13 +17,16 @@ class _NetconState extends State<Netcon> {
           child: Container(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Icon(
                   Icons.wifi_off,
                   size: 40,
                   color: Colors.black,
                 ),
-                Text("Check Network Connection")
+                Text(
+                    "Check Network Connection",
+                  style: TextStyle(),
+                )
               ],
             ),
           ),
