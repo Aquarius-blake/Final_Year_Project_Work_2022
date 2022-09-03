@@ -21,7 +21,13 @@ class _MmessagesState extends State<Mmessages> {
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
 
-    return user1.Guest==true? Scaffold(): Scaffold(
+    return user1.Guest==true? Scaffold(
+      body: SafeArea(
+        child: Center(
+
+        ),
+      ),
+    ): Scaffold(
 body: StreamBuilder(
   stream: FirebaseFirestore.instance.collection('Chats').doc(user1.UID).collection("Chathead").orderBy("Chat Time",descending: true).snapshots(),
   builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
