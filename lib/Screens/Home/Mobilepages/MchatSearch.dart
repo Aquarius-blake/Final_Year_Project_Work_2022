@@ -4,14 +4,14 @@ import 'package:forum3/Services/Searchmethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
 import 'Mprofilescreen.dart';
 
-class Msearch extends StatefulWidget {
-  const Msearch({Key? key}) : super(key: key);
+class Mchatusersearch extends StatefulWidget {
+  const Mchatusersearch({Key? key}) : super(key: key);
 
   @override
-  State<Msearch> createState() => _MsearchState();
+  State<Mchatusersearch> createState() => _MchatusersearchState();
 }
 
-class _MsearchState extends State<Msearch> {
+class _MchatusersearchState extends State<Mchatusersearch> {
   TextEditingController _search=TextEditingController();
   var queryResultset=[];
   var tempSearchstore=[];
