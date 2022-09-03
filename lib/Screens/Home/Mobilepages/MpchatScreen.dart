@@ -38,7 +38,7 @@ class _MpchatScreenState extends State<MpchatScreen> {
         title: Row(
           children: [
             CircleAvatar(
-              backgroundImage: NetworkImage(widget.snap['profilepic']),
+              backgroundImage: NetworkImage(user1.ppurl!),
             ),
             SizedBox(width: 20,),
             Text(
