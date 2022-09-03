@@ -28,6 +28,7 @@ child: Text(
     "Access Denied",
 style: TextStyle(
   fontSize: 32,
+  fontWeight: FontWeight.bold,
 ),
 ),
         ),
