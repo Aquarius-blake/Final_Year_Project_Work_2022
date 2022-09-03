@@ -33,9 +33,12 @@ child:RichText(
             color: Colors.black,
             fontSize: 32,
             fontWeight: FontWeight.bold
-          )
-
+          ),
         ),
+        TextSpan(
+          text: "Please Sign in/Sign up to continue",
+          style: TextStyle(),
+        )
       ],
     )
 )
