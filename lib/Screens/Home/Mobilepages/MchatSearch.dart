@@ -154,13 +154,8 @@ class _MsearchState extends State<Msearch> {
                 }
               });
             },
-            child: !isShowuser? const Text(
+            child:  const Text(
               "User",
-              style: TextStyle(
-                color: Colors.lightBlueAccent,
-              ),
-            ):const Text(
-              "Post",
               style: TextStyle(
                 color: Colors.lightBlueAccent,
               ),
@@ -181,17 +176,12 @@ class _MsearchState extends State<Msearch> {
         ],
       ),
 
-      body: isShowuser? ListView(
+      body: ListView(
         children:tempSearchstore.map((element){
           return usercard(element);
         }).toList()
         ,
       )
-          :ListView(
-        children: tempSearchstore.map((element){
-          return PostCard(snap: element,);
-        }).toList(),
-      ),
     );
   }
 }
