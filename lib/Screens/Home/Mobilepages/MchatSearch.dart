@@ -91,7 +91,7 @@ class _MchatusersearchState extends State<Mchatusersearch> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        elevation: 0.0,
+        elevation: 3.0,
         title: TextFormField(
           controller: _search,
           onChanged: (value){
