@@ -17,7 +17,10 @@ class _NetconState extends State<Netcon> {
           child: Container(
 child: Column(
 children: [
-
+Icon(
+  Icons.wifi_off,
+  size: 40,
+),
 ],
 ),
           ),
