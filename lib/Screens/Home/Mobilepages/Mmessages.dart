@@ -30,6 +30,7 @@ child:RichText(
         TextSpan(
           text: "Access Denied",
           style: TextStyle(
+            color: Colors.black,
             fontSize: 32,
             fontWeight: FontWeight.bold
           )
