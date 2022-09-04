@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -10,6 +11,7 @@ import 'package:forum3/shared/Pop_up.dart';
 import 'package:forum3/shared/Widgets/like_animation.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
+import 'package:share_plus/share_plus.dart';
 import '../../Models/Users1.dart';
 import '../../Provider/user_provider.dart';
 import '../../Screens/Platforms/WebSceens/Wcomments_screen.dart';
@@ -27,6 +29,35 @@ class _PostCardState extends State<PostCard> {
   bool islikeanimating=false;
   bool liked=false;
   int commentlen=0;
+
+
+  //Build dynamiclink
+  buildDynamicLinks(String title,String image,String docId) async {
+    String url = "http://blakeforum.page.link";
+    final DynamicLinkParameters parameters = DynamicLinkParameters(
+      uriPrefix: url,
+      link: Uri.parse('$url/$docId'),
+      androidParameters: AndroidParameters(
+        packageName: "com.project.forum3",
+        minimumVersion: 0,
+      ),
+      iosParameters: IosParameters(
+        bundleId: "Bundle-ID",
+        minimumVersion: '0',
+      ),
+      socialMetaTagParameters: SocialMetaTagParameters(
+          description: '',
+          imageUrl:
+          Uri.parse("$image"),
+          title: title),
+    );
+    final ShortDynamicLink dynamicUrl = await parameters.buildShortLink();
+
+    String? desc = '${dynamicUrl.shortUrl.toString()}';
+
+    await Share.share(desc, subject: title,);
+
+  }
 
 //more options
   _options(BuildContext context)async{
@@ -366,7 +397,9 @@ class _PostCardState extends State<PostCard> {
                         child: SizedBox()
                     ),
                     IconButton(
-                        onPressed: (){},
+                        onPressed: (){
+
+                        },
                         icon: const Icon(
                           Icons.share,
                           color: Colors.black,
