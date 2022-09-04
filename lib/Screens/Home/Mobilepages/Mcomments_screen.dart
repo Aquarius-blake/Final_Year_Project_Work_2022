@@ -45,20 +45,20 @@ text.dispose();
   Widget Avatar(dynamic image,User1 user1){
     try{
       return image!=null?  CircleAvatar(
-        radius: 50,
+        radius: 20,
         backgroundImage: MemoryImage(image),
       ):user1.ppurl!=""? CircleAvatar(
         backgroundImage: NetworkImage(user1.ppurl!),
-        radius: 50,
+        radius: 20,
       ):const CircleAvatar(
         backgroundImage: AssetImage('Assets/hac.jpg'),
-        radius: 50,
+        radius: 20,
       );
     }
     catch(e){
       return const CircleAvatar(
         backgroundImage: AssetImage('Assets/hac.jpg'),
-        radius: 50,
+        radius: 20,
       );
     }
   }
