@@ -49,7 +49,7 @@ class _HomeState extends State<Home> {
         }
       },
       onError: (OnLinkErrorException e)async{
-
+print(e.toString());
       }
     );
   }
