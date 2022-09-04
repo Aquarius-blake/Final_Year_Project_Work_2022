@@ -47,6 +47,8 @@ class _HomeState extends State<Home> {
         if(deeplink!=null){
           //Handle Link here
         }
+      },
+      onError: (OnLinkErrorException e)async{
 
       }
     );
