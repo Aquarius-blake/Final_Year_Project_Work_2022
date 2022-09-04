@@ -20,7 +20,7 @@ class Commentcard extends StatefulWidget {
 }
 
 class _CommentcardState extends State<Commentcard> {
-dynamic image;
+
   Widget Avatar(dynamic image,User1 user1){
     try{
       return image!=null?  CircleAvatar(
@@ -62,7 +62,10 @@ dynamic image;
             children: [
               Row(
                 children: [
-                  Avatar(image, user1),
+                  CircleAvatar(
+                    radius: 16,
+                    backgroundImage: NetworkImage(widget.snap['Profile Pic']),
+                  ),
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.only(
