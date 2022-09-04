@@ -11,6 +11,8 @@ class dynamicHandler extends StatefulWidget {
 class _dynamicHandlerState extends State<dynamicHandler> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+
+    );
   }
 }
