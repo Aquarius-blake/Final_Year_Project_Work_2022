@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:forum3/Provider/user_provider.dart';
 import 'package:forum3/Screens/Authenticate/reset.dart';
 import 'package:forum3/Screens/Platforms/WebSceens/webprofile.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:provider/provider.dart';
 import 'Models/Users1.dart';
 import 'Screens/Authenticate/Register.dart';
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
           create: (_)=> UserProvider(),
         ),
       ],
-      child: MaterialApp(
+      child: GetMaterialApp(
         home: Wrapper(),
         routes: {
           '/register':(context)=>Register(),
