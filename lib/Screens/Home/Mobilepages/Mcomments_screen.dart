@@ -17,7 +17,7 @@ class McommentsScreen extends StatefulWidget {
 }
 
 class _McommentsScreenState extends State<McommentsScreen> {
-
+dynamic image;
 
   commenting(String postid, String textt,String author_uid,String author,String ppurl,String title,String onweruid) async{
     String ress=await FirestoreMethods().postcomment(postid, textt, author_uid, author, ppurl,title,onweruid);
@@ -42,6 +42,27 @@ text.dispose();
     super.dispose();
   }
 
+  Widget Avatar(dynamic image,User1 user1){
+    try{
+      return image!=null?  CircleAvatar(
+        radius: 50,
+        backgroundImage: MemoryImage(image),
+      ):user1.ppurl!=""? CircleAvatar(
+        backgroundImage: NetworkImage(user1.ppurl!),
+        radius: 50,
+      ):const CircleAvatar(
+        backgroundImage: AssetImage('Assets/hac.jpg'),
+        radius: 50,
+      );
+    }
+    catch(e){
+      return const CircleAvatar(
+        backgroundImage: AssetImage('Assets/hac.jpg'),
+        radius: 50,
+      );
+    }
+  }
+  
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
@@ -91,10 +112,7 @@ text.dispose();
             ),
             child: Row(
               children: [
-                CircleAvatar(
-                backgroundImage: NetworkImage(user1.ppurl!),
-                  radius: 18,
-                ),
+               Avatar(image, user1) ,
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.only(
