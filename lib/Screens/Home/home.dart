@@ -6,6 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:forum3/Models/Users1.dart';
+import 'package:forum3/Screens/Forum/dynamic_link_receiver_page.dart';
 import 'package:forum3/Screens/Home/Mobilepages/MPost.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mhome.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mmessages.dart';
@@ -60,7 +61,9 @@ print(e.toString());
 void handlemylink(Uri url){
     List<String> seperatedlink=[];
     seperatedlink.addAll(url.path.split('/'));
-    Get.to(()=>Msearch());
+    Get.to(()=>dynamicHandler(
+      postid: seperatedlink[1],
+    ));
     print("The Token that i'm interesed in is ${seperatedlink[1]}");
 }
 
