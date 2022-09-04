@@ -27,7 +27,7 @@ class _CommentcardState extends State<Commentcard> {
       return image!=null?  CircleAvatar(
         radius: 20,
         backgroundImage: MemoryImage(image),
-      ):user1.ppurl!=""? CircleAvatar(
+      ):widget.snap['Profile Pic']!=""? CircleAvatar(
         backgroundImage: NetworkImage(widget.snap['Profile Pic']),
         radius: 20,
       ):const CircleAvatar(
