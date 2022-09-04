@@ -12,7 +12,11 @@ class _dynamicHandlerState extends State<dynamicHandler> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+appBar: AppBar(
+  iconTheme: IconThemeData(
+    color: Colors.black
+  ),
+),
     );
   }
 }
