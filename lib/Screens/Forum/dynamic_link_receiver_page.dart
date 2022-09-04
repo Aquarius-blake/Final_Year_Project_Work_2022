@@ -27,9 +27,14 @@ appBar: AppBar(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(),
+            SizedBox(
+              height: MediaQuery.of(context).size.height*0.4,
+              width: MediaQuery.of(context).size.width,
+            ),
             Divider(),
-            SizedBox(),
+            SizedBox(
+              height: MediaQuery.of(context).size.height*0.4,
+              width: MediaQuery.of(context).size.width,),
           ],
         ),
       ),
