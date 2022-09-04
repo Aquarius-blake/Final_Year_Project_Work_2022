@@ -45,7 +45,7 @@ class _HomeState extends State<Home> {
         final Uri? deeplink= dynamicLink!.link;
 
         if(deeplink!=null){
-          //Handle Link here
+          handlemylink(deeplink);
         }
       },
       onError: (OnLinkErrorException e)async{
