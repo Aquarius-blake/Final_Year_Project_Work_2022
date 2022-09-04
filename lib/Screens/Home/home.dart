@@ -58,6 +58,7 @@ print(e.toString());
 void handlemylink(Uri url){
     List<String> seperatedlink=[];
     seperatedlink.addAll(url.path.split('/'));
+    print("The Token that i'm interesed in is ${seperatedlink[1]}");
 }
 
   buildDynamicLinks(String title,String image,String docId) async {
