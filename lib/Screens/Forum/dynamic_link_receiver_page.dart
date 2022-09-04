@@ -23,6 +23,11 @@ appBar: AppBar(
   style: TextStyle(),
   ),
 ),
+      body: SingleChildScrollView(
+        child: Column(
+
+        ),
+      ),
     );
   }
 }
