@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 
 import 'Comment_card.dart';
 
-class Comdetail extends StatefulWidget {
+class dynamicCom extends StatefulWidget {
   final postid;
-  const Comdetail({Key? key,this.postid}) : super(key: key);
+  const dynamicCom({Key? key,this.postid}) : super(key: key);
 
   @override
-  State<Comdetail> createState() => _ComdetailState();
+  State<dynamicCom> createState() => _dynamicComState();
 }
 
-class _ComdetailState extends State<Comdetail> {
+class _dynamicComState extends State<dynamicCom> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

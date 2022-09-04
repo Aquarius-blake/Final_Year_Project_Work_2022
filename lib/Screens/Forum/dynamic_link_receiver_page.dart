@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forum3/shared/Widgets/dynamic_Comment.dart';
 import 'package:forum3/shared/Widgets/dynamic_post.dart';
 
 
@@ -41,10 +42,22 @@ appBar: AppBar(
             Divider(),
             SizedBox(
               height: MediaQuery.of(context).size.height*0.4,
-              width: MediaQuery.of(context).size.width,),
+              width: MediaQuery.of(context).size.width,
+              child: dynamicCom(
+                postid: widget.postid,
+              ),
+            ),
           ],
         ),
       ),
     );
   }
+
+
+
+
+
+
+
+
 }
