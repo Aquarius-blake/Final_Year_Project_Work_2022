@@ -1,4 +1,6 @@
+
 import 'package:flutter/material.dart';
+import '../Pop_up.dart';
 
 class NotifCard extends StatefulWidget {
   final snap;
@@ -10,6 +12,28 @@ class NotifCard extends StatefulWidget {
 
 class _NotifCardState extends State<NotifCard> {
  late bool loading;
+ dynamic image;
+ Widget Avatar(dynamic image){
+   try{
+     return image!=null?  CircleAvatar(
+       radius: 20,
+       backgroundImage: MemoryImage(image),
+     ):widget.snap['Profile Pic']!=""? CircleAvatar(
+       backgroundImage: NetworkImage(widget.snap['Profile Pic']),
+       radius: 20,
+     ):const CircleAvatar(
+       backgroundImage: AssetImage('Assets/hac.jpg'),
+       radius: 20,
+     );
+   }
+   catch(e){
+     Showsnackbar(e.toString(), context);
+     return const CircleAvatar(
+       backgroundImage: AssetImage('Assets/hac.jpg'),
+       radius: 20,
+     );
+   }
+ }
 
  @override
   void initState() {
@@ -38,10 +62,7 @@ Future.delayed(const Duration(
             children: [
               Row(
                 children: [
-                  CircleAvatar(
-                    backgroundColor: Colors.lightBlueAccent,
-                    backgroundImage: NetworkImage(widget.snap['Profile Pic']),
-                  ),
+                  Avatar(image),
                   const SizedBox(width: 5,),
                   Expanded(
                     child:   Padding(
