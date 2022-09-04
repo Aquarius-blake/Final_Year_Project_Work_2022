@@ -56,6 +56,7 @@ print(e.toString());
 
 void handlemylink(Uri url){
     List<String> seperatedlink=[];
+    seperatedlink.addAll(url.path.split('/'));
 }
 
 
