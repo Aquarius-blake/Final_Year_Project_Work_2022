@@ -1,6 +1,7 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -38,7 +39,9 @@ class _HomeState extends State<Home> {
 
 
 
-  void initiateDynamiclink()async{}
+  void initiateDynamiclink()async{
+    FirebaseDynamicLinks.instance.onLink;
+  }
 
 
 
