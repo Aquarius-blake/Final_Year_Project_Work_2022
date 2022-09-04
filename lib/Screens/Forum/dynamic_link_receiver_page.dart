@@ -22,7 +22,9 @@ appBar: AppBar(
   ),
   title: const Text(
       "Forum Details",
-  style: TextStyle(),
+  style: TextStyle(
+    color: Colors.black
+  ),
   ),
 ),
       body: SingleChildScrollView(
