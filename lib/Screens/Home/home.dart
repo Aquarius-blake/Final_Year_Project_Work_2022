@@ -18,6 +18,7 @@ import 'package:forum3/shared/Networkconnection.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:provider/provider.dart';
+import 'package:share_plus/share_plus.dart';
 import '../../Provider/user_provider.dart';
 import '../../Services/auth.dart';
 import 'Mobilepages/MDprofile.dart';
@@ -58,6 +59,35 @@ void handlemylink(Uri url){
     List<String> seperatedlink=[];
     seperatedlink.addAll(url.path.split('/'));
 }
+
+  buildDynamicLinks(String title,String image,String docId) async {
+    String url = "http://osam.page.link";
+    final DynamicLinkParameters parameters = DynamicLinkParameters(
+      uriPrefix: url,
+      link: Uri.parse('$url/$docId'),
+      androidParameters: AndroidParameters(
+        packageName: "com.dotcoder.dynamic_link_example",
+        minimumVersion: 0,
+      ),
+      iosParameters: IosParameters(
+        bundleId: "Bundle-ID",
+        minimumVersion: '0',
+      ),
+      socialMetaTagParameters: SocialMetaTagParameters(
+          description: '',
+          imageUrl:
+          Uri.parse("$image"),
+          title: title),
+    );
+    final ShortDynamicLink dynamicUrl = await parameters.buildShortLink();
+
+    String? desc = '${dynamicUrl.shortUrl.toString()}';
+
+    await Share.share(desc, subject: title,);
+
+  }
+
+
 
 
   void pic()async{
