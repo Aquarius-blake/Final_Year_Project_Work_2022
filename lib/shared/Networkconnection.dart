@@ -13,7 +13,7 @@ late String message="Slow Internet Connection";
 
   Future delay()async{
    await Future.delayed(
-        Duration(
+        const Duration(
           minutes: 1
         ),
     );
