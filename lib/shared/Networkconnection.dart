@@ -8,6 +8,10 @@ class Netcon extends StatefulWidget {
 }
 
 class _NetconState extends State<Netcon> {
+
+  Future delay()async{}
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
