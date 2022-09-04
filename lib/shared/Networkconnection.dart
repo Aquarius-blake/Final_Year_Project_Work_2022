@@ -9,7 +9,7 @@ class Netcon extends StatefulWidget {
 
 class _NetconState extends State<Netcon> {
 
-  late String message;
+late String message="Slow Internet Connection";
 
   Future delay()async{
    await Future.delayed(
@@ -24,6 +24,7 @@ class _NetconState extends State<Netcon> {
 
   @override
   Widget build(BuildContext context) {
+    delay();
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -31,14 +32,14 @@ class _NetconState extends State<Netcon> {
           child: Container(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children:  [
                 Icon(
                   Icons.wifi_off,
                   size: 40,
                   color: Colors.black,
                 ),
                 Text(
-                    "Check Network Connection",
+                message,
                   style: TextStyle(),
                 )
               ],
