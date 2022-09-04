@@ -17,7 +17,10 @@ appBar: AppBar(
   iconTheme: const IconThemeData(
     color: Colors.black
   ),
-  title: Text("Forum Details"),
+  title: Text(
+      "Forum Details",
+  style: TextStyle(),
+  ),
 ),
     );
   }
