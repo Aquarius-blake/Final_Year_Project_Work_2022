@@ -13,9 +13,11 @@ class _dynamicHandlerState extends State<dynamicHandler> {
   Widget build(BuildContext context) {
     return Scaffold(
 appBar: AppBar(
-  iconTheme: IconThemeData(
+  centerTitle: true,
+  iconTheme: const IconThemeData(
     color: Colors.black
   ),
+  title: Text("Forum Details"),
 ),
     );
   }
