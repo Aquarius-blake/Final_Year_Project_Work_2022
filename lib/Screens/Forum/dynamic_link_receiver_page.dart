@@ -33,7 +33,6 @@ appBar: AppBar(
             SizedBox(
               height: MediaQuery.of(context).size.height*0.4,
               width: MediaQuery.of(context).size.width,
-              child: Text(widget.postid),
             ),
             Divider(),
             SizedBox(
