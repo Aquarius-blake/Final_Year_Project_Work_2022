@@ -32,11 +32,17 @@ class _HomeState extends State<Home> {
   final  AuthService _auth=AuthService();
   final FirebaseFirestore _firestore=FirebaseFirestore.instance;
   final StorageMethods store=StorageMethods();
-
-
   final Upload _upload=Upload();
   final User1? u2=User1();
   dynamic image;
+
+
+
+  void initiateDynamiclink()async{}
+
+
+
+
   void pic()async{
     image= await _upload.uploadpic(ImageSource.gallery);
     User? result=await FirebaseAuth.instance.currentUser;
@@ -120,6 +126,8 @@ class _HomeState extends State<Home> {
 
     });
   }
+
+
 
   @override
   Widget build(BuildContext context) {
