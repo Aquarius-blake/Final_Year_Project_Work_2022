@@ -123,6 +123,9 @@ class _MsearchState extends State<Msearch> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.0,
+        iconTheme: IconThemeData(
+          color: Colors.black
+        ),
         title: TextFormField(
           controller: _search,
           onChanged: (value){
