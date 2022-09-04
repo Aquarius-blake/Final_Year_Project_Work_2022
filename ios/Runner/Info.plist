@@ -45,5 +45,9 @@
 	<false/>
 	<key>NSPhotoLibraryUsageDescription</key>
     	<string>Photo Library Usage</string>
+    <key>NSCameraUsageDescription</key>
+        <string>Camera Library Usage</string>
+    <key>NSMicrophoneUsageDescription</key>
+        <string>Mic Library Usage</string>
 </dict>
 </plist>
