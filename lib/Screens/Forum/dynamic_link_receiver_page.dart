@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forum3/shared/Widgets/dynamic_post.dart';
 
 
 class dynamicHandler extends StatefulWidget {
@@ -33,6 +34,9 @@ appBar: AppBar(
             SizedBox(
               height: MediaQuery.of(context).size.height*0.4,
               width: MediaQuery.of(context).size.width,
+              child: dynamicp(
+                postid: widget.postid,
+              ),
             ),
             Divider(),
             SizedBox(
