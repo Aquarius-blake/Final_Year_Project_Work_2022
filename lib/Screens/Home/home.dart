@@ -40,7 +40,11 @@ class _HomeState extends State<Home> {
 
 
   void initiateDynamiclink()async{
-    FirebaseDynamicLinks.instance.onLink;
+    FirebaseDynamicLinks.instance.onLink(
+      onSuccess: (PendingDynamicLinkData? dynamicLink)async{
+        final Uri? deeplink= dynamicLink!.link;
+      }
+    );
   }
 
 
