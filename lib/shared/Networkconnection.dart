@@ -9,21 +9,20 @@ class Netcon extends StatefulWidget {
 
 class _NetconState extends State<Netcon> {
 
-late String message="Slow Internet Connection";
+  late String message="Slow Internet Connection";
 
   Future delay()async{
-   await Future.delayed(
-        const Duration(
+    await Future.delayed(
+      const Duration(
           minutes: 1
-        ),
+      ),
     );
-setState(() {
-  message="Check Network Connection";
-
-});
+    setState(() {
+      message="Check Network Connection";
+    });
   }
 
-@override
+  @override
   void dispose() {
 
     super.dispose();
@@ -45,7 +44,7 @@ setState(() {
                   color: Colors.black,
                 ),
                 Text(
-                message,
+                  message,
                   style: TextStyle(),
                 )
               ],
