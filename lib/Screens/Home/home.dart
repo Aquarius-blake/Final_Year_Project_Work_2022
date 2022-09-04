@@ -82,11 +82,13 @@ print(e.toString());
     //  initial();
     pageController=PageController();
     super.initState();
+    initiateDynamiclink();
   }
   @override
   void dispose() {
     super.dispose();
     pageController.dispose();
+
   }
 
   void initial()async{
