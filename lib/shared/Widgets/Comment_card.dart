@@ -36,6 +36,7 @@ class _CommentcardState extends State<Commentcard> {
       );
     }
     catch(e){
+      Showsnackbar(e.toString(), context);
       return const CircleAvatar(
         backgroundImage: AssetImage('Assets/hac.jpg'),
         radius: 20,
