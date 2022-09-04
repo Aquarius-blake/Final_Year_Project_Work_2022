@@ -14,6 +14,8 @@ import 'package:forum3/Screens/Home/Mobilepages/Msearch.dart';
 import 'package:forum3/Services/Storagemethods.dart';
 import 'package:forum3/Services/Upload.dart';
 import 'package:forum3/shared/Networkconnection.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 //import 'package:forum3/shared/loading.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:line_icons/line_icons.dart';
@@ -58,6 +60,7 @@ print(e.toString());
 void handlemylink(Uri url){
     List<String> seperatedlink=[];
     seperatedlink.addAll(url.path.split('/'));
+    Get.to(()=>Msearch());
     print("The Token that i'm interesed in is ${seperatedlink[1]}");
 }
 
