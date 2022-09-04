@@ -20,6 +20,27 @@ class Commentcard extends StatefulWidget {
 }
 
 class _CommentcardState extends State<Commentcard> {
+dynamic image;
+  Widget Avatar(dynamic image,User1 user1){
+    try{
+      return image!=null?  CircleAvatar(
+        radius: 20,
+        backgroundImage: MemoryImage(image),
+      ):user1.ppurl!=""? CircleAvatar(
+        backgroundImage: NetworkImage(user1.ppurl!),
+        radius: 20,
+      ):const CircleAvatar(
+        backgroundImage: AssetImage('Assets/hac.jpg'),
+        radius: 20,
+      );
+    }
+    catch(e){
+      return const CircleAvatar(
+        backgroundImage: AssetImage('Assets/hac.jpg'),
+        radius: 20,
+      );
+    }
+  }
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
@@ -41,10 +62,7 @@ class _CommentcardState extends State<Commentcard> {
             children: [
               Row(
                 children: [
-                  CircleAvatar(
-                    radius: 16,
-                    backgroundImage: NetworkImage(widget.snap['Profile Pic']),
-                  ),
+                  Avatar(image, user1),
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.only(
