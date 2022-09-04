@@ -14,7 +14,7 @@ late String message="Slow Internet Connection";
   Future delay()async{
    await Future.delayed(
         Duration(
-          milliseconds: 100
+          minutes: 1
         ),
     );
 setState(() {
@@ -23,7 +23,11 @@ setState(() {
 });
   }
 
+@override
+  void dispose() {
 
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     delay();
