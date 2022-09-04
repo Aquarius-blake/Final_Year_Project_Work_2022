@@ -9,7 +9,17 @@ class Netcon extends StatefulWidget {
 
 class _NetconState extends State<Netcon> {
 
-  Future delay()async{}
+  late String message;
+
+  Future delay()async{
+   await Future.delayed(
+        Duration(
+          microseconds: 100
+        ),
+    );
+    message="Check Network Connection";
+
+  }
 
 
   @override
