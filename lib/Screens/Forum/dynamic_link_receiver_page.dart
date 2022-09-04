@@ -14,6 +14,7 @@ class _dynamicHandlerState extends State<dynamicHandler> {
   Widget build(BuildContext context) {
     return Scaffold(
 appBar: AppBar(
+  backgroundColor: Colors.white,
   elevation: 2.0,
   centerTitle: true,
   iconTheme: const IconThemeData(
