@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 
 class dynamicHandler extends StatefulWidget {
-  const dynamicHandler({Key? key}) : super(key: key);
+  final postid;
+  const dynamicHandler({Key? key,this.postid}) : super(key: key);
 
   @override
   State<dynamicHandler> createState() => _dynamicHandlerState();
@@ -18,7 +19,7 @@ appBar: AppBar(
   iconTheme: const IconThemeData(
     color: Colors.black
   ),
-  title: Text(
+  title: const Text(
       "Forum Details",
   style: TextStyle(),
   ),
