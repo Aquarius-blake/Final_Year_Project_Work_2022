@@ -17,8 +17,10 @@ late String message="Slow Internet Connection";
           microseconds: 100
         ),
     );
-    message="Check Network Connection";
+setState(() {
+  message="Check Network Connection";
 
+});
   }
 
 
@@ -33,7 +35,7 @@ late String message="Slow Internet Connection";
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children:  [
-                Icon(
+                const Icon(
                   Icons.wifi_off,
                   size: 40,
                   color: Colors.black,
