@@ -29,6 +29,7 @@ appBar: AppBar(
           children: [
             SizedBox(),
             Divider(),
+            SizedBox(),
           ],
         ),
       ),
