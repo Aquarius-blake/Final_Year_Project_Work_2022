@@ -54,7 +54,9 @@ print(e.toString());
     );
   }
 
-void handlemylink(Uri url){}
+void handlemylink(Uri url){
+    List<String> seperatedlink=[];
+}
 
 
   void pic()async{
