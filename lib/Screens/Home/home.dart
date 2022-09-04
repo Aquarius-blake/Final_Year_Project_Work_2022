@@ -54,7 +54,7 @@ print(e.toString());
     );
   }
 
-void handlemylink(){}
+void handlemylink(Uri url){}
 
 
   void pic()async{
