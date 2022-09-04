@@ -27,7 +27,8 @@ appBar: AppBar(
       body: SingleChildScrollView(
         child: Column(
           children: [
-
+            SizedBox(),
+            Divider(),
           ],
         ),
       ),
