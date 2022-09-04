@@ -14,7 +14,7 @@ late String message="Slow Internet Connection";
   Future delay()async{
    await Future.delayed(
         Duration(
-          microseconds: 100
+          milliseconds: 100
         ),
     );
 setState(() {
