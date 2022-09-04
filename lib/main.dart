@@ -40,6 +40,7 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: GetMaterialApp(
+        darkTheme: ThemeData(),
         home: Wrapper(),
         routes: {
           '/register':(context)=>Register(),
