@@ -61,12 +61,12 @@ void handlemylink(Uri url){
 }
 
   buildDynamicLinks(String title,String image,String docId) async {
-    String url = "http://osam.page.link";
+    String url = "http://blakeforum.page.link";
     final DynamicLinkParameters parameters = DynamicLinkParameters(
       uriPrefix: url,
       link: Uri.parse('$url/$docId'),
       androidParameters: AndroidParameters(
-        packageName: "com.dotcoder.dynamic_link_example",
+        packageName: "com.project.forum3",
         minimumVersion: 0,
       ),
       iosParameters: IosParameters(
