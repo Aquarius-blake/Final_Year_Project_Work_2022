@@ -144,7 +144,7 @@ class _MDprofileState extends State<MDprofile>with
                     )
                   ],
                 ),
-                SizedBox(height: 15.0,),
+                const SizedBox(height: 15.0,),
                 Container(
                   alignment: Alignment.centerLeft,
                   child: Text(
