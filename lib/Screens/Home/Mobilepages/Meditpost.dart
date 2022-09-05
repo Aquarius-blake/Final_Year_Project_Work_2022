@@ -172,7 +172,7 @@ _detail.text=widget.snap['detail'];
                             Text(user1.Username!),
                           ],
                         ),
-                        SizedBox(height: 15,),
+                        const SizedBox(height: 15,),
                         TextField(
                           controller: _title,
                           decoration: const InputDecoration(
