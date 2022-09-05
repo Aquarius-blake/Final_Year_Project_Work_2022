@@ -98,7 +98,7 @@ class _MDprofileState extends State<MDprofile>with
                             )
                           ],
                         ),
-                        SizedBox(height: 10,),
+                        const SizedBox(height: 10,),
                         Row(
                           children: [
                             ElevatedButton(
