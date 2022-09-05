@@ -205,7 +205,7 @@ _detail.text=widget.snap['detail'];
                                 _image=null;
                               });
                             },
-                                icon: Icon(
+                                icon: const Icon(
                                 Icons.remove_circle
                             )
                             )
