@@ -49,11 +49,18 @@ dependencies:
   share_plus: ^4.0.10
   get: ^4.6.5
   firebase_dynamic_links: ^2.0.6
-  flutter_launcher_icons: ^0.10.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: any
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "Assets/launcher.png"
+
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
