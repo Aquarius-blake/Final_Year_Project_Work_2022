@@ -191,7 +191,7 @@ _detail.text=widget.snap['detail'];
                           ),
                         ),
                         Post(),
-                        Divider(),
+                        const Divider(),
                         Row(
                           children: [
                             IconButton(
