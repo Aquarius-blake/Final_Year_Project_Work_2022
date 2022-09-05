@@ -206,7 +206,7 @@ void handlemylink(Uri url){
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Text(
-                "$title",
+                title,
                 style: const TextStyle(
                             color: Colors.black
                 ),
