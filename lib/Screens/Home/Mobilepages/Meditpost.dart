@@ -159,7 +159,7 @@ _detail.text=widget.snap['detail'];
             child: Column(
               children: [
                 _isloading? const LinearProgressIndicator():Container(),
-                SizedBox(height: 10,),
+                const SizedBox(height: 10,),
                 Card(
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
