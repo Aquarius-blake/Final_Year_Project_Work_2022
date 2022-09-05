@@ -297,7 +297,7 @@ late DateTime? _dateTime;
                             ),
                           ),
                         ),
-                        SizedBox( height: 10,),
+                        const SizedBox( height: 10,),
                         TextFormField(
                           maxLines: 8,
                           controller: Bio,
