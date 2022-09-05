@@ -161,7 +161,7 @@ class _MDprofileState extends State<MDprofile>with
                         alignment: Alignment.centerLeft,
                         child: Text(
                           "Name: ${user1.Name}",
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Colors.grey
                           ),
                         ),
