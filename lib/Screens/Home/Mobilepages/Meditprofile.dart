@@ -183,7 +183,9 @@ late DateTime? _dateTime;
 
                           style: TextStyle(),
                         ),
-                        const SizedBox(height: 20,),
+                        const SizedBox(
+                          height: 20,
+                        ),
                         TextFormField(
                           controller: username,
                           validator: (val)=>val!.isEmpty ? "Enter Your Username" : null,
