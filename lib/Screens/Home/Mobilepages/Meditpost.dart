@@ -168,7 +168,7 @@ _detail.text=widget.snap['detail'];
                         Row(
                           children: [
                             Avatar(user1),
-                            SizedBox(width: 15,),
+                            const SizedBox(width: 15,),
                             Text(user1.Username!),
                           ],
                         ),
