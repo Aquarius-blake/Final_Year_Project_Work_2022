@@ -149,7 +149,7 @@ class _MDprofileState extends State<MDprofile>with
                   alignment: Alignment.centerLeft,
                   child: Text(
                     user1.Username!,
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18
                     ),
