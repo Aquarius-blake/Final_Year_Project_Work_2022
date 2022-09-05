@@ -218,130 +218,128 @@ void handlemylink(Uri url){
 
       drawer: Drawer(
         backgroundColor: Colors.white,
-        child: Container(
-          child: SingleChildScrollView(
-            child: Column(
-              children: <Widget>[
-                DrawerHeader(
-                    child: Column(
-                      children: <Widget>[
-                        Stack(
-                            children:[
-                              /*image!=null? CircleAvatar(
-                                radius: 60.0,
-                                backgroundImage: MemoryImage(image),
-                              ):CircleAvatar(
-                                radius: 60.0,
-                                backgroundImage: AssetImage('Assets/hac.jpg'),
-                              ),*/
-                              Avatar(image, user1),
-                              Positioned(
-                                bottom: -5,
-                                left: 65,
-                                child: IconButton(
-                                    onPressed:() {
-                                      pic();
-                                    },
-                                    icon:const Icon(
-                                      Icons.add_a_photo,
-                                      color: Colors.white,
-                                    )
-                                ),
-                              )
-                            ]
-                        ),
-                        const SizedBox(height: 10,),
-                        Center(
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              DrawerHeader(
+                  child: Column(
+                    children: <Widget>[
+                      Stack(
+                          children:[
+                            /*image!=null? CircleAvatar(
+                              radius: 60.0,
+                              backgroundImage: MemoryImage(image),
+                            ):CircleAvatar(
+                              radius: 60.0,
+                              backgroundImage: AssetImage('Assets/hac.jpg'),
+                            ),*/
+                            Avatar(image, user1),
+                            Positioned(
+                              bottom: -5,
+                              left: 65,
+                              child: IconButton(
+                                  onPressed:() {
+                                    pic();
+                                  },
+                                  icon:const Icon(
+                                    Icons.add_a_photo,
+                                    color: Colors.white,
+                                  )
+                              ),
+                            )
+                          ]
+                      ),
+                      const SizedBox(height: 10,),
+                      Center(
 
-                          child: Text(
-                            user1.Username!,
-                            style: const TextStyle(
-                              fontSize: 16,
+                        child: Text(
+                          user1.Username!,
+                          style: const TextStyle(
+                            fontSize: 16,
 
-                            ),
                           ),
                         ),
-                      ],
-                    )
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                ListTile(
-                  leading: const Icon(Icons.person,
-                    color: Colors.black,
-                    size:35.0,
-                  ),
-                  title: const Text(
-                    "Profile",
-                    style: TextStyle(
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.bold,
-                      fontStyle: FontStyle.italic,
-
-                    ),
-
-                  ),
-                  onTap: () async{
-                    Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context)=>MDprofile(),
-                        )
-                    );
-                  },
-                ),
-                const SizedBox(height: 5,),
-                ListTile(
-                  leading: const Icon(LineIcons.alternateSignOut,
-                    color: Colors.black,
-                    size:35.0,),
-                  title: const Text(
-                    "Sign Out",
-                    style: TextStyle(
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.bold,
-                      fontStyle: FontStyle.italic,
-
-                    ),
-
-                  ),
-                  onTap: () async{
-                    await _auth.SignOut(user1.Guest!,user1.UID!);
-                  },
-                ),
-               const SizedBox(height: 5.0,),
-                ListTile(
-                  title: const Text(
-                    "Create New Account",
-                    style: TextStyle(
-                      fontStyle: FontStyle.italic,
-                      fontSize: 12.0,
-                    ),
-                  ),
-                  onTap: ()async{
-                    Navigator.pushNamed(context, '/register');
-                  },
-                ),
-               const SizedBox(height: 20.0,),
-              const  Divider(
-                  height: 40,
+                      ),
+                    ],
+                  )
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              ListTile(
+                leading: const Icon(Icons.person,
                   color: Colors.black,
-                  thickness: 3,
+                  size:35.0,
                 ),
-                const Center(
-                  child: Text(
-                    "POWERED by Firebase",
-                    style: TextStyle(
-                      fontSize: 22.0,
-                      fontWeight: FontWeight.bold,
-                      fontStyle: FontStyle.italic,
+                title: const Text(
+                  "Profile",
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
 
-                    ),
                   ),
-                )
 
-              ],
-            ),
+                ),
+                onTap: () async{
+                  Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context)=>MDprofile(),
+                      )
+                  );
+                },
+              ),
+              const SizedBox(height: 5,),
+              ListTile(
+                leading: const Icon(LineIcons.alternateSignOut,
+                  color: Colors.black,
+                  size:35.0,),
+                title: const Text(
+                  "Sign Out",
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+
+                  ),
+
+                ),
+                onTap: () async{
+                  await _auth.SignOut(user1.Guest!,user1.UID!);
+                },
+              ),
+             const SizedBox(height: 5.0,),
+              ListTile(
+                title: const Text(
+                  "Create New Account",
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    fontSize: 12.0,
+                  ),
+                ),
+                onTap: ()async{
+                  Navigator.pushNamed(context, '/register');
+                },
+              ),
+             const SizedBox(height: 20.0,),
+            const  Divider(
+                height: 40,
+                color: Colors.black,
+                thickness: 3,
+              ),
+              const Center(
+                child: Text(
+                  "POWERED by Firebase",
+                  style: TextStyle(
+                    fontSize: 22.0,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+
+                  ),
+                ),
+              )
+
+            ],
           ),
         ),
 
