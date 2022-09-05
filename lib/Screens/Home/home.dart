@@ -250,7 +250,7 @@ void handlemylink(Uri url){
                               )
                             ]
                         ),
-                        SizedBox(height: 10,),
+                        const SizedBox(height: 10,),
                         Center(
 
                           child: Text(
@@ -406,7 +406,7 @@ void handlemylink(Uri url){
       ),
     );
       }catch(e){
-       return Netcon();
+       return  Netcon();
      }
   }
 }
