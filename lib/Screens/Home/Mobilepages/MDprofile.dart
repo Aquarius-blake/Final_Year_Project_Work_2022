@@ -179,7 +179,7 @@ class _MDprofileState extends State<MDprofile>with
                         ),
                       ),
 
-                      SizedBox(width: 80,)
+                      const SizedBox(width: 80,)
                     ]
                 ),
                 user1.Bio==null|| user1.Bio==""? const SizedBox(): Container(
