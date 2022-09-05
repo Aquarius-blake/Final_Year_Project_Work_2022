@@ -211,10 +211,10 @@ late DateTime? _dateTime;
                             ),
                           ),
 
-                          style: TextStyle(
+                          style: const TextStyle(
                           ),
                         ),
-                        SizedBox(height: 20,),
+                        const SizedBox(height: 20,),
                         TextFormField(
                           controller: gender,
                           validator: (val)=>val!.isEmpty ? "Enter Your Username" : null,
