@@ -13,6 +13,6 @@ A Forum Application project with flutter front-end UI and Firebase back-end.
 
 <img src="https://github.com/Aquarius-blake/Images/blob/main/Forum/profile.png" alt="image" width="300" height="700">  <img src="https://github.com/Aquarius-blake/Images/blob/main/Forum/Search.png" alt="image" width="300" height="700">
 
-<img src="https://github.com/Aquarius-blake/Images/blob/main/Forum/Discussion.png" alt="image" width="300" height="700">  <img src="https://github.com/Aquarius-blake/Images/blob/main/Forum/Editprofile.png" alt="image" width="300" height="700">
+<img src="https://github.com/Aquarius-blake/Images/blob/main/Forum/Discussion%20.png" alt="image" width="300" height="700">  <img src="https://github.com/Aquarius-blake/Images/blob/main/Forum/Editprofile.png" alt="image" width="300" height="700">
 
 
