@@ -15,11 +15,14 @@ appBar: AppBar(
   title: Text("Pofile"),
 ),
       body: SafeArea(
-          child: Container(
-            child: Column(
-              children: <Widget>[
+          child: Center(
+            child: Container(
+              padding: EdgeInsets.all(20),
+              child: Column(
+                children: <Widget>[
 
-              ],
+                ],
+              ),
             ),
           )
       ),
