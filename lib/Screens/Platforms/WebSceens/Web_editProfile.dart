@@ -120,7 +120,6 @@ class _WedProfileState extends State<WedProfile> {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    Text("df"),
                     Form(
                         key: _formKey,
                         child: Column(
@@ -133,7 +132,8 @@ class _WedProfileState extends State<WedProfile> {
                                 ):CircleAvatar(
                                   radius: 60.0,
                                   backgroundImage: NetworkImage(
-                                       widget.snap['profilepic']),
+                                       widget.snap['profilepic']
+                                  ),
                                 ),
                                 Positioned(
                                     bottom: -5,
