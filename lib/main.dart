@@ -7,7 +7,6 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:provider/provider.dart';
 import 'Models/Users1.dart';
 import 'Screens/Authenticate/Register.dart';
-import 'Screens/Home/Profile.dart';
 import 'Screens/Wrapper.dart';
 import 'Services/auth.dart';
 import 'firebase_options.dart';
@@ -45,7 +44,6 @@ class MyApp extends StatelessWidget {
         home: Wrapper(),
         routes: {
           '/register':(context)=>Register(),
-          '/Profile':(context)=>Profile(),
           '/reset':(context)=>Resetpass(),
           '/wprofile':(context)=>Wprofile(),
         },
