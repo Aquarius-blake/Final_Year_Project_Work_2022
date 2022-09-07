@@ -81,6 +81,7 @@ class FirestoreMethods{
     }
 
 
+    //Post a comment
     Future<String> postcomment(String postid, String text,String author_uid,String author,String ppurl,String title,String owner_uid) async{
         String ress;
         try{
