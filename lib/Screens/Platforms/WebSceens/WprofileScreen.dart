@@ -7,6 +7,7 @@ import '../../../Provider/user_provider.dart';
 import '../../../shared/Pop_up.dart';
 import '../../Home/Mobilepages/Mlikedposts.dart';
 import '../../Home/Mobilepages/Profile_posts.dart';
+import 'Web_editProfile.dart';
 
 
 class Wprofile extends StatefulWidget {
@@ -141,7 +142,15 @@ class _WprofileState extends State<Wprofile> with
                                                 borderRadius: BorderRadius.circular(100.0)
                                             )
                                         ),
-                                        onPressed: (){},
+                                        onPressed: (){
+                                          Navigator.of(context).push(
+                                              MaterialPageRoute(
+                                                builder: (context)=>WedProfile(
+                                                  snap: widget.snap,
+                                                ),
+                                              )
+                                          );
+                                        },
                                         child: const Padding(
                                           padding: EdgeInsets.only(
                                             left:18.0,

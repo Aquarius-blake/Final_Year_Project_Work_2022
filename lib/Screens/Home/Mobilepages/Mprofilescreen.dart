@@ -6,7 +6,6 @@ import 'package:forum3/Screens/Home/Mobilepages/Mlikedposts.dart';
 import 'package:forum3/Screens/Home/Mobilepages/MpchatScreen.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Profile_posts.dart';
 import 'package:provider/provider.dart';
-
 import '../../../Models/Users1.dart';
 import '../../../Provider/user_provider.dart';
 import '../../../shared/Pop_up.dart';
