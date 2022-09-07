@@ -21,8 +21,10 @@ title: const Text("Edit Profile"),
       body: SafeArea(
           child: Container(
             child: Card(
-              child: Column(
+              child: SingleChildScrollView(
+                child: Column(
 
+                ),
               ),
             ),
           )
