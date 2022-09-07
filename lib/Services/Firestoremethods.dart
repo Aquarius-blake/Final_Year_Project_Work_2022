@@ -235,12 +235,13 @@ class FirestoreMethods{
     }
 
 
+    //Updates a Post profile picture whenever user changes profile pictures
     Future<void> Updatepostpic(String postid,String ppurl)async{
-
         await _firestore.collection("Posts").doc(postid).update({
             "profile Pic":ppurl,
         });
     }
+
 
     //Updates a comment profile picture whenever user changes profile pictures
     Future<void> Updatecommentpic(String postid,String ppurl,String commentid)async{
