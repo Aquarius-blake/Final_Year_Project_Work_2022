@@ -249,6 +249,7 @@ class FirestoreMethods{
         });
     }
 
+    //Send message in chat screen
     Future<String?> Sendmessage(
         String author,
         String author_uid,
