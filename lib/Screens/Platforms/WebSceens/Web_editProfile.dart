@@ -19,7 +19,9 @@ class _WedProfileState extends State<WedProfile> {
 title: const Text("Edit Profile"),
       ),
       body: SafeArea(
-          child: Container()
+          child: Container(
+            child: Card(),
+          )
       ),
     );
   }
