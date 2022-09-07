@@ -20,6 +20,7 @@ title: const Text("Edit Profile"),
       ),
       body: SafeArea(
           child: Container(
+            padding: EdgeInsets.all(20),
             child: Card(
               child: SingleChildScrollView(
                 child: Column(
