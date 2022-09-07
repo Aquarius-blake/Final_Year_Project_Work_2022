@@ -55,6 +55,8 @@ class FirestoreMethods{
         }
     }
 
+
+    //Liking a post
     Future<void>likepost(String postid,String author_uid,List likes,String owneruid,String author,String ppurl,String title )async {
         try{
             if(likes.contains(author_uid)){
