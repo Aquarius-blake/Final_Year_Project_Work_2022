@@ -242,8 +242,8 @@ class FirestoreMethods{
         });
     }
 
+    //Updates a comment profile picture whenever user changes profile pictures
     Future<void> Updatecommentpic(String postid,String ppurl,String commentid)async{
-
         await _firestore.collection("Posts").doc(postid).collection("comments").doc(commentid).update({
             "profile Pic":ppurl,
         });
