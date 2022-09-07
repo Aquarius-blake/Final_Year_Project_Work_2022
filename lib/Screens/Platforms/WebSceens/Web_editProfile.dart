@@ -20,7 +20,11 @@ title: const Text("Edit Profile"),
       ),
       body: SafeArea(
           child: Container(
-            child: Card(),
+            child: Card(
+              child: Column(
+
+              ),
+            ),
           )
       ),
     );
