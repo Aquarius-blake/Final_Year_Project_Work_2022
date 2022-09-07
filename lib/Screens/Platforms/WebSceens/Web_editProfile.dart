@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 
 class WedProfile extends StatefulWidget {
-  const WedProfile({Key? key}) : super(key: key);
+  final snap;
+  const WedProfile({Key? key,this.snap}) : super(key: key);
 
   @override
   State<WedProfile> createState() => _WedProfileState();
