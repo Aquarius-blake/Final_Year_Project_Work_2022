@@ -344,7 +344,7 @@ class FirestoreMethods{
         }
     }
 
-
+    //Delete message
     Future<String>Deletemessage(  String author,
         String author_uid,
         String receiver,
