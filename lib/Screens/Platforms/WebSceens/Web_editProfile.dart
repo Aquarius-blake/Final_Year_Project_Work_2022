@@ -106,7 +106,13 @@ class _WedProfileState extends State<WedProfile> {
         centerTitle: true,
         title: const Text("Edit Profile"),
       ),
-      body: Container()
+      body: Container(
+        child: ListView(
+          children: [
+
+          ],
+        ),
+      )
     );
   }
 }
