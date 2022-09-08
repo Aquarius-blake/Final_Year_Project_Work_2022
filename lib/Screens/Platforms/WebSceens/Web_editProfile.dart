@@ -102,7 +102,7 @@ class _WedProfileState extends State<WedProfile> {
           padding: EdgeInsets.all(20),
           child: Card(
             child: Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(50.0),
               child: ListView(
                 children: [
                   Form(
