@@ -395,8 +395,8 @@ class _WebviewState extends State<Webview> {
                         child: Card(
                             child: Padding(
                               padding: const EdgeInsets.only(
-                                  left:120.0,
-                                right: 120.0
+                                  left:116.0,
+                                right: 116.0
                               ),
                               child: Text("Notifications"),
                             )
