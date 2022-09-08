@@ -392,14 +392,11 @@ class _WebviewState extends State<Webview> {
                   Column(
                     children: <Widget>[
                       Center(
-                        child: Card(
-                            child: Padding(
-                              padding: const EdgeInsets.only(
-                                  left:116.0,
-                                right: 116.0
-                              ),
-                              child: Text("Notifications"),
-                            )
+                        child: SizedBox(
+                          width: MediaQuery.of(context).size.width*0.3,
+                          child: Card(
+                              child: Text("Notifications")
+                          ),
                         ),
                       ),
                      SizedBox(
