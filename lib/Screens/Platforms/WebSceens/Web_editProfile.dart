@@ -106,7 +106,6 @@ class _WedProfileState extends State<WedProfile> {
 
   @override
   Widget build(BuildContext context) {
-    //TODO:Fix Bug(Error) before running
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
       appBar: AppBar(
