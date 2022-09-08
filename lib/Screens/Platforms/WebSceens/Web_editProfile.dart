@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../../Services/Upload.dart';
-import '../../../shared/error_handling.dart';
 
 
 class WedProfile extends StatefulWidget {
