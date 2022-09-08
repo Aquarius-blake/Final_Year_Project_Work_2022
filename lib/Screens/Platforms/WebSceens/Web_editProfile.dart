@@ -296,7 +296,6 @@ widget.snap['DateofBirth']==null?DOB.text="": DOB.text=widget.snap['DateofBirth'
                                 "Bio",
                                 textAlign: TextAlign.left,
                               ),
-                              floatingLabelAlignment: FloatingLabelAlignment.start,
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               hintText: "Write Something about yourself",
                               filled: true,
