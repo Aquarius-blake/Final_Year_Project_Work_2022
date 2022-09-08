@@ -101,11 +101,11 @@ class _WedProfileState extends State<WedProfile> {
         child: Container(
           padding: EdgeInsets.all(20),
           child: Card(
-            child: Padding(
-              padding: const EdgeInsets.all(50.0),
-              child: ListView(
-                children: [
-                  Form(
+            child: ListView(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(50.0),
+                  child: Form(
                       key: _formKey,
                       child: Column(
                         children: [
@@ -344,9 +344,9 @@ class _WedProfileState extends State<WedProfile> {
                           const SizedBox(height: 20,),
                         ],
                       )
-                  )
-                ],
-              ),
+                  ),
+                )
+              ],
             ),
           ),
         ),
