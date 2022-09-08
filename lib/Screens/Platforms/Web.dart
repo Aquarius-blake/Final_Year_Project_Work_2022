@@ -393,6 +393,7 @@ class _WebviewState extends State<Webview> {
                     children: <Widget>[
                      SizedBox(
                        height: MediaQuery.of(context).size.height*0.8,
+                       width: 200,
                        child: Notifications(
                          uid: user1.UID,
                        ),
