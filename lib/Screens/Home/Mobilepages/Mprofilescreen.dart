@@ -231,7 +231,7 @@ class _MprofileState extends State<Mprofile>with
                 Container(
                   alignment: Alignment.centerLeft,
                   child: widget.snap['DateofBirth']==null || widget.snap['DateofBirth']==""? const SizedBox()
-                      : Text("Date of Birth: ${widget.snap['DateoBirth']}",
+                      : Text("Date of Birth: ${widget.snap['DateofBirth']}",
                     style: const TextStyle(
                         color: Colors.grey
                     ),),
