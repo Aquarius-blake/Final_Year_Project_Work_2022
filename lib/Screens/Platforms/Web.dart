@@ -391,8 +391,11 @@ class _WebviewState extends State<Webview> {
                   ),
                   Column(
                     children: <Widget>[
-                     Notifications(
-                       uid: user1.UID,
+                     SizedBox(
+                       height: MediaQuery.of(context).size.height*0.8,
+                       child: Notifications(
+                         uid: user1.UID,
+                       ),
                      )
                     ],
                   ),
