@@ -74,6 +74,11 @@ class _WedProfileState extends State<WedProfile> {
 
   @override
   void initState() {
+     Fname.text = widget.snap['Full Name'];
+     Bio.text=widget.snap['Bio'];
+    username.text=widget.snap['username'];
+     gender.text=widget.snap['Gender'];
+     DOB.text=widget.snap['DateofBirth'];
 
     super.initState();
   }
