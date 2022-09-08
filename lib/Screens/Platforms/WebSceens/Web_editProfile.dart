@@ -93,10 +93,12 @@ class _WedProfileState extends State<WedProfile> {
         title: const Text("Edit Profile"),
       ),
       body: Container(
-        child: ListView(
-          children: [
+        child: Card(
+          child: ListView(
+            children: [
 
-          ],
+            ],
+          ),
         ),
       )
     );
