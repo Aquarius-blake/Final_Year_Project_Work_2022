@@ -93,13 +93,15 @@ class _WedProfileState extends State<WedProfile> {
         centerTitle: true,
         title: const Text("Edit Profile"),
       ),
-      body: Container(
-        padding: EdgeInsets.all(20),
-        child: Card(
-          child: ListView(
-            children: [
+      body: SafeArea(
+        child: Container(
+          padding: EdgeInsets.all(20),
+          child: Card(
+            child: ListView(
+              children: [
 
-            ],
+              ],
+            ),
           ),
         ),
       )
