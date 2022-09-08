@@ -395,7 +395,11 @@ class _WebviewState extends State<Webview> {
                         child: SizedBox(
                           width: MediaQuery.of(context).size.width*0.3,
                           child: Card(
-                              child: Text("Notifications")
+                              child: Center(
+                                child: Text(
+                                    "Notifications"
+                                ),
+                              )
                           ),
                         ),
                       ),
