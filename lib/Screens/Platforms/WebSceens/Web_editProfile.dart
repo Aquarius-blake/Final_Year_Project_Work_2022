@@ -100,9 +100,9 @@ class _WedProfileState extends State<WedProfile> {
       body: SafeArea(
         child: Container(
           padding: EdgeInsets.all(20),
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Card(
+          child: Card(
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
               child: ListView(
                 children: [
                   Form(
