@@ -101,6 +101,10 @@ class _WedProfileState extends State<WedProfile> {
         child: Container(
           padding: EdgeInsets.all(20),
           child: Card(
+            elevation: 3,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(60.0)
+            ),
             child: ListView(
               children: [
                 Container(
