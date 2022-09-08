@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:image_picker/image_picker.dart';
-
-import '../../../Services/Firestoremethods.dart';
 import '../../../Services/Upload.dart';
-import '../../../shared/Pop_up.dart';
 import '../../../shared/error_handling.dart';
 
 
@@ -26,8 +22,6 @@ class _WedProfileState extends State<WedProfile> {
   TextEditingController DOB=TextEditingController();
   TextEditingController gender=TextEditingController();
   late DateTime? _dateTime;
-
-  final _formKey =GlobalKey<FormState>();
 
 
   _selectimage(BuildContext context)async{
