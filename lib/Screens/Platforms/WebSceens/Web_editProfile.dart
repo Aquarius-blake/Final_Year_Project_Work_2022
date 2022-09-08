@@ -294,6 +294,7 @@ widget.snap['DateofBirth']==null?DOB.text="": DOB.text=widget.snap['DateofBirth'
                             decoration: InputDecoration(
                               label: const Text(
                                 "Bio",
+                                textAlign: TextAlign.left,
                               ),
                               floatingLabelAlignment: FloatingLabelAlignment.start,
                               floatingLabelBehavior: FloatingLabelBehavior.always,
