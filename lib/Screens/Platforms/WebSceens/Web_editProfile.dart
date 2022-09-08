@@ -74,20 +74,6 @@ class _WedProfileState extends State<WedProfile> {
   }
 
   @override
-  void didChangeDependencies() {
-    try {
-      Fname.text = widget.snap['Full Name'];
-      Bio.text=widget.snap['Bio'];
-       username.text=widget.snap['username'];
-       gender.text=widget.snap['Gender'];
-       DOB.text=widget.snap['DateofBirth'];
-
-    }catch(e){
-      errormessage(e.toString(), context);
-    }    super.didChangeDependencies();
-  }
-
-  @override
   void dispose() {
     Fname.dispose();
     Bio.dispose();
