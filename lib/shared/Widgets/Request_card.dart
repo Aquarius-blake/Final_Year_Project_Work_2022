@@ -31,6 +31,9 @@ class _RequestCardState extends State<RequestCard> {
                           children: [
                             TextSpan(
                               text: widget.snap['author'],
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold
+                              )
                             ),
                             TextSpan(
                               text: " Requested for Administrative permissions, ",
