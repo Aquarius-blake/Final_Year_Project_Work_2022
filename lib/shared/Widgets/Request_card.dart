@@ -37,7 +37,9 @@ class _RequestCardState extends State<RequestCard> {
                             ),
                             TextSpan(
                               text: " Requested for Administrative permissions, ",
-                              style: TextStyle(),
+                              style: TextStyle(
+                                fontStyle: FontStyle.italic
+                              ),
                             ),
                             TextSpan(
                                 text: "Approve or Deny request?"
