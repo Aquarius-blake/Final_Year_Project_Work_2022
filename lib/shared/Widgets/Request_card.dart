@@ -23,6 +23,7 @@ class _RequestCardState extends State<RequestCard> {
               Row(
                 children: [
                   CircleAvatar(
+                    backgroundImage: NetworkImage(widget.snap['Profile Pic']),
                     backgroundColor: Colors.lightBlueAccent,
                     radius: 20,
                   ),
