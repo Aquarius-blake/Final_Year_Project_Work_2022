@@ -58,7 +58,10 @@ class _RequestCardState extends State<RequestCard> {
                         String content=await FirestoreMethods().DenyRequest(widget.snap['author uid']);
                         Showsnackbar(content, context);
                       },
-                      child: Text("Deny")
+                      child: Text(
+                          "Deny",
+                      style: TextStyle(),
+                      )
                   ),
                 ],
               ),
