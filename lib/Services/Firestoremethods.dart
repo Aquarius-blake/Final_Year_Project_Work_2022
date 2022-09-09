@@ -423,7 +423,10 @@ class FirestoreMethods{
            String requestuid=Uuid().v1();
             Request request=Request(author_uid: uid, requestuid: requestuid, author: author, Timeposted: DateTime.now());
             await _firestore.collection("Requests").doc(uid).set(
-                request.toJson()
+                request.toJson(),
+                SetOptions(
+                    merge: true
+                )
             );
 
             ress='Request Sent';
