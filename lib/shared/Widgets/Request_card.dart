@@ -51,7 +51,9 @@ class _RequestCardState extends State<RequestCard> {
                       child: Text("Approve")
                   ),
                   TextButton(
-                      onPressed: (){},
+                      onPressed: ()async{
+
+                      },
                       child: Text("Deny")
                   ),
                 ],
