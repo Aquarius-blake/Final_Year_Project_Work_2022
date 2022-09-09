@@ -60,7 +60,7 @@ class _PostCardState extends State<PostCard> {
   }
 
 //more options
-  _options(BuildContext context)async{
+  _options(BuildContext context,User1 user1)async{
     return showDialog(
         context: context,
         builder: (context){
@@ -73,7 +73,7 @@ class _PostCardState extends State<PostCard> {
               ),
             ),
             children: [
-              SimpleDialogOption(
+             user1.Admin==true && widget.snap['author uid']!=user1.UID ?SimpleDialogOption() :SimpleDialogOption(
                 padding: const EdgeInsets.all(15.0),
                 child: const Text(
                     "Edit Post",
@@ -276,7 +276,7 @@ class _PostCardState extends State<PostCard> {
                         )
                     ),
                     widget.snap['author uid']==user1.UID || user1.Admin==true ? IconButton(
-                      onPressed: ()=>_options(context),
+                      onPressed: ()=>_options(context,user1),
                       icon: const Icon(
                         Icons.more_vert,
                         color: Colors.black,
