@@ -13,9 +13,11 @@ import 'package:forum3/Screens/Home/Mobilepages/Mmessages.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mnotifications.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mrequest_page.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Msearch.dart';
+import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/Services/Storagemethods.dart';
 import 'package:forum3/Services/Upload.dart';
 import 'package:forum3/shared/Networkconnection.dart';
+import 'package:forum3/shared/Pop_up.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 //import 'package:forum3/shared/loading.dart';
@@ -341,6 +343,10 @@ void handlemylink(Uri url){
                "Request Admin Privileges",
                style: TextStyle(),
              ),
+             onTap: ()async{
+               String content= await FirestoreMethods().Makerequest(user1.Username!, user1.UID!, user1.ppurl!);
+               Showsnackbar(content, context);
+             },
            ),
              const SizedBox(height: 20.0,),
             const  Divider(
