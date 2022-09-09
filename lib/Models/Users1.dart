@@ -19,6 +19,7 @@ class User1{
   late final String? Name;
   late final String? Gender;
   late final String? Bio;
+  late final bool? Admin;
 
 
   User1({ this.UID,
@@ -33,7 +34,8 @@ class User1{
     this.Name,
     this.Gender,
     this.searchkey,
-    this.Bio
+    this.Bio,
+    this.Admin
   });
 
   Map<String,dynamic> toJson()=>{
@@ -47,7 +49,8 @@ class User1{
     "Full Name":Name,
     "Gender":Gender,
     "Bio":Bio,
-    "Guest":Guest
+    "Guest":Guest,
+    "Admin":Admin
   };
 
   static User1? FromSnap(DocumentSnapshot snap){
@@ -62,7 +65,8 @@ class User1{
         Gender: snapshot['Gender'],
         searchkey: snapshot['searchkey'],
         Bio: snapshot['Bio'],
-      Guest: snapshot['Guest']
+      Guest: snapshot['Guest'],
+      Admin: snapshot['Admin'],
     );
     return User12;
 
