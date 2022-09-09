@@ -289,8 +289,8 @@ class FirestoreMethods{
                 .collection("message")
                 .doc(message_uid)
                 .set(
-                    chats.toJson(),
-                    SetOptions(merge: true)
+                chats.toJson(),
+                SetOptions(merge: true)
             );
             await _firestore
                 .collection("Chats")
@@ -420,7 +420,7 @@ class FirestoreMethods{
     Future<String> Makerequest(String author,String uid,String ppurl)async{
         String ress;
         try{
-           String requestuid=Uuid().v1();
+            String requestuid=Uuid().v1();
             Request request=Request(author_uid: uid, requestuid: requestuid, author: author, Timeposted: DateTime.now());
             await _firestore.collection("Requests").doc(uid).set(
                 request.toJson(),
@@ -439,6 +439,7 @@ class FirestoreMethods{
 
 
     Future Approval()async{
+        String ress;
 
     }
 
