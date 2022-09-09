@@ -29,9 +29,11 @@ class _RequestCardState extends State<RequestCard> {
                   RichText(
                       text: TextSpan(
                           children: [
-                            TextSpan(),
                             TextSpan(
-                              text: "Requested for Administrative permissions, ",
+                              text: widget.snap['author'],
+                            ),
+                            TextSpan(
+                              text: " Requested for Administrative permissions, ",
                             ),
                             TextSpan(
                                 text: "Approve or Deny request?"
