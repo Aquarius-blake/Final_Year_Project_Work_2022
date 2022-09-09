@@ -439,6 +439,8 @@ void handlemylink(Uri url){
       }catch(e){
        print(e.toString());
        return  Netcon();
+     }finally{
+       Showsnackbar("Failed to load page", context);
      }
   }
 }
