@@ -456,9 +456,12 @@ class FirestoreMethods{
     }
 
 
-    Future DenyRequest(String uid)async{
+    Future<String> DenyRequest(String uid)async{
         String ress;
-        try{}catch(e){
+        try{
+            ress="Request Denied Successfully";
+            return ress;
+        }catch(e){
             ress=e.toString();
             return ress;
         }
