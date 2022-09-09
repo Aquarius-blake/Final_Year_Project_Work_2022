@@ -32,7 +32,8 @@ class _RequestCardState extends State<RequestCard> {
                             TextSpan(
                               text: widget.snap['author'],
                               style: TextStyle(
-                                fontWeight: FontWeight.bold
+                                fontWeight: FontWeight.bold,
+                                fontSize: 22
                               )
                             ),
                             TextSpan(
