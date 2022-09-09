@@ -23,7 +23,12 @@ class _RequestCardState extends State<RequestCard> {
                 CircleAvatar(
                   backgroundColor: Colors.lightBlueAccent,
                   radius: 20,
-                )
+                ),
+                  RichText(
+                      text: TextSpan(
+
+                      )
+                  )
                 ],
               ),
               Row(
