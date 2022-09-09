@@ -17,7 +17,10 @@ class _RequestCardState extends State<RequestCard> {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
-            children: [],
+            children: [
+              Row(),
+              Row(),
+            ],
           ),
         ),
       ),
