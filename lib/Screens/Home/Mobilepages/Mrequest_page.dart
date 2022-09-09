@@ -13,6 +13,7 @@ class _Request_pageState extends State<Request_page> {
     return Scaffold(
 appBar: AppBar(
   backgroundColor: Colors.white,
+  centerTitle: true,
   iconTheme: IconThemeData(
     color: Colors.black
   ),
