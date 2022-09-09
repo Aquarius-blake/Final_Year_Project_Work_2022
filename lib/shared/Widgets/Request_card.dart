@@ -26,7 +26,7 @@ class _RequestCardState extends State<RequestCard> {
                 ),
                   RichText(
                       text: TextSpan(
-
+children: []
                       )
                   )
                 ],
