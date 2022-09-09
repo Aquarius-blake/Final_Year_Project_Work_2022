@@ -322,7 +322,12 @@ void handlemylink(Uri url){
                 },
               ),
              SizedBox(height: 20,),
-           user1.Admin!?  ListTile():
+           user1.Admin!?  ListTile(
+             title: Text(
+                 "View Requests",
+             style: TextStyle(),
+             ),
+           ):
            ListTile(
              title: Text(
                "Request Admin Privileges",
