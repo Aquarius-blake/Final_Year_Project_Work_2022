@@ -438,12 +438,17 @@ class FirestoreMethods{
     }
 
 
-    Future Approval()async{
+    Future<String> Approval(String uid)async{
         String ress;
         try{
-
+            await _firestore.collection("users").doc(uid).update(
+                {"Admin":true}
+            );
+            ress="Request Approved";
+            return ress;
         }catch(e){
             ress=e.toString();
+            return ress;
         }
     }
 
