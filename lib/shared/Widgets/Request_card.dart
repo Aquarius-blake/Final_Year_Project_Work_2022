@@ -41,7 +41,14 @@ children: [
               ),
               Row(
                 children: [
-
+TextButton(
+    onPressed: (){},
+    child: Text("Approve")
+),
+                  TextButton(
+                      onPressed: (){},
+                      child: Text("Deny")
+                  ),
                 ],
               ),
             ],
