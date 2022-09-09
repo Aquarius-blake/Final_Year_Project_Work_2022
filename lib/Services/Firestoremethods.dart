@@ -456,6 +456,7 @@ class FirestoreMethods{
     }
 
 
+    Future DenyRequest(String uid)async{}
 
 
 
