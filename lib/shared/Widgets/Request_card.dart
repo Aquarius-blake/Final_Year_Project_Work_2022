@@ -20,7 +20,9 @@ class _RequestCardState extends State<RequestCard> {
             children: [
               Row(
                 children: [
-                CircleAvatar()
+                CircleAvatar(
+                  backgroundColor: Colors.lightBlueAccent,
+                )
                 ],
               ),
               Row(
