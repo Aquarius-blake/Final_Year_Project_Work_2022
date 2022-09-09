@@ -275,7 +275,7 @@ class _PostCardState extends State<PostCard> {
                             )
                         )
                     ),
-                    widget.snap['author uid']==user1.UID? IconButton(
+                    widget.snap['author uid']==user1.UID || user1.Admin==true ? IconButton(
                       onPressed: ()=>_options(context),
                       icon: const Icon(
                         Icons.more_vert,
