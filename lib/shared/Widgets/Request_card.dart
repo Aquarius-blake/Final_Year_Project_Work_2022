@@ -20,31 +20,31 @@ class _RequestCardState extends State<RequestCard> {
             children: [
               Row(
                 children: [
-                CircleAvatar(
-                  backgroundColor: Colors.lightBlueAccent,
-                  radius: 20,
-                ),
+                  CircleAvatar(
+                    backgroundColor: Colors.lightBlueAccent,
+                    radius: 20,
+                  ),
                   RichText(
                       text: TextSpan(
-children: [
-  TextSpan(),
-  TextSpan(
-    text: "Requested for Administrative permissions, ",
-  ),
-  TextSpan(
-    text: "Approve or Deny request?"
-  ),
-]
+                          children: [
+                            TextSpan(),
+                            TextSpan(
+                              text: "Requested for Administrative permissions, ",
+                            ),
+                            TextSpan(
+                                text: "Approve or Deny request?"
+                            ),
+                          ]
                       )
                   )
                 ],
               ),
               Row(
                 children: [
-TextButton(
-    onPressed: (){},
-    child: Text("Approve")
-),
+                  TextButton(
+                      onPressed: (){},
+                      child: Text("Approve")
+                  ),
                   TextButton(
                       onPressed: (){},
                       child: Text("Deny")
