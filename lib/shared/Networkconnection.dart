@@ -43,11 +43,12 @@ class _NetconState extends State<Netcon> {
                   size: 40,
                   color: Colors.black,
                 ),
-                CircularProgressIndicator(),
                 Text(
                   message,
                   style: TextStyle(),
                 ),
+                SizedBox(),
+                CircularProgressIndicator(),
               ],
             ),
           ),
