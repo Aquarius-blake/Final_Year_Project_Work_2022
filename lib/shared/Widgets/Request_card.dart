@@ -43,7 +43,10 @@ class _RequestCardState extends State<RequestCard> {
                               ),
                             ),
                             TextSpan(
-                                text: "Approve or Deny request?"
+                                text: "Approve or Deny request?",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ]
                       )
