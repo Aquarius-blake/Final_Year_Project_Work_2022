@@ -47,7 +47,7 @@ class _NetconState extends State<Netcon> {
                   message,
                   style: TextStyle(),
                 ),
-                SizedBox(),
+                SizedBox(height: 20,),
                 CircularProgressIndicator(),
               ],
             ),
