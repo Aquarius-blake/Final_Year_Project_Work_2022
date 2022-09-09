@@ -3,24 +3,20 @@
 // Custom request Class
 
 
-
-
-// Custom Comment Class
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class Comments{
+class Request{
 
   late final  String? author_uid;
   late final String? author;
   late final String? detail;
   late final  Timeposted;
   late final String? ppurl;
-  late final String commentuid;
+  late final String requestuid;
 
-  Comments(
+  Request(
       { required this.author_uid,
-        required this.commentuid,
+        required this.requestuid,
         required  this.detail,
         required this.author,
         required  this.Timeposted,
@@ -33,22 +29,22 @@ class Comments{
     "author":author,
     "Comment Time":Timeposted,
     "Profile Pic":ppurl,
-    "Comment Uid":commentuid,
+    "Request Uid":requestuid,
     "detail":detail,
   };
 
-  static Comments? FromSnap(DocumentSnapshot snap){
+  static Request? FromSnap(DocumentSnapshot snap){
     var snapshot= snap.data() as Map<String,dynamic>;
-    Comments? Comments12=Comments(
+    Request? Request12=Request(
       detail: snapshot['detail'],
       author_uid: snapshot['author uid'],
       author: snapshot['author'],
       Timeposted: snapshot['Comment Time'],
       ppurl: snapshot['Profile Pic'],
-      commentuid: snapshot['Comment Uid'],
+      requestuid: snapshot['Request Uid'],
     );
 
-    return Comments12;
+    return Request12;
 
 
 
