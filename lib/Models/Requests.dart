@@ -9,7 +9,6 @@ class Request{
 
   late final  String? author_uid;
   late final String? author;
-  late final String? detail;
   late final  Timeposted;
   late final String? ppurl;
   late final String requestuid;
@@ -17,7 +16,6 @@ class Request{
   Request(
       { required this.author_uid,
         required this.requestuid,
-        required  this.detail,
         required this.author,
         required  this.Timeposted,
         this.ppurl,
@@ -27,19 +25,17 @@ class Request{
   Map<String,dynamic> toJson()=>{
     "author uid":author_uid,
     "author":author,
-    "Comment Time":Timeposted,
+    "Request Time":Timeposted,
     "Profile Pic":ppurl,
     "Request Uid":requestuid,
-    "detail":detail,
   };
 
   static Request? FromSnap(DocumentSnapshot snap){
     var snapshot= snap.data() as Map<String,dynamic>;
     Request? Request12=Request(
-      detail: snapshot['detail'],
       author_uid: snapshot['author uid'],
       author: snapshot['author'],
-      Timeposted: snapshot['Comment Time'],
+      Timeposted: snapshot['Request Time'],
       ppurl: snapshot['Profile Pic'],
       requestuid: snapshot['Request Uid'],
     );

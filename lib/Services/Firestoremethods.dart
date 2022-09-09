@@ -416,6 +416,21 @@ class FirestoreMethods{
 
 
 
+    Future<String> Makerequest(String author,String uid,String ppurl)async{
+        String ress;
+        try{
+
+            ress='Request Sent';
+            return ress;
+        }catch(e){
+            ress=e.toString();
+            return ress;
+        }
+    }
+
+
+
+
 
 
 }
