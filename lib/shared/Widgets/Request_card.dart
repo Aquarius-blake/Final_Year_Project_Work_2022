@@ -26,7 +26,15 @@ class _RequestCardState extends State<RequestCard> {
                 ),
                   RichText(
                       text: TextSpan(
-children: []
+children: [
+  TextSpan(),
+  TextSpan(
+    text: "Requested for Administrative permissions, ",
+  ),
+  TextSpan(
+    text: "Approve or Deny request?"
+  ),
+]
                       )
                   )
                 ],
@@ -43,3 +51,29 @@ children: []
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
