@@ -22,6 +22,7 @@ class _RequestCardState extends State<RequestCard> {
                 children: [
                 CircleAvatar(
                   backgroundColor: Colors.lightBlueAccent,
+                  radius: 20,
                 )
                 ],
               ),
