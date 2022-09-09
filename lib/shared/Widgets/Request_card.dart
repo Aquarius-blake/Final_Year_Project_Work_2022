@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:forum3/Services/Firestoremethods.dart';
+import 'package:forum3/shared/Pop_up.dart';
 
 class RequestCard extends StatefulWidget {
   final snap;
@@ -42,7 +44,10 @@ class _RequestCardState extends State<RequestCard> {
               Row(
                 children: [
                   TextButton(
-                      onPressed: (){},
+                      onPressed: ()async{
+                        String ress= await FirestoreMethods().Approval(widget.snap['author uid']);
+                        Showsnackbar(ress, context);
+                      },
                       child: Text("Approve")
                   ),
                   TextButton(
