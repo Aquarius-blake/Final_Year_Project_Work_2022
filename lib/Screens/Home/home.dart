@@ -321,6 +321,14 @@ void handlemylink(Uri url){
                   Navigator.pushNamed(context, '/register');
                 },
               ),
+             SizedBox(height: 20,),
+           user1.Admin!?  ListTile():
+           ListTile(
+             title: Text(
+               "Request Admin Privileges",
+               style: TextStyle(),
+             ),
+           ),
              const SizedBox(height: 20.0,),
             const  Divider(
                 height: 40,
