@@ -15,6 +15,12 @@ appBar: AppBar(
   iconTheme: IconThemeData(
     color: Colors.black
   ),
+  title: Text(
+    "Requests",
+    style: TextStyle(
+      color: Colors.black
+    ),
+  ),
 ),
     );
   }
