@@ -50,7 +50,7 @@ class _NetconState extends State<Netcon> {
                 ),
                 SizedBox(height: 20,),
                 SpinKitPouringHourGlassRefined(
-                    color: Colors.lightBlueAccent,
+                    color: Colors.black,
                 size: 100,)
               ],
             ),
