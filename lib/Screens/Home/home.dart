@@ -11,6 +11,7 @@ import 'package:forum3/Screens/Home/Mobilepages/MPost.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mhome.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mmessages.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mnotifications.dart';
+import 'package:forum3/Screens/Home/Mobilepages/Mrequest_page.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Msearch.dart';
 import 'package:forum3/Services/Storagemethods.dart';
 import 'package:forum3/Services/Upload.dart';
@@ -327,6 +328,13 @@ void handlemylink(Uri url){
                  "View Requests",
              style: TextStyle(),
              ),
+             onTap: (){
+               Navigator.of(context).push(
+                   MaterialPageRoute(
+                     builder: (context)=>Request_page(),
+                   )
+               );
+             },
            ):
            ListTile(
              title: Text(
