@@ -437,6 +437,7 @@ void handlemylink(Uri url){
       ),
     );
       }catch(e){
+       print(e.toString());
        return  Netcon();
      }
   }
