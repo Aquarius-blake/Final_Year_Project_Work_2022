@@ -11,6 +11,8 @@ class RequestCard extends StatefulWidget {
 class _RequestCardState extends State<RequestCard> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Card(),
+    );
   }
 }
