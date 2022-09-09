@@ -12,6 +12,7 @@ class _Request_pageState extends State<Request_page> {
   Widget build(BuildContext context) {
     return Scaffold(
 appBar: AppBar(
+  backgroundColor: Colors.white,
   iconTheme: IconThemeData(
     color: Colors.black
   ),
