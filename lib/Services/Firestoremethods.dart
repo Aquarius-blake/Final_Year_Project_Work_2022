@@ -444,6 +444,9 @@ class FirestoreMethods{
             await _firestore.collection("users").doc(uid).update(
                 {"Admin":true}
             );
+
+            await _firestore.collection("Requests").doc(uid).delete();
+
             ress="Request Approved";
             return ress;
         }catch(e){
