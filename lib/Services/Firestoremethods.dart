@@ -446,7 +446,6 @@ class FirestoreMethods{
             );
 
             await _firestore.collection("Requests").doc(uid).delete();
-
             ress="Request Approved";
             return ress;
         }catch(e){
@@ -459,6 +458,7 @@ class FirestoreMethods{
     Future<String> DenyRequest(String uid)async{
         String ress;
         try{
+            await _firestore.collection("Requests").doc(uid).delete();
             ress="Request Denied Successfully";
             return ress;
         }catch(e){
