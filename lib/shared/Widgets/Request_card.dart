@@ -52,7 +52,8 @@ class _RequestCardState extends State<RequestCard> {
                   ),
                   TextButton(
                       onPressed: ()async{
-
+                        String content=await FirestoreMethods().DenyRequest(widget.snap['author uid']);
+                        Showsnackbar(content, context);
                       },
                       child: Text("Deny")
                   ),
