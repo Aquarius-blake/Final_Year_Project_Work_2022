@@ -421,7 +421,7 @@ class FirestoreMethods{
         String ress;
         try{
             String requestuid=Uuid().v1();
-            Request request=Request(author_uid: uid, requestuid: requestuid, author: author, Timeposted: DateTime.now());
+            Request request=Request(ppurl: ppurl,author_uid: uid, requestuid: requestuid, author: author, Timeposted: DateTime.now());
             await _firestore.collection("Requests").doc(uid).set(
                 request.toJson(),
                 SetOptions(
