@@ -62,7 +62,9 @@ class _RequestCardState extends State<RequestCard> {
                       },
                       child: Text(
                           "Approve",
-                      style: TextStyle(),
+                      style: TextStyle(
+                        color: Colors.lightBlueAccent
+                      ),
                       )
                   ),
                   TextButton(
@@ -72,7 +74,9 @@ class _RequestCardState extends State<RequestCard> {
                       },
                       child: Text(
                           "Deny",
-                      style: TextStyle(),
+                      style: TextStyle(
+                        color: Colors.lightBlueAccent
+                      ),
                       )
                   ),
                 ],
