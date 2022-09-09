@@ -247,168 +247,170 @@ class _PostCardState extends State<PostCard> {
       child: Card(
         child: Container(
           padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: [
-              Row(
-                children: [
-
-                  CircleAvatar(
-                    radius: 16,
-                    backgroundImage: NetworkImage(widget.snap['Profile Pic']),
-                  ),
-                  Expanded(
-                      child: Padding(
-                          child:Column(
-                            mainAxisSize: MainAxisSize.min,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                widget.snap['author'],
-                                style: const TextStyle(
-                                    fontWeight: FontWeight.bold
-                                ),)
-                            ],
-                          ) ,
-                          padding:const EdgeInsets.only(
-                              left: 10.0
-                          )
-                      )
-                  ),
-                  widget.snap['author uid']==user1.UID? IconButton(
-                    onPressed: ()=>_options(context),
-                    icon: const Icon(
-                      Icons.more_vert,
-                      color: Colors.black,
-                    ),
-                  ):const SizedBox()
-                ],
-              ),
-              Container(
-                padding:const EdgeInsets.only(
-                  top: 5,
-                ),
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width*0.8,
-                  child: Text(
-                    widget.snap['title'],
-                    style: const TextStyle(
-                      fontSize: 22,
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                padding:const EdgeInsets.only(
-                  top: 5,
-                ),
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width*0.8,
-                  child: Text(
-                    widget.snap['detail'],
-                    style: const TextStyle(
-                      fontSize: 14,
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(height: 10,),
-              Postimage(widget.snap['Image Url'], context,user1),
-              Container(
-                padding: const EdgeInsets.only(
-                  top: 3.0,
-                ),
-                child: Align(
-                  alignment: Alignment.bottomLeft,
-                  child:   Text(
-                    DateFormat.yMMMd().format(widget.snap['Post Time'].toDate(),),
-                    style: const TextStyle(
-                        color: Colors.grey,
-                        fontSize: 12,
-                        fontStyle: FontStyle.italic
-                    ),
-
-                  ),
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 30,
-                ),
-                child: Row(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Row(
                   children: [
-                    Text(
-                      "${widget.snap['likes'].length}",
+
+                    CircleAvatar(
+                      radius: 16,
+                      backgroundImage: NetworkImage(widget.snap['Profile Pic']),
                     ),
-                    likeAnimation(
-                      isAnimating: widget.snap['likes'].contains(user1.UID),
-                      smallLike: true,
-                      child: IconButton(
-                          onPressed: ()async{
-                            await   FirestoreMethods().likepost(
-                              widget.snap['Post Uid'],
-                              user1.UID!,
-                              widget.snap['likes'],
-                              widget.snap['author uid'],
-                              user1.Username!,
-                              user1.ppurl!,
-                              widget.snap['title'],
-                            );
+                    Expanded(
+                        child: Padding(
+                            child:Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  widget.snap['author'],
+                                  style: const TextStyle(
+                                      fontWeight: FontWeight.bold
+                                  ),)
+                              ],
+                            ) ,
+                            padding:const EdgeInsets.only(
+                                left: 10.0
+                            )
+                        )
+                    ),
+                    widget.snap['author uid']==user1.UID? IconButton(
+                      onPressed: ()=>_options(context),
+                      icon: const Icon(
+                        Icons.more_vert,
+                        color: Colors.black,
+                      ),
+                    ):const SizedBox()
+                  ],
+                ),
+                Container(
+                  padding:const EdgeInsets.only(
+                    top: 5,
+                  ),
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width*0.8,
+                    child: Text(
+                      widget.snap['title'],
+                      style: const TextStyle(
+                        fontSize: 22,
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  padding:const EdgeInsets.only(
+                    top: 5,
+                  ),
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width*0.8,
+                    child: Text(
+                      widget.snap['detail'],
+                      style: const TextStyle(
+                        fontSize: 14,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 10,),
+                Postimage(widget.snap['Image Url'], context,user1),
+                Container(
+                  padding: const EdgeInsets.only(
+                    top: 3.0,
+                  ),
+                  child: Align(
+                    alignment: Alignment.bottomLeft,
+                    child:   Text(
+                      DateFormat.yMMMd().format(widget.snap['Post Time'].toDate(),),
+                      style: const TextStyle(
+                          color: Colors.grey,
+                          fontSize: 12,
+                          fontStyle: FontStyle.italic
+                      ),
+
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 30,
+                  ),
+                  child: Row(
+                    children: [
+                      Text(
+                        "${widget.snap['likes'].length}",
+                      ),
+                      likeAnimation(
+                        isAnimating: widget.snap['likes'].contains(user1.UID),
+                        smallLike: true,
+                        child: IconButton(
+                            onPressed: ()async{
+                              await   FirestoreMethods().likepost(
+                                widget.snap['Post Uid'],
+                                user1.UID!,
+                                widget.snap['likes'],
+                                widget.snap['author uid'],
+                                user1.Username!,
+                                user1.ppurl!,
+                                widget.snap['title'],
+                              );
+                            },
+                            icon: liked? const Icon(
+                              Icons.favorite,
+                              color: Colors.red,
+                            )
+                                : const Icon(
+                              Icons.favorite_border_outlined,
+                              color: Colors.black,
+                            )
+                        ),
+                      ),
+                      const Expanded(
+                          child: SizedBox()
+                      ),
+                      Text("$commentlen"),
+                      IconButton(
+                          onPressed: (){
+                            if(kIsWeb){
+                              Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (context)=>Wcommentd(
+                                      snap: widget.snap,
+                                    ),
+                                  )
+                              );
+                            }else{
+                              Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (context)=>McommentsScreen(
+                                      snap: widget.snap,
+                                    ),
+                                  )
+                              );
+                            }
                           },
-                          icon: liked? const Icon(
-                            Icons.favorite,
-                            color: Colors.red,
-                          )
-                              : const Icon(
-                            Icons.favorite_border_outlined,
+                          icon: const FaIcon(
+                            FontAwesomeIcons.comments,
                             color: Colors.black,
                           )
                       ),
-                    ),
-                    const Expanded(
-                        child: SizedBox()
-                    ),
-                    Text("$commentlen"),
-                    IconButton(
-                        onPressed: (){
-                          if(kIsWeb){
-                            Navigator.of(context).push(
-                                MaterialPageRoute(
-                                  builder: (context)=>Wcommentd(
-                                    snap: widget.snap,
-                                  ),
-                                )
-                            );
-                          }else{
-                            Navigator.of(context).push(
-                                MaterialPageRoute(
-                                  builder: (context)=>McommentsScreen(
-                                    snap: widget.snap,
-                                  ),
-                                )
-                            );
-                          }
-                        },
-                        icon: const FaIcon(
-                          FontAwesomeIcons.comments,
-                          color: Colors.black,
-                        )
-                    ),
-                    const Expanded(
-                        child: SizedBox()
-                    ),
-                    IconButton(
-                        onPressed: (){
+                      const Expanded(
+                          child: SizedBox()
+                      ),
+                      IconButton(
+                          onPressed: (){
 buildDynamicLinks(widget.snap['title'], widget.snap['Profile Pic'], widget.snap['Post Uid']);
-                        },
-                        icon: const Icon(
-                          Icons.share,
-                          color: Colors.black,
-                        )
-                    ),
-                  ],
-                ),
-              )
-            ],
+                          },
+                          icon: const Icon(
+                            Icons.share,
+                            color: Colors.black,
+                          )
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),

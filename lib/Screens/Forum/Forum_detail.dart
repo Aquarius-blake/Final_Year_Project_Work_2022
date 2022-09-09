@@ -41,7 +41,7 @@ class _ForumdetailState extends State<Forumdetail> {
         child: Column(
           children: [
             SizedBox(
-              height: MediaQuery.of(context).size.height*0.4,
+                height: MediaQuery.of(context).size.height*0.4,
                 width: MediaQuery.of(context).size.width,
                 child: detailp(snap:widget.snap,)
             ),
@@ -49,9 +49,9 @@ class _ForumdetailState extends State<Forumdetail> {
             SizedBox(
               height: MediaQuery.of(context).size.height*0.4,
               width: MediaQuery.of(context).size.width,
-child: Comdetail(
-  snap: widget.snap,
-),
+              child: Comdetail(
+                snap: widget.snap,
+              ),
             ),
           ],
         ),
