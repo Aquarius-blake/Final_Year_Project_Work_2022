@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class Netcon extends StatefulWidget {
   const Netcon({Key? key}) : super(key: key);
@@ -48,7 +49,9 @@ class _NetconState extends State<Netcon> {
                   style: TextStyle(),
                 ),
                 SizedBox(height: 20,),
-                CircularProgressIndicator(),
+                SpinKitPouringHourGlassRefined(
+                    color: Colors.lightBlueAccent,
+                size: 100,)
               ],
             ),
           ),
