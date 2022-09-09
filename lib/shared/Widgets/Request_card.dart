@@ -12,7 +12,11 @@ class _RequestCardState extends State<RequestCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Card(),
+      child: Card(
+        child: Column(
+
+        ),
+      ),
     );
   }
 }
