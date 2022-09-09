@@ -19,7 +19,11 @@ class _RequestCardState extends State<RequestCard> {
           child: Column(
             children: [
               Row(),
-              Row(),
+              Row(
+                children: [
+
+                ],
+              ),
             ],
           ),
         ),
