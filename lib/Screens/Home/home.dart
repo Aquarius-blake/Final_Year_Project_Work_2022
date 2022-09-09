@@ -328,7 +328,10 @@ void handlemylink(Uri url){
            user1.Admin!?  ListTile(
              title: Text(
                  "View Requests",
-             style: TextStyle(),
+             style: TextStyle(
+               fontStyle: FontStyle.italic,
+               fontSize: 12.0,
+             ),
              ),
              onTap: (){
                Navigator.of(context).push(
@@ -341,7 +344,10 @@ void handlemylink(Uri url){
            ListTile(
              title: Text(
                "Request Admin Privileges",
-               style: TextStyle(),
+               style: TextStyle(
+                 fontSize: 12,
+                 fontStyle: FontStyle.italic
+               ),
              ),
              onTap: ()async{
                String content= await FirestoreMethods().Makerequest(user1.Username!, user1.UID!, user1.ppurl!);
