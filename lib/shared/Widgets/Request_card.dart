@@ -48,7 +48,10 @@ class _RequestCardState extends State<RequestCard> {
                         String ress= await FirestoreMethods().Approval(widget.snap['author uid']);
                         Showsnackbar(ress, context);
                       },
-                      child: Text("Approve")
+                      child: Text(
+                          "Approve",
+                      style: TextStyle(),
+                      )
                   ),
                   TextButton(
                       onPressed: ()async{
