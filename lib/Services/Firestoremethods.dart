@@ -4,6 +4,7 @@ import 'package:forum3/Models/Chats.dart';
 import 'package:forum3/Models/Comments.dart';
 import 'package:forum3/Models/Notifs.dart';
 import 'package:forum3/Models/Posts.dart';
+import 'package:forum3/Models/Requests.dart';
 import 'package:forum3/Services/Storagemethods.dart';
 
 import 'package:uuid/uuid.dart';
@@ -419,6 +420,11 @@ class FirestoreMethods{
     Future<String> Makerequest(String author,String uid,String ppurl)async{
         String ress;
         try{
+           String requestuid=Uuid().v1();
+            Request request=Request(author_uid: uid, requestuid: requestuid, author: author, Timeposted: DateTime.now());
+            await _firestore.collection("Requests").doc(uid).set(
+                request.toJson()
+            );
 
             ress='Request Sent';
             return ress;
