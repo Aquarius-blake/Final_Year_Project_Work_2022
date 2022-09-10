@@ -35,7 +35,7 @@ class User1{
     this.Gender,
     this.searchkey,
     this.Bio,
-    this.Admin
+    this.Admin,
   });
 
   Map<String,dynamic> toJson()=>{

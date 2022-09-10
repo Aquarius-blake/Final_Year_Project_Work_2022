@@ -330,7 +330,6 @@ void handlemylink(Uri url){
                  "View Requests",
              style: TextStyle(
                fontStyle: FontStyle.italic,
-               fontSize: 12.0,
              ),
              ),
              onTap: (){
@@ -345,7 +344,6 @@ void handlemylink(Uri url){
              title: Text(
                "Request Admin Privileges",
                style: TextStyle(
-                 fontSize: 12,
                  fontStyle: FontStyle.italic
                ),
              ),
