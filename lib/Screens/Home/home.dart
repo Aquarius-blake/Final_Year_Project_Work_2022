@@ -324,7 +324,7 @@ void handlemylink(Uri url){
                   Navigator.pushNamed(context, '/register');
                 },
               ),
-             SizedBox(height: 20,),
+             SizedBox(height: 10,),
            user1.Admin==true?  ListTile(
              title: Text(
                  "View Requests",
