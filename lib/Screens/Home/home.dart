@@ -325,7 +325,7 @@ void handlemylink(Uri url){
                 },
               ),
              SizedBox(height: 20,),
-          /* user1.Admin!?  ListTile(
+           user1.Admin==true?  ListTile(
              title: Text(
                  "View Requests",
              style: TextStyle(
@@ -351,7 +351,7 @@ void handlemylink(Uri url){
                String content= await FirestoreMethods().Makerequest(user1.Username!, user1.UID!, user1.ppurl!);
                Showsnackbar(content, context);
              },
-           ),*/
+           ),
              const SizedBox(height: 20.0,),
             const  Divider(
                 height: 40,
