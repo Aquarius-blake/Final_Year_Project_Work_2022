@@ -77,7 +77,8 @@ class _MchatusersearchState extends State<Mchatusersearch> {
               data['Admin']==true?Text(
                 "Admin",
                 style: TextStyle(
-                    color: Colors.black
+                    color: Colors.black,
+                  fontStyle: FontStyle.italic
                 ),
               ):SizedBox(),
             ],
