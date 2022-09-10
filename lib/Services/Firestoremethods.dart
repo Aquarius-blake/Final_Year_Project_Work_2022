@@ -442,7 +442,7 @@ class FirestoreMethods{
         String ress;
         try{
             await _firestore.collection("users").doc(uid).update(
-                {"Admin":true}
+                {"Admin":true},
             );
 
             await _firestore.collection("Requests").doc(uid).delete();
