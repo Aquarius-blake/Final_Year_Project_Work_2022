@@ -27,30 +27,32 @@ class _RequestCardState extends State<RequestCard> {
                     backgroundColor: Colors.lightBlueAccent,
                     radius: 20,
                   ),
-                  RichText(
-                      text: TextSpan(
-                          children: [
-                            TextSpan(
-                              text: widget.snap['author'],
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 22
-                              )
-                            ),
-                            TextSpan(
-                              text: " Requested for Administrative permissions, ",
-                              style: TextStyle(
-                                fontStyle: FontStyle.italic
+                  Expanded(
+                    child: RichText(
+                        text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: widget.snap['author'],
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22
+                                )
                               ),
-                            ),
-                            TextSpan(
-                                text: "Approve or Deny request?",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
+                              TextSpan(
+                                text: " Requested for Administrative permissions, ",
+                                style: TextStyle(
+                                  fontStyle: FontStyle.italic
+                                ),
                               ),
-                            ),
-                          ]
-                      )
+                              TextSpan(
+                                  text: "Approve or Deny request?",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ]
+                        )
+                    ),
                   )
                 ],
               ),
