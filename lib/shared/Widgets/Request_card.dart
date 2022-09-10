@@ -27,7 +27,7 @@ class _RequestCardState extends State<RequestCard> {
                     backgroundColor: Colors.lightBlueAccent,
                     radius: 20,
                   ),
-                  SizedBox(),
+                  SizedBox(width: 5,),
                   Expanded(
                     child: RichText(
                         text: TextSpan(
