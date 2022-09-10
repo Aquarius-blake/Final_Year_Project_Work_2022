@@ -60,6 +60,7 @@ class _RequestCardState extends State<RequestCard> {
                 ],
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TextButton(
                       onPressed: ()async{
