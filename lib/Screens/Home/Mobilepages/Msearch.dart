@@ -104,7 +104,12 @@ class _MsearchState extends State<Msearch> {
               const SizedBox(width: 20,),
               Text(data['username']),
               SizedBox(width: 5,),
-              data['Admin']==true?Text("Admin"):SizedBox(),
+              data['Admin']==true?Text(
+                "Admin",
+                style: TextStyle(
+                  color: Colors.black
+                ),
+              ):SizedBox(),
             ],
           ),
         ),
