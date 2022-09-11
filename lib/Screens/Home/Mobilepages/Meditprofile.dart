@@ -163,7 +163,7 @@ late DateTime? _dateTime;
                           validator: (val)=>val!.isEmpty ? "Enter Your Full Name" : null,
                           onChanged: (val){
                             setState(() {
-                              Fname.text=val;
+                            //  Fname.text=val;
                             });
                           },
                           decoration: InputDecoration(
@@ -193,7 +193,7 @@ late DateTime? _dateTime;
                           validator: (val)=>val!.isEmpty ? "Enter Your Username" : null,
                           onChanged: (val){
                             setState(() {
-                              username.text=val;
+                           //   username.text=val;
                             });
                           },
                           decoration: InputDecoration(
@@ -222,7 +222,7 @@ late DateTime? _dateTime;
                           validator: (val)=>val!.isEmpty ? "Enter Your Username" : null,
                           onChanged: (val){
                             setState(() {
-                              gender.text=val;
+                            //  gender.text=val;
                             });
                           },
                           decoration: InputDecoration(
@@ -273,7 +273,7 @@ late DateTime? _dateTime;
                             validator: (val)=>val!.isEmpty ? "Enter Your Date of Birth" : null,
                             onChanged: (val){
                               setState(() {
-                                DOB.text=val;
+                            //    DOB.text=val;
                               });
                             },
                             decoration: InputDecoration(
