@@ -374,7 +374,12 @@ class _WebviewState extends State<Webview> {
                               children: const [
                                 WebHome(),
                                 wpost(),
-                                MDprofile(),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                      right: 8.0,
+                                  left: 2.0),
+                                  child: MDprofile(),
+                                ),
                                 Text("Page3"),
                                 Wsearch()
                               ],
