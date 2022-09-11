@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:forum3/Provider/user_provider.dart';
 import 'package:forum3/Screens/Home/Mobilepages/MDprofile.dart';
+import 'package:forum3/Screens/Home/Mobilepages/Mmessages.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mnotifications.dart';
 import 'package:forum3/Screens/Platforms/WebSceens/Whome.dart';
 import 'package:forum3/Screens/Platforms/WebSceens/Wsearch.dart';
@@ -380,7 +381,7 @@ class _WebviewState extends State<Webview> {
                                   left: 2.0),
                                   child: MDprofile(),
                                 ),
-                                Text("Page3"),
+                                Mmessages(),
                                 Wsearch()
                               ],
 
