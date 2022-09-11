@@ -10,6 +10,7 @@ import 'package:forum3/Screens/Platforms/WebSceens/Whome.dart';
 import 'package:forum3/Screens/Platforms/WebSceens/Wsearch.dart';
 import 'package:forum3/Screens/Platforms/WebSceens/wpost.dart';
 import 'package:forum3/Services/Upload.dart';
+import 'package:forum3/shared/Networkconnection.dart';
 import 'package:provider/provider.dart';
 import '../../Models/Users1.dart';
 import '../../Services/auth.dart';
@@ -100,9 +101,9 @@ class _WebviewState extends State<Webview> {
 
   @override
   Widget build(BuildContext context) {
+    try{
     User1? user1=  Provider.of<UserProvider>(context).getUser;
     return Scaffold(
-
       backgroundColor: Colors.lightBlueAccent[100],
       appBar: AppBar(
         centerTitle: true,
@@ -431,5 +432,8 @@ class _WebviewState extends State<Webview> {
           )
       ),
     );
+    }catch(e){
+      return Netcon();
+    }
   }
 }
