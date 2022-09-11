@@ -102,6 +102,10 @@ class _MprofileState extends State<Mprofile>with
                           ],
                         ),
                         SizedBox(height: 10,),
+                        widget.snap['Admin']==true && user1.Admin==true ?ElevatedButton(
+                            onPressed: (){},
+                            child:Text("")
+                        ):SizedBox(),
                         Row(
                           children: [
                             widget.snap['uid']!=user1.UID? ElevatedButton(
