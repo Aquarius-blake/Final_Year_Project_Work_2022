@@ -5,6 +5,7 @@ import 'package:forum3/Screens/Home/Mobilepages/Meditprofile.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mlikedposts.dart';
 import 'package:forum3/Screens/Home/Mobilepages/MpchatScreen.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Profile_posts.dart';
+import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:provider/provider.dart';
 import '../../../Models/Users1.dart';
 import '../../../Provider/user_provider.dart';
@@ -103,7 +104,10 @@ class _MprofileState extends State<Mprofile>with
                         ),
                         SizedBox(height: 10,),
                         widget.snap['Admin']==true && user1.Admin==true ?ElevatedButton(
-                            onPressed: ()async{},
+                            onPressed: ()async{
+                              String content= await FirestoreMethods().RemoveAdmin(widget.snap['uid']);
+                              Showsnackbar(content, context);
+                            },
                             child:Text(
                               "Remove Admin",
                             style: TextStyle(),
