@@ -128,6 +128,7 @@ class _MprofileState extends State<Mprofile>with
                             ),
                             )
                         ):SizedBox(),
+                        SizedBox(height: 5,),
                         Row(
                           children: [
                             widget.snap['uid']!=user1.UID? ElevatedButton(
