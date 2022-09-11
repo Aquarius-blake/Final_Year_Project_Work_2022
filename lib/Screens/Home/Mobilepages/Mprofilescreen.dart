@@ -104,6 +104,19 @@ class _MprofileState extends State<Mprofile>with
                         ),
                         SizedBox(height: 10,),
                         widget.snap['Admin']==true && user1.Admin==true ?ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                elevation: 6.0,
+                                shadowColor: Colors.black,
+                                primary: Colors.white,
+                                side: const BorderSide(
+                                  color: Colors.blue,
+                                  width: 2.0,
+                                ),
+
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(100.0)
+                                )
+                            ),
                             onPressed: ()async{
                               String content= await FirestoreMethods().RemoveAdmin(widget.snap['uid']);
                               Showsnackbar(content, context);
