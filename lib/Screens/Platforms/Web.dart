@@ -381,7 +381,12 @@ class _WebviewState extends State<Webview> {
                                   left: 2.0),
                                   child: MDprofile(),
                                 ),
-                                Mmessages(),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                      right: 8.0,
+                                  left :2.0),
+                                  child: Mmessages(),
+                                ),
                                 Wsearch()
                               ],
 
