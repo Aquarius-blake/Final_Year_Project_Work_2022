@@ -36,12 +36,12 @@ class _WebviewState extends State<Webview> {
 
 
 
-    Widget Post(dynamic image){
+  Widget Post(dynamic image){
     return image==null?SizedBox():SizedBox(
       width: MediaQuery.of(context).size.width*0.3,
       child: Image.memory(image),
     );
-    }
+  }
 
   @override
   void initState() {
@@ -102,7 +102,7 @@ class _WebviewState extends State<Webview> {
   Widget build(BuildContext context) {
     User1? user1=  Provider.of<UserProvider>(context).getUser;
     return Scaffold(
-      
+
       backgroundColor: Colors.lightBlueAccent[100],
       appBar: AppBar(
         centerTitle: true,
@@ -144,13 +144,13 @@ class _WebviewState extends State<Webview> {
                             children: <Widget>[
                               Stack(
                                   children:<Widget>[
-                                   user1.ppurl!=""? CircleAvatar(
+                                    user1.ppurl!=""? CircleAvatar(
                                       radius: 50.0,
                                       backgroundImage: NetworkImage(user1.ppurl!),
                                     ):CircleAvatar(
-                                     backgroundImage: AssetImage('Assets/hac.jpg'),
-                                     radius: 50,
-                                   ),
+                                      backgroundImage: AssetImage('Assets/hac.jpg'),
+                                      radius: 50,
+                                    ),
                                     Positioned(
                                       bottom: -5,
                                       left: 65,
@@ -205,7 +205,7 @@ class _WebviewState extends State<Webview> {
                                   ),
                                   SizedBox(
                                     width: MediaQuery.of(context).size.width*0.055,
-                                  height: MediaQuery.of(context).size.height*0.05,
+                                    height: MediaQuery.of(context).size.height*0.05,
                                   )
                                 ],
                               ),
@@ -378,20 +378,20 @@ class _WebviewState extends State<Webview> {
                                 Padding(
                                   padding: EdgeInsets.only(
                                       right: 8.0,
-                                  left: 2.0),
+                                      left: 2.0),
                                   child: MDprofile(),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(
                                       right: 8.0,
-                                  left :2.0),
+                                      left :2.0),
                                   child: Mmessages(),
                                 ),
                                 Wsearch()
                               ],
 
                               physics:const  ScrollPhysics(
-                               parent: NeverScrollableScrollPhysics(),
+                                parent: NeverScrollableScrollPhysics(),
                               ),
                               controller: pageController,
                               onPageChanged: pagechange,
@@ -415,13 +415,13 @@ class _WebviewState extends State<Webview> {
                           ),
                         ),
                       ),
-                     SizedBox(
-                       height: MediaQuery.of(context).size.height*0.8,
-                       width: MediaQuery.of(context).size.width*0.3,
-                       child: Notifications(
-                         uid: user1.UID,
-                       ),
-                     )
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height*0.8,
+                        width: MediaQuery.of(context).size.width*0.3,
+                        child: Notifications(
+                          uid: user1.UID,
+                        ),
+                      )
                     ],
                   ),
 
