@@ -94,6 +94,7 @@ class _MmchatScreenState extends State<MmchatScreen> {
                   onPressed: ()async{
                     String? ress= await FirestoreMethods().Sendmessage(user1.Username!, user1.UID!, widget.snap['Receiver'], widget.snap['Receiver uid'], text.text,widget.snap['Profile Pic'],user1.ppurl!);
                     Showsnackbar(ress!, context);
+                    text.text="";
                   },
                   child: const FaIcon(
                       FontAwesomeIcons.featherPointed
