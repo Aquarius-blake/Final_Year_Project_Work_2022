@@ -469,7 +469,11 @@ class FirestoreMethods{
 
     Future<String?> RemoveAdmin(String uid)async{
         String ress;
-        try{}catch(e){
+        try{
+            await _firestore.collection("users").doc(uid).update(
+                {"Admin":false},
+            );
+        }catch(e){
             ress=e.toString();
             return ress;
         }
