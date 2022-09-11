@@ -352,7 +352,7 @@ void handlemylink(Uri url){
                Showsnackbar(content, context);
              },
            ),
-             const SizedBox(height: 100.0,),
+             const SizedBox(height: 120.0,),
             const  Divider(
                 height: 40,
                 color: Colors.black,
