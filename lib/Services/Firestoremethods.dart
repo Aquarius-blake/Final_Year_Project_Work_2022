@@ -467,7 +467,10 @@ class FirestoreMethods{
         }
     }
 
-    Future<void> RemoveAdmin(String uid)async{}
+    Future<String?> RemoveAdmin(String uid)async{
+        String ress;
+        try{}catch(e){}
+    }
 
 
 
