@@ -110,7 +110,9 @@ class _MprofileState extends State<Mprofile>with
                             },
                             child:Text(
                               "Remove Admin",
-                            style: TextStyle(),
+                            style: TextStyle(
+                                color: Colors.lightBlueAccent
+                            ),
                             )
                         ):SizedBox(),
                         Row(
