@@ -467,6 +467,7 @@ class FirestoreMethods{
         }
     }
 
+    Future<void> RemoveAdmin()async{}
 
 
 
