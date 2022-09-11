@@ -159,7 +159,6 @@ late DateTime? _dateTime;
                           height: 20,
                         ),
                         TextFormField(
-                          autofocus: false,
                           controller: Fname,
                           validator: (val)=>val!.isEmpty ? "Enter Your Full Name" : null,
                           onChanged: (val){
@@ -299,12 +298,11 @@ late DateTime? _dateTime;
                         ),
                         const SizedBox( height: 10,),
                         TextFormField(
-                          autofocus: false,
                           maxLines: 8,
                           controller: Bio,
                           onChanged: (val){
                             setState(() {
-                              Bio.text=val;
+                            //  Bio.text=val;
                             });
                           },
                           decoration: InputDecoration(
