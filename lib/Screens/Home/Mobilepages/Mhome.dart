@@ -15,7 +15,7 @@ class _MhomeState extends State<Mhome> {
   Widget build(BuildContext context) {
     return Scaffold(
   body: StreamBuilder(
-    stream: FirebaseFirestore.instance.collection('Posts').snapshots(),
+    stream: FirebaseFirestore.instance.collection('Posts').orderBy("Post Time",descending: true).snapshots(),
       builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
       if(snapshot.connectionState==ConnectionState.waiting){
           return const Center(
