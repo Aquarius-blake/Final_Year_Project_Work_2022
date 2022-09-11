@@ -308,7 +308,6 @@ late DateTime? _dateTime;
                           decoration: InputDecoration(
                             label: const Text(
                               "Bio",
-                              textAlign: TextAlign.start,
                             ),
                             floatingLabelAlignment: FloatingLabelAlignment.start,
                             floatingLabelBehavior: FloatingLabelBehavior.always,
