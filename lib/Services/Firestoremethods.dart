@@ -469,7 +469,10 @@ class FirestoreMethods{
 
     Future<String?> RemoveAdmin(String uid)async{
         String ress;
-        try{}catch(e){}
+        try{}catch(e){
+            ress=e.toString();
+            return ress;
+        }
     }
 
 
