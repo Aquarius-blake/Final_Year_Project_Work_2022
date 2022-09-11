@@ -27,7 +27,7 @@ appBar: AppBar(
   ),
 ),
       body: StreamBuilder(
-        stream: FirebaseFirestore.instance.collection('Requests').snapshots(),
+        stream: FirebaseFirestore.instance.collection('Requests').orderBy('Request Time',descending: true).snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
           if(snapshot.connectionState==ConnectionState.waiting){
             return const Center(
