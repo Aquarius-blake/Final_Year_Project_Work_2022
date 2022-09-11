@@ -104,7 +104,10 @@ class _MprofileState extends State<Mprofile>with
                         SizedBox(height: 10,),
                         widget.snap['Admin']==true && user1.Admin==true ?ElevatedButton(
                             onPressed: ()async{},
-                            child:Text("")
+                            child:Text(
+                              "Remove Admin",
+                            style: TextStyle(),
+                            )
                         ):SizedBox(),
                         Row(
                           children: [
