@@ -105,6 +105,9 @@ class _WebviewState extends State<Webview> {
     User1? user1=  Provider.of<UserProvider>(context).getUser;
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent[100],
+      appBar: AppBar(
+
+      ),
       body: SafeArea(
           child: Container(
             padding:const EdgeInsets.all(10),
