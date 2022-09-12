@@ -106,7 +106,8 @@ class _WebviewState extends State<Webview> {
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent[100],
       appBar: AppBar(
-
+        centerTitle: true,
+title: Text("Welcome"),
       ),
       body: SafeArea(
           child: Container(
