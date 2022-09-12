@@ -105,23 +105,6 @@ class _WebviewState extends State<Webview> {
     User1? user1=  Provider.of<UserProvider>(context).getUser;
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent[100],
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text("Web"),
-        actions: [
-          ElevatedButton(
-            onPressed: ()async{
-              await _auth.SignOut(user1.Guest!,user1.UID!);
-            },
-            child: Text("Sign Out"),
-          ),
-          /*ListTile(
-            leading: Icon(LineIcons.alternateSignOut),
-            title: Text("Sign Out"),
-            onTap: (){},
-          ),*/
-        ],
-      ),
       body: SafeArea(
           child: Container(
             padding:const EdgeInsets.all(10),
