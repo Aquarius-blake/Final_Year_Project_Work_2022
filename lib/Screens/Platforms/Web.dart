@@ -352,7 +352,9 @@ class _WebviewState extends State<Webview> {
                               ),
                               SizedBox(height: 30,),
                               TextButton(
-                                  onPressed: (){},
+                                  onPressed: (){
+                                    Navigator.pushNamed(context, '/register');
+                                  },
                                   child: const Text("Create New Account",
                                     style: TextStyle(
 
