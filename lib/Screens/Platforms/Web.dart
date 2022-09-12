@@ -102,331 +102,331 @@ class _WebviewState extends State<Webview> {
   @override
   Widget build(BuildContext context) {
     try{
-    User1? user1=  Provider.of<UserProvider>(context).getUser;
-    return Scaffold(
-      backgroundColor: Colors.lightBlueAccent[100],
-      appBar: AppBar(
-        centerTitle: true,
-title: Text("Welcome"),
-      ),
-      body: SafeArea(
-          child: Container(
-            padding:const EdgeInsets.all(10),
-            child: Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: <Widget>[
-                  Column(
-                    children: <Widget>[
-                      Card(
-                        elevation: 15.0,
-                        color: Colors.white,
-                        shape:  RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0)
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(50,50,50,50),
-                          child: Column(
-
-                            children: <Widget>[
-                              Stack(
-                                  children:<Widget>[
-                                    user1.ppurl!=""? CircleAvatar(
-                                      radius: 50.0,
-                                      backgroundImage: NetworkImage(user1.ppurl!),
-                                    ):CircleAvatar(
-                                      backgroundImage: AssetImage('Assets/hac.jpg'),
-                                      radius: 50,
-                                    ),
-                                    Positioned(
-                                      bottom: -5,
-                                      left: 65,
-                                      child: IconButton(
-                                          onPressed:() {
-
-                                          },
-                                          icon:Icon(
-                                            Icons.add_a_photo,
-                                            color: Colors.lightBlueAccent,
-                                          )
-                                      ),
-                                    )
-                                  ]
-                              ),
-                              SizedBox(height: 10,),
-                              user1.Username!=null? Text(
-                                user1.Username!,
-                                style: TextStyle(
-
-                                ),
-                              ):
-                              Text("Loading"),
-                              SizedBox(height: 10,),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: <Widget>[
-                                  IconButton(
-                                    onPressed: (){
-                                      setState(() {
-                                        page=0;
-                                      });
-                                      Navitap(page);
-                                    },
-                                    icon: Icon(Icons.home),
-                                    iconSize: 40.0,
-
-                                  ),
-
-                                  GestureDetector(
-                                    onTap: (){
-                                      setState(() {
-                                        page=0;
-                                      });
-                                      Navitap(page);
-                                    },
-                                    child: const Text("Home",
-                                      style: TextStyle(
-                                        fontSize: 19.0,
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: MediaQuery.of(context).size.width*0.055,
-                                    height: MediaQuery.of(context).size.height*0.05,
-                                  )
-                                ],
-                              ),
-                              SizedBox(),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: <Widget>[
-                                  IconButton(
-                                    onPressed: (){
-                                      setState(() {
-                                        page=1;
-                                      });
-                                      Navitap(page);
-                                    },
-                                    icon: FaIcon(FontAwesomeIcons.featherPointed),
-                                    iconSize: 28.0,
-
-                                  ),
-
-                                  GestureDetector(
-                                    onTap: (){
-                                      setState(() {
-                                        page=1;
-                                      });
-                                      Navitap(page);
-                                    },
-                                    child: Text("Post",
-                                      style: TextStyle(
-                                        fontSize: 19.0,
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: MediaQuery.of(context).size.width*0.07,
-                                    height: MediaQuery.of(context).size.height*0.05,
-                                  )
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: <Widget>[
-                                  IconButton(
-                                    onPressed: (){
-                                      setState(() {
-                                        page=2;
-                                      });
-                                      Navitap(page);
-                                    },
-                                    icon: Icon(Icons.person),
-                                    iconSize: 40.0,
-
-                                  ),
-
-                                  GestureDetector(
-                                    onTap: (){
-                                      setState(() {
-                                        page=2;
-                                      });
-                                      Navitap(page);
-                                    },
-                                    child: Text("Profile",
-                                      style: TextStyle(
-                                        fontSize: 19.0,
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: MediaQuery.of(context).size.width*0.055,
-                                    height: MediaQuery.of(context).size.height*0.05,
-                                  )
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: <Widget>[
-                                  IconButton(
-                                    onPressed: (){
-
-                                      setState(() {
-                                        page=3;
-                                      });
-                                      Navitap(page);
-                                    },
-                                    icon: Icon(Icons.mail_outline),
-                                    iconSize: 40.0,
-
-                                  ),
-
-                                  GestureDetector(
-                                    onTap: (){
-
-                                      setState(() {
-                                        page=3;
-                                      });
-                                      Navitap(page);
-                                    },
-                                    child: Text("Messages",
-                                      style: TextStyle(
-                                        fontSize: 19.0,
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: MediaQuery.of(context).size.width*0.02,
-                                    height: MediaQuery.of(context).size.height*0.05,
-                                  )
-                                ],
-                              ),Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: <Widget>[
-                                  IconButton(
-                                    onPressed: (){
-
-                                      setState(() {
-                                        page=4;
-                                      });
-                                      Navitap(page);
-                                    },
-                                    icon: Icon(Icons.search),
-                                    iconSize: 40.0,
-
-                                  ),
-
-                                  GestureDetector(
-                                    onTap: (){
-
-                                      setState(() {
-                                        page=4;
-                                      });
-                                      Navitap(page);
-                                    },
-                                    child: Text("Search",
-                                      style: TextStyle(
-                                        fontSize: 19.0,
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: MediaQuery.of(context).size.width*0.04,
-                                    height: MediaQuery.of(context).size.height*0.05,
-                                  )
-                                ],
-                              ),
-                              SizedBox(height: 30,),
-                              TextButton(
-                                  onPressed: (){
-                                    Navigator.pushNamed(context, '/register');
-                                  },
-                                  child: const Text("Create New Account",
-                                    style: TextStyle(),
-                                  )
-                              ),TextButton(
-                                  onPressed: ()async{
-                                    await _auth.SignOut(user1.Guest!,user1.UID!);
-                                  },
-                                  child: const Text("Sign Out",
-                                    style: TextStyle(),
-                                  )
-                              )
-
-                            ],
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                  Flexible(
-                    fit: FlexFit.tight,
-                    child: Column(
+      User1? user1=  Provider.of<UserProvider>(context).getUser;
+      return Scaffold(
+        backgroundColor: Colors.lightBlueAccent[100],
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text("Welcome"),
+        ),
+        body: SafeArea(
+            child: Container(
+              padding:const EdgeInsets.all(10),
+              child: Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    Column(
                       children: <Widget>[
-                        SizedBox(
-                          height: MediaQuery.of(context).size.height*0.89,
-                          child: Center(
-                            child: PageView(
-                              children: const [
-                                WebHome(),
-                                wpost(),
-                                Padding(
-                                  padding: EdgeInsets.only(
-                                      right: 8.0,
-                                      left: 2.0),
-                                  child: MDprofile(),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(
-                                      right: 8.0,
-                                      left :2.0),
-                                  child: Mmessages(),
-                                ),
-                                Wsearch()
-                              ],
+                        Card(
+                          elevation: 15.0,
+                          color: Colors.white,
+                          shape:  RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0)
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.fromLTRB(50,50,50,50),
+                            child: Column(
 
-                              physics:const  ScrollPhysics(
-                                parent: NeverScrollableScrollPhysics(),
-                              ),
-                              controller: pageController,
-                              onPageChanged: pagechange,
+                              children: <Widget>[
+                                Stack(
+                                    children:<Widget>[
+                                      user1.ppurl!=""? CircleAvatar(
+                                        radius: 50.0,
+                                        backgroundImage: NetworkImage(user1.ppurl!),
+                                      ):CircleAvatar(
+                                        backgroundImage: AssetImage('Assets/hac.jpg'),
+                                        radius: 50,
+                                      ),
+                                      Positioned(
+                                        bottom: -5,
+                                        left: 65,
+                                        child: IconButton(
+                                            onPressed:() {
+
+                                            },
+                                            icon:Icon(
+                                              Icons.add_a_photo,
+                                              color: Colors.lightBlueAccent,
+                                            )
+                                        ),
+                                      )
+                                    ]
+                                ),
+                                SizedBox(height: 10,),
+                                user1.Username!=null? Text(
+                                  user1.Username!,
+                                  style: TextStyle(
+
+                                  ),
+                                ):
+                                Text("Loading"),
+                                SizedBox(height: 10,),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: <Widget>[
+                                    IconButton(
+                                      onPressed: (){
+                                        setState(() {
+                                          page=0;
+                                        });
+                                        Navitap(page);
+                                      },
+                                      icon: Icon(Icons.home),
+                                      iconSize: 40.0,
+
+                                    ),
+
+                                    GestureDetector(
+                                      onTap: (){
+                                        setState(() {
+                                          page=0;
+                                        });
+                                        Navitap(page);
+                                      },
+                                      child: const Text("Home",
+                                        style: TextStyle(
+                                          fontSize: 19.0,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: MediaQuery.of(context).size.width*0.055,
+                                      height: MediaQuery.of(context).size.height*0.05,
+                                    )
+                                  ],
+                                ),
+                                SizedBox(),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: <Widget>[
+                                    IconButton(
+                                      onPressed: (){
+                                        setState(() {
+                                          page=1;
+                                        });
+                                        Navitap(page);
+                                      },
+                                      icon: FaIcon(FontAwesomeIcons.featherPointed),
+                                      iconSize: 28.0,
+
+                                    ),
+
+                                    GestureDetector(
+                                      onTap: (){
+                                        setState(() {
+                                          page=1;
+                                        });
+                                        Navitap(page);
+                                      },
+                                      child: Text("Post",
+                                        style: TextStyle(
+                                          fontSize: 19.0,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: MediaQuery.of(context).size.width*0.07,
+                                      height: MediaQuery.of(context).size.height*0.05,
+                                    )
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: <Widget>[
+                                    IconButton(
+                                      onPressed: (){
+                                        setState(() {
+                                          page=2;
+                                        });
+                                        Navitap(page);
+                                      },
+                                      icon: Icon(Icons.person),
+                                      iconSize: 40.0,
+
+                                    ),
+
+                                    GestureDetector(
+                                      onTap: (){
+                                        setState(() {
+                                          page=2;
+                                        });
+                                        Navitap(page);
+                                      },
+                                      child: Text("Profile",
+                                        style: TextStyle(
+                                          fontSize: 19.0,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: MediaQuery.of(context).size.width*0.055,
+                                      height: MediaQuery.of(context).size.height*0.05,
+                                    )
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: <Widget>[
+                                    IconButton(
+                                      onPressed: (){
+
+                                        setState(() {
+                                          page=3;
+                                        });
+                                        Navitap(page);
+                                      },
+                                      icon: Icon(Icons.mail_outline),
+                                      iconSize: 40.0,
+
+                                    ),
+
+                                    GestureDetector(
+                                      onTap: (){
+
+                                        setState(() {
+                                          page=3;
+                                        });
+                                        Navitap(page);
+                                      },
+                                      child: Text("Messages",
+                                        style: TextStyle(
+                                          fontSize: 19.0,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: MediaQuery.of(context).size.width*0.02,
+                                      height: MediaQuery.of(context).size.height*0.05,
+                                    )
+                                  ],
+                                ),Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: <Widget>[
+                                    IconButton(
+                                      onPressed: (){
+
+                                        setState(() {
+                                          page=4;
+                                        });
+                                        Navitap(page);
+                                      },
+                                      icon: Icon(Icons.search),
+                                      iconSize: 40.0,
+
+                                    ),
+
+                                    GestureDetector(
+                                      onTap: (){
+
+                                        setState(() {
+                                          page=4;
+                                        });
+                                        Navitap(page);
+                                      },
+                                      child: Text("Search",
+                                        style: TextStyle(
+                                          fontSize: 19.0,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: MediaQuery.of(context).size.width*0.04,
+                                      height: MediaQuery.of(context).size.height*0.05,
+                                    )
+                                  ],
+                                ),
+                                SizedBox(height: 30,),
+                                TextButton(
+                                    onPressed: (){
+                                      Navigator.pushNamed(context, '/register');
+                                    },
+                                    child: const Text("Create New Account",
+                                      style: TextStyle(),
+                                    )
+                                ),TextButton(
+                                    onPressed: ()async{
+                                      await _auth.SignOut(user1.Guest!,user1.UID!);
+                                    },
+                                    child: const Text("Sign Out",
+                                      style: TextStyle(),
+                                    )
+                                )
+
+                              ],
                             ),
                           ),
                         )
                       ],
                     ),
-                  ),
-                  Column(
-                    children: <Widget>[
-                      Center(
-                        child: SizedBox(
-                          width: MediaQuery.of(context).size.width*0.3,
-                          child: Card(
-                              child: Center(
-                                child: Text(
-                                    "Notifications"
+                    Flexible(
+                      fit: FlexFit.tight,
+                      child: Column(
+                        children: <Widget>[
+                          SizedBox(
+                            height: MediaQuery.of(context).size.height*0.89,
+                            child: Center(
+                              child: PageView(
+                                children: const [
+                                  WebHome(),
+                                  wpost(),
+                                  Padding(
+                                    padding: EdgeInsets.only(
+                                        right: 8.0,
+                                        left: 2.0),
+                                    child: MDprofile(),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.only(
+                                        right: 8.0,
+                                        left :2.0),
+                                    child: Mmessages(),
+                                  ),
+                                  Wsearch()
+                                ],
+
+                                physics:const  ScrollPhysics(
+                                  parent: NeverScrollableScrollPhysics(),
                                 ),
-                              )
+                                controller: pageController,
+                                onPageChanged: pagechange,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    Column(
+                      children: <Widget>[
+                        Center(
+                          child: SizedBox(
+                            width: MediaQuery.of(context).size.width*0.3,
+                            child: Card(
+                                child: Center(
+                                  child: Text(
+                                      "Notifications"
+                                  ),
+                                )
+                            ),
                           ),
                         ),
-                      ),
-                      SizedBox(
-                        height: MediaQuery.of(context).size.height*0.8,
-                        width: MediaQuery.of(context).size.width*0.3,
-                        child: Notifications(
-                          uid: user1.UID,
-                        ),
-                      )
-                    ],
-                  ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height*0.8,
+                          width: MediaQuery.of(context).size.width*0.3,
+                          child: Notifications(
+                            uid: user1.UID,
+                          ),
+                        )
+                      ],
+                    ),
 
-                ],
+                  ],
+                ),
               ),
-            ),
-          )
-      ),
-    );
+            )
+        ),
+      );
     }catch(e){
       return Netcon();
     }
