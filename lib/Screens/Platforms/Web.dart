@@ -356,9 +356,15 @@ class _WebviewState extends State<Webview> {
                                     Navigator.pushNamed(context, '/register');
                                   },
                                   child: const Text("Create New Account",
-                                    style: TextStyle(
-
-                                    ),)
+                                    style: TextStyle(),
+                                  )
+                              ),TextButton(
+                                  onPressed: ()async{
+                                    await _auth.SignOut(user1.Guest!,user1.UID!);
+                                  },
+                                  child: const Text("Sign Out",
+                                    style: TextStyle(),
+                                  )
                               )
 
                             ],
