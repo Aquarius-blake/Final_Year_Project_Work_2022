@@ -372,6 +372,7 @@ class _WebviewState extends State<Webview> {
                             child: Center(
                               child: Scrollbar(
                                 isAlwaysShown: true,
+                                controller: pageController,
                                 child: PageView(
                                   children: const [
                                     Padding(
