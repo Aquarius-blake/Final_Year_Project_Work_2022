@@ -370,36 +370,39 @@ class _WebviewState extends State<Webview> {
                           SizedBox(
                             height: MediaQuery.of(context).size.height*0.89,
                             child: Center(
-                              child: PageView(
-                                children: const [
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right:8.0,
-                                      left:2.0
+                              child: Scrollbar(
+                                isAlwaysShown: true,
+                                child: PageView(
+                                  children: const [
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                          right:8.0,
+                                        left:2.0
+                                      ),
+                                      child: WebHome(),
                                     ),
-                                    child: WebHome(),
-                                  ),
-                                  wpost(),
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: 8.0,
-                                        left: 2.0),
-                                    child: MDprofile(),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: 8.0,
-                                        left :2.0),
-                                    child: Mmessages(),
-                                  ),
-                                  Wsearch()
-                                ],
+                                    wpost(),
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                          right: 8.0,
+                                          left: 2.0),
+                                      child: MDprofile(),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                          right: 8.0,
+                                          left :2.0),
+                                      child: Mmessages(),
+                                    ),
+                                    Wsearch()
+                                  ],
 
-                                physics:const  ScrollPhysics(
-                                  parent: NeverScrollableScrollPhysics(),
+                                  physics:const  ScrollPhysics(
+                                    parent: NeverScrollableScrollPhysics(),
+                                  ),
+                                  controller: pageController,
+                                  onPageChanged: pagechange,
                                 ),
-                                controller: pageController,
-                                onPageChanged: pagechange,
                               ),
                             ),
                           )
