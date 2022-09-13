@@ -410,6 +410,7 @@ class _WebviewState extends State<Webview> {
                         ],
                       ),
                     ),
+                    SizedBox(width: 10,),
                     Column(
                       children: <Widget>[
                         Center(
