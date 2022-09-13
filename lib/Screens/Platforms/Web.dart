@@ -372,7 +372,13 @@ class _WebviewState extends State<Webview> {
                             child: Center(
                               child: PageView(
                                 children: const [
-                                  WebHome(),
+                                  Padding(
+                                    padding: EdgeInsets.only(
+                                        right:8.0,
+                                      left:2.0
+                                    ),
+                                    child: WebHome(),
+                                  ),
                                   wpost(),
                                   Padding(
                                     padding: EdgeInsets.only(
