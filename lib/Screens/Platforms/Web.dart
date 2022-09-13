@@ -107,7 +107,10 @@ class _WebviewState extends State<Webview> {
         backgroundColor: Colors.lightBlueAccent[100],
         appBar: AppBar(
           centerTitle: true,
-          title: Text("Welcome"),
+          title: Text(
+            "Welcome",
+            style:TextStyle(),
+          ),
         ),
         body: SafeArea(
             child: Container(
