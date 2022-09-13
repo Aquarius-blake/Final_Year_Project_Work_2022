@@ -398,9 +398,6 @@ class _WebviewState extends State<Webview> {
                                     Wsearch()
                                   ],
 
-                                  physics:const  ScrollPhysics(
-                                    parent: NeverScrollableScrollPhysics(),
-                                  ),
                                   controller: pageController,
                                   onPageChanged: pagechange,
                                 ),
