@@ -309,7 +309,6 @@ class _WebviewState extends State<Webview> {
                                   children: <Widget>[
                                     IconButton(
                                       onPressed: (){
-
                                         setState(() {
                                           page=4;
                                         });
@@ -317,12 +316,9 @@ class _WebviewState extends State<Webview> {
                                       },
                                       icon: Icon(Icons.search),
                                       iconSize: 40.0,
-
                                     ),
-
                                     GestureDetector(
                                       onTap: (){
-
                                         setState(() {
                                           page=4;
                                         });
