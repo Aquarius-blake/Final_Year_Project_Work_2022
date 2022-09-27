@@ -42,6 +42,7 @@ class FirestoreMethods{
                 imageUrl: photourl,
                 ppurl: ppurl,
                 likes: [],
+                nol: 0
             );
 
             _firestore.collection("Posts").doc(postid).set(
