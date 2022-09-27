@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:forum3/shared/Widgets/post_card.dart';
 
 
@@ -81,6 +82,40 @@ class _MhomeState extends State<Mhome> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+
+      appBar:AppBar(
+        backgroundColor: Colors.black,
+        elevation: 0.0,
+        actions: [
+          Row(
+            children: [
+              GestureDetector(
+                onTap:(){
+                  _options(context);
+                } ,
+                child: const Text(
+                  "Sort By",
+                  style: TextStyle(
+                      color:Colors.white,
+                      fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.bold
+                  ),
+                ),
+              ),
+              IconButton(
+                onPressed: (){
+                  _options(context);
+                },
+                icon: const FaIcon(
+                  FontAwesomeIcons.sort,
+                  color: Colors.white,
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+
   body: StreamBuilder(
     stream: FirebaseFirestore.instance.collection('Posts').orderBy("Post Time",descending: true).snapshots(),
       builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
