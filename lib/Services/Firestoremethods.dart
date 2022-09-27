@@ -63,11 +63,16 @@ class FirestoreMethods{
         try{
             if(likes.contains(author_uid)){
                 await _firestore.collection("Posts").doc(postid).update(
-                    {'likes':FieldValue.arrayRemove([author_uid])}
+                    {'likes':FieldValue.arrayRemove([author_uid]),
+                        'nol':FieldValue.increment(-1),
+                    }
                 );
             }else{
                 await  _firestore.collection("Posts").doc(postid).update(
-                    {'likes':FieldValue.arrayUnion([author_uid])}
+                    {'likes':FieldValue.arrayUnion([author_uid]),
+                        'nol':FieldValue.increment(1),
+
+                    }
                 );
 
                 String message=" Liked your post: ";
