@@ -84,7 +84,7 @@ class _MhomeState extends State<Mhome> {
     return Scaffold(
 
       appBar:AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
         elevation: 0.0,
         actions: [
           Row(
@@ -96,7 +96,7 @@ class _MhomeState extends State<Mhome> {
                 child: const Text(
                   "Sort By",
                   style: TextStyle(
-                      color:Colors.white,
+                      color:Colors.black,
                       fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.bold
                   ),
@@ -108,7 +108,7 @@ class _MhomeState extends State<Mhome> {
                 },
                 icon: const FaIcon(
                   FontAwesomeIcons.sort,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
             ],
@@ -117,7 +117,7 @@ class _MhomeState extends State<Mhome> {
       ),
 
   body: StreamBuilder(
-    stream: FirebaseFirestore.instance.collection('Posts').orderBy("Post Time",descending: true).snapshots(),
+    stream: FirebaseFirestore.instance.collection('Posts').orderBy(sortby,descending: true).snapshots(),
       builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
       if(snapshot.connectionState==ConnectionState.waiting){
           return const Center(
