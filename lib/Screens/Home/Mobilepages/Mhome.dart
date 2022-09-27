@@ -12,6 +12,73 @@ class Mhome extends StatefulWidget {
 
 class _MhomeState extends State<Mhome> {
   @override
+
+  late String sortby="Post Time";
+
+  _options(BuildContext context)async{
+    return showDialog(
+        context: context,
+        builder: (context){
+          return SimpleDialog(
+            title: const Text(
+              "Sort by",
+              style: TextStyle(
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            children: [
+              SimpleDialogOption(
+                padding: const EdgeInsets.all(15.0),
+                child: const Text(
+                  "Recent Post",
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+                onPressed: (){
+                  setState(() {
+                    sortby='Post Time';
+                  });
+                  Navigator.pop(context);
+                },
+              ),
+              SimpleDialogOption(
+                padding: const EdgeInsets.all(15.0),
+                child: const Text(
+                  "Most Liked",
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+                onPressed: ()async{
+                  setState(() {
+                    sortby='nol';
+                  });
+                  Navigator.of(context).pop();
+                },
+              ),
+              SimpleDialogOption(
+                padding: const EdgeInsets.all(15.0),
+                child: const Text(
+                  "Cancel",
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+                onPressed: (){
+                  Navigator.of(context).pop();
+                },
+              )
+            ],
+          );
+        }
+    );
+
+  }
+
+
+
   Widget build(BuildContext context) {
     return Scaffold(
   body: StreamBuilder(
