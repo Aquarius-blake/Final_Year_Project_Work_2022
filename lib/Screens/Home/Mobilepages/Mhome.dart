@@ -84,7 +84,7 @@ class _MhomeState extends State<Mhome> {
     return Scaffold(
 
       appBar:AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.transparent,
         elevation: 0.0,
         actions: [
           Row(
