@@ -47,7 +47,7 @@ class _MhomeState extends State<Mhome> {
               SimpleDialogOption(
                 padding: const EdgeInsets.all(15.0),
                 child: const Text(
-                  "Most Liked",
+                  "Most Popular",
                   style: TextStyle(
                     fontStyle: FontStyle.italic,
                   ),
