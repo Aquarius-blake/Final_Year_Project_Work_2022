@@ -252,7 +252,9 @@ class _PostCardState extends State<PostCard> {
               children: [
                 Row(
                   children: [
-
+                    widget.snap['Profile Pic']==""?CircleAvatar(
+                      backgroundImage: AssetImage('Assets/hac.jpg'),
+                    ) :
                     CircleAvatar(
                       radius: 16,
                       backgroundImage: NetworkImage(widget.snap['Profile Pic']),
