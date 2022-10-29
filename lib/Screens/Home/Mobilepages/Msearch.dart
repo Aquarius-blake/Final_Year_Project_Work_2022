@@ -66,8 +66,7 @@ class _MsearchState extends State<Msearch> {
     }else{
       tempSearchstore=[];
       queryResultset.forEach((element) {
-        String valo=capvalue.toString().toLowerCase();
-        if(element['username'].startsWith(capvalue) || element['username'].startsWith(valo)){
+        if(element['username'].startsWith(capvalue)){
           setState(() {
             tempSearchstore.add(element);
           });
