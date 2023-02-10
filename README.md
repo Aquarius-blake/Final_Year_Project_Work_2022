@@ -18,7 +18,7 @@ A Forum Application project with flutter front-end UI and Firebase back-end.
 <img src="https://github.com/Aquarius-blake/Images/blob/main/Forum/chat.png" alt="image" width="300" height="700">   <img src="https://github.com/Aquarius-blake/Images/blob/main/Forum/notifications.png" alt="image" width="300" height="700">
 
 ## Quick Note
-The web version is currently incomplete,I might continue at a future time,However, I dont plan on making an IOS build (at least until I get a macbook or viirtual macOS) 
+The web version is currently incomplete,I might continue at a future time 
 
 
 
