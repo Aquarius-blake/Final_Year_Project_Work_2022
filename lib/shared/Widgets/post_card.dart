@@ -41,7 +41,7 @@ class _PostCardState extends State<PostCard> {
         packageName: "com.project.forum3",
         minimumVersion: 0,
       ),
-      iosParameters: IosParameters(
+      iosParameters: IOSParameters(
         bundleId: "Bundle-ID",
         minimumVersion: '0',
       ),
@@ -51,7 +51,7 @@ class _PostCardState extends State<PostCard> {
           Uri.parse("$image"),
           title: title),
     );
-    final ShortDynamicLink dynamicUrl = await parameters.buildShortLink();
+    final ShortDynamicLink dynamicUrl = await FirebaseDynamicLinks.instance.buildShortLink(parameters);
 
     String? desc = '${dynamicUrl.shortUrl.toString()}';
 
