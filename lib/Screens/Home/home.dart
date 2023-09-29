@@ -47,15 +47,15 @@ class _HomeState extends State<Home> {
 
 
   void initiateDynamiclink()async{
-    FirebaseDynamicLinks.instance.onLink(
-      onSuccess: (PendingDynamicLinkData? dynamicLink)async{
+    FirebaseDynamicLinks.instance.onLink.listen(
+      (PendingDynamicLinkData? dynamicLink)async{
         final Uri? deeplink= dynamicLink!.link;
 
         if(deeplink!=null){
           handlemylink(deeplink);
         }
       },
-      onError: (OnLinkErrorException e)async{
+      onError: (e)async{
 print(e.toString());
       }
     );
@@ -79,7 +79,7 @@ void handlemylink(Uri url){
         packageName: "com.project.forum3",
         minimumVersion: 0,
       ),
-      iosParameters: IosParameters(
+      iosParameters: IOSParameters(
         bundleId: "Bundle-ID",
         minimumVersion: '0',
       ),
@@ -89,7 +89,7 @@ void handlemylink(Uri url){
           Uri.parse("$image"),
           title: title),
     );
-    final ShortDynamicLink dynamicUrl = await parameters.buildShortLink();
+    final ShortDynamicLink dynamicUrl = await FirebaseDynamicLinks.instance.buildShortLink(parameters);
 
     String? desc = '${dynamicUrl.shortUrl.toString()}';
 
